@@ -1,5 +1,5 @@
 # Teaching_CBS4DH
-Teaching materials for 070296 AR Methodological Workshop - Computational Background Skills for Digital Humanities (2019S)
+Teaching materials for AR Methodological Workshop - Computational Background Skills for Digital Humanities at University of Vienna.
 
 ## Schedule 2019S
 Time | [Wednesday (6.3)](week_1_day_1_plan.md) |[Thursday (7.3)](week_1_day_2_plan.md) |[Wednesday (13.3)](week_1_day_3_plan.md) |[Wednesday (20.3)](week_1_day_4_plan.md) |[Thursday (21.3)](week_1_day_5_plan.md) |
