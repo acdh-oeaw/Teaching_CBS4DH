@@ -28,3 +28,4 @@ Assessment will be on the basis of class participation, 'question' points, and i
 ## Credits
 - Bootcamp: Computational groundwork skills by Pittsburgh-NEH-Institute: https://github.com/Pittsburgh-NEH-Institute/Institute-Materials-2017
 - Software Carpentry workshop: https://software-carpentry.org/lessons/
+- Historical Events data: http://www.vizgr.org/historical-events/
