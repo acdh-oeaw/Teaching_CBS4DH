@@ -31,7 +31,7 @@ You’ll use some of these shortly.
 ### Looking at HTML
 
 1. Start \<oXygen/\>.
-2. Open [schedule/week_1/web/web\_exercise\_1.html](web/web_exercise_1.html) in \<oXygen/\>.
+2. Open [web\_exercise\_1.html](web/web_exercise_1.html) in \<oXygen/\>.
 3. Start a web browser.
 4. Open the same file in your browser (`Ctrl+o` [Windows] or `Cmd+o` [Mac OS] to open a file from the filesystem).
 
@@ -76,7 +76,7 @@ You should see something like the following in \<oXygen/\>:
 
 ### Looking at CSS
 
-Open [schedule/week_1/web/web\_exercise\_2.html](web/web_exercise_2.html) in \<oXygen/\>. It should look something like:
+Open [web/web\_exercise\_2.html](web/web_exercise_2.html) in \<oXygen/\>. It should look something like:
 
 ```html
 <?xml version="1.0" encoding="UTF-8"?>
@@ -102,7 +102,7 @@ Open [schedule/week_1/web/web\_exercise\_2.html](web/web_exercise_2.html) in \<o
 
 2. Notice that except for the filename and title, the only difference is that this file has added a `<link>` element in the `<head>`, which uses the `@href` attribute to point to the CSS file.
 3. Open the HTML file in a browser and notice that paragraphs are red and bold.
-4. Open [schedule/week_1/web/web\_exercise\_2.css](web/web_exercise_2.css) in \<oXygen/\> and notice that it implements the commands described above, which are responsible for the color and weight of the paragraphs. Your CSS file should look something like:
+4. Open [web/web\_exercise\_2.css](web/web_exercise_2.css) in \<oXygen/\> and notice that it implements the commands described above, which are responsible for the color and weight of the paragraphs. Your CSS file should look something like:
 
 ```css
 p{
@@ -126,7 +126,7 @@ p{
 
 ### The HTML and CSS behind our JavaScript
 
-Open [schedule/week_1/web/web\_exercise\_3.html](web/web_exercise_3.html) in \<oXygen/\>. It should look something like:
+Open [web/web\_exercise\_3.html](web/web_exercise_3.html) in \<oXygen/\>. It should look something like:
 
 ```html
 <?xml version="1.0" encoding="UTF-8"?>
@@ -156,7 +156,7 @@ Open [schedule/week_1/web/web\_exercise\_3.html](web/web_exercise_3.html) in \<o
 2. Notice that except for the filename and title, there are only two differences between this file and the last one. The first difference is that this file has added a `<script>` element in the `<head>`, which uses the `@src` attribute to point to the separate JavaScript file. The second is that we’ve created two `<button>` elements. The `@value` of the button is the text that it displays. As we’ll see below, the `@id` values let the CSS select the buttons separately, so that it can color them differently.
 3. Open the HTML file in a browser. Notice that the page looks the same as the one in the CSS exercise, except for the addition of the buttons.
 
-Open [schedule/week_1/web/web\_exercise\_3.css](web/web_exercise_3.css) in \<oXygen/\>. It should look something like:
+Open [web/web\_exercise\_3.css](web/web_exercise_3.css) in \<oXygen/\>. It should look something like:
 
 ```css
 p{
@@ -180,7 +180,7 @@ Click the red or green buttons in the web browser and see how the color of the p
 
 ### How the JavaScript works
 
-Open [schedule/week_1/web/web\_exercise\_3.js](web/web_exercise_3.js) in \<oXygen/\>. It should look something like:
+Open [web/web\_exercise\_3.js](web/web_exercise_3.js) in \<oXygen/\>. It should look something like:
 
 ```javascript
 window.addEventListener('DOMContentLoaded', init, false);
