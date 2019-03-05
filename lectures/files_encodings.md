@@ -1,5 +1,22 @@
 # Files and encodings
 
+## Aim for 07.03.
+* file formats and encoding
+* txt, csv
+
+* md examples (https://en.wikipedia.org/wiki/2011)
+
+* https://pandoc.org/
+
+* html/xml; unpack docx
+* json format
+
+* encoding
+  * https://ianus-fdz.de/it-empfehlungen/textdokumente?qt-textdokumente=2#text-kodierungpraxis
+  * utf-8
+  * Atom: install package (convert-file-encoding); change encoding
+  * csv in utf-8 in excel
+
 ## Identifying file types
 
 * How your operating system does it: filename extensions
