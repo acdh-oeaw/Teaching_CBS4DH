@@ -8,7 +8,7 @@ Time | Wednesday (6.3) | Thursday (7.3) | Wednesday (13.3) | Wednesday (20.3) | 
 14:45 – 15:00 |  Coffee break | Coffee break | Coffee break | Coffee break | Coffee break 
 15:00 – 16:30 |  Command line 1: [Mac](lectures/command_1_mac.md) and [Windows](lectures/command_1_windows.md) | [Files and encodings](lectures/files_encodings.md) | [Git](lectures/git.md) | [Web technologies](lectures/web.md) | [Pre-programming 2](lectures/pre-programming_2.md) 
 16:30 – 16:45 |  Coffee break | Coffee break | Coffee break | Coffee break | Coffee break 
-16:45 – 18:15 |  [Command line 2](lectures/command_2.md) | [Regular expressions 1](lectures/regex.md | Review | Review | Review and wrap-up
+16:45 – 18:15 |  [Command line 2](lectures/command_2.md) | [Regular expressions 1](lectures/regex.md) | Review | Review | Review and wrap-up
 Lecturers | Asil & Matej | Martina & Matthias | Can & Matthias | Asil & Can | Martina & Matej
 
 ## Information (u:find)
