@@ -9,11 +9,11 @@ Welcome to the Computational Background Skills class! We will use these markdown
 * [Getting to know your OS (40m)](#getting-to-know-your-OS)
 
 ## Introducing the lecturers
-Asil Cetin (asil.cetin@oeaw.ac.at)
-Matej Durco (matej.durco@oeaw.ac.at)
-Matthias Schlögl (matthias.schloegl@oeaw.ac.at)
-Martina Trognitz (martina.trognitz@oeaw.ac.at)
-Can Özgür Yilmaz (can.yilmaz@onb.ac.at)
+Asil Cetin (asil.cetin@oeaw.ac.at)  
+Matej Durco (matej.durco@oeaw.ac.at)  
+Matthias Schlögl (matthias.schloegl@oeaw.ac.at)  
+Martina Trognitz (martina.trognitz@oeaw.ac.at)  
+Can Özgür Yilmaz (can.yilmaz@onb.ac.at)  
 
 ## Aims and contents of the course
 This course is intended to provide basic training and support for further skills courses in the Digital Humanities. It is strongly recommended as a prerequisite to the other DH practical courses.
@@ -33,17 +33,19 @@ We will also try to accompany the contents of each course with some practical st
 - (Only Windows users) Download and install Gitbash: https://gitforwindows.org/
 
 ## Getting to know your OS
-* [Mac)](#mac)
+* [macOS](#mac)
 * [Windows](#windows)
 
 Operating systems are system software which manage computer hardware and software resources. They provide common services for computer programs and interfaces for humans to interact with.
-[Operating System](images/operating_system.png)
-Most common current OS are:
-Windows (Microsoft)
-macOS (Apple)
-Linux (Linux community, open-source)
-Mobile: Android (Google, based on Linux kernel)
-Mobile: iOS (Apple)
+
+![Operating System](images/operating_system.png)
+
+Most common current OS are:  
+Windows (Microsoft)  
+macOS (Apple)  
+Linux (Linux community, open-source)  
+Mobile: Android (Google, based on Linux kernel)  
+Mobile: iOS (Apple)  
 
 # Mac
 
