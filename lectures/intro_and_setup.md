@@ -15,6 +15,8 @@ Matthias Schlögl (matthias.schloegl@oeaw.ac.at)
 Martina Trognitz (martina.trognitz@oeaw.ac.at)  
 Can Özgür Yilmaz (can.yilmaz@onb.ac.at)  
 
+Please don't hesitate to reach out to the lecturers if you need any help about the lecture.
+
 ## Aims and contents of the course
 This course is intended to provide basic training and support for further skills courses in the Digital Humanities. It is strongly recommended as a prerequisite to the other DH practical courses.
 As such, students will be required to bring a laptop computer (no tablets!) If this presents a problem, please contact one of the course instructors in advance.
@@ -26,6 +28,11 @@ As such, students will be required to bring a laptop computer (no tablets!) If t
 - Where to go for help and how to understand the answers
 
 We will also try to accompany the contents of each course with some practical steps of the exercise, which will lead to a final project in the end.
+
+### Grading & Attendance
+Attendance in every lecture is required due to the PI type of block-course.
+
+Regular attendance, following the practical exercise tasks during the lecture and active participation will lead to a final grade.
 
 ## Required Setup and Tools
 - Create a personal GitHub account: https://github.com/join
