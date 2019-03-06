@@ -87,7 +87,6 @@ xxd filename
 xxd -b filename
 ```
 
-
 ## Operating system conventions everyone should know about
 
 * Line endings (EOL):
