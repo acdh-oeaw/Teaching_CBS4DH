@@ -1,15 +1,5 @@
 # Command line 3
 
-## Aim for 07.03.
-
-More command line:
-* wget
-* chmod
-* write to file (>)
-* sym links
-man, --help
-
-
 ## General
 
 * **References:** Much of the content of these sessions is summarized at our [Command line quick reference](command_resources.md) page.
@@ -61,4 +51,7 @@ man, --help
 
 * Lessons 5-7 from: http://swcarpentry.github.io/shell-novice/ (lesson 6 only short)
 
+* `wget`
+* `chmod`
+* symbolic links
 * `grep` brings us to: regular expressions
