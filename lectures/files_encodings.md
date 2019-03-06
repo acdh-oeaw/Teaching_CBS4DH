@@ -52,6 +52,7 @@
 
 #### Converting between mark up formats
 * https://pandoc.org/
+* A lot of dedicated online tools exist as well; just google for it. E.g. [csv2json](https://www.csvjson.com/csv2json)
 
 
 ## Character sets and encoding
