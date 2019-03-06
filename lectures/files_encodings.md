@@ -7,7 +7,6 @@
 * How your operating system does it: filename extensions
 <details>
   <summary>Why this is kind of silly in many cases</summary>
-
   1. Copy the 'index.html' you created yesterday and rename the new file to something like 'index.pdf'
   2. Look at it in your file explorer
   3. Try to open it by double clicking
