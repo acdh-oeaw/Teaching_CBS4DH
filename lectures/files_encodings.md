@@ -46,7 +46,7 @@
    2. Rename the file and change the format bit to '.zip'
    3. Unzip the file
   ```
-* Markdown (.md): e.g. [Wiki -> Edit source](https://en.wikipedia.org/wiki/2011)
+* Markdown (.md): e.g. [Wiki -> Edit source](https://en.wikipedia.org/wiki/2011) or [GitHub](https://help.github.com/en/articles/basic-writing-and-formatting-syntax)
 * JSON ([Example on Wikipedia](https://en.wikipedia.org/wiki/JSON#JSON_sample))
 
 
@@ -57,6 +57,7 @@
 ## Character sets and encoding
 
 * [Short German explanation](https://ianus-fdz.de/it-empfehlungen/textdokumente?qt-textdokumente=2#text-kodierungpraxis)
+* [Short, but not so short introduction in English](http://www.steves-internet-guide.com/guide-data-character-encoding/)
 * Where it all began: ASCII (i = 105 = 1101001), try `man ascii`
 * 8-bit character encodings (and why they're called that) (i = 105 = 01101001)
   * Windows: ANSI / code pages
