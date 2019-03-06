@@ -6,7 +6,7 @@ Repetition of day 1
 More command line:
 * wget
 * chmod
-* write to file (<)
+* write to file (>)
 * sym links
 man, --help
 
