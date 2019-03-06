@@ -61,3 +61,15 @@
 * `chmod`
 * symbolic links
 * `grep` brings us to: regular expressions
+
+### Finding commands and files
+* `help`: list all shell built-ins
+* `which`: search `$PATH`, one result (the one that will be executed if you type the command), not for shell built-ins or aliases
+* `whereis`: search standard locations, multiple results, not for shell built-ins or aliases
+* `find / -name java -print 2> /dev/null`: find all files named `java` starting at the file system root, not for shell built-ins or aliases
+* `type`: includes shell built-ins and aliases!
+
+
+
+### Fun commands
+* See [this article](https://www.tecmint.com/20-funny-commands-of-linux-or-linux-is-fun-in-terminal/)
