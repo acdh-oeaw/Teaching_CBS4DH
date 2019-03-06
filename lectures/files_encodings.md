@@ -12,6 +12,7 @@
   2. Look at it in your file explorer
   3. Try to open it by double clicking
 </details>
+
 * Another way to do it:
 <details>
   <summary>the magical `file` commands</summary>
@@ -19,6 +20,7 @@
  2. Execute: `file index.pdf`
  3. kj
 </details>
+
 * Why `file` is not completely infallible
 
 ## Aim for 07.03.
