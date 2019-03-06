@@ -7,14 +7,17 @@
 * How your operating system does it: filename extensions
 <details>
   <summary>Why this is kind of silly in many cases</summary>
+  
   1. Copy the 'index.html' you created yesterday and rename the new file to something like 'index.pdf'
   2. Look at it in your file explorer
   3. Try to open it by double clicking
 </details>
 
+
 * Another way to do it:
 <details>
   <summary>the magical `file` commands</summary>
+  
  1. In the cli go to the folder containing your newly created 'index.pdf' file
  2. Execute: `file index.pdf`
  3. kj
