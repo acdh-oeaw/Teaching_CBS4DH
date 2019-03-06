@@ -59,7 +59,7 @@ Mobile: iOS (Apple)
 ## File system hierarchy 
 
 * What are files?
-* What are directories/repositories/folders? <!--Thinking about why we call them folders: a folder and a piece of paper are the same, and can do some of the same things. A folder can also hold pieces of paper.-->
+* What are directories/folders? <!--Thinking about why we call them folders: a folder and a piece of paper are the same, and can do some of the same things. A folder can also hold pieces of paper.-->
 * What are programs? <!--Programs are files that can do something, but are still files nonetheless. Take a piece of paper out of your folder, fold it into an airplane, and throw it. It's still a piece of paper you can read from and write on, but it can fly.-->
 * GUI file explorers and file hierarchy
 * `/` as the center of the filesystem universe (exception: Windows)
