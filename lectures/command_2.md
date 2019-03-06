@@ -1,16 +1,5 @@
 # Command line 2
 
-## Aim for 07.03.
-Repetition of day 1
-
-More command line:
-* wget
-* chmod
-* write to file (>)
-* sym links
-man, --help
-
-
 ## General
 
 * **References:** Much of the content of these sessions is summarized at our [Command line quick reference](command_resources.md) page.
@@ -75,7 +64,7 @@ man, --help
 	* What’s a good filename?
 * `less /Users/djb/Documents/myfile.txt` (`space`, `b`, `q`, `/`, `?`, `n`, `G` , `G1`)
 
-## Wildcards (“globbing”; annoyingly different from regex) 
+## Wildcards (“globbing”; annoyingly different from regex)
 
 ### Examples
 
