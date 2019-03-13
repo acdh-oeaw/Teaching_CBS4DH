@@ -268,3 +268,7 @@ Command | Description
 * Pull request (GitHub term)
 * Branch
 * Merge, merge commit, merge conflict
+
+## Git Terms Cheat Sheet
+
+* https://www.keycdn.com/blog/git-cheat-sheet
