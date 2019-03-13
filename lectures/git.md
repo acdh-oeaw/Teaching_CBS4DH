@@ -188,7 +188,7 @@ Command | Description
 * On Github fork the NEH Institute Materials 2017 repository
 * Clone you fork to your local machine.
 In your Workspace directory in your home directory do:
-`$ git clone https://github.com/Pittsburgh-NEH-Institute/Institute-Materials-2017`
+`$ git clone https://github.com/acdh-oeaw/Teaching_CBS4DH.git`
 * On your local machine add the original repository as a second remote repository called upstream
 
 ```bash
