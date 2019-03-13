@@ -38,7 +38,7 @@ The exercise goals of each lecture are:
 - Day 3:
   - Download the exercise/lecture3/data.csv file and inspect it using the code editor
   - Make basic modifications the index.html and README.md files following the boilerplate code found in exercise/lecture3 folder
-  - Create an empty repository on Github wit MIT Licence and push your project folder to remote
+  - Create an empty repository on Github wit MIT Licence and push your project folder to remote (project folder should contain index.html, data.csv, README.md and LICENCE files)
 - Day 4:
   - Modify the JavaScript function given in the boilerplate code to execute various regex tasks
   - See the output of regex by opening the index.html file with a browser
