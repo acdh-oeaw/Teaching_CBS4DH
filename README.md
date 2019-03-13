@@ -32,17 +32,16 @@ The exercise goals of each lecture are:
 - Day 1:
   - Install needed software to be used as terminal and code editor
   - Get familiar using the shell and code editor
-  - Change to your desktop directory and create a folder for the project
+  - Change to your desktop directory and create a folder with empty README.md and index.html files for the project
 - Day 2:
-  - Create a README file, practice with renaming, deleting, creating files on using cli
-  - Create the index.html file, copy the boilerplate HTML code inside and save
-  - Download the historical-events.json file and inspect it using the code editor
+  - Apply learned RegEx methods to create the .csv file which will be used in the project
 - Day 3:
+  - Download the exercise/lecture3/data.csv file and inspect it using the code editor
+  - Make basic modifications the index.html and README.md files following the boilerplate code found in exercise/lecture3 folder
+  - Create an empty repository on Github wit MIT Licence and push your project folder to remote
+- Day 4:
   - Modify the JavaScript function given in the boilerplate code to execute various regex tasks
   - See the output of regex by opening the index.html file with a browser
-  - Create a GitHub account and install Git
-  - Create a repository on Github and push your project folder to remote
-- Day 4:
   - Understand how our code fetches the data using HTTP requests
   - Create HTML elements such as tables, divs, paragraphs etc. for our output
   - Add basic CSS styles for different elements
