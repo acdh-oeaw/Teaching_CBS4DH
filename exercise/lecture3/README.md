@@ -6,7 +6,7 @@ This the main README file for this project, which is done as an excercise during
 
 ## Built With
 * [HTML](https://www.w3.org/html/) - Hypertext Markup Language
-* [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+* [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) - ECMAScript standard
 * [CSS](https://www.w3.org/Style/CSS/) - Cascading Style Sheets
 
 ## License
