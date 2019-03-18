@@ -36,6 +36,7 @@
 
 #### more commands
 * `>`, `>>`, `<`
+ * a good example for `<`: use it to e.g. search in a file with `grep` and then write the search results into another file; see [answer on StackExchange](https://unix.stackexchange.com/questions/283374/what-does-the-left-chevron-triangle-bracket-do)  
 * `less` (space, b, q)
 * filter: `cat`, `wc` (`-l`, `-w`, `-c`), `sort` (`-n`), `head`, `tail`,  `uniq`
 * `echo`
@@ -56,8 +57,8 @@
 * Up and down arrow (full list `history`)
 * Tab
 
-### Some extra commands
-* `wget`
+### Some new commands
+* `wget`: get stuff from web
 * `chmod`
 * symbolic links
 * `grep` brings us to: regular expressions
