@@ -58,10 +58,22 @@
 * Tab
 
 ### Some new commands
-* `wget`: get stuff from web
-* `chmod`
-* symbolic links
-* `grep` brings us to: regular expressions
+* `wget` and `curl`: get stuff from web, the second works on MacOS; to use it with git bash on Windows you'll have to [install it](https://gist.github.com/evanwill/0207876c3243bbb6863e65ec5dc3f058)
+
+* `ln`: symbolic links (or just symlinks); much like a desktop shortcut on Windows
+```
+ln -s /path/to/file /path/to/symlink
+ls -la
+```
+
+* `chmod`: (change mode) used to change access permissions; permissions are split into read, write, and execute and can be assigned for the owner, a group, and all others. See more on [Wikipedia](https://en.wikipedia.org/wiki/Chmod) or in [this tutorial](https://catcode.com/teachmod/). A special permission also exists for reading directories
+* `chown`: (change owner) used to change the owner of a file or directory `chown newuser /path/to/file`
+* `sudo`: (super do) used to execute a command as root user (i. e. admin), e. g. `sudo chmod` or to get a [sandwich made for you](https://xkcd.com/149/)
+
+* `which`: helps to find where a program is actually stored on your system, e. g. for `ls` try `which ls`
+* `workon`: used in combination with [Virtual Environments](https://en.wikipedia.org/wiki/Virtual_environment_software). Helps to keep a clean system and not clutter it with multiple versions of e. g. [Python](https://www.python.org/)
+
+* `grep`: used to search for things; this already brings us to: [regular expressions 1](lectures/regex_1.md)
 
 ### Finding commands and files
 * `help`: list all shell built-ins

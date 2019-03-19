@@ -1,12 +1,5 @@
 # Regular expressions
 
-* Will test in Atom and on cli
-* https://regex101.com/
-* https://regexcrossword.com/
-* https://regexone.com/
-* Play with example file from Wikipedia: https://en.wikipedia.org/wiki/2011
-* Convert wiki md to csv with regex
-
 _Regular expressions_ (called _REs_, _regexes_, _regexps_, _regex patterns_) are essentially a tiny, _highly specialized programming language_ embedded inside general purpose programming languages (Python, XQuery, javascript). Please note that there are differences in how all general purpose programming langugages implement thier RE language.
 When using a _RE language_, you specify the _rules_ for the _set_ of possible _strings_ that you want to _match_:
 * sentences in a language,
