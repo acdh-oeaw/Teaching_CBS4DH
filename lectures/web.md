@@ -19,7 +19,21 @@ You can author HTML, CSS, and JavaScript in *Atom*.
 
 ### About HTML
 
-HTML is a tag set controlled by a schema (rules for which tags are permitted in which contexts). All content that will appear in the web page goes inside the `<body>` element. A typical page has some of the following components:
+HTML is a set of tags (elements) controlled by a schema (rules for which tags are permitted in which contexts). 
+It has elements that form a tree structure. 
+
+* Elements can be empty or have other elements inside them or text or both. 
+* Elements that have content inside them must be closed. 
+* Elements must be correctly nested. 
+* Elements can have attributes.
+
+**Element example:** `<div> This is an element </div>`
+
+**Element hierarchy example:** `<div> <p> This is an element </p> Some more text </div>`
+
+**Attribute example:** `<div style="color:red"> This text will be colored red </div>`
+
+All content that will appear in the web page goes inside the `<body>` element. A typical page has some of the following elements:
 
 * Headers (`<h1>` through `<h6>`)
 * Paragraphs (`<p>`)
