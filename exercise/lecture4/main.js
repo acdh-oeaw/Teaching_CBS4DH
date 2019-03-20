@@ -1,3 +1,4 @@
+// The below code fetches the .json data using a HTTP GET request
 // Define our data source as JSON file
 var sourceURL = 'https://raw.githubusercontent.com/acdh-oeaw/Teaching_CBS4DH/master/exercise/lecture4/data.json';
 // Fetch API: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
@@ -7,9 +8,11 @@ fetch(sourceURL)
     return response.json();
   })
   .then(function (data) {
-    // Let's do something with the data we received
+    // We have received our data, let's create a variable called persons and which will hold the data of this JSON file
     var persons = data;
+    // Below is a for-loop, which iterates through all persons one by one.
     for (key in persons) {
+      // For every person we'll call the function "outputData", which will process and display the table rows. See that function below.
       outputData(persons[key]);
     }
   });
