@@ -25,6 +25,13 @@ What is the difference between packet-switched and circuit-switched networks?
 - In circuit-switched networks, the resources needed along a path between the end systems are reserved for the duration of the communication session. Traditional telephone networks are examples of circuit-switched networks.
 - In packet-switched networks, these resources are not reserved; a session’s messages use the resources on demand. 
 
+## World Wide Web
+In 1980, Tim Berners-Lee, an English independent contractor at the European Organization for Nuclear Research (CERN) in Switzerland, built ENQUIRE, as a personal database of people and software models, but also as a way to play with hypertext; each new page of information in ENQUIRE had to be linked to a page.
+
+By 1990, Berners-Lee had built all the tools necessary for a working Web: the HyperText Transfer Protocol (HTTP) 0.9, the HyperText Markup Language (HTML), the first Web browser (named WorldWideWeb, which was also a Web editor), the first HTTP server software (later known as CERN httpd), the first web server (http://info.cern.ch), and the first Web pages that described the project itself.
+
+First webpage ever: http://info.cern.ch/hypertext/WWW/TheProject.html
+
 ## Protocols
 
 A protocol defines the format and the order of messages exchanged between two or more communicating entities, as well as the actions taken using that message.
