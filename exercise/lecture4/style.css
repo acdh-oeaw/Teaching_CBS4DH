@@ -1,0 +1,40 @@
+p{
+    color: red;
+    font-weight: bold;
+}
+#redButton{
+    background-color: pink;
+}
+#greenButton{
+    background-color: lightgreen;
+}
+#blueButton{
+    background-color: lightblue;
+}
+
+table, th, td{
+	border: 1px solid black;
+}
+
+.coolPeople{
+	font-family: "Helvetica", "Times New Roman", Times, serif;
+	border-spacing:0; /* Removes the cell spacing via CSS */
+  	border-collapse: collapse;  /* Optional - if you don't want to have double border where cells touch */
+}
+
+.tableTitles{
+	background-color: #77a9ef;
+}
+
+div{
+	margin: auto;
+	width: 50%;
+  	border: 3px solid green;
+  	padding: 10px;
+}
+
+.center{
+	margin: auto;
+	width: 50%;
+	text-align: center;
+}
