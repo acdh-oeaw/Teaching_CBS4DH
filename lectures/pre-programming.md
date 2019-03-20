@@ -39,7 +39,7 @@ Many programming langages provide means to group or collect variables together
 * sets, tuples
 * maps, dictionaries
 
-### Close reading of error messages
+### Close reading of [error messages](error_messages.md)
 
 * `ls -z`
 * use a filename as command

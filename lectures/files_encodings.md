@@ -46,7 +46,7 @@
    2. Rename the file and change the format bit to '.zip'
    3. Unzip the file
   ```
-* Markdown (.md): e.g. [Wiki -> Edit source](https://en.wikipedia.org/wiki/2011) or [GitHub](https://help.github.com/en/articles/basic-writing-and-formatting-syntax)
+* [Markdown](markdown_outline.md) (.md): e.g. [Wiki -> Edit source](https://en.wikipedia.org/wiki/2011) or [GitHub](https://help.github.com/en/articles/basic-writing-and-formatting-syntax)
 * JSON ([Example on Wikipedia](https://en.wikipedia.org/wiki/JSON#JSON_sample))
 
 

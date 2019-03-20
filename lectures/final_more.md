@@ -20,12 +20,13 @@ This course's aim was to provide basic training and support for further skills c
 * How to make basic webpages:
   * HTML
   * CSS
-  * JavaScript (JS) 
+  * JavaScript (JS)
   * Question about sorting tables: [see w3schools](https://www.w3schools.com/howto/howto_js_sort_table.asp)
 
 What next?
 
 ## Learn
+* Go through this material on GitHub
 * Uni Wien: [Forschungsschwerpunkt Digital Humanities](https://fsp-digital-humanities.univie.ac.at/) and [Courses](https://fsp-digital-humanities.univie.ac.at/lehre/)
 * [Austrian Centre for Digital Humanities (ÖAW)](https://www.oeaw.ac.at/acdh/)
   * [Internships](https://www.oeaw.ac.at/acdh/team/internships/)
