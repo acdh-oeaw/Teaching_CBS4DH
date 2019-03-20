@@ -5,10 +5,12 @@
 - Today’s Internet traces its beginning back to the early 1960s.
 - Back then the telephone network was the world’s dominant communication network.
 - Three research groups around the world, each unaware of the others’ work, began inventing packet switching networks: MIT (1961), Rand Institute (1964), National Physical Laboratory in England (1965).
-- The work of these research groups came together, when they went on to lead the computer science program at the Advanced Research Projects Agency (ARPA) at MIT, which was the first packet-switched computer network and a direct ancestor of today’s public Internet.
+- The work of these research groups came together, when they went on to lead the computer science program at the Advanced Research Projects Agency (ARPA), which was the first packet-switched computer network and a direct ancestor of today’s public Internet.
 - In 1969, the ARPANET was installed at UCLA, Stanford Research Institute (SRI), UC Santa Barbara, and the University of Utah. Internet was four nodes large by the end of 1969.
 
 ![](images/arpanet.jpg)
+
+Robert E. Kahn, one of the inventors of the technolgy behind Internet, explains how computers are interconnected in a packet-switching network: https://youtu.be/fVhwOaCwkb0?t=174
 
 ## Basis of the Internet Communication: Packet switching
 
@@ -22,8 +24,6 @@
 What is the difference between packet-switched and circuit-switched networks?
 - In circuit-switched networks, the resources needed along a path between the end systems are reserved for the duration of the communication session. Traditional telephone networks are examples of circuit-switched networks.
 - In packet-switched networks, these resources are not reserved; a session’s messages use the resources on demand. 
-
-Robert E. Kahn, one of the inventors of the technolgy behind Internet, explains how computers are interconnected in a packet-switching network: https://youtu.be/fVhwOaCwkb0?t=174
 
 ## Protocols
 

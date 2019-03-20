@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Page Title</title>
+    <meta name="description" content="Page description">
+    <meta name="author" content="Page author">
+  </head>
+  <body>
+    <h1>My First Heading</h1>
+    <p>My first paragraph.</p>
+    <script>
+      // Define our data source as JSON file
+      var sourceURL = 'https://raw.githubusercontent.com/acdh-oeaw/Teaching_CBS4DH/master/exercise/lecture4/data.json';
+    
+      // Fetch API: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
+      fetch(sourceURL)
+        .then(function(response) {
+          // Extract the JSON body content from the response
+          return response.json();
+        })
+        .then(function(data) {
+          // Let's do something with the data we received
+          //console.log(data.result.events);
+          var events = data.result.events;
+          for (key in events) {
+            processData(events[key]);
+            //document.write(events[key].date + "<br />");
+          }
+        });
+    
+        function processData(event) {
+          //if (event.date == "1000") document.write(event.description + "<br />");
+          if ((new RegExp('prince|queen')).test(event.description))
+            document.write(event.description + "<br />");
+          
+        }
+    </script>
+  </body>
+</html>
