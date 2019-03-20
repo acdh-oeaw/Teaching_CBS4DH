@@ -54,7 +54,6 @@ You’ll use some of these shortly.
 You should see something like the following in *Atom*:
 
 ```html
-<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
@@ -100,7 +99,6 @@ You should see something like the following in *Atom*:
 
 * The only part of the HTML file that is rendered inside the browser window is the part inside the `<body>` tags. Notice that we’ve used several of the element types described earlier.
 * Modify the text of the HTML file in *Atom*. You might add additional paragraphs (`<p>`) elements or headers (`<h1>` through `<h6>`). You can change the bulleted list to a numbered one by changing the wrapper from `<ul>` to `<ol>` (you need to change both the start and end tag, although if you change the start tag first, *Atom* will usually change the end tag automatically to match).
-* If you see a green square in the upper right corner of the editor windows, your HTML is valid. If not, it isn’t, and you need to fix it. For example, a `<p>` cannot contain another `<p>` because paragraphs in text are not normally nested inside one another. *Atom* will try to identify the location of the error and highlight it with a squiggly red line, although it sometimes isn’t able to tell because an error in one place could become apparent only elsewhere in the document.
 * Save your document from within *Atom* and then reload it into the browser, observing the changes.
 
 ## Styling HTML with CSS
@@ -116,7 +114,6 @@ You should see something like the following in *Atom*:
 Open [web/web\_exercise\_2.html](web/web_exercise_2.html) in *Atom*. It should look something like:
 
 ```html
-<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
@@ -222,7 +219,6 @@ div{
 Open [web/web\_exercise\_3.html](web/web_exercise_3.html) in *Atom*. It should look something like:
 
 ```html
-<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
@@ -403,5 +399,10 @@ You can validate your files online:
 
 The basic architecture of the 'Internet' is the server-client model. In this model, there is a centralized server which *serves* content to clients. When you open a web browser and navigate to a website you become a client. You (your browser) sends requests to server and server sends responses back. The code that runs on the web browser (what we learned today) is considered front-end and the code that runs on the servers is considered backend.  
 
-## Markdown and pandoc
-[Markdown outline](markdown_outline.md)
+##W3 Tutorials
+
+**HTML:** https://www.w3schools.com/html/
+
+**CSS:** https://www.w3schools.com/w3css/
+
+**JS:** https://www.w3schools.com/js/
