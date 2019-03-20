@@ -13,7 +13,7 @@ The main front-end web technologies include:
 W3C Working Group Note, 31 January 2017](https://www.w3.org/TR/CSS/).
 * JavaScript: JavaScript enables the user to interact with the page in the browser.
 
-You can author HTML, CSS, and JavaScript in \<oXygen/\>.
+You can author HTML, CSS, and JavaScript in *Atom*.
 
 ## HTML
 
@@ -24,20 +24,20 @@ HTML is a tag set controlled by a schema (rules for which tags are permitted in 
 * Headers (`<h1>` through `<h6>`)
 * Paragraphs (`<p>`)
 * Lists (`<ul>` for bulleted lists, `<ol>` for numbered list). The only children allowed for these list are `<li>` (list item).
-* Tables. Not covered in this exercise.
+* Tables (`<table>`, `<tr>` for table rows, `<th>` table headers, `<td>` table cells)
 
 You’ll use some of these shortly.
 
 ### Looking at HTML
 
-1. Start \<oXygen/\>.
-2. Open [web\_exercise\_1.html](web/web_exercise_1.html) in \<oXygen/\>.
+1. Start *Atom*.
+2. Open [web\_exercise\_1.html](web/web_exercise_1.html) in *Atom*.
 3. Start a web browser.
 4. Open the same file in your browser (`Ctrl+o` [Windows] or `Cmd+o` [Mac OS] to open a file from the filesystem).
 
 ### Working with HTML
 
-You should see something like the following in \<oXygen/\>:
+You should see something like the following in *Atom*:
 
 ```html
 <?xml version="1.0" encoding="UTF-8"?>
@@ -50,21 +50,44 @@ You should see something like the following in \<oXygen/\>:
         <h1>HTML exercise 1</h1>
         <h2>This is a level 2 header, or subheading</h2>
         <p>This is a paragraph.</p>
+        <p>This is a second paragraph.</p>
         <p>This is another paragraph.</p>
-        <ul>
+        <h3>List:</h3>
+        <ol>
             <li>This is the first item in a list.</li>
             <li>This is the second item in the same list.</li>
-        </ul>
+            <li>This is the third item in the same list.</li>
+        </ol>
         <p>This is one last paragraph.</p>
+
+        <h3>Table:</h3>
+         <table>
+          <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Age</th>
+          </tr>
+          <tr>
+            <td>Jill</td>
+            <td>Smith</td>
+            <td>50</td>
+          </tr>
+          <tr>
+            <td>Eve</td>
+            <td>Jackson</td>
+            <td>94</td>
+          </tr>
+        </table>
+
     </body>
 </html>
 ```
 
 
 * The only part of the HTML file that is rendered inside the browser window is the part inside the `<body>` tags. Notice that we’ve used several of the element types described earlier.
-* Modify the text of the HTML file in \<oXygen/\>. You might add additional paragraphs (`<p>`) elements or headers (`<h1>` through `<h6>`). You can change the bulleted list to a numbered one by changing the wrapper from `<ul>` to `<ol>` (you need to change both the start and end tag, although if you change the start tag first, \<oXygen/\> will usually change the end tag automatically to match).
-* If you see a green square in the upper right corner of the editor windows, your HTML is valid. If not, it isn’t, and you need to fix it. For example, a `<p>` cannot contain another `<p>` because paragraphs in text are not normally nested inside one another. \<oXygen/\> will try to identify the location of the error and highlight it with a squiggly red line, although it sometimes isn’t able to tell because an error in one place could become apparent only elsewhere in the document.
-* When you have a green square, save your document from within \<oXygen/\> and then reload it into the browser, observing the changes.
+* Modify the text of the HTML file in *Atom*. You might add additional paragraphs (`<p>`) elements or headers (`<h1>` through `<h6>`). You can change the bulleted list to a numbered one by changing the wrapper from `<ul>` to `<ol>` (you need to change both the start and end tag, although if you change the start tag first, *Atom* will usually change the end tag automatically to match).
+* If you see a green square in the upper right corner of the editor windows, your HTML is valid. If not, it isn’t, and you need to fix it. For example, a `<p>` cannot contain another `<p>` because paragraphs in text are not normally nested inside one another. *Atom* will try to identify the location of the error and highlight it with a squiggly red line, although it sometimes isn’t able to tell because an error in one place could become apparent only elsewhere in the document.
+* Save your document from within *Atom* and then reload it into the browser, observing the changes.
 
 ## Styling HTML with CSS
 
@@ -76,13 +99,14 @@ You should see something like the following in \<oXygen/\>:
 
 ### Looking at CSS
 
-Open [web/web\_exercise\_2.html](web/web_exercise_2.html) in \<oXygen/\>. It should look something like:
+Open [web/web\_exercise\_2.html](web/web_exercise_2.html) in *Atom*. It should look something like:
 
 ```html
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
+        <meta charset="utf-8"/>
         <title>HTML exercise 2</title>
         <link rel="stylesheet" type="text/css" href="web_exercise_2.css"/>
     </head>
@@ -91,23 +115,78 @@ Open [web/web\_exercise\_2.html](web/web_exercise_2.html) in \<oXygen/\>. It sho
         <h2>This is a level 2 header, or subheading</h2>
         <p>This is a paragraph.</p>
         <p>This is another paragraph.</p>
+        <h3>List:</h3>
         <ul>
             <li>This is the first item in a list.</li>
             <li>This is the second item in the same list.</li>
         </ul>
         <p>This is one last paragraph.</p>
+
+        <div>
+            <h3 class="center">Cool People Table</h3>
+             <table class="coolPeople center">
+              <tr class="tableTitles center">
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Age</th>
+              </tr>
+              <tr>
+                <td>Can Özgür</td>
+                <td>Yilmaz</td>
+                <td>26</td>
+              </tr>
+              <tr>
+                <td>Asil</td>
+                <td>Cetin</td>
+                <td>??</td>
+              </tr>
+            </table>
+        </div>
+
     </body>
 </html>
 ```
 
-2. Notice that except for the filename and title, the only difference is that this file has added a `<link>` element in the `<head>`, which uses the `@href` attribute to point to the CSS file.
-3. Open the HTML file in a browser and notice that paragraphs are red and bold.
-4. Open [web/web\_exercise\_2.css](web/web_exercise_2.css) in \<oXygen/\> and notice that it implements the commands described above, which are responsible for the color and weight of the paragraphs. Your CSS file should look something like:
+2. Notice the difference that this file has added a `<link>` element in the `<head>`, which uses the `@href` attribute to point to the CSS file.
+3. Open the HTML file in a browser and notice that paragraphs are green and bold.
+4. Open [web/web\_exercise\_2.css](web/web_exercise_2.css) in *Atom* and notice that it implements the commands described above, which are responsible for the color, weight and shape of the paragraphs and the table. Your CSS file should look something like:
 
 ```css
 p{
-    color: red;
+    color: purple;
     font-weight: bold;
+    background-color: chartreuse; 
+}
+
+ul{
+    font-style: italic;
+}
+
+table, th, td{
+    border: 1px solid black;
+}
+
+.coolPeople{
+    font-family: "Helvetica", "Times New Roman", Times, serif;
+    border-spacing:0; /* Removes the cell spacing via CSS */
+    border-collapse: collapse;  /* Optional - if you don't want to have double border where cells touch */
+}
+
+.tableTitles{
+    background-color: #77a9ef;
+}
+
+div{
+    margin: auto;
+    width: 50%;
+    border: 3px solid green;
+    padding: 10px;
+}
+
+.center{
+    margin: auto;
+    width: 50%;
+    text-align: center;
 }
 ```
 
@@ -126,13 +205,14 @@ p{
 
 ### The HTML and CSS behind our JavaScript
 
-Open [web/web\_exercise\_3.html](web/web_exercise_3.html) in \<oXygen/\>. It should look something like:
+Open [web/web\_exercise\_3.html](web/web_exercise_3.html) in *Atom*. It should look something like:
 
 ```html
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
+        <meta charset="utf-8"/>
         <title>HTML exercise 3</title>
         <link rel="stylesheet" type="text/css" href="web_exercise_3.css" />
         <script type="text/javascript" src="web_exercise_3.js">/**/</script>
@@ -142,6 +222,7 @@ Open [web/web\_exercise\_3.html](web/web_exercise_3.html) in \<oXygen/\>. It sho
         <h2>This is a level 2 header, or subheading</h2>
         <button type="button" value="red" id="redButton">Red</button>
         <button type="button" value="green" id="greenButton">Green</button>
+        <button type="reset" value="black" id="blueButton">Reset</button>
         <p>This is a paragraph.</p>
         <p>This is another paragraph.</p>
         <ul>
@@ -149,14 +230,37 @@ Open [web/web\_exercise\_3.html](web/web_exercise_3.html) in \<oXygen/\>. It sho
             <li>This is the second item in the same list.</li>
         </ul>
         <p>This is one last paragraph.</p>
+
+        <div>
+            <h3 class="center">Cool People Table</h3>
+             <table class="coolPeople center">
+              <tr class="tableTitles center">
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Age</th>
+              </tr>
+              <tr>
+                <td>Can Özgür</td>
+                <td>Yilmaz</td>
+                <td>26</td>
+              </tr>
+              <tr>
+                <td>Asil</td>
+                <td>Cetin</td>
+                <td>??</td>
+              </tr>
+            </table>
+        </div>
     </body>
 </html>
+
+
 ```
 
 2. Notice that except for the filename and title, there are only two differences between this file and the last one. The first difference is that this file has added a `<script>` element in the `<head>`, which uses the `@src` attribute to point to the separate JavaScript file. The second is that we’ve created two `<button>` elements. The `@value` of the button is the text that it displays. As we’ll see below, the `@id` values let the CSS select the buttons separately, so that it can color them differently.
 3. Open the HTML file in a browser. Notice that the page looks the same as the one in the CSS exercise, except for the addition of the buttons.
 
-Open [web/web\_exercise\_3.css](web/web_exercise_3.css) in \<oXygen/\>. It should look something like:
+Open [web/web\_exercise\_3.css](web/web_exercise_3.css) in *Atom*. It should look something like:
 
 ```css
 p{
@@ -169,6 +273,36 @@ p{
 #greenButton{
     background-color: lightgreen;
 }
+#blueButton{
+    background-color: lightblue;
+}
+
+table, th, td{
+    border: 1px solid black;
+}
+
+.coolPeople{
+    font-family: "Helvetica", "Times New Roman", Times, serif;
+    border-spacing:0; /* Removes the cell spacing via CSS */
+    border-collapse: collapse;  /* Optional - if you don't want to have double border where cells touch */
+}
+
+.tableTitles{
+    background-color: #77a9ef;
+}
+
+div{
+    margin: auto;
+    width: 50%;
+    border: 3px solid green;
+    padding: 10px;
+}
+
+.center{
+    margin: auto;
+    width: 50%;
+    text-align: center;
+}
 ```
 
 1. A CSS selector that begins with a hash mark matches the element in the document that has the text after the hash mark as an `@id` value. We use that feature to color the buttons differently. 
@@ -180,11 +314,12 @@ Click the red or green buttons in the web browser and see how the color of the p
 
 ### How the JavaScript works
 
-Open [web/web\_exercise\_3.js](web/web_exercise_3.js) in \<oXygen/\>. It should look something like:
+Open [web/web\_exercise\_3.js](web/web_exercise_3.js) in *Atom*. It should look something like:
 
 ```javascript
-window.addEventListener('DOMContentLoaded', init, false);
-function init() {
+window.addEventListener('DOMContentLoaded', initialize, false);
+
+function initialize() {
     var buttons = document.getElementsByTagName('button');
     for (var i = 0, length = buttons.length; i < length; i++) {
         buttons[i].addEventListener('click', toggleColor, false);
@@ -194,6 +329,11 @@ function toggleColor() {
     var paragraphs = document.getElementsByTagName('p');
     for (var i = 0, length = paragraphs.length; i < length; i++) {
         paragraphs[i].style.color = this.value;
+    }
+
+    var tables = document.getElementsByTagName('table');
+    for (var i = 0, length = tables.length; i < length; i++) {
+        tables[i].style.color = this.value;
     }
 }
 ```
@@ -210,7 +350,7 @@ The `init()` function fires automatically, thanks to the bootstrap line, as soon
 
 #### The `toggleColor()` function
 
-The `toggleColor()` function fires whenever the user clicks a button because in the `init()` function we told the buttons to listen for and respond to clicks. When `toggleColor()` fires, it finds all of the paragraphs, loops over them, and changes their color. The button that was clicked is represented in the function by the magic word `this`, and the expression `this.value` returns the value of the `@value` attribute on the `<button>` element that was clicked. Since those values are “red” and “green”, we can use them directly to set the color style property of the paragraphs.
+The `toggleColor()` function fires whenever the user clicks a button because in the `init()` function we told the buttons to listen for and respond to clicks. When `toggleColor()` fires, it finds all of the paragraphs and tables (only one in this case), loops over them, and changes their color. The button that was clicked is represented in the function by the magic word `this`, and the expression `this.value` returns the value of the `@value` attribute on the `<button>` element that was clicked. Since those values are “red” and “green”, we can use them directly to set the color style property of the paragraphs.
 
 #### Watch the JavaScript work
 
@@ -240,14 +380,14 @@ When you’re developing JavaScript and don’t get what you expect, you can use
 
 You should ensure that your HTML and CSS are valid, that is, that they conform to the requirements of the standard. It isn’t enough to verify that they look correct in the browser, since if they aren’t valid, they may not look correct in a different browser (including your own when the next upgrade is released).
 
-\<oXygen/\> validates HTML and CSS, but if you post your files to the Internet, you should also validate them on line:
+You can validate your files online:
 
 * For HTML: W3C [Markup validation service](https://validator.w3.org/)
 * For CSS: W3C [CSS validation service](https://jigsaw.w3.org/css-validator/)
 
-## A note about PHP
+## A note about Backend and Frontend
 
-PHP (which stands for PHP: Hypertext Preprocessor, a recursive acronym) is a technology that builds all or part of a page dynamically on the server before sending it back to the user. For example, the user can input data into a query form and the server will customize the response according to that input. PHP is commonly used to interact with databases (including XML databases), such as on e-commerce shopping sites. We omit PHP from this session because of lack of time. 
+The basic architecture of the 'Internet' is the server-client model. In this model, there is a centralized server which *serves* content to clients. When you open a web browser and navigate to a website you become a client. You (your browser) sends requests to server and server sends responses back. The code that runs on the web browser (what we learned today) is considered front-end and the code that runs on the servers is considered backend.  
 
 ## Markdown and pandoc
 [Markdown outline](markdown_outline.md)
