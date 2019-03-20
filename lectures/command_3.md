@@ -50,8 +50,6 @@
 
 ## More CLI
 
-* Lessons 5-7 from: http://swcarpentry.github.io/shell-novice/ (lesson 6 only short)
-
 ### Special keys in the cli
 * Control (+ x, l, r)
 * Up and down arrow (full list `history`)

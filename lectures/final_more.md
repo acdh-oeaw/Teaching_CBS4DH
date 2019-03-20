@@ -7,8 +7,8 @@ What next?
 ## Learn
 * Uni Wien: [Forschungsschwerpunkt Digital Humanities](https://fsp-digital-humanities.univie.ac.at/) and [Courses](https://fsp-digital-humanities.univie.ac.at/lehre/)
 * [Austrian Centre for Digital Humanities (ÖAW)](https://www.oeaw.ac.at/acdh/)
- * [Internships](https://www.oeaw.ac.at/acdh/team/internships/)
- * [Service](https://www.oeaw.ac.at/acdh/service/)
+  * [Internships](https://www.oeaw.ac.at/acdh/team/internships/)
+  * [Service](https://www.oeaw.ac.at/acdh/service/)
 * Take a programming class (we suggest [Python](https://www.learnpython.org/), [Java](https://www.learnjavaonline.org/), [JavaScript](https://www.w3schools.com/js/), [R](https://www.rstudio.com/online-learning/))
 
 ## Get Information
