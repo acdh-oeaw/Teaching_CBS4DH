@@ -95,6 +95,8 @@ A protocol defines the format and the order of messages exchanged between two or
 * HTTP headers
 * HTTP responses
 
+**List of HTTP Status Codes:** https://en.wikipedia.org/wiki/List_of_HTTP_status_codes
+
 ## Application Layer in Computer Networks
 
 - Applications utilize / build on the physical infrastructure and transport protocols.
