@@ -58,7 +58,9 @@ window.onload = function() {
   function toggleRows() {
     var tableRows = document.getElementsByTagName('tr');
     for (var i = 1, length = tableRows.length; i < length; i++) {
-      if (tableRows[i].classList.contains(this.value)) {
+      if (this.value == 'reset') {
+        tableRows[i].style.display = "table-row";
+      } else if (tableRows[i].classList.contains(this.value)) {
         tableRows[i].style.display = "table-row";
       } else {
         tableRows[i].style.display = "none";
