@@ -12,7 +12,6 @@
     <script>
       // Define our data source as JSON file
       var sourceURL = 'https://raw.githubusercontent.com/acdh-oeaw/Teaching_CBS4DH/master/exercise/lecture4/data.json';
-    
       // Fetch API: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
       fetch(sourceURL)
         .then(function(response) {
@@ -21,18 +20,19 @@
         })
         .then(function(data) {
           // Let's do something with the data we received
-          //console.log(data.result.events);
-          var events = data.result.events;
-          for (key in events) {
-            processData(events[key]);
-            //document.write(events[key].date + "<br />");
+          var persons = data;
+          for (key in persons) {
+            outputData(persons[key]);
           }
         });
     
-        function processData(event) {
+        function outputData(person) {
+          var name = person.link.split(/[/]+/).pop();
+          document.write(name + "<br />");
           //if (event.date == "1000") document.write(event.description + "<br />");
-          if ((new RegExp('prince|queen')).test(event.description))
-            document.write(event.description + "<br />");
+          //if ((new RegExp('prince|queen')).test(event.description))
+            //document.write(event.description + "<br />");
+            //document.write(person.link + "<br />");
           
         }
     </script>

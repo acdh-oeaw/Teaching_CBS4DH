@@ -44,11 +44,13 @@ A protocol defines the format and the order of messages exchanged between two or
 * IPv6 and its sloooowww adoption
 * localhost and private IP addresses
 
+![](images/ip-headers.jpg)
+
 ## Network communication
 
 * Computers run programs, which *listen* at *ports*
 * Port: a number that tells the computer which program to send the message to
-* Restricted ports: 0-1023
+* Restricted ports: 0-1023 https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers
 * Registered ports: everything in /etc/services
 * Once you learn enough Python, you too can write a program that listens at a port!
 
@@ -70,27 +72,12 @@ A protocol defines the format and the order of messages exchanged between two or
 		Hello Tara! It's your old friend Mickey. Squeak.
 		.
 		QUIT
-		
+
 * Why might mail get caught in a spam filter?
-
-## Security matters
-
-* Telnet is from the era of the free and open internet
-* Free and open to packet sniffers like `tcpdump`, that is!
-
-		sudo tcpdump -A -n -s0 -i en0 port 80
-* Secure protocols and SSL
-
-		[winpty] openssl s_client -connect www.somesite:443
-		
-		GET / HTTP/1.1
-		Host: byzantini.st
-* What it looks like when you try to packet sniff SSL
 
 ## The Hypertext Transfer Protocol (HTTP)
 
-* The components of a URL: protocol, host, port, path(, query, fragment)
-* What happens when you run Jupyter?
+* The components of a URL: protocol, host, port, path (protocol://host:port/path?query)
 * Connecting to an HTTP server
 * HTTP request verbs
   * HEAD
@@ -100,9 +87,16 @@ A protocol defines the format and the order of messages exchanged between two or
   * DELETE
 * HTTP headers
 * HTTP responses
-* How to make an HTTP request in Python
+
+## Application Layer in Computer Networks
+
+- Applications utilize / build on the physical infrastructure and transport protocols.
+- Messaging, web browsing, video streaming, cloud computing etc. applications all use such internet protocols.
+- On the client end, the human user views and interacts with the transmitted data using control devices: https://www.youtube.com/watch?v=VScVgXM7lQQ&list=PLCGFadV4FqU2yAqCzKaxnKKXgnJBUrKTE&index=1
 
 ## References
 The content of this course summarizes the relevant sections from the network technolgies textbook "Computer Networking: A Top-Down Approach" by James F. Kurose,  Keith W. Ross.
 
 https://commons.wikimedia.org/wiki/File:Packet_Switching.gif by Oddbodz [CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0)]
+
+https://www.cisco.com/en/US/technologies/tk648/tk872/technologies_white_paper0900aecd8054d37d.html
