@@ -1,10 +1,41 @@
 # How the Internet works
 
-## Hostnames and DNS
+## History of the Internet
 
-* What happens when you register a hostname
-* Making a DNS query: `host` and `dig`
-* Things other than A records: aliases and mail
+- Today’s Internet traces its beginning back to the early 1960s.
+- Back then the telephone network was the world’s dominant communication network.
+- Three research groups around the world, each unaware of the others’ work, began inventing packet switching networks: MIT (1961), Rand Institute (1964), National Physical Laboratory in England (1965).
+- The work of these research groups came together, when they went on to lead the computer science program at the Advanced Research Projects Agency (ARPA) at MIT, which was the first packet-switched computer network and a direct ancestor of today’s public Internet.
+- In 1969, the ARPANET was installed at UCLA, Stanford Research Institute (SRI), UC Santa Barbara, and the University of Utah. Internet was four nodes large by the end of 1969.
+
+![](images/arpanet.jpg)
+
+## Basis of the Internet Communication: Packet switching
+
+- In a network application, end systems exchange messages with each other.
+- Messages can contain anything the application designer wants, such as an email message, a JPEG image, or an MP3 audio file.
+- The sender breaks long messages into smaller chunks of data known as packets.
+- Between sender and receiver, each packet travels through communication links and packet switches.
+
+![](images/Packet_Switching.gif)
+
+What is the difference between packet-switched and circuit-switched networks?
+- In circuit-switched networks, the resources needed along a path between the end systems are reserved for the duration of the communication session. Traditional telephone networks are examples of circuit-switched networks.
+- In packet-switched networks, these resources are not reserved; a session’s messages use the resources on demand. 
+
+Robert E. Kahn, one of the inventors of the technolgy behind Internet, explains how computers are interconnected in a packet-switching network: https://youtu.be/fVhwOaCwkb0?t=174
+
+## Protocols
+
+A protocol defines the format and the order of messages exchanged between two or more communicating entities, as well as the actions taken using that message.
+
+- All activity in the Internet that involves multiple remote entities is governed by a protocol.
+- What happens when you make a request to a Web server? 
+  - you type the URL of a Web page into your Web browser.
+  - Your computer sends a connection request message to the Web server and waits for a reply.
+  - The Web server receives your connection request message and returns a connection reply message.
+  - Knowing that it is now OK to request the Web document, your computer sends the name of the Web page it wants to fetch from that Web server in a GET message.
+  - Finally, the Web server returns the Web page (file) to your computer.
 
 ## Internet addresses
 
@@ -70,3 +101,8 @@
 * HTTP headers
 * HTTP responses
 * How to make an HTTP request in Python
+
+## References
+The content of this course summarizes the relevant sections from the network technolgies textbook "Computer Networking: A Top-Down Approach" by James F. Kurose,  Keith W. Ross.
+
+https://commons.wikimedia.org/wiki/File:Packet_Switching.gif by Oddbodz [CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0)]
