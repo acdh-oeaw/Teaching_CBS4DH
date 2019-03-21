@@ -7,14 +7,17 @@ button {
   padding: 8px;
 }
 
-#redButton{
+.redButton{
   background-color: pink;
 }
-#greenButton{
+.greenButton{
   background-color: lightgreen;
 }
-#blueButton{
+.blueButton{
   background-color: lightblue;
+}
+.yellowButton{
+  background-color: yellow;
 }
 
 table, th, td {
