@@ -46,6 +46,7 @@ Many programming langages provide means to group or collect variables together
 * `cp file file file`
 * other error messages we've seen?
 * The power of Google
+* [Stack Overflow](https://stackoverflow.com/)
 
 ### Documentation, man pages and --help
 
