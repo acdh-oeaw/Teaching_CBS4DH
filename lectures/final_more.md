@@ -42,9 +42,9 @@ What next?
 * [PARTHENOS](http://www.parthenos-project.eu/) ([Training](http://www.parthenos-project.eu/portal/trainingsuite) and [SSK](http://ssk.huma-num.fr/))
 
 ## Go to Conferences
-* Digital Humanities conference, e. g. [DH2019](https://dh2019.adho.org/)
-* DHd
-* DHa
+* Digital Humanities conference, e. g. [DH2019](https://dh2019.adho.org/), July 2019, Utrecht
+* [DHd](https://www.dhd2019.org/tagung) 25.- 29. March, Frankfurt/Mainz
+* DHA
 * [Computer Applications in Archaeology](https://caa-international.org/)
 * [Events Calendar by ADHO](http://adho.org/events-calendar)
 
