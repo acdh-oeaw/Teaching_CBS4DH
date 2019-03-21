@@ -12,7 +12,7 @@
 * Line endings
 * Drive and file paths
 
-### [Locale](https://en.wikipedia.org/wiki/Locale_(computer_software)
+### [Locale](https://en.wikipedia.org/wiki/Locale_(computer_software))
 
 * What it is for
 * When you might need it (see e.g. questions on [StackExchange](https://superuser.com/search?q=locale))
