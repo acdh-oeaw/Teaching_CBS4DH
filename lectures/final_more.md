@@ -16,12 +16,17 @@ This course's aim was to provide basic training and support for further skills c
   * use UTF-8 without BOM
 * GIT:
   * versioning and sharing
+  * there is an integration for windows explorer: [TortoiseGit](https://tortoisegit.org/)
+  * How does a directory know that it is a git repository?
+    * there is a hidden `.git`-directory with all the information (see it with `ls -la`)
 * [The Internet](https://www.youtube.com/watch?v=iDbyYGrswtg)
 * How to make basic webpages:
   * HTML
   * CSS
   * JavaScript (JS)
   * Question about sorting tables: [see w3schools](https://www.w3schools.com/howto/howto_js_sort_table.asp)
+  * Trying things online: [w3schools](https://www.w3schools.com/) (`Try it Yourself`) and [JSFiddle](https://jsfiddle.net/) (can even be shared)
+  * use [GitHub pages](https://pages.github.com/) to publish basic webpages 
 
 What next?
 
