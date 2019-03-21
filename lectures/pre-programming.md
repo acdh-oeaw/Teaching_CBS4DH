@@ -23,8 +23,11 @@
 * What is that for you?
 * What is it for the computer?
 ```
-A data type (or just type) tells the program/interpreter/computer what kind of data a specific value can have.
-In programming or in databases data types are used to define attributes or variables and define particular characteristics. Data types include classifications like integers, floating point values, strings, characters etc.
+A data type (or just type) tells the program/interpreter/computer what kind
+of data a specific value can have.
+In programming or in databases data types are used to define attributes or
+variables and define particular characteristics. Data types include classifications
+like integers, floating point values, strings, characters etc.
 ```
 * Common data types:
   * for numbers: integer (int), float (`1234`, `12,34`)
@@ -59,6 +62,6 @@ Many programming langages provide means to group or collect variables together
 
 ### The hard way
 
-* install Mallet (\url{http://mallet.cs.umass.edu/index.php} )!
+* install Mallet ([from here](http://mallet.cs.umass.edu/index.php))!
 * Get stuck, get a chocolate
 * This is an exercise in running into problems and resolving them, not an exercise in showing how skilled you are!
