@@ -38,9 +38,15 @@ like integers, floating point values, strings, characters etc.
 
 Many programming langages provide means to group or collect variables together
 
-* lists, arrays
-* sets, tuples
-* maps, dictionaries
+* lists, arrays (e.g. `[1,2,3,5,8]`)
+* sets, tuples (e.g. `('A', 'B')`)
+* maps, dictionaries (e.g. `{"name": "Walter"}`)
+* nested datatypes, e.g. to represent a matrix:
+```
+123   ---->   [[123],[456],[789]]
+456
+789
+```
 
 ### Close reading of [error messages](error_messages.md)
 
