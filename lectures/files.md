@@ -1,33 +1,29 @@
 # File formats and encodings
 
-
-## Identifying file types
+## Identifying a file format
 
 * How do you identifiy a file format?
 * How your operating system does it?  
-  By filename extensions
+  > By filename extensions
 * Why this is naive?
+  > 1. Download any PDF image, e.g. [OEAW maing building](images/arpanet.jpg)
+  > 2. Open it by double clicking
+  > 3. Change its name to `arpanet.html`
+  > 4. Try to open it by double clicking
 ```
-  1. Copy the 'index.html' you created yesterday and rename the new file to something like 'index.pdf'
-  2. Look at it in your file explorer
-  3. Try to open it by double clicking
-```
-* But also...
-```
-  1. Create a sample.docx file (with any content, even empty)
-  2. Rename it to sample.zip
-  3. Try to open it by double clicking
-```
-* ...as well as.. 
-  What's the format of the file with the `.bin` extension? [answer from Google](https://fileinfo.com/extension/bin)
-
+* but also...
+  > 1. Download any Ms Word file, e.g. [this one](files/sample.docx)
+  > 2. Rename it to sample.zip
+  > 3. Try to open it by double clicking
+* ...and... 
+  What's the format of the file with the `.bin` extension?
+  > [Ask Google](https://fileinfo.com/extension/bin)
 * Is there a better way to recognize the file type?  
-  Yes, we can try to actually analyse its content, e.g. with the `file` command
-```
- 1. In the cli go to the folder containing your newly created 'index.pdf' file
- 2. Execute: `file index.pdf`
-```
-
+  > Yes, we can try to actually analyse its content, e.g. with the `file` command
+  ```
+   1. In the cli go to the folder containing the arpanet.html
+   2. Execute: `file arpanet.html`
+  ```
 * Even when looking into the file contant the result might be surprising
 ```
  echo 'rot,blau,gelb' > farben.csv
@@ -35,6 +31,8 @@
 ```
 
 ## File formats
+
+There are two broad file format kinds binary and text.
 
 ### Binary formats
 
@@ -58,121 +56,155 @@ There are various reasons for using binary formats:
 
 * txt: plain text file
 * csv, tsv: delimited values "database" files
-* xml, json: a general "database" file formats
-* html, md: files storing markup data (text data along with information on how to display them)
+* xml, json: general structured data file formats
+* html, md: files storing formatted texts
 * js, php, py, r, cpp, etc.: source code in various programming languages
-* and many, many more (e.g. [IANA-registered list of text formats](https://www.iana.org/assignments/media-types/media-types.xhtml#text)]
+* and many, many more (e.g. [IANA-registered list of text formats](https://www.iana.org/assignments/media-types/media-types.xhtml#text))
 
 There are various reasons for using text formats:
 
-* Are easy to access and read
-* Can be effectively processed with general tools (ones you know after the command line lectures :-) )
-```
-EXAMPLE
-```
-* Can be easily compared and versioned
-```
-EXAMPLE
-```
+* All of them can be read and edited using just a plain text editor.  
+  Which doesn't mean it's always the most convenient way.
+* They are easy to compare and version.  
+  (you should have seen it during the git lecture)
 
 ### File formats hierarchy
 
-File formats form a hierarchy with more specialized ones being build on top of more generic ones, e.g.
+* Can a file be in more than one format at the same time?
+  > Sure it can, e.g.
+  > 1. Download a [sample HTML file](files/sample.html).
+  > 2. Open it in a browser (just double click on it)
+  > 3. Make a copy of it and rename the copy to sample.xml
+  > 4. Open sample.xml in a browser (just double click on it)
+  > 5. Make a copy of it and rename the copy to sample.txt
+  > 5. Open sample.txt in a plain text editor (e.g. Atom)
+  > As we can see an HTML file is also an XML file as well as a plain text file at the same time
+* File formats form a hierarchy with more specialized ones being build on top of more generic ones, e.g.
+  ```
+  text file -+                      any file which can be read in a plain text editor
+             +-> XML --+            a generic text format for storing structured data in text files
+             |         +-> TEI      uses XML to store text data
+             |         +-> HTML     uses XML to store WWW webpages
+             |         +-> RDF/XML  uses XML to store RDF data
+             |         +-> MARC/XML uses XML to store MARC data (library catalog data)
+             |
+             +-> JSON -+            another generic format for storing structured data in text files
+                       +-> geoJSON  uses JSON to store spatial data
+                       +-> JSON-LD  uses JSON to store RDF data
+  ZIP -+        just a compressed set of arbitrary files
+       +-> DOCX a compressed set of files representing an Ms Word document
+  ```
 
-```
-text file -+
-           +-> XML --+            a "generic" text format for storing structured data
-           |         +-> TEI      uses XML to store text data
-           |         +-> HTML     uses XML to store WWW webpages
-           |         +-> RDF/XML  uses XML to store RDF data
-           |         +-> MARC/XML uses XML to store MARC data (library catalog data)
-           |
-           +-> JSON -+            a "generic" text format for storing structured data
-                     +-> geoJSON  uses JSON to store spatial data
-                     +-> JSON-LD  uses JSON to store RDF data
-ZIP -+        just a compressed set of arbitrary files
-     +-> DOCX a compressed set of files representing an Ms Word document
-```
-
-* It means a file can be (and often is) "in many formats" at the same time!  
-  e.g. an HTML file is at the same time also an XML file as well as a text file
-* It is convenient as it allows to reuse the same tools, e.g.
-    * you can edit any text file in plain text editor (like the Atom one we are using)
-    * you can search for a file containing a given phrase using `grep` no matter in any text file
-    * you can extract and transform data stored in a JSON file using the [jq](https://stedolan.github.io/jq/) program
-* If it's so convenient to work with "generic" file formats, why do we need specialized ones?
-
-### Does file format determines the way the file is displayed?
-
-Depending on the program used to open a file, it can look completely different:
-
-* open a [CSV file](TODO) in a spreadsheet app (e.g. Ms Excel) and in a plain text editor (Atom)
-* open an [HTML file](TODO) in a web browser and in a plain text editor (Atom)
-* open an [SVG file](TODO) in a web browser and in a plain text editor (Atom)
-
-Is one representation better than other?
-
-### File formats conversion
+### File format conversion
 
 * Many file formats can be converted between each other, e.g.
-    * https://pandoc.org/
-    * [csv2json](https://www.csvjson.com/csv2json)
+    * [pandoc](https://pandoc.org/) allows conversion between many different formatted text formats
+    * [csv2json](https://www.csvjson.com/csv2json) can convert CSV to JSON and vice versa
     * Ms Office/Libre Office/Google Docs being able to save both in .docx and .odt, .xlsx and .ods, etc.
+    * and there are plenty others - google it!
 * But sometimes it's tricky.  
   When?
-```
-EXAMPLES - CSV vs JSON, Ms Office/Libre Office
-```
 
-## Character sets and encoding
+### Problems specific to plain text files
 
-* [Short German explanation](https://ianus-fdz.de/it-empfehlungen/textdokumente?qt-textdokumente=2#text-kodierungpraxis)
-* [Short, but not so short introduction in English](http://www.steves-internet-guide.com/guide-data-character-encoding/)
-* Where it all began: ASCII (i = 105 = 1101001), try `man ascii`
-* 8-bit character encodings (and why they're called that) (i = 105 = 01101001)
-  * Windows: ANSI / code pages
-  * Mac: MacOS encodings
-  * Unix: ISO-8859 encodings
-* Unicode and encodings thereof
-  * The [Unicode](https://www.unicode.org/versions/Unicode12.0.0/) set
-  * Problems of encoding and how they can be solved
-  * Byte order marks in encodings other than UTF-8 (UTR-16, UCS-4)
-    * Corollary: there is **never** a reason to choose "UTF-8 with BOM" for your encoding!
-  * Unicode-enabled Windows uses UTF-16 by default
-  * Unicode-enabled Mac and Linux use UTF-8
-* Why UTF-8 is preferred by most people: backwards compatibility
-* [Table with characters](https://www.rapidtables.com/code/text/index.html)
-* How to change the encoding: your text editor
-  * [Example on Notepad++](images/programs_1_ansi.png)
-  * [Example on BBEdit](images/programs_1_bbedit.png)
-  * Atom (not in basic installation yet)
-  ```
-  Install package: convert-file-encoding
-  Now Atom can do some basic conversion of encodings
-  ```
-* How to change what you have on the command line (Windows-1252 to UTF-8): `iconv -f CP1252 -t UTF-8 oldfile.txt > newfile.txt`
-* How to get up close and personal with the bits
-```
-xxd -l 1000 filename
-xxd filename
-xxd -b filename
-```
+### Character sets
 
-## Operating system conventions everyone should know about
+* **The issue: there's no common agreement on how computers should internally store characters and different parties doing it in a different way lead to trouble.**
+* A bit of history:
+  * Historically we tried to store characters as compact as possible which limited the number of characters which can be represented.
+  * Initially (ASCII, 1963) it was only around 100 useful characters.
+    This left no space for characters specific to non-English alphabets (even 10 digits and 26 letters in small and big caps is already 62 characters and we also need space, coma, period, brackets, etc.).
+  * This has been quickly (still in '60s) extended with additional 128 characters which was enough to handle (almost) any single language.  
+    This lead to creation of dozens of variants which we call [code pages](https://en.wikipedia.org/wiki/Code_page).
+  * It took until 1991 to come up with a standard allowing to represent (hopefully) any character in a uniform way - the [Unicode](https://en.wikipedia.org/wiki/Unicode) -
+    but it has a few implementations ([UTF-8](https://en.wikipedia.org/wiki/UTF-8), [UTF-16](https://en.wikipedia.org/wiki/UTF-16), [UTF-32](https://en.wikipedia.org/wiki/UTF-32) and few others).
+    All in all it solved one issue by creating others.
+* Why code pages are troublesome?
+  > 1. You have to know file code page to read it properly but this information is not contained in the file
+  >    * Download and open in Atom [this file](files/windows_1252.txt).  
+  >      Choose the encoding using the `Edit->Select Encoding` dialog so it's displayed properly.
+  >    * Download and open in Atom [this file](files/iso_8859-1.txt).  
+  >      Choose the encoding using the `Edit->Select Encoding` dialog so it's displayed properly.
+  >    * Download and open in Atom [this file](files/mysterious_encoding.txt).  
+  >      It's the same text as in the `files/iso_8859-1.txt` but can you guess the encoding?
+  > 2. You can't store characters from different encodings in one file, e.g. have a file containing `Jürgen Żółtak` (mixing German and Polish characters)
+* Unfortunately code pages are still wildly used
+  * PDF (!)
+  * filenames in ZIP files created by Windows (!)
+  * Many apps for working with plain text files under Windows (!)
+  * Legacy data created before Unicode gained momentum
+* What can go wrong with Unicode?
+  * There are many ways of encoding Unicode data: [UTF-8](https://en.wikipedia.org/wiki/UTF-8), [UTF-16](https://en.wikipedia.org/wiki/UTF-16), [UTF-32](https://en.wikipedia.org/wiki/UTF-32).
+    (Have we learnt nothing from code pages mess?)
+  * To embed information on which encoding is used, an idea of [BOM](https://en.wikipedia.org/wiki/Byte_order_mark) come up.  
+    Unfortunately or not BOM has never been widely adopted.
+    Anyway if you have BOM-aware app (unfortunately Atom is not among them) and a file containing the BOM mark, the automated encoding recognition works:
+    > * Download and open [this file](files/utf_16_bom.txt)
+    > * Download and open [this file](files/utf_32_bom.txt)
+    > * Download and open [this file](files/utf_32_nobom.txt), see how it looks like, then choose the UTF-32 encoding with the `Edit->Select Encoding` dialog.
+* **UTF-8 without BOM is the most portable Unicode encoding.**  
+  Just use it in every new file you create.
+  * If you're using Mac or Linux, you're using it already.
+  * If you're using Windows, make sure your app is set up to save files using UTF-8.
 
-* Line endings (EOL):
-  * Windows default is CRLF (\r\n, 0x0d 0x0a)
-  * Unix/current Mac default is LF (\n, 0x0a)
-  * Legacy MacOS default is CR (\r, 0x0d)
-  * Use `xxd` to see what kind of line endings you have.
-  * Convert line endings on Windows: with Notepad++ or `dos2unix` and `unix2dos`
-  * Convert line endings on Mac: either install `dos2unix` via Homebrew (`brew install dos2unix`), or [use Perl](https://stackoverflow.com/a/14155400) (e.g. `perl -pi -e 's/\r\n|\n|\r/\n/g'` for converting to Unix). We recommend installing the utilities via Homebrew!
+#### Character sets conversion
+
+There are various tools allowing to convert files between characters sets, e.g.
+
+> * With Atom
+>   1. Install the "convert-file-encoding" Atom package by runing `apm install convert-file-encoding` in the cli
+>   2. Open a file in Atom
+>   3. Use the `Packages->Convert to encoding->...` menu item
+>   4. Save the file
+> * Use the `iconv` app in the cli, e.g.:
+>   `iconv -f CP1252 -t UTF-8 fileInWindows1252Encoding.txt > fileConvertedToUTF8.txt`
+
+### Line endings
+
+* For historical reasons there are two characters used to denote the end of a line in plain text files: a `Carriage Return` (`\r`) and a `Line Feed` (`\n`) (that's how printers used to work).
+* Different operating systems use them in a different way:
+  * Windows default is `\r\n`
+  * Unix/current Mac default is `\n`
+  * Legacy MacOS default is `\r`
+* Most apps just handles all conventions listed above but it does make a difference for file comparison (e.g. in git)
+* There are ways to convert line ending style:
+  * On Windows: with [Notepad++](https://notepad-plus-plus.org) or `dos2unix` and `unix2dos`
+  * On Mac: either install `dos2unix` via Homebrew (`brew install dos2unix`)
+  * On Unix: use `dos2unix` and `unix2dos`
+
+## Problems related to file names and paths
 
 * Path separators:
   * `\` (Windows non-bash),
   * `/` (Unix, Mac)
-  * Why you can't put `:` in a file name, and what happens if you try
 
-# Opened Data Formats
+* Characters allowed in file and folder names
+  * Differ between operating systems or even filesystems, e.g. `windows:will:not:read:it.txt` is a valid file name under Linux but not under Windows
+  * Some characters are allowed by may require special handling in the cli, e.g. a space.
+  * To be on the safe side avoid characters other then letters, digits, a dot, an underscore and a dash.
 
-TODO
+## Keep your data Opened Data
+
+This topic is far to broad to discuss in details during an introductory course but it's still worth to mention that:
+
+* The same information can be stored in a different way, e.g.
+  * you can prepare a text as a .docx, [LaTeX](https://en.wikipedia.org/wiki/LaTeX), [markdown](https://en.wikipedia.org/wiki/Markdown), [TEI-XML](https://en.wikipedia.org/wiki/Text_Encoding_Initiative#TEI_guidelines) or publish it as an HTML webpage,
+  * you can store your database as .xlsx, [.csv](https://en.wikipedia.org/wiki/Comma-separated_values), [JSON](https://en.wikipedia.org/wiki/JSON), [XML](https://en.wikipedia.org/wiki/XML), [RDF](https://en.wikipedia.org/wiki/Resource_Description_Framework) or using a dedicated database software (e.g. a [relational database](https://en.wikipedia.org/wiki/Relational_database) or a [triplestore](https://en.wikipedia.org/wiki/Triplestore)),
+  * etc.
+* The format you choose impacts how easy it will be to reuse the data (see e.g. [5 Star Opened Data](https://en.wikipedia.org/wiki/Linked_data#5-star_linked_open_data)).
+  * Use formats which can be processed using free tools.
+    * Something to think about - "free" as in "a free beer" or like in "freedom of speach"?
+      See e.g. [here](https://en.wikipedia.org/wiki/Gratis_versus_libre/))
+  * Think about licensing.
+    * Take a look on [CreativeCommons](https://en.wikipedia.org/wiki/Creative_Commons_license). 
+    * Honor licenses of data you are using (in academia you are most likely to violate attribution and share [derived work](https://en.wikipedia.org/wiki/Derivative_work) under same license obligations).
+    * The "free beer" vs "freedom of speach" question applies also here.
+  * Separate data from presentation and keep your data structured (making them easy to process it in automated way).
+  * Follow your scientific community standards.
+  * Don't forget about the metadata.
+  * Deposit outcomes of your work in public repositories (e.g. [Zenodo](https://zenodo.org/)) so others can find and access them.
+* Read about:
+  * [Opened Data](https://en.wikipedia.org/wiki/Open_data) and [Linked Data](https://en.wikipedia.org/wiki/Linked_data)
+  * Remember any data you create during your studies or work can be useful for others...  
+    ...but sharing it in reusable way involves admittedly quite some work.
+
