@@ -114,36 +114,35 @@ There are various reasons for using text formats:
   * Initially (ASCII, 1963) it was only around 100 useful characters.
     This left no space for characters specific to non-English alphabets (even 10 digits and 26 letters in small and big caps is already 62 characters and we also need space, coma, period, brackets, etc.).
   * This has been quickly (still in '60s) extended with additional 128 characters which was enough to handle (almost) any single language.  
-    This lead to creation of dozens of variants which we call [code pages](https://en.wikipedia.org/wiki/Code_page).
+    This lead to creation of hundreds (!) of encoding standards which we call [code pages](https://en.wikipedia.org/wiki/Code_page).
   * It took until 1991 to come up with a standard allowing to represent (hopefully) any character in a uniform way - the [Unicode](https://en.wikipedia.org/wiki/Unicode) -
-    but it has a few implementations ([UTF-8](https://en.wikipedia.org/wiki/UTF-8), [UTF-16](https://en.wikipedia.org/wiki/UTF-16), [UTF-32](https://en.wikipedia.org/wiki/UTF-32) and few others).
-    All in all it solved one issue by creating others.
+    but it still has a few implementations ([UTF-8](https://en.wikipedia.org/wiki/UTF-8), [UTF-16](https://en.wikipedia.org/wiki/UTF-16), [UTF-32](https://en.wikipedia.org/wiki/UTF-32) and few others).
 * Why code pages are troublesome?
   > 1. You have to know file code page to read it properly but this information is not contained in the file
-  >    * Download and open in Atom [this file](https://raw.githubusercontent.com/acdh-oeaw/Teaching_CBS4DH/2022S/lectures/files/windows_1252.txt).  
+  >    * Download and open in Atom [Windows-1252-encoded file](https://raw.githubusercontent.com/acdh-oeaw/Teaching_CBS4DH/2022S/lectures/files/windows_1252.txt).  
   >      Choose the encoding using the `Edit->Select Encoding` dialog so it's displayed properly.
-  >    * Download and open in Atom [this file](https://raw.githubusercontent.com/acdh-oeaw/Teaching_CBS4DH/2022S/lectures/files/iso_8859-1.txt).  
+  >    * Download and open in Atom [ISO-8859-1-encoded file](https://raw.githubusercontent.com/acdh-oeaw/Teaching_CBS4DH/2022S/lectures/files/iso_8859-1.txt).  
   >      Choose the encoding using the `Edit->Select Encoding` dialog so it's displayed properly.
-  >    * Download and open in Atom [this file](https://raw.githubusercontent.com/acdh-oeaw/Teaching_CBS4DH/2022S/lectures/files/mysterious_encoding.txt).  
-  >      It's the same text as in the `iso_8859-1.txt` but can you guess the encoding?
-  > 2. You can't store characters from different encodings in one file, e.g. have a file containing `Jürgen Żółtak` (mixing German and Polish characters)
-* Unfortunately code pages are still wildly used
-  * PDF (!)
+  >    * Download and open in Atom [file in unknown encoding](https://raw.githubusercontent.com/acdh-oeaw/Teaching_CBS4DH/2022S/lectures/files/mysterious_encoding.txt).  
+  >      It contains the same text as in the `iso_8859-1.txt` but can you guess the encoding so its displayed properly?
+  > 2. You can't store characters from different encodings in one file, e.g. you can't have a file containing `Jürgen Żółtak` (a mix of German and Polish characters)
+* Unfortunately code pages are still wildly used, e.g. in:
+  * PDFs (!)
   * filenames in ZIP files created by Windows (!)
-  * Many apps for working with plain text files under Windows (!)
+  * Many apps working with plain text files under Windows (!)
   * Legacy data created before Unicode gained momentum
 * What can go wrong with Unicode?
   * There are many ways of encoding Unicode data: [UTF-8](https://en.wikipedia.org/wiki/UTF-8), [UTF-16](https://en.wikipedia.org/wiki/UTF-16), [UTF-32](https://en.wikipedia.org/wiki/UTF-32).
     (Have we learnt nothing from code pages mess?)
-  * To embed information on which encoding is used, an idea of [BOM](https://en.wikipedia.org/wiki/Byte_order_mark) come up.  
+  * To avoid problems with unknown file encoding a [BOM](https://en.wikipedia.org/wiki/Byte_order_mark) has been invented.  
     Unfortunately or not BOM has never been widely adopted.
     Anyway if you have BOM-aware app (unfortunately Atom is not among them) and a file containing the BOM mark, the automated encoding recognition works:
-    > * Download and open [this file](https://raw.githubusercontent.com/acdh-oeaw/Teaching_CBS4DH/2022S/lectures/files/utf_16_bom.txt)
-    > * Download and open [this file](https://raw.githubusercontent.com/acdh-oeaw/Teaching_CBS4DH/2022S/lectures/files/utf_32_bom.txt)
-    > * Download and open [this file](https://raw.githubusercontent.com/acdh-oeaw/Teaching_CBS4DH/2022S/lectures/files/utf_32_nobom.txt), see how it looks like, then choose the UTF-32 encoding with the `Edit->Select Encoding` dialog.
+    > * Download and open a [UTF-16-encoded file](https://raw.githubusercontent.com/acdh-oeaw/Teaching_CBS4DH/2022S/lectures/files/utf_16_bom.txt) with BOM
+    > * Download and open [UTF-32-encoded file](https://raw.githubusercontent.com/acdh-oeaw/Teaching_CBS4DH/2022S/lectures/files/utf_32_bom.txt) with BOM
+    > * Download and open [UTF-32-encoded file](https://raw.githubusercontent.com/acdh-oeaw/Teaching_CBS4DH/2022S/lectures/files/utf_32_nobom.txt) without BOM
 * **UTF-8 without BOM is the most portable Unicode encoding.**  
   Just use it in every new file you create.
-  * If you're using Mac or Linux, you're using it already.
+  * If you're using Mac or Unix, it's just a default.
   * If you're using Windows, make sure your app is set up to save files using UTF-8.
 
 #### Character sets conversion
@@ -160,14 +159,16 @@ There are various tools allowing to convert files between characters sets, e.g.
 
 ### Line endings
 
-* For historical reasons there are two characters used to denote the end of a line in plain text files: a `Carriage Return` (`\r`) and a `Line Feed` (`\n`) (that's how printers used to work).
+* For historical reasons there are two characters used to denote the end of a line in plain text files: a `Carriage Return` (`\r`) and a `Line Feed` (`\n`). 
+  (If you're wondering why think of how [old printers](https://en.wikipedia.org/wiki/Teleprinter) used to work).
 * Different operating systems use them in a different way:
   * Windows default is `\r\n`
   * Unix/current Mac default is `\n`
   * Legacy MacOS default is `\r`
-* Most apps just handles all conventions listed above but it does make a difference for file comparison (e.g. in git)
+* Most apps just handle all conventions listed above but it does make a difference for file comparison (e.g. in git)
 * There are ways to convert line ending style:
   * On Windows: with [Notepad++](https://notepad-plus-plus.org) or `dos2unix` and `unix2dos`
+    * When you install git on Windows you can choose if the conversion should be performed automatically when you pull/push data from remote repositories.
   * On Mac: either install `dos2unix` via Homebrew (`brew install dos2unix`)
   * On Unix: use `dos2unix` and `unix2dos`
 
@@ -175,11 +176,14 @@ There are various tools allowing to convert files between characters sets, e.g.
 
 * Path separators:
   * `\` (Windows non-bash),
-  * `/` (Unix, Mac)
+  * `/` (Unix, Mac but works in pretty many places in Windows as well)
 
 * Characters allowed in file and folder names
-  * Differ between operating systems or even filesystems, e.g. `windows:will:not:read:it.txt` is a valid file name under Linux but not under Windows
-  * Some characters are allowed by may require special handling in the cli, e.g. a space.
+  * Differ between operating systems or even filesystems, e.g. `windows:will:not:store:it.txt` is a valid file name under Linux but not under Windows
+  * Some characters are allowed but may require special handling in the cli, e.g. a space.
+    > 1. Rename any file in a way its name contains a space
+    > 2. Try to copy it in the cli now.  
+    >    How to do it properly?
   * To be on the safe side avoid characters other then letters, digits, a dot, an underscore and a dash.
 
 ## Keep your data Opened Data
@@ -193,12 +197,12 @@ This topic is far to broad to discuss in details during an introductory course b
 * The format you choose impacts how easy it will be to reuse the data (see e.g. [5 Star Opened Data](https://en.wikipedia.org/wiki/Linked_data#5-star_linked_open_data)).
   * Use formats which can be processed using free tools.
     * Something to think about - "free" as in "a free beer" or like in "freedom of speach"?
-      See e.g. [here](https://en.wikipedia.org/wiki/Gratis_versus_libre/))
+      See e.g. [here](https://en.wikipedia.org/wiki/Gratis_versus_libre/)
   * Think about licensing.
     * Take a look on [CreativeCommons](https://en.wikipedia.org/wiki/Creative_Commons_license). 
-    * Honor licenses of data you are using (in academia you are most likely to violate attribution and share [derived work](https://en.wikipedia.org/wiki/Derivative_work) under same license obligations).
+    * Honor licenses of data you are using (in academia you are most likely to violate [attribution](https://en.wikipedia.org/wiki/Attribution_(copyright)) and "share [derived work](https://en.wikipedia.org/wiki/Derivative_work) under same license" obligations).
     * The "free beer" vs "freedom of speach" question applies also here.
-  * Separate data from presentation and keep your data structured (making them easy to process it in automated way).
+  * Separate data from presentation and keep your data structured (make it easy to process your data in an automated way).
   * Follow your scientific community standards.
   * Don't forget about the metadata.
   * Deposit outcomes of your work in public repositories (e.g. [Zenodo](https://zenodo.org/)) so others can find and access them.
