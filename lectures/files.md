@@ -138,8 +138,8 @@ There are various reasons for using text formats:
   * To avoid problems with unknown file encoding a [BOM](https://en.wikipedia.org/wiki/Byte_order_mark) has been invented.  
     Unfortunately or not BOM has never been widely adopted.
     Anyway if you have BOM-aware app (unfortunately Atom is not among them) and a file containing the BOM mark, the automated encoding recognition works:
-    > * Download and open a [UTF-16-encoded file](https://raw.githubusercontent.com/acdh-oeaw/Teaching_CBS4DH/2022S/lectures/files/utf_16_bom.txt) with BOM
-    > * Download and open [UTF-32-encoded file](https://raw.githubusercontent.com/acdh-oeaw/Teaching_CBS4DH/2022S/lectures/files/utf_32_bom.txt) with BOM
+    > * Download and open a [UTF-16-encoded file](https://raw.githubusercontent.com/acdh-oeaw/Teaching_CBS4DH/2022S/lectures/files/utf_16.txt) with BOM
+    > * Download and open [UTF-32-encoded file](https://raw.githubusercontent.com/acdh-oeaw/Teaching_CBS4DH/2022S/lectures/files/utf_32.txt) with BOM
     > * Download and open [UTF-32-encoded file](https://raw.githubusercontent.com/acdh-oeaw/Teaching_CBS4DH/2022S/lectures/files/utf_32_nobom.txt) without BOM
 * **UTF-8 without BOM is the most portable Unicode encoding.**  
   Just use it in every new file you create.
