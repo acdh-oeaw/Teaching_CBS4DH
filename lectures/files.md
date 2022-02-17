@@ -23,7 +23,7 @@
    1. In the cli go to the folder containing the arpanet.html
    2. Execute: `file arpanet.html`
   ```
-* Even when looking into the file contant the result might be surprising
+* Even when looking into the file content the result might be surprising
   ```
   echo 'rot,blau,gelb' > farben.csv
   file -i --mime farben.csv
