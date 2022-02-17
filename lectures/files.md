@@ -104,7 +104,7 @@ There are various reasons for using text formats:
 * But sometimes it's tricky.  
   When?
 
-### Problems specific to plain text files
+## Problems specific to plain text files
 
 ### Character sets
 
