@@ -6,13 +6,12 @@
 * How your operating system does it?  
   > By filename extensions
 * Why this is naive?
-  > 1. Download any PDF image, e.g. [OEAW maing building](images/arpanet.jpg)
+  > 1. Download any PDF image, e.g. [this one](https://raw.githubusercontent.com/acdh-oeaw/Teaching_CBS4DH/2022S/lectures/images/arpanet.jpg)
   > 2. Open it by double clicking
   > 3. Change its name to `arpanet.html`
   > 4. Try to open it by double clicking
-```
 * but also...
-  > 1. Download any Ms Word file, e.g. [this one](files/sample.docx)
+  > 1. Download any Ms Word file, e.g. [this one](https://raw.githubusercontent.com/acdh-oeaw/Teaching_CBS4DH/2022S/lectures/files/sample.docx)
   > 2. Rename it to sample.zip
   > 3. Try to open it by double clicking
 * ...and... 
@@ -25,10 +24,10 @@
    2. Execute: `file arpanet.html`
   ```
 * Even when looking into the file contant the result might be surprising
-```
- echo 'rot,blau,gelb' > farben.csv
- file -i --mime farben.csv
-```
+  ```
+  echo 'rot,blau,gelb' > farben.csv
+  file -i --mime farben.csv
+  ```
 
 ## File formats
 
@@ -72,7 +71,7 @@ There are various reasons for using text formats:
 
 * Can a file be in more than one format at the same time?
   > Sure it can, e.g.
-  > 1. Download a [sample HTML file](files/sample.html).
+  > 1. Download a [sample HTML file](https://raw.githubusercontent.com/acdh-oeaw/Teaching_CBS4DH/2022S/lectures/files/sample.html).
   > 2. Open it in a browser (just double click on it)
   > 3. Make a copy of it and rename the copy to sample.xml
   > 4. Open sample.xml in a browser (just double click on it)
@@ -121,12 +120,12 @@ There are various reasons for using text formats:
     All in all it solved one issue by creating others.
 * Why code pages are troublesome?
   > 1. You have to know file code page to read it properly but this information is not contained in the file
-  >    * Download and open in Atom [this file](files/windows_1252.txt).  
+  >    * Download and open in Atom [this file](https://raw.githubusercontent.com/acdh-oeaw/Teaching_CBS4DH/2022S/lectures/files/windows_1252.txt).  
   >      Choose the encoding using the `Edit->Select Encoding` dialog so it's displayed properly.
-  >    * Download and open in Atom [this file](files/iso_8859-1.txt).  
+  >    * Download and open in Atom [this file](https://raw.githubusercontent.com/acdh-oeaw/Teaching_CBS4DH/2022S/lectures/files/iso_8859-1.txt).  
   >      Choose the encoding using the `Edit->Select Encoding` dialog so it's displayed properly.
-  >    * Download and open in Atom [this file](files/mysterious_encoding.txt).  
-  >      It's the same text as in the `files/iso_8859-1.txt` but can you guess the encoding?
+  >    * Download and open in Atom [this file](https://raw.githubusercontent.com/acdh-oeaw/Teaching_CBS4DH/2022S/lectures/files/mysterious_encoding.txt).  
+  >      It's the same text as in the `iso_8859-1.txt` but can you guess the encoding?
   > 2. You can't store characters from different encodings in one file, e.g. have a file containing `Jürgen Żółtak` (mixing German and Polish characters)
 * Unfortunately code pages are still wildly used
   * PDF (!)
@@ -139,9 +138,9 @@ There are various reasons for using text formats:
   * To embed information on which encoding is used, an idea of [BOM](https://en.wikipedia.org/wiki/Byte_order_mark) come up.  
     Unfortunately or not BOM has never been widely adopted.
     Anyway if you have BOM-aware app (unfortunately Atom is not among them) and a file containing the BOM mark, the automated encoding recognition works:
-    > * Download and open [this file](files/utf_16_bom.txt)
-    > * Download and open [this file](files/utf_32_bom.txt)
-    > * Download and open [this file](files/utf_32_nobom.txt), see how it looks like, then choose the UTF-32 encoding with the `Edit->Select Encoding` dialog.
+    > * Download and open [this file](https://raw.githubusercontent.com/acdh-oeaw/Teaching_CBS4DH/2022S/lectures/files/utf_16_bom.txt)
+    > * Download and open [this file](https://raw.githubusercontent.com/acdh-oeaw/Teaching_CBS4DH/2022S/lectures/files/utf_32_bom.txt)
+    > * Download and open [this file](https://raw.githubusercontent.com/acdh-oeaw/Teaching_CBS4DH/2022S/lectures/files/utf_32_nobom.txt), see how it looks like, then choose the UTF-32 encoding with the `Edit->Select Encoding` dialog.
 * **UTF-8 without BOM is the most portable Unicode encoding.**  
   Just use it in every new file you create.
   * If you're using Mac or Linux, you're using it already.
