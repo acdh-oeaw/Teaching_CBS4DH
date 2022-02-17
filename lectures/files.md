@@ -120,11 +120,11 @@ There are various reasons for using text formats:
     but it still has a few implementations ([UTF-8](https://en.wikipedia.org/wiki/UTF-8), [UTF-16](https://en.wikipedia.org/wiki/UTF-16), [UTF-32](https://en.wikipedia.org/wiki/UTF-32) and few others).
 * Why code pages are troublesome?
   > 1. You have to know file code page to read it properly but this information is not contained in the file
-  >    * Download and open in Atom [Windows-1252-encoded file](https://raw.githubusercontent.com/acdh-oeaw/Teaching_CBS4DH/2022S/lectures/files/windows_1252.txt).  
+  >    * Download and open in Atom a sample [Windows-1252-encoded file](https://raw.githubusercontent.com/acdh-oeaw/Teaching_CBS4DH/2022S/lectures/files/windows_1252.txt) (right click on the link and choose "Save target element as..." to download instead of opening it in the browser).  
   >      Choose the encoding using the `Edit->Select Encoding` dialog so it's displayed properly.
-  >    * Download and open in Atom [ISO-8859-1-encoded file](https://raw.githubusercontent.com/acdh-oeaw/Teaching_CBS4DH/2022S/lectures/files/iso_8859-1.txt).  
+  >    * Download and open in Atom a sample [ISO-8859-1-encoded file](https://raw.githubusercontent.com/acdh-oeaw/Teaching_CBS4DH/2022S/lectures/files/iso_8859-1.txt).  
   >      Choose the encoding using the `Edit->Select Encoding` dialog so it's displayed properly.
-  >    * Download and open in Atom [file in unknown encoding](https://raw.githubusercontent.com/acdh-oeaw/Teaching_CBS4DH/2022S/lectures/files/mysterious_encoding.txt).  
+  >    * Download and open in Atom a sample [file in unknown encoding](https://raw.githubusercontent.com/acdh-oeaw/Teaching_CBS4DH/2022S/lectures/files/mysterious_encoding.txt).  
   >      It contains the same text as in the `iso_8859-1.txt` but can you guess the encoding so its displayed properly?
   > 2. You can't store characters from different encodings in one file, e.g. you can't have a file containing `Jürgen Żółtak` (a mix of German and Polish characters)
 * Unfortunately code pages are still wildly used, e.g. in:
