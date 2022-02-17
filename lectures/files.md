@@ -6,7 +6,7 @@
 * How your operating system does it?  
   > By filename extensions
 * Why this is naive?
-  > 1. Download any PDF image, e.g. [this one](https://raw.githubusercontent.com/acdh-oeaw/Teaching_CBS4DH/2022S/lectures/images/arpanet.jpg)
+  > 1. Download any image, e.g. [this JPEG](https://raw.githubusercontent.com/acdh-oeaw/Teaching_CBS4DH/2022S/lectures/images/arpanet.jpg) (right click on the link and choose "Save target element as..." to download instead of opening it in the browser)
   > 2. Open it by double clicking
   > 3. Change its name to `arpanet.html`
   > 4. Try to open it by double clicking
@@ -71,12 +71,13 @@ There are various reasons for using text formats:
 
 * Can a file be in more than one format at the same time?
   > Sure it can, e.g.
-  > 1. Download a [sample HTML file](https://raw.githubusercontent.com/acdh-oeaw/Teaching_CBS4DH/2022S/lectures/files/sample.html).
+  > 1. Download a [sample HTML file](https://raw.githubusercontent.com/acdh-oeaw/Teaching_CBS4DH/2022S/lectures/files/sample.html) (right click on the link and choose "Save target element as..." to download instead of opening it in the browser).
   > 2. Open it in a browser (just double click on it)
   > 3. Make a copy of it and rename the copy to sample.xml
   > 4. Open sample.xml in a browser (just double click on it)
   > 5. Make a copy of it and rename the copy to sample.txt
-  > 5. Open sample.txt in a plain text editor (e.g. Atom)
+  > 6. Open sample.txt in a plain text editor (e.g. Atom)
+  >
   > As we can see an HTML file is also an XML file as well as a plain text file at the same time
 * File formats form a hierarchy with more specialized ones being build on top of more generic ones, e.g.
   ```
