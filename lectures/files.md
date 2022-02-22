@@ -6,7 +6,7 @@
 * How does your operating system do it?  
   > By filename extensions
 * Why is this naive?
-  > 1. Download any PDF image, e.g. [this one](https://raw.githubusercontent.com/acdh-oeaw/Teaching_CBS4DH/2022S/lectures/images/arpanet.jpg)
+  > 1. Download any image, e.g. [this JPEG](https://raw.githubusercontent.com/acdh-oeaw/Teaching_CBS4DH/2022S/lectures/images/arpanet.jpg) (right click on the link and choose "Save target element as..." to download instead of opening it in the browser)
   > 2. Open it by double clicking
   > 3. Change its name to `arpanet.html`
   > 4. Try to open it by double clicking
@@ -23,7 +23,7 @@
    1. In the cli go to the folder containing the arpanet.html
    2. Execute: `file arpanet.html`
   ```
-* Even when looking into the file contant the result might be surprising
+* Even when looking into the file content the result might be surprising
   ```
   echo 'rot,blau,gelb' > farben.csv
   file -i --mime farben.csv
@@ -71,12 +71,13 @@ There are various reasons for using text formats:
 
 * Can a file be in more than one format at the same time?
   > Sure it can, e.g.
-  > 1. Download a [sample HTML file](https://raw.githubusercontent.com/acdh-oeaw/Teaching_CBS4DH/2022S/lectures/files/sample.html).
+  > 1. Download a [sample HTML file](https://raw.githubusercontent.com/acdh-oeaw/Teaching_CBS4DH/2022S/lectures/files/sample.html) (right click on the link and choose "Save target element as..." to download instead of opening it in the browser).
   > 2. Open it in a browser (just double click on it)
   > 3. Make a copy of it and rename the copy to sample.xml
   > 4. Open sample.xml in a browser (just double click on it)
   > 5. Make a copy of it and rename the copy to sample.txt
-  > 5. Open sample.txt in a plain text editor (e.g. Atom)
+  > 6. Open sample.txt in a plain text editor (e.g. Atom)
+  >
   > As we can see an HTML file is also an XML file as well as a plain text file at the same time
 * File formats form a hierarchy with more specialized ones being build on top of more generic ones, e.g.
   ```
@@ -119,11 +120,11 @@ There are various reasons for using text formats:
     but it still has a few implementations ([UTF-8](https://en.wikipedia.org/wiki/UTF-8), [UTF-16](https://en.wikipedia.org/wiki/UTF-16), [UTF-32](https://en.wikipedia.org/wiki/UTF-32) and a few others).
 * Why are code pages troublesome?
   > 1. You have to know file code page to read it properly but this information is not contained in the file
-  >    * Download and open in Atom [Windows-1252-encoded file](https://raw.githubusercontent.com/acdh-oeaw/Teaching_CBS4DH/2022S/lectures/files/windows_1252.txt).  
+  >    * Download and open in Atom a sample [Windows-1252-encoded file](https://raw.githubusercontent.com/acdh-oeaw/Teaching_CBS4DH/2022S/lectures/files/windows_1252.txt) (right click on the link and choose "Save target element as..." to download instead of opening it in the browser).  
   >      Choose the encoding using the `Edit->Select Encoding` dialog so it's displayed properly.
-  >    * Download and open in Atom [ISO-8859-1-encoded file](https://raw.githubusercontent.com/acdh-oeaw/Teaching_CBS4DH/2022S/lectures/files/iso_8859-1.txt).  
+  >    * Download and open in Atom a sample [ISO-8859-1-encoded file](https://raw.githubusercontent.com/acdh-oeaw/Teaching_CBS4DH/2022S/lectures/files/iso_8859-1.txt).  
   >      Choose the encoding using the `Edit->Select Encoding` dialog so it's displayed properly.
-  >    * Download and open in Atom [file in unknown encoding](https://raw.githubusercontent.com/acdh-oeaw/Teaching_CBS4DH/2022S/lectures/files/mysterious_encoding.txt).  
+  >    * Download and open in Atom a sample [file in unknown encoding](https://raw.githubusercontent.com/acdh-oeaw/Teaching_CBS4DH/2022S/lectures/files/mysterious_encoding.txt).  
   >      It contains the same text as in the `iso_8859-1.txt` but can you guess the encoding so that it displays correctly?
   > 2. You can't store characters from different encodings in one file, e.g. you can't have a file containing `Jürgen Żółtak` (a mix of German and Polish characters)
 * Unfortunately, code pages are still wildly used, e.g. in:
@@ -136,8 +137,8 @@ There are various reasons for using text formats:
   * To avoid problems with unknown file encoding the [BOM](https://en.wikipedia.org/wiki/Byte_order_mark) has been invented.  
     Unfortunately or not BOM has never been widely adopted.
     Anyway, if you have a BOM-aware app (unfortunately Atom is not among them) and a file containing the BOM mark, the automated encoding recognition works, e.g.:
-    > * Download and open a [UTF-16-encoded file](https://raw.githubusercontent.com/acdh-oeaw/Teaching_CBS4DH/2022S/lectures/files/utf_16_bom.txt) with BOM
-    > * Download and open [UTF-32-encoded file](https://raw.githubusercontent.com/acdh-oeaw/Teaching_CBS4DH/2022S/lectures/files/utf_32_bom.txt) with BOM
+    > * Download and open a [UTF-16-encoded file](https://raw.githubusercontent.com/acdh-oeaw/Teaching_CBS4DH/2022S/lectures/files/utf_16.txt) with BOM
+    > * Download and open [UTF-32-encoded file](https://raw.githubusercontent.com/acdh-oeaw/Teaching_CBS4DH/2022S/lectures/files/utf_32.txt) with BOM
     > * Download and open [UTF-32-encoded file](https://raw.githubusercontent.com/acdh-oeaw/Teaching_CBS4DH/2022S/lectures/files/utf_32_nobom.txt) without BOM
 * **UTF-8 without BOM is the most portable Unicode encoding.**  
   Use it in every new file you create.
