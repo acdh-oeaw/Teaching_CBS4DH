@@ -14,4 +14,4 @@ In this excercise we'll take data from Wikipedia and make a csv file out of it b
 * Click on "Quelltext bearbeiten"
 * What you see there is the Wikipedia markdown format
 * Copy the section "Auswahl bekannter Verstorbener" into a plain text file
-* In Atom you can now use regular expressions for converting that list into a csv file 
+* In Atom you can now use regular expressions for converting that list into a csv file like [this one](../exercise/lecture3/data.csv)
