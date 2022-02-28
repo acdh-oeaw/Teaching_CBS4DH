@@ -1,5 +1,35 @@
 # Git 2
 
+## Summarizing yesterdays Git lecture
+
+### Creating a Github account and repository
+* Online
+
+### Connecting local git with Github
+* `$ git config --global user.name "John Doe"`
+* `$ git config --global user.email johndoe@example.com`
+
+### Cloning a remote repository from Github
+* `git clone <repository-url>` Copy an existing repository from a remote location (for example GitHub)
+* `git remote` View and manage remote repositories
+* `git init` Create a new repository locally
+
+### Commiting changes from your local repository
+* `git status` Show which files are modified locally or new
+* `git add <filename>` Add a file to change tracking and stage  
+* `git commit -m "<message>"` Make changes permanent
+
+```bash
+$ git add -a
+$ git commit -m "added a new feature some files changed"
+```
+
+### Synchronizing remote with local repository
+* `git pull origin <branch>` Fetch the commits from a remote repository and merge them with the current working directory (i.e. does a fetch and a merge in one)
+* `git push origin <branch>` Push the commits from the local repository to a remote repository 
+* `git fetch origin <branch>` Fetch the commits from a remote repository into the local repository
+* `git merge origin <branch>` Merge the commits from the local repository with commits fetched from a remote repository (actually this works on branches; this will be explained in the git tutorial part 2)
+
 ## Forking repositories
 
 ![Git forking repositories](images/git_forking.gif)
