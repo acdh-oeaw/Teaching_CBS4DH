@@ -53,7 +53,7 @@ Notice the multiple ways to define the same pattern along this introduction. It 
 Besides using the predefined special sequences, also the exact text (also single characters) can be used. <br>
 For the characters, either you specify them _individually_ or use _ranges_ by giving a _hyphen_ `-` inbetween. We will see some examples later.
 <br><br>
-**Example:** `\d\d\s[A-Z][a-z][a-z][a-z][a-z]\s\d\d\d\d` would be equal to `10 March 2022`. <br> An equal regex would be: `[0-9][0-9]\s[A-Z][a-z][a-z][a-z][a-z]\s[0-9][0-9]`.<br> We can, of course, just write the string and search it in our sentence, but in this case we lose generalization.<br> Is there a compacter way to write this Regex? Can we make it even more general to include other months as well? Later!
+**Example:** `\d\d\s[A-Z][a-z][a-z][a-z][a-z]\s\d\d\d\d` would be equal to `10 March 2022`. <br> An equal regex would be: `[0-9][0-9]\s[A-Z][a-z][a-z][a-z][a-z]\s[0-9][0-9][0-9][0-9]`.<br> We can, of course, just write the string and search it in our sentence, but in this case we lose generalization.<br> Is there a compacter way to write this Regex? Can we make it even more general to include other months as well? Later!
 
 
 #### Metacharacters
@@ -98,6 +98,7 @@ What invalid strings that matched before do not match anymore? Can we improve it
 #### Some Remarks:
 * `?` is equal to `{0, 1}`
 * `[0123456789]` is equal to `[0-9]`
+* `[012]` is equal to `(0|1|2)`. `(123)` does not represent the same, as the pattern would look after exactly `"123"` in the string.
 * Note: for German characters (or some other languages with Latin characters) you need to redefine the group of letters `[a-zA-Z]` to include also the extra letters: `[a-zA-ZäöüÄÖÜß]`.
 * Regex for simple punctuation: `[\.\,!\?]`
 
