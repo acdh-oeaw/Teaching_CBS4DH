@@ -1,132 +1,119 @@
 # Regular expressions
 
-_Regular Expressions_ (called  _REs_, _regex_, _regexps_, _regex patterns_) pose a **search pattern** in a text and are supported by multiple programming languages (Python, Java, Javascript, and many more) and serve as an integral part in several tasks. There are subtle differences between each implementation of Regex in the different programming languages but they are all based on the same basic principles. 
+_Regular expressions_ (called _REs_, _regexes_, _regexps_, _regex patterns_) are essentially a tiny, _highly specialized programming language_ embedded inside general purpose programming languages (Python, XQuery, javascript). Please note that there are differences in how all general purpose programming langugages implement thier RE language.
+When using a _RE language_, you specify the _rules_ for the _set_ of possible _strings_ that you want to _match_:
+* sentences in a language,
+* e-mail addresses,
+* TeX commands, or
+* anything you like.
 
-They are useful especially for cases where the dataset is complicated and "not-clean", as they support many important tasks in string processing (searching, replacing, validating, parsing, etc.), as they focus on defining the rules of the searched (sub-)string. Depends on the task and on the search pattern, they could spare a lot of work for programmers but can as well consume a lot of computational effort for the computer. Regex have some limitations and they do not enable the performance of _all possible_ string processing tasks.
+It does not replace a parser for XML or HTML since you can easily create invalid and non-wellformed markup.
 
-The search pattern defines some generalized way to define a possible string:</br>
-The pattern _3 digits and one following capital letter_ would match both: _123A_ and _456B_, but not _123a_.</br>
-The pattern _possibly some digit(s) and a final exclamation mark_ would match: _10000!_, _2022!_, and also _!_ (why? later!). 
+You can then ask questions such as:
+* Does this _string_ _match_ _the pattern_?, or
+* Is there a _match_ for the _pattern_ _anywhere_ in this _string_?.
 
-_RE_ patterns are usually compiled into series of bytecode and are then executed by a matching engine. Therefore, it may be necessary to pay more attention to how the engine executes a given _RE_ as the order of compilation might play a role (order of compilation, how fast it runs and amount of computational ressources needed).
-Processing with Regex does not replace a parser for XML or HTML since you can easily create invalid and non-wellformed markup.
+You can also use _REs_ to _modify_ a _string_ or to _split it apart_ in various ways.
 
-## Theoretical Part
-The origin of regular expressions finds its way to the world of _theoretical computer science_. When we talk about some languages, we can define **regular languages** as those who are built from some _Alphabet_ that is closed under _union_, _concatenation_ and the _Kleene star operator_ (arbitrary repetition(s) of some string, including 0 repetitions, so an empty string), as well as _intersection_, _complement_, _difference_, and some more several operators. By the term _closed under_ we observe that every time we apply one of the operators, we still have a regular language. 
+_RE patterns_ are usually compiled into a series of bytecodes which are then executed by a matching engine.
+(For advanced use, it may be necessary to pay careful attention to how the engine will execute a given _RE_, and write the _RE_ in a certain way in order to produce bytecode that runs faster or just not use too much resources to be useful).
 
-There is a strong correlation between regular languages and regular expressions. 
-With the help of a regular expression, the corresponding regular language can be represented.
+Since a _RE language_ is relatively small and restricted not all possible string processing tasks can be done using _REs_. There are also tasks that can be done with _REs_, but the expressions turn out to be very complicated.
 
-There are different notations for regular expressions:
-* Algebraic notion
-* EBNF notation
-* Syntax diagramme
-* POSIX
+In these cases, you may be better off writing code in the programming language, e.g. Python, to do the processing; Usually it is **slower** than an elaborate _RE_ but probably **a lot easier to understand**.
 
-We will focus on POSIX notations which are mostly the standard in the different technologies.
+Your best use would probably be to assert negative patterns, e.g. things you know are wrong.
 
-## Define Patterns
-We want to use the Regex as a tool to define some generalized pattern, so that it could match a possible set of strings that have some _common elements_.
-Some common examples:
-* e-mail addresses
-* phone numbers
-<!-- TODO ADD MORE EXAMPLES -->
+## Simple patterns
+We will start by learning about the _simplest possible REs_. Since _REs_ are used to operate on strings, we will begin with the most common task: _matching characters_.
 
-For this we need some fixed notation for digits, (Latin) letters, logical operators: OR, AND, some negations and more.
+### Characters
 
-We will focus on Regex represantion in _Python_. The Regex library is imported in Python with the `re` module.
-We will firstly treat basic characters and later see some possibilities to combine them on a higher level to enable more complicated patterns.
-Notice the multiple ways to define the same pattern along this introduction. It is important to compose the regular expression in a way that is readable and understandable for a third person.
-
-#### characters:
-
-| Special sequence | Matches | Equivalent sets |
-|----------------- | ------- | ------------------------------------ |
-| `\d` | any _decimal digit_ | `[0-9]` |
-| `\D` | any _non-digit character_ | `[^0-9]` |
-| `\s` | any _whitespace character_ | `[\t\n\r\f\v]` or `' '` (one space) |
-| `\S` | any _non-whitespace character_ | `[^\t\n\r\f\v]` |
-| `\w` | any _alphanumeric character or underscore_ | `[a-zA-Z0-9_]` |
-| `\W` | any _non-alphanumeric character or underscore_ | `[^a-zA-Z0-9_]` |
-
-
-Besides using the predefined special sequences, also the exact text (also single characters) can be used. <br>
-For the characters, either you specify them _individually_ or use _ranges_ by giving a _hyphen_ `-` inbetween. We will see some examples later.
-<br><br>
-**Example:** `\d\d\s[A-Z][a-z][a-z][a-z][a-z]\s\d\d\d\d` would be equal to `10 March 2022`. <br> An equal regex would be: `[0-9][0-9]\s[A-Z][a-z][a-z][a-z][a-z]\s[0-9][0-9][0-9][0-9]`.<br> We can, of course, just write the string and search it in our sentence, but in this case we lose generalization.<br> Is there a compacter way to write this Regex? Can we make it even more general to include other months as well? Later!
-
+* Most letters and characters will simply match themselves.
+* Though some characters are special _metacharacters_, and do not match themselves:
+  * They signal that some out-of-the-ordinary thing should be matched, or
+  * affect other portions of the _RE_ by repeating them or changing their meaning.
 
 #### Metacharacters
 The complete list of metacharacters:
 
-| Metacharacter | Name | Meaning |
-| --- | --- | --- |
-| `[]` | _brackets_ | a set of characters |
-| `()` | _parenthesis_ | create a group |  
-| `.` | _period_ or _dot_ | any character besides new line |
-| `^` | _caret_ | anchor operator: starts with or negation, exclude (inside the brackets) |
-| `$` | _dollar sign_ | anchor operator: ends with, final pattern |
-| `\` | _backslash_ | indicate sequences or escape metacharacters |
-| `|` | _pipe_ or _bar_ | logical OR |
+| Metacharacter | Name |
+| --- | --- |
+| `.` | _period_ or _dot_ |
+| `^` | _caret_ |
+| `$` | _dollar sign_ |
+| `*` | _asterisk_ or _star_ |
+| `+` | _plus sign_ |
+| `?` | _question mark_ |
+| `{` | _opening curly brace_ |
+| `}` | _closing curly brace_ |
+| `[` | _opening square bracket_ |
+| `]` | _closing square bracket_ |
+| `\` | _backslash_ |
+| `\|` | _pipe_ or _bar_ |
+| `(` | _opening parenthesis_ |
+| `)` | _closing parenthesis_ |
 
 
-#### Repeating Qualifiers
-| Metacharacter | Name | Meaning |
-| --- | --- | --- |
-| `*` | _asterisk_ or _star_ | arbitrary many occurences (including zero) |
-| `+` | _plus sign_ | arbitrary many occurences (at least one) |
-| `?` | _question mark_ | at most one time (including zero) |
-| `{}` | _curly brackets_ | range or number of repetitions |
+Character classes are surrounded by _opening square bracket_ `[` and _closing square bracket_ `]` to form a _set of characters_. Either you specify the characters _individually_ or use _ranges_ by giving a _hyphen_ `-` inbetween. _Metacharacters_ **are not active** inside _character classes_. Since the _character class_ is a _set_ you can also _complement_ it. To do complementing you give a _caret_ `^` as the first character of the class.
 
-We now go back to our example from above, we want to form some regex to match a date that looks like: `DAY MONTH YEAR` where the day and the year appear in digits and the month in letters.
-`(\d){2}\s(A-Z)(a-z)+\s(\d){4}`: We have here a set of groups, we firstly have 2 digits followed by a space, one uper case letter, some arbitrary number of lower case letters, another space and 4 final digits.<br>
-With this regex the following strings would match:
-* `30 January 2021`
-* `01 February 1990`
-* `15 April 2000`<br>
+One of the most important metacharacters is the _backslash_ `\` which is used to:
+* _indicate_ various _special sequences_
+* _escape_ all _metacharacters_ so they can be used in patterns without their special mening, e.g. use `\[` to match an actual _opening square bracket_ `[` in the string.
 
-_But also:_
-* `90 Fix 9999`
-* `00 January 2000`
-* `29 February 2022`
-* `30 Ja 2021`
+Some of the special sequences beginning with _backslash_ `\` represent predefined shorthand sets of characters that are often useful:
+* the set of _digits_,
+* the set of _letters_, or
+* the set of anything that is _not whitespace_.
 
-We cannot cover _all_ edge cases, however, we can definitely make the specification perciser while still maintaining generalization:<br>
-`[(0-3)\d\s(A-Z)(a-z){2, 8}\s(0-2)(\d){3}]`<br>
-What invalid strings that matched before do not match anymore? Can we improve it even more?
+`\w` matches any _alphanumeric_ character. For use with Python this set **differs** depending on whether the _RE pattern_ is:
+* a _string_, `\w` will match all the characters marked as letters or digits in the Unicode data plus underscore, or
+* _bytes_, then this is equivalent to the class `[a-zA-Z0-9_]`.
 
-#### Some Remarks:
-* `?` is equal to `{0, 1}`
-* `[0123456789]` is equal to `[0-9]`
-* `[012]` is equal to `(0|1|2)`. `(123)` does not represent the same, as the pattern would look after exactly `"123"` in the string.
-* Note: for German characters (or some other languages with Latin characters) you need to redefine the group of letters `[a-zA-Z]` to include also the extra letters: `[a-zA-ZäöüÄÖÜß]`.
-* Regex for simple punctuation: `[\.\,!\?]`
 
-#### More examples:
+| Special sequence | Matches | Restricted<sup>1</sup> equivalent to |
+|----------------- | ------- | ------------------------------------ |
+| `\d` | any _decimal digit_ | `[0-9]` |
+| `\D` | any _non-digit character_ | `[^0-9]` |
+| `\s` | any _whitespace character_ | `[ \t\n\r\f\v]` |
+| `\S` | any _non-whitespace character_ | `[^ \t\n\r\f\v]` |
+| `\w` | any _alphanumeric character_ | `[a-zA-Z0-9_]` |
+| `\W` | any _non-alphanumeric character_ | `[^a-zA-Z0-9_]` |
 
-The _metacharacter star_ `*`, does not match the _literal character_ `*`, and its meaning is matching _zero or more times_. To match the _literal character_ `*`, we use the backslash for escaping the metacharacter: `\*`. 
+<sup>1</sup> With Python you can use the more restricted definition of e.g. `\w` in a string pattern by supplying the `re.ASCII` flag when compiling the regular expression. Otherwise the Unicode character categories are used and thus the sequence sets include a lot more characters.
+
+_Sequences_ can be included inside a _character class_. E.g. `[\s:;]` will match any whitespace character, a colon `:` or semicolon `;`.
+
+The final metacharacter in this section is _dot_ `.`. It matches anything except a newline character.
+(In Python you can use `re.DOTALL` to match even a _newline_. _Dot_ `.` is often used where you want to match _any character_.)
+
+## Repetition
+
+_Matching varying sets of characters_ is the first thing REs can do. Another capability is that you can specify that portions of the _RE_ must be _repeated_, i.e. _qualified_, a certain number of times.
+
+All four _repeating qualifiers_:
+```
+* + ? {m,n}
+```
+
+The first single _metacharacter_ for _repeating_ things that we will look at is _star_ `*`. _Star_ `*` does not match the _literal character_ `*`. It specifies that the previous character can be matched _zero or more times_, instead of _exactly once_. This means whatever is being repeated may not be present at all.
 
 | String | RE | Match |
 | --- | --- | --- |
 | star | `[e]*` | Yes |
-| staar | `st[a]*r` | Yes |
+| staar | `t[a]*r` | Yes |
 
-The _repeating metacharacter_ plus `+` means matching _one or more times_. This requires _at least one occurrence_ compared to _asterisk_ `*`.
+The second _repeating metacharacter_ is plus `+` which matches _one or more times_. This requires _at least one occurrence_ compared to _asterisk_ `*`.
 
 | String | RE | Match |
 | --- | --- | --- |
 | plus | `pl[au]+s` | Yes |
 | pluus | `plu+s` | Yes |
-| plu | `plu[s]+` | No |  
-| plusss | `plus+` | Yes |
-| plusususs | `pl(us)+` | No | 
-| plusususs | `pl[us]+` | Yes | 
-| plusususs | `pl(us)+s` | Yes |
-
-Notice the three last examples and the difference between applying the operator on a set and on a group.
+| plusplus | `uss+` | No |  
+| plussusch | `us[cs]+` | Yes |  
 
 
-The third single repeating _qualifier_ is  the _question mark_ `?` which matches either _once or zero times_.
+The third single repeating _qualifiers_ is  the _question mark_ `?` which matches either _once or zero times_.
 
 | String | RE | Match |
 | --- | --- | --- |
@@ -135,28 +122,31 @@ The third single repeating _qualifier_ is  the _question mark_ `?` which matches
 | markka | `rk?a` | No |  
 | mark | `a?r` | Yes |
 
-
-The fourth repeated qualifier is `{m,n}`, where `m` and `n` are _decimal integers_. This _qualifier_ means there must be _at least_ `m` repetitions, and _at most_ `n` repetitions.
+The fourth and most complicated repeated qualifier is `{m,n}`, where `m` and `n` are _decimal integers_. This _qualifier_ means there must be _at least_ `m` repetitions, and _at most_ `n` repetitions.
 
 | String | RE | Match |
 | --- | --- | --- |
 | complicated | `li{1,1}c` | Yes |
 | appreciated | `p{2,2}` | Yes |  
-| rain | `(ai){2,2}` | Yes |
-| rain | `(ai){1,2}` | Yes |
-| complicated | `li(act){3,}ed` | Yes |
+| rain | `[ai]{2,2}` | Yes |
+| rain | `[ai]{1,2}` | Yes |
+| complicated | `li[act]{3,}ed` | Yes |
 
 If either `m` or `n` is omitted it becomes for e.g. `{3,}` _three or more_ and `{,3}` _up to three_ repetitions.
 
-#### Remark: 
-if we have a set or a group with no following _repeating metacharacter_ we refer to exactly one occurence by default.
+With this qualifier you can express all the single repeating qualifiers, e.g. `?` as `{0,1}` `+` as `{1,}`, and `*` as `{0,}` but the single versions are both easier on the eye and shorter to write.
 
+## Anchors
+Anchors match a position not characters.
 
-#### Anchors
-Anchors match a pattern based on its position in the string.
-Note: Most _RE engines_ have a _multi-line_ mode that makes _caret_ `^` match after any line break, and _dollar_sign_ `$` before any line break.
+### Metacharacter anchors
 
-#### Examples:
+| Metacharacter |  Matches at |
+| --- | --- |
+| `^` | the start of a string |
+| `$` | the end of a string |
+
+Most _RE engines_ have a _multi-line_ mode that makes _caret_ `^` match after any line break, and _dollar_sign_ `$` before any line break.
 
 | String | RE | Match |
 | --- | --- | --- |
@@ -166,7 +156,7 @@ Note: Most _RE engines_ have a _multi-line_ mode that makes _caret_ `^` match af
 | rain | `$r[ai]+n$` | Yes |
 | complicated | `^comp.*ed$` | Yes |
 
-#### Special sequence anchors
+### Special sequence anchors
 
 | Special sequence |  Matches at |
 | --- | --- |
@@ -183,8 +173,43 @@ A word boundary is a position between a character that can be matched by the set
 | rain | `$r[ai]+n\b` | Yes |
 | complicated | `\bcomp.+\b` | Yes |
 
-In the next lecture we will review: sets and groups, regex-based functions and go over examples.
+# Regular Expressions 2
 
-Material to overview before the next lecture:
+Last session we covered _simple patterns_ and _repetition_. We also did some exercises on this using `egrep`. Today we firstly want to cover _alternation_ and _grouping_ before we continue using `egrep` with more andvanced expressions. Later on we will start compare `egrep`s REs to `python`.
+
+## Alternation
+
+_Alternation_ is the _RE_ equivalent of `or`. `word|weapon` matches _words_ in _About words and other mighty weapons_. Applied again the _RE alternation_ matches _weapons_. You can add as many alternatives as you want, e.g. `letter|syllable|word|phrase|sentence|paragraph`.
+
+_Alternation_ has the **lowest precedence** of all _RE operators_.
+
+Exercise: Find the preference for all types, e.g _concatenation_, _repetition_ and _alternation_.
+
+## Grouping
+Since we introduced _precedence_ in the previous section we also want to be able to change the behaviour. This is one of the things _grouping_ does.  
+
+| Metacharacter | Explanation |
+| --- | --- |
+| `(` | starts a group |
+| `)` | ends a group |
+
+### Precedence examples
+
+<table>
+<tr><th>String</th><th>Pattern</th><th>Match?</th></tr>
+<tr><td> word and phrase level</td><td><code>word|phrase level</code></td><td>Yes, both <em>word</em> and <em>phrase level</em></td></tr>
+<tr><td>walked up to the talking lamp post</td><td><code>ed\b|ing\b</code></td><td>Yes, both <em>ed</em> at the end of <em>walked</em> and <em>ing</em> at the end of <em>talking</em></td></tr>
+<tr><td>word level and phrase level</td><td><code>word|phrase level</code></td><td>Yes, but only <em>word</em> and <em>phrase level</em> (not all of <em>word level</em>)</td></tr>
+<tr><td>word level and phrase level</td><td><code>(word|phrase) level</code></td><td>Yes, both <em>word level</em> and <em>phrase level</em></td></tr>
+</table>
+
+In addition to use the _grouping metachararacters_ to alter the precedence you can use it for _back reference_. Some RE implementations have named grouping back references others just `\1`, `\2` etcetera.
+
+Exercise: Check out how this is in `egrep`.   
 
 
+## Comparing to Python
+Without going into actual Python programming we are going to see how the `egrep` REs compare to Python's:  
+* [Regular expressions 101](https://regex101.com/)
+
+Make sure to tick Python in the _Flavour_ list to the left.

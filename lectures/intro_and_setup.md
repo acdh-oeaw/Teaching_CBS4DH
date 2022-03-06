@@ -9,31 +9,52 @@ Welcome to the Computational Background Skills class! We will use these markdown
 * [Getting to know your OS (40m)](#getting-to-know-your-OS)
 
 ## Introducing the lecturers
+<<<<<<< HEAD
+
+Team from the Austrian Centre for Digital Humanities and Cultural Heritage of the Austrian Academy of Sciences ([ACDH-CH OEAW[(https://www.oeaw.ac.at/acdh/)])
+
+* Matej Ďurčo
+* Massimiliano Carloni
+* Tahel Singer
+* Mateusz Żółtak
+* Daniel Stoxreiter
+* Florian Wiencek
+=======
 Massimiliano Carloni (massimiliano.carloni@oeaw.ac.at)
 Matej Ďurčo (matej.durco@oeaw.ac.at)
 Tahel Singer (tahel.singer@oeaw.ac.at)
 Daniel Stoxreiter (daniel.stoxreiter@oeaw.ac.at)
 Florian Wiencek (florian.wiencek@oeaw.ac.at)
 Mateusz Żółtak (mateusz.zoltak@oeaw.ac.at)
+>>>>>>> 2194ca7f10529a79d5c9ab4a9bd5ecc2b0503f68
 
 Please don't hesitate to reach out to the lecturers if you need any help about the lecture.
+(email: firstname.surname@oeaw.ac.at)
+
 
 ## Aims and contents of the course
-This course is intended to provide basic training and support for further skills courses in the Digital Humanities. It is strongly recommended as a prerequisite to the other DH practical courses.
-As such, students will be required to bring a laptop computer (no tablets!) If this presents a problem, please contact one of the course instructors in advance.
-- Introduction to the command line
-- Introduction to file formats and filesystems
-- Solving the mystery of special characters
-- Understanding how the Internet works behind the browser
+This course is intended to provide basic training in skills needed in further courses and in the Digital Humanities in general.
+
+Main topics covered:
+
+- Use of command line
+- Introduction to regular expressions
+- Practical use of Git
+- Some notes on file formats
+- Minimal introduction to web technologies
 - Things you ought to know about your (Mac / Windows / Linux) operating system
 - Where to go for help and how to understand the answers
+- Broader DH context
 
-We will also try to accompany the contents of each course with some practical steps of the exercise, which will lead to a final project in the end.
+The whole course is aimed to gain practical skills, accordingly the contents of each lesson is accompanied with practical exercises, which we will go through during the session.
+
+Whole course contents is on [github](https://github.com/acdh-oeaw/Teaching_CBS4DH)
 
 ### Grading & Attendance
 Attendance in every lecture is required due to the PI type of block-course.
 
 Regular attendance, following the practical exercise tasks during the lecture and active participation will lead to a final grade.
+
 
 ## Required Setup and Tools
 - Create a personal GitHub account: https://github.com/join
@@ -85,7 +106,11 @@ Most common current OS's are:
 ## About files
 
 * Why are some files hidden? <!--If you change something, however small, in some of these files, you can break your computer. Be careful!-->
+<<<<<<< HEAD
+* **Case sensitive** vs **case preserving**: Linux is **case sensitive**, meaning files with the same name but different capitalization are different files (e.g., `finalpaper.txt` is different than `FinalPaper.txt`). Mac OS and Windows are **case preserving**, but not case sensitive. <!-- (This preference can be changed when configuring the filesystem, but certain programs will not run in a case sensitive environment, so it’s best to leave it alone). A case preserving file system will spell the filename as you type it, but if you create a different file with a name that differs only in capitalization, it will overwrite the first one. We recommend not creating filenames that differ only in capitalization even on Linux; not only is it potentially confusing, but you may be collaborating on a project with someone not on Linux. -->
+=======
 * **Case sensitive** vs **case preserving**: Linux is **case sensitive**, meaning files with the same name but different capitalization are different files (e.g., `finalpaper.txt` is different than `FinalPaper.txt`). macOS and Windows are **case preserving**, but not case sensitive. <!-- (This preference can be changed when configuring the filesystem, but certain programs will not run in a case sensitive environment, so it’s best to leave it alone). A case preserving file system will spell the filename as you type it, but if you create a different file with a name that differs only in capitalization, it will overwrite the first one. We recommend not creating filenames that differ only in capitalization even on Linux; not only is it potentially confusing, but you may be collaborating on a project with someone not on Linux. -->
+>>>>>>> 2194ca7f10529a79d5c9ab4a9bd5ecc2b0503f68
 * **Spaces** in a file and directory names. Why could these be problematic?
 
 
@@ -117,21 +142,31 @@ Most common current OS's are:
 <!-- where is home?  both in cmd and in gui-->
 <!-- language differences for gui and command line-->
 
+<<<<<<< HEAD
+* Navigate up and down, with emphasis on the paths in the title bar
+* `cd`: change directory <!--Open a command line and begin using `cd`. Explain that `cd` is essentially the same as selecting or clicking a folder. `cd` into your home directory.-->
+=======
 * Navigate up and down, with emphasis on the paths in the title bar 
 * `cd`: change directory <!--Open a command line and begin using `cd`. Explain that `cd` is essentially the same as selecting or clicking on a folder. `cd` into your home directory.-->
+>>>>>>> 2194ca7f10529a79d5c9ab4a9bd5ecc2b0503f68
 * `ls`: list all files  <!--Use `ls` to show all the files in your current (when you first open the terminal, home) directory. Compare that to what you now see in your home directory (or C drive “folder”). Then use `cd Documents` to move into your documents folder. This is a relative path, as you’ve navigated relative to where you’ve started. Explain what an absolute path looks like, and try running one. Then run a few relative paths.-->
 
 ## File/directory path in file explorer GUI vs. shell
 
 * Matching the GUI file path with the file/directory path in the terminal
-* User-specific directories: where are your home directory, document folder, and desktop? What are their full file/directory paths? 
+* User-specific directories: where are your home directory, document folder, and desktop? What are their full file/directory paths?
 * Non-English OS’s may have translation/localization applied, but only on the GUI side! Why is this?
 
 ## External drives and mounting
 How removable and external drives (such as a USB thumbdrive) are treated in GUI vs. terminal environment
 
+<<<<<<< HEAD
+* In Mac OS, they are mounted underneath `/Volumes` when you plug them in. Unmount them by following the instructions at [Mount and unmount drives from the command line in Mac OS X](http://osxdaily.com/2013/05/13/mount-unmount-drives-from-the-command-line-in-mac-os-x/).
+
+=======
 * In macOS, they are mounted underneath `/Volumes` when you plug them in. Unmount them by following the instructions at [Mount and unmount drives from the command line in Mac OS X](http://osxdaily.com/2013/05/13/mount-unmount-drives-from-the-command-line-in-mac-os-x/). 
  	
+>>>>>>> 2194ca7f10529a79d5c9ab4a9bd5ecc2b0503f68
 ## How to run a program as an administrator
 
 * The GUI will generally ask you if you need to do this
@@ -140,7 +175,7 @@ How removable and external drives (such as a USB thumbdrive) are treated in GUI 
 
 # Windows
 
-## File system hierarchy 
+## File system hierarchy
 
 * What are files?
 * What are directories/folders? <!--Thinking about why we call them folders: a folder and a piece of paper are the same, and can do some of the same things. A folder can also hold pieces of paper.-->
@@ -155,13 +190,13 @@ How removable and external drives (such as a USB thumbdrive) are treated in GUI 
 
 ## Configuring your machine to show filename extensions
 
-* <[screenshot](images/getting_to_know_winconfig.png)> In any File Explorer window, click on “View” tab, and then “Options” on the right to open the “Folder Options” window. 
+* <[screenshot](images/getting_to_know_winconfig.png)> In any File Explorer window, click on “View” tab, and then “Options” on the right to open the “Folder Options” window.
 	* In the “View” tab, uncheck “Hide extensions for known file types” box.
 
 ## Configuring your machine to show hidden files, and more
 
-* <[screenshot](images/getting_to_know_winconfig.png)> In the same “Folder Options” window as before, 
-	* Check “Show hidden files, folders, and drives”. 
+* <[screenshot](images/getting_to_know_winconfig.png)> In the same “Folder Options” window as before,
+	* Check “Show hidden files, folders, and drives”.
 		* NOTE: Protected operating system files will still stay hidden.  
 	* Also check “Display the full path in the title bar” (not essential, but recommended).
 
@@ -169,6 +204,17 @@ How removable and external drives (such as a USB thumbdrive) are treated in GUI 
 
 * Why are some files hidden? <!--If you change something, however small, in some of these files, you can break your computer. Be careful!-->
 * **Case sensitive** vs **case preserving**
+<<<<<<< HEAD
+	* Linux is **case sensitive**, meaning files with the same name but different capitalization are different files (e.g., `finalpaper.txt` is different than `FinalPaper.txt`).
+	* Mac OS and Windows are **case preserving**, but not case sensitive. <!-- (This preference can be changed when configuring the filesystem, but certain programs will not run in a case sensitive environment, so it’s best to leave it alone). A case preserving file system will spell the filename as you type it, but if you create a different file with a name that differs only in capitalization, it will overwrite the first one. We recommend not creating filenames that differ only in capitalization even on Linux; not only is it potentially confusing, but you may be collaborating on a project with someone not on Linux. -->
+* **Spaces** in a file and directory names. Why could these be problematic?
+
+## Launching a terminal
+
+* The Command Prompt **cmd.exe** <[screenshot](images/getting_to_know_cmd.png)> is the native Windows console, which grew out of DOS.  We will be using it in this session.
+	* How to launch: from the Start menu type in “cmd”.
+	* NOTE: For later sessions and the remainder of this institute we will be using the **bash shell** instead, which you downloaded and installed as part of Git. This is the command line interface we use and recommend.
+=======
 	* Linux is **case sensitive**, meaning files with the same name but different capitalization are different files (e.g., `finalpaper.txt` is different than `FinalPaper.txt`). 
 	* macOS and Windows are **case preserving**, but not case sensitive. <!-- (This preference can be changed when configuring the filesystem, but certain programs will not run in a case sensitive environment, so it’s best to leave it alone). A case preserving file system will spell the filename as you type it, but if you create a different file with a name that differs only in capitalization, it will overwrite the first one. We recommend not creating filenames that differ only in capitalization even on Linux; not only is it potentially confusing, but you may be collaborating on a project with someone not on Linux. -->
 * **Spaces** in a file and directory names. Why could these be problematic? 
@@ -178,6 +224,7 @@ How removable and external drives (such as a USB thumbdrive) are treated in GUI 
 * The Command Prompt **cmd.exe** <[screenshot](images/getting_to_know_cmd.png)> is the native Windows console, which grew out of DOS.  We will be using it in this session. 
 	* How to launch: from the Start menu type in “cmd”. 
 	* NOTE: For later sessions and the remainder of this course we will be using the **bash shell** instead, which you downloaded and installed as part of Git. This is the command line interface we use and recommend.
+>>>>>>> 2194ca7f10529a79d5c9ab4a9bd5ecc2b0503f68
 
 ## Moving through a filesystem
 <!-- Move the programs and files stuff in here, use cmd.exe -->
@@ -190,11 +237,11 @@ How removable and external drives (such as a USB thumbdrive) are treated in GUI 
 * `cd`: change directory <!--Open a command line and begin using `cd`. Explain that `cd` is essentially the same as selecting or clicking a folder. `cd` into your home directory.-->
 * `dir`: list all files
 
-## File/directory path in File Explorer GUI vs. cmd 
+## File/directory path in File Explorer GUI vs. cmd
 
 * Matching the GUI file path with the file/directory path in the terminal
-* User-specific directories: where are your home directory, document folder, and desktop? What are their full file/directory paths? 
-* Non-English OS’s may have translation/localization applied, but only on the GUI side! 
+* User-specific directories: where are your home directory, document folder, and desktop? What are their full file/directory paths?
+* Non-English OS’s may have translation/localization applied, but only on the GUI side!
 	* In Spanish Windows, a user’s Documents folder would appear in File Explorer as “Usarios > jeremy > Documentos”
 	* The same folder will appear on the command line as `C:\Users\jeremy\Documents`
 
@@ -202,17 +249,17 @@ How removable and external drives (such as a USB thumbdrive) are treated in GUI 
 How removable and external drives (such as a USB thumbdrive) are treated in GUI vs. terminal environment
 
 * In Windows, they are assigned a new drive letter: `d:\` `e:\` (cmd)
-* In Git bash environment (will learn this later), they look like: `/d/` `/e/` 
+* In Git bash environment (will learn this later), they look like: `/d/` `/e/`
 
 ## How to run a program as an administrator
 
-* Right click on a program icon (say, Command Prompt) and select “Run as administrator”. 
+* Right click on a program icon (say, Command Prompt) and select “Run as administrator”.
 	* **CAUTION!** You may accidentally break your system by removing essential files or directories.
-	* Use only when you have a good reason to; close program when done. 
+	* Use only when you have a good reason to; close program when done.
 
 ## Environment variables (aka system variables)
 
 * How to view environment variables through a GUI
-	* File Explorer -> Right click on 'This PC', select 'Properties' -> Advanced System Settings -> Environment Variables 
+	* File Explorer -> Right click on 'This PC', select 'Properties' -> Advanced System Settings -> Environment Variables
 * How to view environment variables in a terminal
 	* In `cmd`, type in: `set`
