@@ -9,9 +9,8 @@ Welcome to the Computational Background Skills class! We will use these markdown
 * [Getting to know your OS (40m)](#getting-to-know-your-OS)
 
 ## Introducing the lecturers
-<<<<<<< HEAD
 
-Team from the Austrian Centre for Digital Humanities and Cultural Heritage of the Austrian Academy of Sciences ([ACDH-CH OEAW[(https://www.oeaw.ac.at/acdh/)])
+Team from the Austrian Centre for Digital Humanities and Cultural Heritage of the Austrian Academy of Sciences ([ACDH-CH OEAW](https://www.oeaw.ac.at/acdh/))
 
 * Matej Ďurčo
 * Massimiliano Carloni
@@ -19,14 +18,6 @@ Team from the Austrian Centre for Digital Humanities and Cultural Heritage of th
 * Mateusz Żółtak
 * Daniel Stoxreiter
 * Florian Wiencek
-=======
-Massimiliano Carloni (massimiliano.carloni@oeaw.ac.at)
-Matej Ďurčo (matej.durco@oeaw.ac.at)
-Tahel Singer (tahel.singer@oeaw.ac.at)
-Daniel Stoxreiter (daniel.stoxreiter@oeaw.ac.at)
-Florian Wiencek (florian.wiencek@oeaw.ac.at)
-Mateusz Żółtak (mateusz.zoltak@oeaw.ac.at)
->>>>>>> 2194ca7f10529a79d5c9ab4a9bd5ecc2b0503f68
 
 Please don't hesitate to reach out to the lecturers if you need any help about the lecture.
 (email: firstname.surname@oeaw.ac.at)
