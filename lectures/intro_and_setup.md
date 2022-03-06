@@ -10,7 +10,7 @@ Welcome to the Computational Background Skills class! We will use these markdown
 
 ## Introducing the lecturers
 
-Team from the Austrian Centre for Digital Humanities and Cultural Heritage of the Austrian Academy of Sciences ([ACDH-CH OEAW[(https://www.oeaw.ac.at/acdh/)])
+Team from the Austrian Centre for Digital Humanities and Cultural Heritage of the Austrian Academy of Sciences ([ACDH-CH OEAW](https://www.oeaw.ac.at/acdh/))
 
 * Matej Ďurčo
 * Massimiliano Carloni
