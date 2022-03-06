@@ -79,7 +79,6 @@
 | /pattern | search forward for pattern |
 | ?pattern | search backward for pattern |
 | q | exit |
-[Some essential commands for less]
 
 ## Wildcards (“globbing”; annoyingly different from regex)
 
