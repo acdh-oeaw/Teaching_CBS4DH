@@ -4,14 +4,14 @@
 
 * **References:** Much of the content of these sessions is summarized at our [Command line quick reference](command_resources.md) page.
 * **Credit:** Our materials are based on the Software Carpentry [Unix Shell](http://swcarpentry.github.io/shell-novice/) course
-* **Etherpad:** We’ll create an [Etherpad](https://etherpad.net) where participants who wish to do so can take notes collaboratively. For a quick overview of Etherpad functionality see <http://write.flossmanuals.net/etherpad/introduction/>.
+* **Etherpad:** We’ll create an [Etherpad](https://etherpad.net) where participants who wish to do so can take notes collaboratively. For a quick overview of Etherpad functionality see <http://archive.flossmanuals.net/etherpad/>.
 * **Something to play with:** Follow the instructions at <http://swcarpentry.github.io/shell-novice/setup.html> to copy some practice files.
 
 ## General review (see also below)
 
 * `whoami`
 * `pwd`
-* `clear` (`Ctrl+l`)
+* `clear` (`Ctrl+l` on Windows and Ubuntu, `Cmd+k` on macOS)
 * `ls` (`-l`, `-a`, `-G`, `-lh`, `-d`, `-d */`, `-1`, `-F`); `ls /Users/djb/Documents/data-shell`
 
 ## History and tab completion
@@ -19,8 +19,8 @@
 ### Review
 
 * `history` (up and down arrows)
-* `!580`
-* `!!`
+* `!580` (execute the 580th command from the history)
+* `!!` (execute the previous command)
 * `tab`: 1) Filename completion, 2) Command completion
 * Editing the command line: `Ctrl + a`, `Ctrl + e`, `Ctrl + u`, `Option + click` (Mac only)
 * `file /Users/djb/Documents/myfile.txt`
@@ -35,7 +35,7 @@
 * `cd` or `cd ~`: go to your home directory
 * `cd -`: go back to the directory you came from
 * `cd ..` go up one level
-* `cd /Users/djb/Documents/data-shell`: To to specified directory
+* `cd /Users/djb/Documents/data-shell`: go to specified directory
 
 ## Working with directories
 
@@ -58,11 +58,27 @@
 * `rm`: delete (careful—deletion is forever!)
 * `rm -i`: delete after asking permission
 * Editing and saving files (in your editor of choice)
-	* Mac default is TextEdit
-	* Or install [BBEdit](https://www.barebones.com/products/bbedit/)
+	* Windows default is Notepad, Mac default is TextEdit
+	* In this course, we will use [Atom](https://atom.io/)
+	* Alternatives are:
+		* [BBEdit](https://www.barebones.com/products/bbedit/) (only Mac)
+		* [Notepad++](https://notepad-plus-plus.org/) (only Windows)
+		* [Visual Studio Code](https://code.visualstudio.com/) (Mac, Windows, Linux)
 	* Or use `vim` from the command line
 	* What’s a good filename?
 * `less /Users/djb/Documents/myfile.txt` (`space`, `b`, `q`, `/`, `?`, `n`, `G` , `G1`)
+
+| Keystroke | Action |
+| --------- | ------ |
+| space | forward one window |
+| b | backward one window |
+| d | forward one half-window |
+| u | backward one half-window |
+| g | go to first line |
+| G | go to last line |
+| /pattern | search forward for pattern |
+| ?pattern | search backward for pattern |
+| q | exit |
 
 ## Wildcards (“globbing”; annoyingly different from regex)
 
