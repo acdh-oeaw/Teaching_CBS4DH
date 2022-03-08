@@ -31,7 +31,7 @@ Some common examples:
 * phone numbers
 * clean out time stamps or (special notationed) notes in transcriptions
 
-### Characters
+## Characters
 
 We will focus on Regex representation in _Python_. The Regex library is imported in Python with the `re` module:
 ```Python
@@ -43,7 +43,7 @@ re.sub(r"0", "1", "023") # output = "123"
 We will firstly treat basic characters and later see some possibilities to combine them on a higher level to enable more complicated patterns.
 Notice the multiple ways to define the same pattern along this introduction. It is important to compose the regular expression in a way that is readable and understandable for another person.
 
-#### Metacharacters
+## Metacharacters
 The complete list of metacharacters:
 
 | Metacharacter | Name |
@@ -111,7 +111,7 @@ The final metacharacter in this section is _dot_ `.`. It matches anything except
 | `\` | _backslash_ | indicate sequences or escape metacharacters |
 | `\|` | _pipe_ or _bar_ | logical OR |
 
-#### Repeating Qualifiers
+## Repeating Qualifiers
 | Metacharacter | Name | Meaning |
 | --- | --- | --- |
 | `*` | _asterisk_ or _star_ | arbitrary many occurences (including zero) |
@@ -140,14 +140,14 @@ We cannot cover _all_ edge cases, however, we can definitely make the specificat
 `(0-3)\d\s(A-Z)(a-z){2, 8}\s(0-2)(\d){3}`<br>
 What invalid strings that matched before do not match anymore? Can we improve it even more?
 
-#### **Some Remarks:**
+### **Some Remarks:**
 * `?` is equal to `{0, 1}`
 * `[0123456789]` is equal to `[0-9]`
 * `[012]` is equal to `(0|1|2)`. `(123)` does not represent the same, as the pattern would look after exactly `"123"` in the string.
 * Note: for German characters (or some other languages with Latin characters) you need to redefine the group of letters `[a-zA-Z]` to include also the extra letters: `[a-zA-ZäöüÄÖÜß]`.
 * Regex for simple punctuation: `[\.\,!\?]`
 
-#### **More examples:**
+### **More examples:**
 
 For the examples we will use the ```match``` function of Python, and will take a deeper look at the different functions in the next lecture.
 ```Python
@@ -224,9 +224,6 @@ If either `m` or `n` is omitted it becomes for e.g. `{3,}` _three or more_ and `
 With this qualifier you can express all the single repeating qualifiers, e.g. `?` as `{0,1}` `+` as `{1,}`, and `*` as `{0,}` but the single versions are both easier on the eye and shorter to write.
 
 ## Anchors
-Anchors match a position not characters.
-
-#### Anchors
 Anchors match a pattern based on its position in the string. 
 Note: Most _RE engines_ have a _multi-line_ mode that makes _caret_ `^` match after any line break, and _dollar_sign_ `$` before any line break. We will review the examples next lecture, as they are relevant to other functions.
 
