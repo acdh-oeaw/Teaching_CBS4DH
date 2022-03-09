@@ -16,6 +16,7 @@ ____
 * The Unix philosophy is that you can _pipe_ (chain) together small commands, each of which does one thing well, to do something complex. You can’t do this in a GUI.
 * **bash** = ‘Bourne again shell’ (the original Bourne shell is sh; others include csh, ksh, tcsh, zsh). <!-- We use and recommend bash. There are many different shells, some of which you end up downloading with program packages like Python.-->
 	* The standard shell on macOS, starting with macOS Catalina (10.15), is **zsh** (Z shell). There are some differences compared to bash (some of them listed [here](https://apple.stackexchange.com/a/361957)), but none that affect us during these lessons. You can still use bash by simply typing `bash` in the command line, or you can change the default shell by following the instructions at <https://support.apple.com/en-au/HT208050>.
+	* Not sure which shell you're using? Type `echo $SHELL` at the command prompt.
 * Learn the shell on a need-to-know basis. <!--There are commands you’ll use every day, some you’ll use for special purposes (and you’ll look up how they work when you need them), and some that you’ll never need.-->
 
 ## Advantages of using a CLI-based shell
