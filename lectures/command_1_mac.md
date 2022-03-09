@@ -93,7 +93,8 @@ For example: `ls -F exercise-data`
 	* Delete the whole line: `Ctrl+u`
 	* Move to beginning of line: `Ctrl+a`
 	* Move to end of line: `Ctrl+e`
-
+* If the screen has become a bit cluttered: `clear` (or `Cmd+k` on Mac, `Ctrl+l` on Ubuntu)	
+	
 ## Need help with a command?
 
 For example `ls`:
