@@ -104,7 +104,7 @@ Resources on the web:
 * Command line reference: <https://ss64.com/bash/>
 * Or just google the command (followed by `unix`, `terminal`, or the like)
 
-## How to navigate in man pages
+How to navigate in `man` pages:
 
 | Key | Action |
 | --------- | ------ |
