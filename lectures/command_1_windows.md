@@ -83,7 +83,7 @@ For example: `ls -F exercise-data`
 * `cd /Users/djb/Desktop/data-shell/data` (absolute path; it has a leading slash = root directory)
 
 `ls` = listing
-* `ls -a`: include hidden files (filenames starting with `.`, `.DS_store` files included)
+* `ls -a`: include hidden files (filenames starting with `.`)
 * `ls -l`: show enhanced file information, including date and time stamps, owner and group, permissions
 * `ls -t`: list in timestamp order
 * `ls -G`: colored output
