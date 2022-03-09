@@ -17,7 +17,7 @@ ____
 * **bash** = ‘Bourne again shell’ (the original Bourne shell is sh; others include csh, ksh, tcsh, zsh). <!-- We use and recommend bash. There are many different shells, some of which you end up downloading with program packages like Python.-->
 * Learn the shell on a need-to-know basis. <!--There are commands you’ll use every day, some you’ll use for special purposes (and you’ll look up how they work when you need them), and some that you’ll never need.-->
 
-## Advantages of using a CLI-based shell
+## Advantages of using a CLI-based shell
 
 * There are tools that are available only on the command line.
 * It has a very high action-to-keystroke ratio.
