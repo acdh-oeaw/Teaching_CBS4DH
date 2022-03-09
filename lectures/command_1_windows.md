@@ -62,7 +62,9 @@ ____
 ## The basic structure of a command
 
 Command + options (with `-`) + arguments
+
 For example: `ls -F exercise-data`
+
 * Options are also called flags or switches
 * In some cases, options can be express in a longer form, with a double hyphen (`--`)
 * You can also combine options together (e.g., `ls -l -h` or `ls -lh`)
