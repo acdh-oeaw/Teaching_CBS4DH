@@ -8,8 +8,8 @@ The search pattern defines some generalized way to describe a possible string:</
 The pattern _3 digits and one following capital letter_ would match both: _123A_ and _456B_, but not _123a_.</br>
 The pattern _possibly some digit(s) and a final exclamation mark_ would match: _10000!_, _2022!_, and also _!_ (why? later!). 
 
-_RE_ patterns are usually compiled into series of bytes/bytecode and are then executed by a matching engine. Therefore, it may be necessary to pay more attention to how the engine executes a given _RE_ as the order of compilation might play a role (order of compilation, how fast it runs and amount of computational ressources needed).
-Processing with Regex does not replace a parser for XML or HTML since you can easily create invalid and non-wellformed markup.
+<!-- _RE_ patterns are usually compiled into series of bytes/bytecode and are then executed by a matching engine. Therefore, it may be necessary to pay more attention to how the engine executes a given _RE_ as the order of compilation might play a role (order of compilation, how fast it runs and amount of computational ressources needed).
+Processing with Regex does not replace a parser for XML or HTML since you can easily create invalid and non-wellformed markup. -->
 
 ## Theoretical Part
 The origin of regular expressions finds its way to the world of _theoretical computer science_. When we talk about some languages, we can define **regular languages** as those who are built from some _Alphabet_ that is closed under _union_, _concatenation_ and the _Kleene star operator_ (arbitrary repetition(s) of some string, including 0 repetitions, so an empty string), as well as _intersection_, _complement_, _difference_, and some more several operators. By the term _closed under_ we indicate that every time we apply one of the operators, we still have a regular language. 
