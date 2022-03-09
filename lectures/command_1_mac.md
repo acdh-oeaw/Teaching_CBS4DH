@@ -7,18 +7,18 @@ ____
 * **Credit:** Our materials are based on the Software Carpentry [Unix Shell](http://swcarpentry.github.io/shell-novice/) course
 * **Something to play with:** Follow the instructions at <http://swcarpentry.github.io/shell-novice/setup.html> to copy some practice files.
 
-## What is the *shell*? Why and how do we use it?
+## What is the *shell*? How do we use it?
 
 * The *shell* is a program that runs other programs. <!-- The shell is still a program, which takes input and gives output. The input is a command, though, so it seems as though we’re doing something different. In reality, using command line is no different than using any other program.-->
 * There are shells that use a GUI (graphical user interface), for example the [Windows Shell](https://docs.microsoft.com/en-us/windows/win32/shell/shell-entry), and shells that use a CLI (command-line interface), like [cmd](https://en.wikipedia.org/wiki/Cmd.exe) in Windows. <!-- What is important to know is that the shell is the outermost layer around the operating system, and there is no one-to-one correspondence between an OS and a shell, although some shells are typically made for a specific OS. In Windows, for example, there are two CLI-based shells that come preinstalled, i.e. cmd and PowerShell, and others can be installed afterwards. -->
-* We will use a Unix shell, which we will run inside a window in the GUI of our OS. <!-- macOS and Linux are Unix-like OS's, and come with a Unix shell preinstalled; but we can install one in Windows too. -->
+* We will use a **Unix shell**, which we will run inside a window in the GUI of our OS. <!-- macOS and Linux are Unix-like OS's, and come with a Unix shell preinstalled; but we can install one in Windows too. -->
 * The command-line-based window that runs a shell is called a *console* or a *terminal*.
 * The Unix philosophy is that you can _pipe_ (chain) together small commands, each of which does one thing well, to do something complex. You can’t do this in a GUI.
-* bash = ‘Bourne again shell’ (the original Bourne shell is sh; others include csh, ksh, tcsh, zsh). <!-- We use and recommend bash. There are many different shells, some of which you end up downloading with program packages like Python.-->
-	* The standard shell on macOS, starting with macOS Catalina (10.15), is zsh (Z shell). There are some differences compared to bash (some of them listed [here](https://apple.stackexchange.com/a/361957)), but none that affect us during these lessons. You can still use bash by simply typing `bash` in the command line, or you can change the default shell by following the instructions at <https://support.apple.com/en-au/HT208050>.
+* **bash** = ‘Bourne again shell’ (the original Bourne shell is sh; others include csh, ksh, tcsh, zsh). <!-- We use and recommend bash. There are many different shells, some of which you end up downloading with program packages like Python.-->
+	* The standard shell on macOS, starting with macOS Catalina (10.15), is **zsh** (Z shell). There are some differences compared to bash (some of them listed [here](https://apple.stackexchange.com/a/361957)), but none that affect us during these lessons. You can still use bash by simply typing `bash` in the command line, or you can change the default shell by following the instructions at <https://support.apple.com/en-au/HT208050>.
 * Learn the shell on a need-to-know basis. <!--There are commands you’ll use every day, some you’ll use for special purposes (and you’ll look up how they work when you need them), and some that you’ll never need.-->
 
-### Advantages of using a CLI-based shell
+## Advantages of using a CLI-based shell
 
 * There are tools that are available only on the command line.
 * It has a very high action-to-keystroke ratio.
@@ -28,7 +28,7 @@ ____
 ## Launching the shell
 
 * For macOS: the **Terminal.app** that you will find in the Applications → Utilities folder. (Many Mac users prefer the free third-party <https://www.iterm2.com/>.)
-* For Ubuntu Desktop: you can hit `Ctrl-Alt-T` or you can type `Terminal` into the Search box. You can also right-click on an empty part of a window in the file explorer (Nautilus) and select "Open in Terminal".
+* For Ubuntu Desktop: you can hit `Ctrl-Alt-T` or you can type `Terminal` into the Search box. You can also right-click on an empty part of a window in the file explorer (_Nautilus__) and select "Open in Terminal".
 
 ## Files and directories
 * We will work with the Software Carpentry lessons:
@@ -37,26 +37,19 @@ ____
 
 ## Getting oriented
 
-The prompt
-* zsh on macOS: `username@yourpc ~ %`
-* bash on Ubuntu Desktop: `username@yourpc:~$`
-
-A first simple command: `whoami`
-
-Check what is your current working directory: `pwd`
-* Two different meanings for `/`: path separator or root directory (when at the beginning of absolute path)
-
-Go to your home directory: `cd ~` or `cd`
-
-How do we check what is in this directory? `ls`
-
-Go to Desktop: `cd Desktop`
-
-Distinguish between files, directories, etc.: `ls -F` (option `-F` will add the following characters after pathnames: `/` for directories, `*` for executable files, `@` symbolic links etc.)
+* The prompt
+	* zsh on macOS: `username@yourpc ~ %`
+	* bash on Ubuntu Desktop: `username@yourpc:~$`
+* A first simple command: `whoami`
+* Check what is your current working directory: `pwd`
+	* Two different meanings for `/`: path separator or root directory (when at the beginning of absolute path)
+* Go to your home directory: `cd ~` or `cd`
+* How do we check what is in this directory? `ls`
+* Go to Desktop: `cd Desktop`
+* Distinguish between files, directories, etc.: `ls -F` (option `-F` will add the following characters after pathnames: `/` for directories, `*` for executable files, `@` symbolic links etc.)
 	* macOS applications (with `.app` extension) are actually directories ("application bundles"), so they will be displayed with a `/`
-	
-What happens if we write an invalid command? Or we add an invalid option?
-Let's try with `ks` and `ls -j`
+* What happens if we write an invalid command? Or we add an invalid option?
+	* Let's try with `ks` and `ls -j`
 
 ## The basic structure of a command
 
@@ -66,7 +59,7 @@ For example: `ls -F exercise-data`
 * In some cases, options can be express in a longer form, with a double hyphen (`--`)
 * You can also combine options together (e.g., `ls -l -h` or `ls -lh`)
 * Some options require an argument immediately after them
-* In general, options are case-sensitive
+* In general, options are case-sensitive (`ls -s` is different from `ls -S`)
 
 ## Navigating files and directories
 
@@ -94,23 +87,26 @@ For example: `ls -F exercise-data`
 
 * Command and filename completion with the `Tab` key
 * Command history with the arrow keys
-* Delete the whole line: `Ctrl+u`
-* Move to beginning of line: `Ctrl+a`
-* Move to end of line: `Ctrl+e`
+* Some useful shortcuts:
+	* Delete the whole line: `Ctrl+u`
+	* Move to beginning of line: `Ctrl+a`
+	* Move to end of line: `Ctrl+e`
 
 ## Need help with a command?
 
 For example `ls`:
-`man ls`
-`ls --help` (only on Linux)
-`whatis ls` (short description)
 
-Command line reference: <https://ss64.com/bash/>
-Or just google the command (followed by `unix`, `terminal`, or the like)
+* `man ls`
+* `ls --help` (only on Linux)
+* `whatis ls` (short description)
 
-### How to navigate in man
+Resources on the web:
+* Command line reference: <https://ss64.com/bash/>
+* Or just google the command (followed by `unix`, `terminal`, or the like)
 
-| Keystroke | Action |
+## How to navigate in man pages
+
+| Key | Action |
 | --------- | ------ |
 | space | forward one window |
 | b | backward one window |

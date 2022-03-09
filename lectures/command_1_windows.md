@@ -7,14 +7,14 @@ ____
 * **Credit:** Our materials are based on the Software Carpentry [Unix Shell](http://swcarpentry.github.io/shell-novice/) course
 * **Something to play with:** Follow the instructions at <http://swcarpentry.github.io/shell-novice/setup.html> to copy some practice files.	
 
-## What is the *shell*? Why and how do we use it?
+## What is the *shell*? How do we use it?
 
 * The *shell* is a program that runs other programs. <!-- The shell is still a program, which takes input and gives output. The input is a command, though, so it seems as though we’re doing something different. In reality, using command line is no different than using any other program.-->
 * There are shells that use a GUI (graphical user interface), for example the [Windows Shell](https://docs.microsoft.com/en-us/windows/win32/shell/shell-entry), and shells that use a CLI (command-line interface), like [cmd](https://en.wikipedia.org/wiki/Cmd.exe) in Windows. <!-- What is important to know is that the shell is the outermost layer around the operating system, and there is no one-to-one correspondence between an OS and a shell, although some shells are typically made for a specific OS. In Windows, for example, there are two CLI-based shells that come preinstalled, i.e. cmd and PowerShell, and others can be installed afterwards. -->
-* We will use a Unix shell, which we will run inside a window in the GUI of our OS. <!-- macOS and Linux are Unix-like OS's, and come with a Unix shell preinstalled; but we can install one in Windows too. -->
+* We will use a **Unix shell**, which we will run inside a window in the GUI of our OS. <!-- macOS and Linux are Unix-like OS's, and come with a Unix shell preinstalled; but we can install one in Windows too. -->
 * The command-line-based window that runs a shell is called a *console* or a *terminal*.
 * The Unix philosophy is that you can _pipe_ (chain) together small commands, each of which does one thing well, to do something complex. You can’t do this in a GUI.
-* bash = ‘Bourne again shell’ (the original Bourne shell is sh; others include csh, ksh, tcsh, zsh). <!-- We use and recommend bash. There are many different shells, some of which you end up downloading with program packages like Python.-->
+* **bash** = ‘Bourne again shell’ (the original Bourne shell is sh; others include csh, ksh, tcsh, zsh). <!-- We use and recommend bash. There are many different shells, some of which you end up downloading with program packages like Python.-->
 * Learn the shell on a need-to-know basis. <!--There are commands you’ll use every day, some you’ll use for special purposes (and you’ll look up how they work when you need them), and some that you’ll never need.-->
 
 ### Advantages of using a CLI-based shell
@@ -47,25 +47,17 @@ ____
 
 ## Getting oriented
 
-The prompt:
-`username@yourpc MINGW64 ~`
-`$`
-
-A first simple command: `whoami`
-
-Check what is your current working directory: `pwd`
-
-Go to your home directory: `cd ~` or `cd`
-
-How do we check what is in this directory? `ls`
-
-Go to Desktop: `cd Desktop`
-* If you have activated automatic sync of Desktop with OneDrive, your Desktop will be in the OneDrive folder.
-
-Distinguish between files, directories, etc.: `ls -F` (option `-F` will add the following characters after pathnames: `/` for directories, `*` for executable files, `@` symbolic links etc.)
-
-What happens if we write an invalid command? Or we add an invalid option?
-Let's try with `ks` and `ls -j`
+* The prompt: `username@yourpc MINGW64 ~ $`
+* A first simple command: `whoami`
+* Check what is your current working directory: `pwd`
+	* Two different meanings for `/`: path separator or root directory (when at the beginning of absolute path)
+* Go to your home directory: `cd ~` or `cd`
+* How do we check what is in this directory? `ls`
+* Go to Desktop: `cd Desktop`
+	* If you have activated automatic sync of Desktop with OneDrive, your Desktop will be in the OneDrive folder.
+* Distinguish between files, directories, etc.: `ls -F` (option `-F` will add the following characters after pathnames: `/` for directories, `*` for executable files, `@` symbolic links etc.)
+* What happens if we write an invalid command? Or we add an invalid option?
+	* Let's try with `ks` and `ls -j`
 
 ## The basic structure of a command
 
@@ -103,17 +95,19 @@ For example: `ls -F exercise-data`
 
 * Command and filename completion with the `Tab` key
 * Command history with the arrow keys
-* Delete the whole line: `Ctrl+u`
-* Move to beginning of line: `Ctrl+a`
-* Move to end of line: `Ctrl+e`
+* Some useful shortcuts:
+	* Delete the whole line: `Ctrl+u`
+	* Move to beginning of line: `Ctrl+a`
+	* Move to end of line: `Ctrl+e`
 
 ## Need help with a command?
 
 For example `ls`:
-`ls --help`
+* `ls --help`
 
-Command line reference: <https://ss64.com/bash/>
-Or just google the command (followed by `unix`, `terminal`, `bash`, or the like)
+Resources on the web:
+* Command line reference: <https://ss64.com/bash/>
+* Or just google the command (followed by `unix`, `terminal`, or the like)
 
 ## Summary
 
