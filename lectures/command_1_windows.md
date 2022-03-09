@@ -69,7 +69,7 @@ For example: `ls -F exercise-data`
 * In some cases, options can be express in a longer form, with a double hyphen (`--`)
 * You can also combine options together (e.g., `ls -l -h` or `ls -lh`)
 * Some options require an argument immediately after them
-* In general, options are case-sensitive
+* In general, options are case-sensitive (`ls -s` is different from `ls -S`)
 
 ## Navigating files and directories
 
@@ -78,20 +78,23 @@ For example: `ls -F exercise-data`
 * `cd ..` (go to parent directory)
 * `cd ../..` (go up two directories)
 * `cd -` (go back to previous directory; like "Back" button in file explorer)
+* `cd /` (go to root directory; in Git bash the installation folder will act as root)
 * `cd; cd Desktop` (`cd` will change to the home directory)
 * `cd data-shell/data/s...` (tab completion)
-* `cd /Users/djb/Desktop/data-shell/data` (absolute path; it has a leading slash = root directory)
+* `cd /Users/djb/Desktop/shell-lesson-data/exercise-data` (absolute path; it has a leading slash = root directory)
 
 `ls` = listing
 * `ls -a`: include hidden files (filenames starting with `.`)
 * `ls -l`: show enhanced file information, including date and time stamps, owner and group, permissions
 * `ls -t`: list in timestamp order
+* `ls -r`: list in reverse order (try to combine it with `-t`)
 * `ls -G`: colored output
 * `ls -lh`: human readable file size
 * `ls -F`: decorate filenames according to filetype
-* `ls -d`: don’t recurse into directories
 * `ls -1`: single-column
+* `ls -d`: don’t recurse into directories
 * `ls -d */`: list only directories
+* `ls -R`: recursive listing inside directories
 
 ## History and completion
 

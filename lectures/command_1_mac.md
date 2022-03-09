@@ -71,20 +71,23 @@ For example: `ls -F exercise-data`
 * `cd ..` (go to parent directory)
 * `cd ../..` (go up two directories)
 * `cd -` (go back to previous directory; like "Back" button in file explorer)
+* `cd /` (go to root directory)
 * `cd; cd Desktop` (`cd` will change to the home directory)
 * `cd data-shell/data/s...` (tab completion)
-* `cd /Users/djb/Desktop/data-shell/data` (absolute path; it has a leading slash = root directory)
+* `cd /Users/djb/Desktop/shell-lesson-data/exercise-data` (absolute path; it has a leading slash = root directory)
 
 `ls` = listing
 * `ls -a`: include hidden files (filenames starting with `.`, `.DS_store` files included)
 * `ls -l`: show enhanced file information, including date and time stamps, owner and group, permissions
 * `ls -t`: list in timestamp order
+* `ls -r`: list in reverse order (try to combine it with `-t`)
 * `ls -G`: colored output
 * `ls -lh`: human readable file size
 * `ls -F`: decorate filenames according to filetype
-* `ls -d`: don’t recurse into directories
 * `ls -1`: single-column
+* `ls -d`: don’t recurse into directories
 * `ls -d */`: list only directories
+* `ls -R`: recursive listing inside directories
 
 ## History and completion
 
@@ -94,13 +97,15 @@ For example: `ls -F exercise-data`
 	* Delete the whole line: `Ctrl+u`
 	* Move to beginning of line: `Ctrl+a`
 	* Move to end of line: `Ctrl+e`
-* If the screen has become a bit cluttered: `clear` (or `Cmd+k` on Mac, `Ctrl+l` on Ubuntu)	
-	
+	* Or just `Option + click` (on Mac) to move the cursor to a specific position
+* If the screen has become a bit cluttered: `clear` (or `Cmd+k` on Mac, `Ctrl+l` on Ubuntu)
+
 ## Need help with a command?
 
 For example `ls`:
 
 * `man ls`
+* `info ls`
 * `ls --help` (only on Linux)
 * `whatis ls` (short description)
 
@@ -120,6 +125,7 @@ How to navigate in `man` pages:
 | G | go to last line |
 | /pattern | search forward for pattern |
 | ?pattern | search backward for pattern |
+| n/N | next/previous search result |
 | q | exit |
 
 ## Summary

@@ -4,31 +4,31 @@
 
 * **References:** Much of the content of these sessions is summarized at our [Command line quick reference](command_resources.md) page.
 * **Credit:** Our materials are based on the Software Carpentry [Unix Shell](http://swcarpentry.github.io/shell-novice/) course
-* **Etherpad:** We’ll create an [Etherpad](https://etherpad.net) where participants who wish to do so can take notes collaboratively. For a quick overview of Etherpad functionality see <http://archive.flossmanuals.net/etherpad/>.
 * **Something to play with:** Follow the instructions at <http://swcarpentry.github.io/shell-novice/setup.html> to copy some practice files.
 
 ## General review (see also below)
 
 * `whoami`
 * `pwd`
+* `ls` (`-l`, `-a`, `-lh`, `-F`, `-R`); `ls /Users/djb/Desktop/shell-lesson-data`
 * `clear` (`Ctrl+l` on Windows and Ubuntu, `Cmd+k` on macOS)
-* `ls` (`-l`, `-a`, `-G`, `-lh`, `-d`, `-d */`, `-1`, `-F`); `ls /Users/djb/Documents/data-shell`
+* `man ls`, `ls --help`
 
 ## History and tab completion
 
 ### Review
 
 * `history` (up and down arrows)
-* `!580` (execute the 580th command from the history)
-* `!!` (execute the previous command)
 * `tab`: 1) Filename completion, 2) Command completion
 * Editing the command line: `Ctrl + a`, `Ctrl + e`, `Ctrl + u`, `Option + click` (Mac only)
-* `file /Users/djb/Documents/myfile.txt`
 
 ### And something new
 
-* `$!`: last word of last command
+* `!580` (execute the 580th command from the history)
+* `!!` (execute the previous command)
+* `!$`: last word of last command
 * `Ctrl+r`: initiate (or continue) history search
+<!-- `file /Users/djb/Documents/myfile.txt` -->
 
 ## Getting around the file system review
 
@@ -40,11 +40,14 @@
 ## Working with directories
 
 * `mkdir`: make directory
-	* What’s a good name for a directory?
+	* What’s a good name for a directory? And more in general: what's a good filename?
+		* Avoid spaces (otherwise you'll be forced to use quotes `"..."` for arguments or backslashes `\`)
+		* Avoid beginning hyphens, otherwise file and directory names might be mistaken for options/flags
 	* What’s a good directory structure for a project?
 * `mkdir -p a/b/c`: create intermediate directories
 * `rmdir`: remove empty directory
 * `rm -rf:` remove directory and its contents recursively (careful!)
+* `rm -ri`: remove directory asking for confirmation (for single files)
 
 ## Working with files
 
@@ -55,6 +58,8 @@
 * `mv`: rename / move
 	* Rename a file or directory
 	* Move a file or directory to a different location (optionally rename)
+	* Be careful! It will automatically overwrite files with the same name, unless you add `-i` to make it interactive (will ask for permission)
+* An easy way to create an empty file: `touch test.txt`
 * `rm`: delete (careful—deletion is forever!)
 * `rm -i`: delete after asking permission
 * Editing and saving files (in your editor of choice)
@@ -64,9 +69,13 @@
 		* [BBEdit](https://www.barebones.com/products/bbedit/) (only Mac)
 		* [Notepad++](https://notepad-plus-plus.org/) (only Windows)
 		* [Visual Studio Code](https://code.visualstudio.com/) (Mac, Windows, Linux)
-	* Or use `vim` from the command line
+	* Or use `vim` or `emacs` from the command line (<https://en.wikipedia.org/wiki/Editor_war>)
 	* What’s a good filename?
-* `less /Users/djb/Documents/myfile.txt` (`space`, `b`, `q`, `/`, `?`, `n`, `G` , `G1`)
+		* Avoid spaces (otherwise you'll be forced to use quotes `"..."` for arguments or backslashes `\`)
+		* Avoid beginning hyphens, otherwise file and directory names might be mistaken for options/flags
+* Check the contents of a file
+	* `cat /Users/djb/Documents/myfile.txt` (but not very useful to navigate through it)
+	* `less /Users/djb/Documents/myfile.txt`
 
 | Keystroke | Action |
 | --------- | ------ |
@@ -78,6 +87,7 @@
 | G | go to last line |
 | /pattern | search forward for pattern |
 | ?pattern | search backward for pattern |
+| n/N | next/previous search result |
 | q | exit |
 
 ## Wildcards (“globbing”; annoyingly different from regex)
@@ -94,8 +104,6 @@
 * Globbing: `*` and `?` are wildcards
 * Glob `*` = regex `.*`
 * Glob `?` = regex `.?`
-
-Practice with `ls` in data-shell/molecules
 
 ## Reading from and writing to files
 
