@@ -22,7 +22,7 @@ There are different notations for regular expressions:
 * Syntax diagrams
 * POSIX
 
-Your best use would probably be to assert negative patterns, e.g. things you know are wrong.
+We will focus on POSIX notations which are mostly the standard in the different technologies.
 
 ## Define Patterns
 We want to use the Regex as a tool to define some generalized pattern, so that it could match a possible set of strings that have some _common elements_.<br>
