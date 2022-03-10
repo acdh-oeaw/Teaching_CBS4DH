@@ -50,10 +50,10 @@ We already considered these topics at the end of yesterday's session. Here is a 
 ### Working with directories
 
 * `mkdir`: make directory
-	* What’s a good name for a directory? And more in general: what's a good filename?
+	* What√ïs a good name for a directory? And more in general: what's a good filename?
 		* Avoid spaces (otherwise you'll be forced to use quotes `"..."` for arguments or backslashes `\`)
 		* Avoid beginning hyphens, otherwise file and directory names might be mistaken for options/flags
-	* What’s a good directory structure for a project?
+	* What√ïs a good directory structure for a project?
 * `mkdir -p a/b/c`: create intermediate directories
 * `rmdir`: remove empty directory
 * `rm -rf:` remove directory and its contents recursively (careful!)
@@ -70,7 +70,7 @@ We already considered these topics at the end of yesterday's session. Here is a 
 	* Move a file or directory to a different location (optionally rename)
 	* Be careful! It will automatically overwrite files with the same name, unless you add `-i` to make it interactive (will ask for permission)
 * An easy way to create an empty file: `touch test.txt`
-* `rm`: delete (careful—deletion is forever!)
+* `rm`: delete (careful√ëdeletion is forever!)
 * `rm -i`: delete after asking permission
 
 ### Editing and saving files
@@ -85,7 +85,7 @@ You can use a text editor to edit and save files:
 	* [Notepad++](https://notepad-plus-plus.org/) (only Windows)
 	* [Visual Studio Code](https://code.visualstudio.com/) (Mac, Windows, Linux)
 * Or use `vim` or `emacs` from the command line (<https://en.wikipedia.org/wiki/Editor_war>)
-* What’s a good filename?
+* What√ïs a good filename?
 	* Avoid spaces (otherwise you'll be forced to use quotes `"..."` for arguments or backslashes `\`)
 	* Avoid beginning hyphens, otherwise file and directory names might be mistaken for options/flags
 * Check the contents of a file
@@ -107,7 +107,7 @@ You can use a text editor to edit and save files:
 | n/N | next/previous search result |
 | q | exit |
 
-## Wildcards (“globbing”)
+## Wildcards ("globbing")
 
 For this and the next sections, see <https://swcarpentry.github.io/shell-novice/04-pipefilter/index.html>, on which we will base our exercises.
 
@@ -118,9 +118,9 @@ We will be using some special characters that allow to search for undetermined c
 
 ### Examples
 
-* `*.xml ` (files ending in “.xml”; the place occupied by `*` may be empty or contain one or more characters)
-* `*.x?l` (files ending in “.x” followed by any single letter followed by “l”, e.g., XML [xml], XSLT [xsl], XProc [xpl] files)
-* `*.x[ms]l` (files ending in “.x” followed by “m” **or** “s” followed by “l”, e.g., XML and XSLT files, but not XProc)
+* `*.xml ` (files ending in √í.xml√ì; the place occupied by `*` may be empty or contain one or more characters)
+* `*.x?l` (files ending in √í.x√ì followed by any single letter followed by √íl√ì, e.g., XML [xml], XSLT [xsl], XProc [xpl] files)
+* `*.x[ms]l` (files ending in √í.x√ì followed by √ím√ì **or** √ís√ì followed by √íl√ì, e.g., XML and XSLT files, but not XProc)
 
 ### Regex vs globbing
 
@@ -143,13 +143,13 @@ We usually **input** data into a command by writing its argument(s) with the _ke
 	* `<`: input from file
 * **stdout**:
 	* `>`: output to file (careful: overwrites existing files with the same name)
-	* `>>`: append to file (creates file if it doesn’t already exist)
+	* `>>`: append to file (creates file if it doesn√ït already exist)
 * **stderr**:
 	* `2>`: error messages to file (`2> /dev/null` means that the error messages will basically disappear)
 
 For example, we can save the list of contents of a directory in a text file by simply writing this:
-`ls > some_file.txt`
-`ls some_directory > some_file.txt`
+* `ls > some_file.txt`
+* `ls some_directory > some_file.txt`
 
 ## Filters
 
@@ -199,7 +199,7 @@ The best way to understand what a pipeline does is **building it up "gradually"*
 2. `wc -l *.pdb | sort -n`
 3. `wc -l *.pdb | sort -n | head -n 1`
 
-## A very quick look at scripts
+## A very quick look at scripts
 
 Let's say that you have finally built a nice pipeline of commands that you might want to reuse later. Where do you store it? Can you use it without having to type the whole pipeline again?
 
