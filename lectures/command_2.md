@@ -6,13 +6,22 @@
 * **Credit:** Our materials are based on the Software Carpentry [Unix Shell](http://swcarpentry.github.io/shell-novice/) course
 * **Something to play with:** Follow the instructions at <http://swcarpentry.github.io/shell-novice/setup.html> to copy some practice files.
 
-## General review (see also below)
+## General review
 
-* `whoami`
-* `pwd`
-* `ls` (`-l`, `-a`, `-lh`, `-F`, `-R`); `ls /Users/djb/Desktop/shell-lesson-data`
-* `clear` (`Ctrl+l` on Windows and Ubuntu, `Cmd+k` on macOS)
-* `man ls`, `ls --help`
+![Directory tree sample](images/directory_tree.png)
+
+* Absolute path: `/Users/mamo/Desktop/shell-lesson-data` (starts with a slash, which means "root directory", i.e. uppermost directory of the filesystem)
+	* This is the one you get when you type `pwd`
+* Relative path
+	* `shell-lesson-data` (starting from `/Users/mamo/Desktop/`)
+	* `Desktop/shell-lesson-data` (starting from `Users/mamo/Desktop`)
+	* `..` (starting from `/Users/mamo/Desktop/shell-lesson-data/exercise-data`)
+	* `../shell-lesson-data` (if we imagine to start from another directory contained in `/Users/mamo/Desktop/`)
+	
+* General structure of a command: `commmand -option(s) argument(s)`, e.g. `ls -F shell-lesson-data`
+* `cd` to go to a directory
+* `ls` to show what is inside a directory
+* Need help? `man ls` or `ls --help`
 
 ## History and tab completion
 
@@ -28,14 +37,6 @@
 * `!!` (execute the previous command)
 * `!$`: last word of last command
 * `Ctrl+r`: initiate (or continue) history search
-<!-- `file /Users/djb/Documents/myfile.txt` -->
-
-## Getting around the file system review
-
-* `cd` or `cd ~`: go to your home directory
-* `cd -`: go back to the directory you came from
-* `cd ..` go up one level
-* `cd /Users/djb/Documents/data-shell`: go to specified directory
 
 ## Working with directories
 
@@ -92,6 +93,8 @@
 
 ## Wildcards (“globbing”; annoyingly different from regex)
 
+For this and the next sections, see <https://swcarpentry.github.io/shell-novice/04-pipefilter/index.html>.
+
 ### Examples
 
 * `*.xml ` (files ending in “.xml”)
@@ -99,6 +102,8 @@
 * `*.x[ms]l` (files ending in “.x” followed by “m” or “s” followed by “l”, e.g., XML and XSLT files, but not XProc)
 
 ### Regex vs globbing
+
+We will see what regex is in the following session.
 
 * Regex: `*` and `?` are repetition indicators for the preceding item
 * Globbing: `*` and `?` are wildcards
