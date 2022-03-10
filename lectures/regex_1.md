@@ -22,7 +22,7 @@ There are different notations for regular expressions:
 * Syntax diagrams
 * POSIX
 
-Your best use would probably be to assert negative patterns, e.g. things you know are wrong.
+We will focus on POSIX notations which are mostly the standard in the different technologies.
 
 ## Define Patterns
 We want to use the Regex as a tool to define some generalized pattern, so that it could match a possible set of strings that have some _common elements_.<br>
@@ -43,42 +43,7 @@ re.sub(r"0", "1", "023") # output = "123"
 We will firstly treat basic characters and later see some possibilities to combine them on a higher level to enable more complicated patterns.
 Notice the multiple ways to define the same pattern along this introduction. It is important to compose the regular expression in a way that is readable and understandable for another person.
 
-## Metacharacters
-The complete list of metacharacters:
-
-| Metacharacter | Name |
-| --- | --- |
-| `.` | _period_ or _dot_ |
-| `^` | _caret_ |
-| `$` | _dollar sign_ |
-| `*` | _asterisk_ or _star_ |
-| `+` | _plus sign_ |
-| `?` | _question mark_ |
-| `{` | _opening curly brace_ |
-| `}` | _closing curly brace_ |
-| `[` | _opening square bracket_ |
-| `]` | _closing square bracket_ |
-| `\` | _backslash_ |
-| `\|` | _pipe_ or _bar_ |
-| `(` | _opening parenthesis_ |
-| `)` | _closing parenthesis_ |
-
-
-Character classes are surrounded by _opening square bracket_ `[` and _closing square bracket_ `]` to form a _set of characters_. Either you specify the characters _individually_ or use _ranges_ by giving a _hyphen_ `-` inbetween. _Metacharacters_ **are not active** inside _character classes_. Since the _character class_ is a _set_ you can also _complement_ it. To do complementing you give a _caret_ `^` as the first character of the class.
-
-One of the most important metacharacters is the _backslash_ `\` which is used to:
-* _indicate_ various _special sequences_
-* _escape_ all _metacharacters_ so they can be used in patterns without their special mening, e.g. use `\[` to match an actual _opening square bracket_ `[` in the string.
-
-Some of the special sequences beginning with _backslash_ `\` represent predefined shorthand sets of characters that are often useful:
-* the set of _digits_,
-* the set of _letters_, or
-* the set of anything that is _not whitespace_.
-
-`\w` matches any _alphanumeric_ character. For use with Python this set **differs** depending on whether the _RE pattern_ is:
-* a _string_, `\w` will match all the characters marked as letters or digits in the Unicode data plus underscore, or
-* _bytes_, then this is equivalent to the class `[a-zA-Z0-9_]`.
-
+## Characters
 
 | Special sequence | Matches | Restricted<sup>1</sup> equivalent to |
 |----------------- | ------- | ------------------------------------ |
@@ -89,17 +54,13 @@ Some of the special sequences beginning with _backslash_ `\` represent predefine
 | `\w` | any _alphanumeric character_ | `[a-zA-Z0-9_]` |
 | `\W` | any _non-alphanumeric character_ | `[^a-zA-Z0-9_]` |
 
-<sup>1</sup> With Python you can use the more restricted definition of e.g. `\w` in a string pattern by supplying the `re.ASCII` flag when compiling the regular expression. Otherwise the Unicode character categories are used and thus the sequence sets include a lot more characters.
 
 Besides using the predefined special sequences, also the exact text (as well single characters) can be used. <br>
 For the characters, either you specify them _individually_ or use _ranges_ by giving a _hyphen_ `-` inbetween. We will see some examples later.
 <br><br>
 **Example:** The pattern `\d\d\s[A-Z][a-z][a-z][a-z][a-z]\s\d\d\d\d` matches the string `10 March 2022`. <br> It can also be expressed with the pattern: `[0-9][0-9]\s[A-Z][a-z][a-z][a-z][a-z]\s[0-9][0-9][0-9][0-9]`.<br> We can, of course, just write the string and search it in our sentence, but in this case we lose generalization.<br> Is there a compacter way to write this Regex? Can we make it even more general to include other months as well? Later!
 
-The final metacharacter in this section is _dot_ `.`. It matches anything except a newline character.
-(In Python you can use `re.DOTALL` to match even a _newline_. _Dot_ `.` is often used where you want to match _any character_.)
-
-## Repetition
+## Metacharacters
 
 | Metacharacter | Name | Meaning |
 | --- | --- | --- |
@@ -204,9 +165,9 @@ The third single repeating _qualifiers_ is  the _question mark_ `?` which matche
 | question | `qa?e` | No |
 | question | `quest?tion` | Yes |
 | markka | `rk?a` | No |  
-| mark | `a?r` | Yes |
+| mark | `ma?r` | Yes |
 
-The fourth and most complicated repeated qualifier is `{m,n}`, where `m` and `n` are _decimal integers_. This _qualifier_ means there must be _at least_ `m` repetitions, and _at most_ `n` repetitions.
+The fourth repeated qualifier is `{m,n}`, where `m` and `n` are _decimal integers_. This _qualifier_ means there must be _at least_ `m` repetitions, and _at most_ `n` repetitions.
 
 | String | RE | Match |
 | --- | --- | --- |
