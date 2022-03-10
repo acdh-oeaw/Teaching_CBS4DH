@@ -41,19 +41,19 @@ We already considered these topics at the end of yesterday's session. Here is a 
 
 | Command | Explanation |
 | ------- | ----------- |
-| cp | copy |
-| mv | move |
-| rm | remove |
-| mkdir | make directory |
-| rmdir | remove directory |
+| `cp` | copy |
+| `mv` | move |
+| `rm` | remove |
+| `mkdir` | make directory |
+| `rmdir` | remove directory |
 
 ### Working with directories
 
 * `mkdir`: make directory
-	* WhatÕs a good name for a directory? And more in general: what's a good filename?
+	* What's a good name for a directory? And more in general: what's a good filename?
 		* Avoid spaces (otherwise you'll be forced to use quotes `"..."` for arguments or backslashes `\`)
 		* Avoid beginning hyphens, otherwise file and directory names might be mistaken for options/flags
-	* WhatÕs a good directory structure for a project?
+	* What's a good directory structure for a project?
 * `mkdir -p a/b/c`: create intermediate directories
 * `rmdir`: remove empty directory
 * `rm -rf:` remove directory and its contents recursively (careful!)
@@ -70,7 +70,7 @@ We already considered these topics at the end of yesterday's session. Here is a 
 	* Move a file or directory to a different location (optionally rename)
 	* Be careful! It will automatically overwrite files with the same name, unless you add `-i` to make it interactive (will ask for permission)
 * An easy way to create an empty file: `touch test.txt`
-* `rm`: delete (carefulÑdeletion is forever!)
+* `rm`: delete (careful: deletion is forever!)
 * `rm -i`: delete after asking permission
 
 ### Editing and saving files
@@ -85,7 +85,7 @@ You can use a text editor to edit and save files:
 	* [Notepad++](https://notepad-plus-plus.org/) (only Windows)
 	* [Visual Studio Code](https://code.visualstudio.com/) (Mac, Windows, Linux)
 * Or use `vim` or `emacs` from the command line (<https://en.wikipedia.org/wiki/Editor_war>)
-* WhatÕs a good filename?
+* What's a good filename?
 	* Avoid spaces (otherwise you'll be forced to use quotes `"..."` for arguments or backslashes `\`)
 	* Avoid beginning hyphens, otherwise file and directory names might be mistaken for options/flags
 * Check the contents of a file
@@ -118,9 +118,9 @@ We will be using some special characters that allow to search for undetermined c
 
 ### Examples
 
-* `*.xml ` (files ending in Ò.xmlÓ; the place occupied by `*` may be empty or contain one or more characters)
-* `*.x?l` (files ending in Ò.xÓ followed by any single letter followed by ÒlÓ, e.g., XML [xml], XSLT [xsl], XProc [xpl] files)
-* `*.x[ms]l` (files ending in Ò.xÓ followed by ÒmÓ **or** ÒsÓ followed by ÒlÓ, e.g., XML and XSLT files, but not XProc)
+* `*.xml ` (files ending in ".xml"; the place occupied by `*` may be empty or contain one or more characters)
+* `*.x?l` (files ending in ".x" followed by any single letter followed by "l", e.g., XML [xml], XSLT [xsl], XProc [xpl] files)
+* `*.x[ms]l` (files ending in ".x" followed by "m" **or** "s" followed by "l", e.g., XML and XSLT files, but not XProc)
 
 ### Regex vs globbing
 
