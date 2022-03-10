@@ -216,10 +216,10 @@ For example, in our case, let's call our script `script1.sh`:
 * Make this executable: in the directory where the script is contained, type `chmod 755 script1.sh`
 * Execute the script with `./script1.sh` (you have to specify that the script is in your current directory by adding `./`)
 
-Be careful!
+**Be careful!**
 * This script will execute the commands in the directory where it is stored. So, it will look for all files `*.pdb` in its directory.
 * If you want to use it in another directory, you must either move the script or recall it from the directory where you want to use it (this would require a longer and complicated path).
-* However, the easiest way is to include a variable, so that you can specify to the script where it should be applied: instead of writing `*.pdb` in its code, you can write `$@`. This means that the shell will automatically replace `$@` with whatever you input as argument of the script, e.g. `./script1.sh exercise-data/*.pdb`. This will also allow you to use the script to check for other kinds of formats too, e.g. `./script1.sh *.txt`
+* However, the easiest way is to include a **variable**, so that you can specify to the script where it should be applied: instead of writing `*.pdb` in its code, you can write `$@`. This means that the shell will automatically replace `$@` with whatever you input as argument of the script, e.g. `./script1.sh exercise-data/*.pdb`. This will also allow you to use the script to check for other kinds of formats too, e.g. `./script1.sh *.txt`
 
 This is just the tip of the iceberg: scripts would require at least a whole session for itself (or even a whole course), but I hope you already got the gist of what makes the shell such a powerful tool. The shell is not only a way of interacting with the operating system, but it is also a **programming language**.
 
