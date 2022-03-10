@@ -8,7 +8,11 @@
 
 ## General review
 
-![Directory tree sample](images/directory_tree.png)
+### A directory tree sample
+
+![Directory tree sample](images/directory_tree_sample.png)
+
+### Paths
 
 * Absolute path: `/Users/mamo/Desktop/shell-lesson-data` (starts with a slash, which means "root directory", i.e. uppermost directory of the filesystem)
 	* This is the one you get when you type `pwd`
@@ -17,7 +21,9 @@
 	* `Desktop/shell-lesson-data` (starting from `Users/mamo/Desktop`)
 	* `..` (starting from `/Users/mamo/Desktop/shell-lesson-data/exercise-data`)
 	* `../shell-lesson-data` (if we imagine to start from another directory contained in `/Users/mamo/Desktop/`)
-	
+
+### The basics of the command line
+
 * General structure of a command: `commmand -option(s) argument(s)`, e.g. `ls -F shell-lesson-data`
 * `cd` to go to a directory
 * `ls` to show what is inside a directory
