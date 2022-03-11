@@ -81,7 +81,7 @@ The use of the escape key in Vim, the `i` for insert mode, `:wq` and `:q!` to ca
 
 ## Github Actions
 
-Please open this link to read more: ![Understanding GitHub Actions](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions)
+Please open this link to read more: [Understanding GitHub Actions](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions)
 
 ### Example Workflow to deploy Github Pages
 
@@ -110,7 +110,7 @@ jobs:
         publish_dir: ./html
 ```
 
-Learn more about `secrets.GITHUB_TOKEN`: ![Understanding GitHub automatic token authentication](https://docs.github.com/en/actions/security-guides/automatic-token-authentication)
+Learn more about `secrets.GITHUB_TOKEN`: [Understanding GitHub automatic token authentication](https://docs.github.com/en/actions/security-guides/automatic-token-authentication)
 
 ## Forking repositories
 
