@@ -30,39 +30,6 @@ $ git commit -m "added a new feature some files changed"
 * `git fetch origin <branch>` Fetch the commits from a remote repository into the local repository
 * `git merge origin <branch>` Merge the commits from the local repository with commits fetched from a remote repository (actually this works on branches; this will be explained in the git tutorial part 2)
 
-## Forking repositories
-
-![Git forking repositories](images/git_forking.gif)
-
-* Log in to Github
-* On Github fork the NEH Institute Materials 2017 repository
-* Clone you fork to your local machine.
-In your Workspace directory in your home directory do:
-`$ git clone https://github.com/acdh-oeaw/Teaching_CBS4DH.git`
-* On your local machine add the original repository as a second remote repository called upstream
-
-```bash
-$ git remote -v
-origin  https://github.com/YOUR_USERNAME/YOUR_FORK.git (fetch)
-origin  https://github.com/YOUR_USERNAME/YOUR_FORK.git (push)
-
-$ git remote add upstream https://github.com/Pittsburgh-NEH-Institute/Institute-Materials-2017
-
-$ git remote -v
-origin    https://github.com/YOUR_USERNAME/YOUR_FORK.git (fetch)
-origin    https://github.com/YOUR_USERNAME/YOUR_FORK.git (push)
-upstream  https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git (fetch)
-upstream  https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git (push)
-```
-
-## Pull requests: making changes and submitting a pull request
-
-* Create changes
-* Track changes
-* Commit changes
-* Push commits 
-* Create pull request on github 
-
 ## How to work with branches
 
 What you think Git is:
@@ -100,6 +67,83 @@ Command | Description
 * `$ git push`
 
 ## How to resolve a merge conflict
+
+vim is the default editor in Git (on all operating systems). When a merge conflict occurs you are taken into vim to resolve it. The most important vim commands are:
+
+You type | What happens
+---- | ----
+`Esc` | enter command mode
+`i` | enter insert mode
+`:wq` | write your changes and quit
+`:q!` | cancel (quit without writing changes)
+
+The use of the escape key in Vim, the `i` for insert mode, `:wq` and `:q!` to cancel
+
+## Github Actions
+
+Please open this link to read more: ![Understanding GitHub Actions](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions)
+
+### Example Workflow to deploy Github Pages
+
+* Requires directories: `.github` and a sub directory `workflows` in your Github (git) repository
+* Requires a file called `build.yml` stored in the `workflows` directory
+
+#### Inside build.yml
+
+```bash
+name: Build and publish
+
+on: 
+  push:
+
+jobs:
+  build_pages:
+    name: Publish as GitHub Pages Website
+    runs-on: ubuntu-latest
+    steps:
+    - name: Perform Checkout
+      uses: actions/checkout@v2
+    - name: Deploy GH Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{secrets.GITHUB_TOKEN}}
+        publish_dir: ./html
+```
+
+Learn more about `secrets.GITHUB_TOKEN`: ![Understanding GitHub automatic token authentication](https://docs.github.com/en/actions/security-guides/automatic-token-authentication)
+
+## Forking repositories
+
+![Git forking repositories](images/git_forking.gif)
+
+* Log in to Github
+* On Github fork the NEH Institute Materials 2017 repository
+* Clone you fork to your local machine.
+In your Workspace directory in your home directory do:
+`$ git clone https://github.com/acdh-oeaw/Teaching_CBS4DH.git`
+* On your local machine add the original repository as a second remote repository called upstream
+
+```bash
+$ git remote -v
+origin  https://github.com/YOUR_USERNAME/YOUR_FORK.git (fetch)
+origin  https://github.com/YOUR_USERNAME/YOUR_FORK.git (push)
+
+$ git remote add upstream https://github.com/Pittsburgh-NEH-Institute/Institute-Materials-2017
+
+$ git remote -v
+origin    https://github.com/YOUR_USERNAME/YOUR_FORK.git (fetch)
+origin    https://github.com/YOUR_USERNAME/YOUR_FORK.git (push)
+upstream  https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git (fetch)
+upstream  https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git (push)
+```
+
+## Pull requests: making changes and submitting a pull request
+
+* Create changes
+* Track changes
+* Commit changes
+* Push commits 
+* Create pull request on github 
 
 ## Notes
 
