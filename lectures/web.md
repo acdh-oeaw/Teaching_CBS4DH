@@ -45,13 +45,14 @@ You’ll use some of these shortly.
 ### Looking at HTML
 
 1. Start *Atom*.
-2. Open [web\_exercise\_1.html](web/web_exercise_1.html) in *Atom*.
-3. Start a web browser.
-4. Open the same file in your browser (`Ctrl+o` [Windows] or `Cmd+o` [Mac OS] to open a file from the filesystem).
+2. Create directory called `html` and a new file called `index.html` / Exercise example: [web\_exercise\_1.html](web/web_exercise_1.html).
+3. Open `index.html` in *Atom*
+4. Start a web browser.
+5. Open the same file in your browser (`Ctrl+o` [Windows] or `Cmd+o` [Mac OS] to open a file from the filesystem).
 
 ### Working with HTML
 
-You should see something like the following in *Atom*:
+Currently you will see nothing. However, we will create something similar to the following example in *Atom*:
 
 ```html
 <!DOCTYPE html>
@@ -101,6 +102,14 @@ You should see something like the following in *Atom*:
 * Modify the text of the HTML file in *Atom*. You might add additional paragraphs (`<p>`) elements or headers (`<h1>` through `<h6>`). You can change the bulleted list to a numbered one by changing the wrapper from `<ul>` to `<ol>` (you need to change both the start and end tag, although if you change the start tag first, *Atom* will usually change the end tag automatically to match).
 * Save your document from within *Atom* and then reload it into the browser, observing the changes.
 
+### Push changes to your GitHub repository
+
+`git add --all`
+`git commit -m "added index.html"`
+`git pull origin main` 
+resolve merge conflicts if necessary
+`git push origin main`
+
 ## Styling HTML with CSS
 
 ### About CSS
@@ -111,7 +120,9 @@ You should see something like the following in *Atom*:
 
 ### Looking at CSS
 
-Open [web/web\_exercise\_2.html](web/web_exercise_2.html) in *Atom*. It should look something like:
+Create a new file called `style.css` and save it in the `html` directory you previosly created and open it in *Atom*. Example CSS: [web/web\_exercise\_2.html](web/web_exercise_2.html).
+
+Before we work with CSS open your `index.html` file and make the following changes:
 
 ```html
 <!DOCTYPE html>
@@ -119,7 +130,7 @@ Open [web/web\_exercise\_2.html](web/web_exercise_2.html) in *Atom*. It should l
     <head>
         <meta charset="utf-8"/>
         <title>HTML exercise 2</title>
-        <link rel="stylesheet" type="text/css" href="web_exercise_2.css"/>
+        <link rel="stylesheet" type="text/css" href="style.css"/>
     </head>
     <body>
         <h1>HTML exercise 2</h1>
@@ -158,9 +169,10 @@ Open [web/web\_exercise\_2.html](web/web_exercise_2.html) in *Atom*. It should l
 </html>
 ```
 
-2. Notice the difference that this file has added a `<link>` element in the `<head>`, which uses the `@href` attribute to point to the CSS file.
-3. Open the HTML file in a browser and notice that paragraphs are green and bold.
-4. Open [web/web\_exercise\_2.css](web/web_exercise_2.css) in *Atom* and notice that it implements the commands described above, which are responsible for the color, weight and shape of the paragraphs and the table. Your CSS file should look something like:
+1. Notice the difference that this file has added a `<link>` element in the `<head>`, which uses the `@href` attribute to point to the CSS file.
+2. Some elements like `<h3>` have attributes called `class` and one or serveral values inside.
+3. Open your `style.css` file and add the following CSS code in *Atom* and notice that it implements the commands described above, which are responsible for the color, weight and shape of the paragraphs and the table. Your CSS file should look something like. Example CSS: [web/web\_exercise\_2.css](web/web_exercise_2.css)
+4. Reload your `index.html` in your Web Browser and notice the changes.
 
 ```css
 p{
@@ -207,6 +219,61 @@ div{
 6. Bolding is set with the `font-weight` property, but italics are turned on by setting the `font-style` property to “italic”. Italicize the `<h1>` header by creating a new rule with `h1` as the selector, `font-style` as the property name, and “italic” as the property value.
 7. You can set a `background-color` property for any element, or for the entire page. Try it! (To specify a property for the entire page, create a CSS rule with a selector for “body”, since the `<body>` element contains everything on the page.)
 8. Try changing the size of an element with the `font-size` property. Values can be absolute (e.g., “50px” for 50 pixels) or relative (e.g., “small” or “smaller”). 
+
+### Push changes to your GitHub repository
+
+`git add --all`
+`git commit -m "added style.css and changed index.html by adding classes"`
+`git pull origin main` 
+resolve merge conflicts if necessary
+`git push origin main`
+
+## GitHub Pages
+
+Open this link to read more about: [What is GitHub Pages?](https://pages.github.com)
+
+### Workflow to deploy Github Pages
+
+* Requires directories: `.github` and a sub directory `workflows` in your Github (git) repository
+* Requires a file called `build.yml` stored in the `workflows` directory
+
+#### Inside build.yml
+
+Copy&Paste the following or download this file: [githubActions/build.yml](githubActions/build.yml)
+
+```bash
+name: Build and publish
+
+on: 
+  push:
+
+jobs:
+  build_pages:
+    name: Publish as GitHub Pages Website
+    runs-on: ubuntu-latest
+    steps:
+    - name: Perform Checkout
+      uses: actions/checkout@v2
+    - name: Deploy GH Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{secrets.GITHUB_TOKEN}}
+        publish_dir: ./html
+```
+
+### Push changes to your GitHub repository
+
+`git add --all`
+`git commit -m "added GitHub Actions workflow"`
+`git pull origin main` 
+resolve merge conflicts if necessary
+`git push origin main`
+
+See Actions work!
+
+### Settings / Pages
+
+Select the correct Source by changing the `Branch` to "gh-pages" and click save
 
 ## JavaScript
 
