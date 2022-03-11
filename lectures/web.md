@@ -45,7 +45,8 @@ You’ll use some of these shortly.
 ### Looking at HTML
 
 1. Start *Atom*.
-2. Create directory called `html` and a new file called `index.html` / Exercise example: [web\_exercise\_1.html](web/web_exercise_1.html).
+2. Create a new directory called `html` and a new file called `index.html`. The latter must be saved in the `html` dir.
+Exercise example: [web\_exercise\_1.html](web/web_exercise_1.html).
 3. Open `index.html` in *Atom*
 4. Start a web browser.
 5. Open the same file in your browser (`Ctrl+o` [Windows] or `Cmd+o` [Mac OS] to open a file from the filesystem).
@@ -104,11 +105,11 @@ Currently you will see nothing. However, we will create something similar to the
 
 ### Push changes to your GitHub repository
 
-`git add --all`
-`git commit -m "added index.html"`
-`git pull origin main` 
-resolve merge conflicts if necessary
-`git push origin main`
+* `git add --all`
+* `git commit -m "added index.html"`
+* `git pull origin main` 
+* resolve merge conflicts if necessary
+* `git push origin main`
 
 ## Styling HTML with CSS
 
@@ -120,7 +121,8 @@ resolve merge conflicts if necessary
 
 ### Looking at CSS
 
-Create a new file called `style.css` and save it in the `html` directory you previosly created and open it in *Atom*. Example CSS: [web/web\_exercise\_2.html](web/web_exercise_2.html).
+Create a directory `static` and sub directory `css`.
+Create a new file called `style.css` and save it in the `html/static/css` directory you previosly created and open it in *Atom*. Example CSS: [web/web\_exercise\_2.html](web/web_exercise_2.html).
 
 Before we work with CSS open your `index.html` file and make the following changes:
 
@@ -130,7 +132,7 @@ Before we work with CSS open your `index.html` file and make the following chang
     <head>
         <meta charset="utf-8"/>
         <title>HTML exercise 2</title>
-        <link rel="stylesheet" type="text/css" href="style.css"/>
+        <link rel="stylesheet" type="text/css" href="static/css/style.css"/>
     </head>
     <body>
         <h1>HTML exercise 2</h1>
@@ -222,11 +224,11 @@ div{
 
 ### Push changes to your GitHub repository
 
-`git add --all`
-`git commit -m "added style.css and changed index.html by adding classes"`
-`git pull origin main` 
-resolve merge conflicts if necessary
-`git push origin main`
+* `git add --all`
+* `git commit -m "added style.css and changed index.html by adding classes"`
+* `git pull origin main` 
+* resolve merge conflicts if necessary
+* `git push origin main`
 
 ## GitHub Pages
 
@@ -235,7 +237,7 @@ Open this link to read more about: [What is GitHub Pages?](https://pages.github.
 ### Workflow to deploy Github Pages
 
 * Requires directories: `.github` and a sub directory `workflows` in your Github (git) repository
-* Requires a file called `build.yml` stored in the `workflows` directory
+* Requires a file called `build.yml` stored in the `workflows`.
 
 #### Inside build.yml
 
@@ -263,17 +265,17 @@ jobs:
 
 ### Push changes to your GitHub repository
 
-`git add --all`
-`git commit -m "added GitHub Actions workflow"`
-`git pull origin main` 
-resolve merge conflicts if necessary
-`git push origin main`
+* `git add --all`
+* `git commit -m "added GitHub Actions workflow"`
+* `git pull origin main` 
+* resolve merge conflicts if necessary
+* `git push origin main`
 
 See Actions work!
 
 ### Settings / Pages
 
-Select the correct Source by changing the `Branch` to "gh-pages" and click save
+Select the correct Source by changing the `Branch` to "gh-pages" and click save.
 
 ## JavaScript
 
@@ -283,7 +285,9 @@ Select the correct Source by changing the `Branch` to "gh-pages" and click save
 
 ### The HTML and CSS behind our JavaScript
 
-Open [web/web\_exercise\_3.html](web/web_exercise_3.html) in *Atom*. It should look something like:
+Open your `index.html` file in *Atom*. Exercise example: [web/web\_exercise\_3.html](web/web_exercise_3.html) 
+
+It should look something like:
 
 ```html
 <!DOCTYPE html>
@@ -291,8 +295,8 @@ Open [web/web\_exercise\_3.html](web/web_exercise_3.html) in *Atom*. It should l
     <head>
         <meta charset="utf-8"/>
         <title>HTML exercise 3</title>
-        <link rel="stylesheet" type="text/css" href="web_exercise_3.css" />
-        <script type="text/javascript" src="web_exercise_3.js">/**/</script>
+        <link rel="stylesheet" type="text/css" href="static/css/style.css" />
+        <script type="text/javascript" src="static/js/toggleColor.js">/**/</script>
     </head>
     <body>
         <h1>HTML exercise 3</h1>
@@ -337,7 +341,9 @@ Open [web/web\_exercise\_3.html](web/web_exercise_3.html) in *Atom*. It should l
 2. Notice that except for the filename and title, there are only two differences between this file and the last one. The first difference is that this file has added a `<script>` element in the `<head>`, which uses the `@src` attribute to point to the separate JavaScript file. The second is that we’ve created two `<button>` elements. The `@value` of the button is the text that it displays. As we’ll see below, the `@id` values let the CSS select the buttons separately, so that it can color them differently.
 3. Open the HTML file in a browser. Notice that the page looks the same as the one in the CSS exercise, except for the addition of the buttons.
 
-Open [web/web\_exercise\_3.css](web/web_exercise_3.css) in *Atom*. It should look something like:
+Open your `style.css` file in *Atom*. Exercise example: [web/web\_exercise\_3.css](web/web_exercise_3.css).
+
+It should look something like:
 
 ```css
 p{
@@ -391,7 +397,10 @@ Click the red or green buttons in the web browser and see how the color of the p
 
 ### How the JavaScript works
 
-Open [web/web\_exercise\_3.js](web/web_exercise_3.js) in *Atom*. It should look something like:
+Create a new directory as sub directory of `html/static` called `js`.
+Create a new file called `toggleColor.js`, save it in the `html/static/js` directory and open it in *Atom*. Exercise example: [web/web\_exercise\_3.js](web/web_exercise_3.js).
+
+Copy&Paste the following JavaScript code into your `toggleColor.js` file:
 
 ```javascript
 window.addEventListener('DOMContentLoaded', initialize, false);
@@ -415,19 +424,27 @@ function toggleColor() {
 }
 ```
 
-This JavaScript has three parts: a bootstrap line that gets it started (just linking to it isn’t enough; we also have to tell it to run), an initialization function that we’ve called `init()`, and a `toggleColor()` function that will change the color of the paragraphs when the user clicks a button.
+This JavaScript has three parts: a bootstrap line that gets it started (just linking to it isn’t enough; we also have to tell it to run), an initialization function that we’ve called `initialize()`, and a `toggleColor()` function that will change the color of the paragraphs when the user clicks a button.
 
 #### The bootstrap line
 
-The first line tells the browser to run the `init()` function (lines 2 through 7) when the page finishes loading. This fires only once.
+The first line tells the browser to run the `initialize()` function (lines 2 through 7) when the page finishes loading. This fires only once.
 
-#### The `init()` function
+#### The `initialize()` function
 
-The `init()` function fires automatically, thanks to the bootstrap line, as soon as the page has finished loading. It finds all of the `<button>` elements (there are two of them), loops over them, and tells them both to listen for click events, that is, to do something when they are clicked. The something they are told to do is to fire the `toggleColor()` function. The `init()` function also fires only once.
+The `initialize()` function fires automatically, thanks to the bootstrap line, as soon as the page has finished loading. It finds all of the `<button>` elements (there are two of them), loops over them, and tells them both to listen for click events, that is, to do something when they are clicked. The something they are told to do is to fire the `toggleColor()` function. The `initialize()` function also fires only once.
 
 #### The `toggleColor()` function
 
-The `toggleColor()` function fires whenever the user clicks a button because in the `init()` function we told the buttons to listen for and respond to clicks. When `toggleColor()` fires, it finds all of the paragraphs and tables (only one in this case), loops over them, and changes their color. The button that was clicked is represented in the function by the magic word `this`, and the expression `this.value` returns the value of the `@value` attribute on the `<button>` element that was clicked. Since those values are “red” and “green”, we can use them directly to set the color style property of the paragraphs.
+The `toggleColor()` function fires whenever the user clicks a button because in the `initialize()` function we told the buttons to listen for and respond to clicks. When `toggleColor()` fires, it finds all of the paragraphs and tables (only one in this case), loops over them, and changes their color. The button that was clicked is represented in the function by the magic word `this`, and the expression `this.value` returns the value of the `@value` attribute on the `<button>` element that was clicked. Since those values are “red” and “green”, we can use them directly to set the color style property of the paragraphs.
+
+### Push changes to your GitHub repository
+
+* `git add --all`
+* `git commit -m "added javascript files"`
+* `git pull origin main` 
+* resolve merge conflicts if necessary
+* `git push origin main`
 
 #### Watch the JavaScript work
 
