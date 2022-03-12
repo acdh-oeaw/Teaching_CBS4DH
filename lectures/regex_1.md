@@ -45,7 +45,7 @@ Notice the multiple ways to define the same pattern along this introduction. It 
 
 ## Characters
 
-| Special sequence | Matches | Restricted<sup>1</sup> equivalent to |
+| Special sequence | Matches | Equivalent Sets |
 |----------------- | ------- | ------------------------------------ |
 | `\d` | any _decimal digit_ | `[0-9]` |
 | `\D` | any _non-digit character_ | `[^0-9]` |
@@ -85,7 +85,7 @@ A group refers to __whole__ the characters in their sequence. `(abc)` has the me
 
 
 We now go back to our example from above, we want to form some regex to match a date that looks like: `DAY MONTH YEAR` where the day and the year appear in digits and the month in letters. <br>
-`(\d){2}\s(A-Z)(a-z)+\s(\d){4}` <br> We have here a set of groups, we firstly have 2 digits followed by a space, one upper case letter, some arbitrary number of lower case letters, another space and 4 final digits.<br>
+`(\d){2}\s[A-Z][a-z]+\s(\d){4}` <br> We have here a set of groups, we firstly have 2 digits followed by a space, one upper case letter, some arbitrary number of lower case letters, another space and 4 final digits.<br>
 With this regex the following strings would match:
 * `30 January 2021`
 * `01 February 1990`
@@ -98,7 +98,7 @@ _But also:_
 * `30 Ja 2021`
 
 We cannot cover _all_ edge cases, however, we can definitely make the specification more percise while still maintaining generalization:<br>
-`(0-3)\d\s(A-Z)(a-z){2, 8}\s(0-2)(\d){3}`<br>
+`(0-3)\d\s[A-Z][a-z]{2, 8}\s(0-2)(\d){3}`<br>
 What invalid strings that matched before do not match anymore? Can we improve it even more?
 
 ### **Some Remarks:**
@@ -131,7 +131,7 @@ The _metacharacter star_ `*`, does not match the _literal character_ `*`, and it
 | hello | `H[ello]*` | No |
 | hello | `[Hell]*o` | Yes |
 | star | `[e]*` | Yes |
-| staar | `t[a]*r` | Yes |
+| staar | `st[a]*r` | Yes |
 
 ```Python
 import re
@@ -151,8 +151,8 @@ The _repeating metacharacter_ plus `+` means matching _one or more times_. This 
 | --- | --- | --- |
 | plus | `pl[au]+s` | Yes |
 | pluus | `plu+s` | Yes |
-| plusplus | `uss+` | No |  
-| plussusch | `us[cs]+` | Yes |  
+| plusplus | `pluss+` | No |  
+| plussusch | `plus[cs]+` | Yes |  
 
 
 The third single repeating _qualifiers_ is  the _question mark_ `?` which matches either _once or zero times_.
@@ -221,4 +221,9 @@ Some links to practice:
 * https://regex101.com/
 * https://regexone.com/
 * https://regex.sketchengine.co.uk/
+
+Links to more sources:
+* https://www.geeksforgeeks.org/write-regular-expressions/
+* https://www.w3schools.com/jsref/jsref_obj_regexp.asp
+* https://medium.com/factory-mind/regex-tutorial-a-simple-cheatsheet-by-examples-649dc1c3f285
 
