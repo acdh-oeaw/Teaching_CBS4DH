@@ -2,9 +2,9 @@
 
 Git is a content management system, but not in the usual way you might expect from well-known Content Management Systems (CMS) like Wordpress or Drupal, or well-known file-sharing systems like Dropbox or Box. For this reason, Git is called a *content tracker*.
 
-Git is one of the most used *version control systems* in the coding community. It is useful when working on coding projects, alone or in a group: it keeps track of each stage of the process, and allows you for instance to go back and restore to an earlier version.
+Git is one of the most used *version control systems* in the coding community. It is useful when working on coding projects, alone or in a group: it keeps track of each stage of the process, and allows you, for instance, to go back and restore to an earlier version.
 
-Git is a distributed version management control system. That means that every project member has a copy of the complete history of all the files in the project on their machine. Contrast this with centralized version control systems such as Subversion (SVN) were users only have the last version of a file on their system. In this workshop, we are going to use *remote* repositories, which are located om a server on Github, as well as a *local* repository that is located on your own machine.
+Git is a distributed version management control system. That means that every project member has a copy of the complete history of all the files in the project on their machine. This is the contrarz to centralized version control systems, such as Subversion (SVN,) where users only have the last version of a file on their system. In this workshop, we are going to use *remote* repositories, which are located on a server on Github, as well as a *local* repository that is located on your own machine.
 
 In this tutorial, we will work both in the browser and in a terminal window. We use the browser to administer remote Git repositories; we work in the terminal for everything regarding the local Git repository.  
 
