@@ -1,4 +1,4 @@
-# Regular expressions
+# Regular Expressions
 
 _Regular Expressions_ (called  _REs_, _regex_, _regexps_, _regex patterns_) describe a **search pattern** in a text and are supported by multiple programming languages (Python, Java, Javascript, and many more) and serve as an integral part in several tasks. There are subtle differences between each implementation of Regex in the different programming languages but they are all based on the same basic principles. 
 
