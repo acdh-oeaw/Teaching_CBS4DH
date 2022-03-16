@@ -4,7 +4,7 @@ Teaching materials for AR Methodological Workshop - Computational Background Ski
 ## Schedule 2022S
 Time | Wednesday (9.3) | Thursday (10.3) | Wednesday (16.3) | Thursday (17.3) | Wednesday (23.3) | Thursday (24.3)
 ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-13:15 – 14:45 |  [Intro and Setup](lectures/intro_and_setup.md) (MĎ) | [Command line 2](lectures/command_2.md) (MC) | [Regular expressions 2](lectures/regex_2.md) (TS, MŻ) | [Git 2](lectures/git_2.md) (DS, MŻ) | [Web technologies 1](lectures/web.md) (FW, DS) | Questions & Answers (MĎ, FW)
+06:15 – 14:45 |  [Intro and Setup](lectures/intro_and_setup.md) (MĎ) | [Command line 2](lectures/command_2.md) (MC) | [Regular expressions 2](lectures/regex_2.md) (TS, MŻ) | [Git 2](lectures/git_2.md) (DS, MŻ) | [Web technologies 1](lectures/web.md) (FW, DS) | Questions & Answers (MĎ, FW)
 15:00 – 16:25 |  Command line 1: [Mac](lectures/command_1_mac.md) and [Windows](lectures/command_1_windows.md) (MĎ, MC) | [Regular expressions 1](lectures/regex_1.md) (TS, MC) | [Git 1](lectures/git_1.md) (TS, MŻ) | [File formats and encodings](lectures/files.md) (DS, MŻ) | [Web technologies 2](lectures/web.md) (FW) | [More DH](lectures/final_more.md) (MĎ)
 
 Lecturers:
