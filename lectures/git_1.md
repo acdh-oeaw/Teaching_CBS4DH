@@ -4,13 +4,15 @@ Git is a content management system, but not in the usual way you might expect fr
 
 Git is one of the most used *version control systems* in the coding community. It is useful when working on coding projects, alone or in a group: it keeps track of each stage of the process, and allows you, for instance, to go back and restore to an earlier version.
 
-Git is a distributed version management control system. That means that every project member has a copy of the complete history of all the files in the project on their machine. This is the contrarz to centralized version control systems, such as Subversion (SVN,) where users only have the last version of a file on their system. In this workshop, we are going to use *remote* repositories, which are located on a server on Github, as well as a *local* repository that is located on your own machine.
+<!-- [Mateusz] Commenting out as first, distributed vs centralized is not important for non-technical people; second, this paragraph defines this distinction wrongly and finally, most people use git in a centralized way anyway.
+Git is a distributed version management control system. That means that every project member has a copy of the complete history of all the files in the project on their machine. This is the contrast to centralized version control systems, such as Subversion (SVN,) where users only have the last version of a file on their system. In this workshop, we are going to use *remote* repositories, which are located on a server on Github, as well as a *local* repository that is located on your own machine.
+-->
 
 In this tutorial, we will work both in the browser and in a terminal window. We use the browser to administer remote Git repositories; we work in the terminal for everything regarding the local Git repository.  
 
-Git is a command line tool with which one can administer local and remote Git repositories, allowing you to version your files and share them easily with others within a project.
+The git is a command line tool with which one can administer local and remote Git repositories, allowing you to version your files and share them easily with others within a project.
 
-Github is an online service that hosts Git repositories (public as well as private) and provides social network functionality to users. Users can add issues, construct a wiki, create tasks and create pull requests on the web-site. 
+Github is an online service that hosts Git repositories (public as well as private) and provides social network functionality to users. Users can add issues, construct a wiki, create tasks and create pull requests on the website. 
  
 What you need to get started with Git:
 
@@ -53,8 +55,9 @@ When you start working with Git you need to set your identity. Git tracks who ch
 
 Open a terminal window and type the following commands, replacing John Doe with your name and the email-address with your own email address:
 
-* `$ git config --global user.name "John Doe"`
-* `$ git config --global user.email johndoe@example.com`
+* `git config --global user.name "John Doe"`
+* `git config --global user.email johndoe@example.com`
+* `git config --global core.editor "nano -w"` (change the default text editor to something user-friendly)
 
 ## Cloning remote repositories
 
@@ -66,7 +69,7 @@ Working with Git repositories is completely command line and file based, so the 
 
 Command | Description
 ------- | -----------
-`git clone` |   Copy an existing repository from a remote location (for example GitHub)
+`git clone` |   Copy an existing repository from a remote location, (for example GitHub)
 `git remote` |  View and manage remote repositories
 `git init` |   Create a new repository locally
 
@@ -146,16 +149,8 @@ If you make a mistake with a commit (forgot to add new files, or messed up your 
 
 Note that there is a difference between files and commits. A commit can consist (and usually does) of multiple files. Git tracks commits and content, not single files.
 
-vim is the default editor in Git (on all operating systems). When you type `git commit`, you are taken into vim to enter a _commit message_, where you record information about the commit. The most important vim commands are:
-
-You type | What happens
----- | ----
-`Esc` | enter command mode
-`i` | enter insert mode
-`:wq` | write your changes and quit
-`:q!` | cancel (quit without writing changes)
-
-The use of the escape key in Vim, the `i` for insert mode, `:wq` and `:q!` to cancel 
+If you want to provide a more extensive (e.g. multiline) commit description, run `git commit` without the `-m` parameter.
+This will open a text editor (in our case the `nano`). Just type the commit message and hit `CTRL+X`. Then confirm you want to save your message with `Y` and confirm the default file name (just hit the `Enter`).
 
 # Syncing repositories
 
