@@ -79,6 +79,61 @@ You type | What happens
 
 The use of the escape key in Vim, the `i` for insert mode, `:wq` and `:q!` to cancel
 
+## Forking repositories
+
+![Git forking repositories](images/git_forking.gif)
+
+* Log in to Github
+* On Github fork the NEH Institute Materials 2017 repository
+* Clone you fork to your local machine.
+In your Workspace directory in your home directory do:
+`$ git clone https://github.com/acdh-oeaw/Teaching_CBS4DH.git`
+* On your local machine add the original repository as a second remote repository called upstream
+
+```bash
+$ git remote -v
+origin  https://github.com/YOUR_USERNAME/YOUR_FORK.git (fetch)
+origin  https://github.com/YOUR_USERNAME/YOUR_FORK.git (push)
+
+$ git remote add upstream https://github.com/Pittsburgh-NEH-Institute/Institute-Materials-2017
+
+$ git remote -v
+origin    https://github.com/YOUR_USERNAME/YOUR_FORK.git (fetch)
+origin    https://github.com/YOUR_USERNAME/YOUR_FORK.git (push)
+upstream  https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git (fetch)
+upstream  https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git (push)
+```
+
+## Pull requests: making changes and submitting a pull request
+
+* Create changes
+* Track changes
+* Commit changes
+* Push commits 
+* Create pull request on github
+
+## Notes
+
+* A fork is a remote repository on GitHub. 
+* Forking has to do with permissions.
+* Explain difference between a fork and a branch
+* A fork is not a branch, a fork is a repository, a branch is a series of commits.
+* Explain git status "ahead / behind origin/master" line
+* Explain difference between a pull and a fetch
+* The Git `pull` command is not the same as a *pull request* on GitHub.
+* Git does not track empty directories or empty files.
+
+## Terms learned part 2
+
+* Fork (GitHub term)
+* Pull request (GitHub term)
+* Branch
+* Merge, merge commit, merge conflict
+
+## Git Terms Cheat Sheet
+
+* https://www.keycdn.com/blog/git-cheat-sheet
+
 ## Github Actions
 
 Please open this link to read more: [Understanding GitHub Actions](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions)
@@ -111,58 +166,3 @@ jobs:
 ```
 
 Learn more about `secrets.GITHUB_TOKEN`: [Understanding GitHub automatic token authentication](https://docs.github.com/en/actions/security-guides/automatic-token-authentication)
-
-## Forking repositories
-
-![Git forking repositories](images/git_forking.gif)
-
-* Log in to Github
-* On Github fork the NEH Institute Materials 2017 repository
-* Clone you fork to your local machine.
-In your Workspace directory in your home directory do:
-`$ git clone https://github.com/acdh-oeaw/Teaching_CBS4DH.git`
-* On your local machine add the original repository as a second remote repository called upstream
-
-```bash
-$ git remote -v
-origin  https://github.com/YOUR_USERNAME/YOUR_FORK.git (fetch)
-origin  https://github.com/YOUR_USERNAME/YOUR_FORK.git (push)
-
-$ git remote add upstream https://github.com/Pittsburgh-NEH-Institute/Institute-Materials-2017
-
-$ git remote -v
-origin    https://github.com/YOUR_USERNAME/YOUR_FORK.git (fetch)
-origin    https://github.com/YOUR_USERNAME/YOUR_FORK.git (push)
-upstream  https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git (fetch)
-upstream  https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git (push)
-```
-
-## Pull requests: making changes and submitting a pull request
-
-* Create changes
-* Track changes
-* Commit changes
-* Push commits 
-* Create pull request on github 
-
-## Notes
-
-* A fork is a remote repository on GitHub. 
-* Forking has to do with permissions.
-* Explain difference between a fork and a branch
-* A fork is not a branch, a fork is a repository, a branch is a series of commits.
-* Explain git status "ahead / behind origin/master" line
-* Explain difference between a pull and a fetch
-* The Git `pull` command is not the same as a *pull request* on GitHub.
-* Git does not track empty directories or empty files.
-
-## Terms learned part 2
-
-* Fork (GitHub term)
-* Pull request (GitHub term)
-* Branch
-* Merge, merge commit, merge conflict
-
-## Git Terms Cheat Sheet
-
-* https://www.keycdn.com/blog/git-cheat-sheet
