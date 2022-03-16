@@ -5,6 +5,7 @@
 * *Git* can mean a lot of things. For the sake of this lecture we assume the *git* is an environment for sharing files (with some goodies like keeping history of changes, etc.).
 * The git environment consists of many pieces which can be provided by many vendors. We do not have time to dig into that. We will just go trough one possible setup based on the GitHub (because we - lectures - use it every day and feel comfortable with it) so you can see how it works. The way it works with other vendors can differ here and there but these differences are not that severe and important (it is like driving a car - if you know how to drive a VM Golf you will most likely manage driving any other compact car out there).
 * The *git* can be used in many ways (e.g. in a centralized or distributed setup, witch extensive use of branches or not, etc.) and people write whole volumes about it. Again, we do not have time to discuss all possibilities. We will just present you a workflow which should do the job for you at the beginning of your git adventure.
+* Below it's assumed you have [git](https://git-scm.com/) installed in your system and you know how to call git commands from the command line.
 
 ## Initial intuitions
 
@@ -124,7 +125,7 @@ Unfortunately sometimes a more complex setup can be needed.
 
 ## Commits, branches and merging
 
-### Referring to commits
+### Referencing commits
 
 Before we dig deeper, we must understand better what a commit is and how we can refer to it.
 
@@ -145,8 +146,66 @@ As we can see by default the only way to refer to commits is to use their hash-i
   You can list them with `git tag list`.
   Tags work intuitively. Once you create a tag, it just contantly points to a given commit.
   They are used to denote important points in the repository history e.g. the software version number (e.g. *1.5* meaning "what we shipped to users under version 1.5") or some kind of milestone (e.g. *thesis_as_sent_to_reviewer*).
-* Branches. Branches are also user-friendly labels linking to a hash-id of a commit.
-  What is specific to them (and a little strange but also useful) is that when you perform a commit, the branch automatically 
+* Branches. Technically branches are just another user-friendly labels linking to a hash-id of a commit.  
+  What makes branches special is the way this link is updated.
+  * Your repository always have at least one branch. The very first one is created when you create a repository (and typically named `master` or `main` depending on the git settings).
+  * One branch is always *active* (by default the one created during the repository creation).
+  * When you make a new commit, the *active branch* is automatically updated so it points to the new commit.
+    * Anyway when we talk about a branch we typically mean not the single commit the branch technically points to but also a chain of all its predecessor-commits.
+    * Unfortunately there are some contexts where the branch name means a single commit (the one a branch technically points to or in other words the one "at the top" of a branch).
+
+Remarks:
+
+* You can see if a given commit is pointed by a tag and/or branch in the `git log` output, e.g.:
+  ```
+  commit 4c633cfb4b181c9776cb5d4a7fb841262d25eb4f (tag: 0.14.4, namednode-made-iri-string)
+  Author: Mateusz Żółtak <zozlak@zozlak.org>
+  Date:   Tue Mar 9 12:47:44 2021 +0100
+  (...)
+  ```
+* If a given git command accepts/requires a commit id, you can use any of above-mentioned methods interchangeably.  
+  Let's assume you want to restore the `README.md` file to the version from the commit on the listing above. All command below will do exactly the same:
+  ```
+  git checkout 4c633cfb4b181c9776cb5d4a7fb841262d25eb4f README.md
+  git checkout 0.14.4 README.md
+  git checkout namednode-made-iri-string README.md
+  ```
+
+### Using branches
+
+Sometimes you just can not keep changes in your repository linear. Imagine you are writing a paper which goes trough two-stages review process. For the first stage you only need to prepare a two pages overview and for the second stage you must prepare a fully-blown ten pages paper. You prepared the file, commited it, maybe even assigned it a tag `stage1tag` and sent it for the first stage review. Once you did it you started working on the full version and already made a few commits. Out of a sadden you co-author writes you a message - you made a typo in a fundamental equation/mixed up two charts/some other silly but devastating error. But what to do now? You already made a few new commits while working on the full paper version and you do not want to loose this work. On the other hand you can not use these commits if you want to fit the 2-pages limit for the first review stage. There is no other way, you must create two parallel versions of your repository (which may but do not have to merge again later on):
+
+* A bugfigs version providing a crucial fix for the `stage1tag` commit (let's name it `stage1branch`).
+* Another version keeping the progress you already made since the `stage1tag` commit (let's use the default branch for that and assume it is named `master`; by the way you can list all the branches with `git branch`).
+
+This is when **branches** come in handy.  
+(by the way we finally found a scenario where normal file sharing services would fail!)
+
+What you probably need to do now is:
+
+1. Commit all the uncommited work you have at the moment.
+2. Run `git checkout stage1tag` - restore the repository state at the `stage1tag` commit.
+3. Run `git checkout -b stage1branch` - create a new branch called `stage1branch` from the current repository state and make it an *active branch*.
+4. Fix and commit what is to be fixed.
+5. Run `git checkout master` to restore the repository version to the state it had at the end of the 1st point.
+
+Finally you need to decide if changes you made in the 4th point are applicable for the `master` branch or not.
+
+* If not, you are done.
+* If yes, you can merge them with `git merge stage1branch`.  
+  As the same file was modified it will surely create a conflict but you should already know how to deal with that.
+
+Remarks:
+
+* **push** and **pull** commands allow you to specify the branch name explicitly, e.g. `git pull origin foo` means "pull the branch foo from the repository you initially cloned".
+  What happens if you do not provide the branch name depends on your *active branch* configuration but in worse case the git error message will tell you what to do.
+* **merge** is actually very similar to **pull**, just it is done locally.
+  * in fact `git fetch origin` + `git merge branchX` is equal to `git pull origin branchX`;
+  * when a repository owner accepts a pull request on the GitHub (s)he implicitely runs `git merge branchSentAsPullRequest`.
+* If you want to share the `stage1branch` with others, you must push it separately with `git checkout stage1branch` followed by `git push origin stage1branch`.
+* GitHub provides a nice visualization of branches and commits history under https://github.com/organization/repoName/network, e.g. for this repository https://github.com/acdh-oeaw/Teaching_CBS4DH/network .
+  (it includes forks; branches are black labels; dots are commits; the chart can be scrolled by dragging)
+ 
 
 ## Homework
 
