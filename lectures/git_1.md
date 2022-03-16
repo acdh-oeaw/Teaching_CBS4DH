@@ -1,176 +1,160 @@
 # Git 1
 
-Git is a content management system, but not in the usual way you might expect from well-known Content Management Systems (CMS) like Wordpress or Drupal, or well-known file-sharing systems like Dropbox or Box. For this reason, Git is called a *content tracker*.
+## Opening remarks
 
-Git is one of the most used *version control systems* in the coding community. It is useful when working on coding projects, alone or in a group: it keeps track of each stage of the process, and allows you, for instance, to go back and restore to an earlier version.
+* *Git* can mean a lot of things. For the sake of this lecture we assume the *git* is an environment for sharing files (with some goodies like keeping history of changes, etc.).
+* The git environment consists of many pieces which can be provided by many vendors. We do not have time to dig into that. We will just go trough one possible setup based on the GitHub (because we - lectures - use it every day and feel comfortable with it) so you can see how it works. The way it works with other vendors can differ here and there but these differences are not that severe and important (it is like driving a car - if you know how to drive a VM Golf you will most likely manage driving any other compact car out there).
+* The *git* can be used in many ways (e.g. in a centralized or distributed setup, witch extensive use of branches or not, etc.) and people write whole volumes about it. Again, we do not have time to discuss all possibilities. We will just present you a workflow which should do the job for you at the beginning of your git adventure.
 
-<!-- [Mateusz] Commenting out as first, distributed vs centralized is not important for non-technical people; second, this paragraph defines this distinction wrongly and finally, most people use git in a centralized way anyway.
-Git is a distributed version management control system. That means that every project member has a copy of the complete history of all the files in the project on their machine. This is the contrast to centralized version control systems, such as Subversion (SVN,) where users only have the last version of a file on their system. In this workshop, we are going to use *remote* repositories, which are located on a server on Github, as well as a *local* repository that is located on your own machine.
--->
+## Initial intuitions
 
-In this tutorial, we will work both in the browser and in a terminal window. We use the browser to administer remote Git repositories; we work in the terminal for everything regarding the local Git repository.  
+You likely used some kind of file sharing service already, e.g. a Dropbox, Google Drive, Ms OneDrive, YouNameIt.
+Well, git's aim is more or less the same - assure all parties involved in the collaboration have access to the up to date file versions.
+Just in the process of achieving that the accents are put on different aspects of the process:
 
-The git is a command line tool with which one can administer local and remote Git repositories, allowing you to version your files and share them easily with others within a project.
+* File sharing services tries to do the work as automatically and transparent as possible. In most cases you do not have to do nothing but assure you are connected to the Internet.
+* Git focuses on giving you control on how the sharing is performed. Which is a lot more work on your side but it also allows you keep things in order in complex collaboration scenarios where ordinary file sharing services would give up.
 
-Github is an online service that hosts Git repositories (public as well as private) and provides social network functionality to users. Users can add issues, construct a wiki, create tasks and create pull requests on the website. 
+To synchronize the change you made with your collaborator in git you have to:
+
+* Manually confirm the change should be remembered (so called **commit**)
+* Manually move it to the place reachable for your collaborators, e.g. GitHub (so called **push**)
+* And finally your collaborator has to actively synchronize (so called **pull**)
+
+It is worth nothing that file sharing services do exactly the same, just without asking you about it (until they really have to, e.g. in case of conflicting changes).
+
+The git approach may look overcomplicated and it certainly brings too much trouble for sharing a Christmas presents list across the family but as the size of the projects you are involved in will grow you should actually find useful the amount of control the git provides.
+
+## Git configuration
+
+Before you start using git on your machine, set up a few configuration options using the console:
+
+* `git config --global user.name "My Name"` (so others know who made changes)
+* `git config --global user.email My email address` (so others can contact you)
+* `git config --global core.editor "nano -w"` (so git uses a user-friendly text editor on the console)
+
+
+## Git circle of life
+
+When you use git, you just spin around in the circle of **commits**, **pulls** and **pushes**:
+
+![](images/git_workflow.png)
+
+But to get there you first need to obtain a repository on GitHub which you are allowed to write (push) to. Which leads us to the topic of the repository initialization.
+
+### Repository initialization
+
+First of all you need a [GitHub account](https://github.com/join). Then:
+
+* If you start from scratch, just [create a new one](https://docs.github.com/en/get-started/quickstart/create-a-repo).
+* If the repository you want to work with already exists:
+  * and you have write rights on it (because you created it or someone who created it granted you such rights), then you are lucky and can jump directly to the next step;
+  * and you do not have write rights on it (or you do not know if you have which most probably means you do not), then **[fork it](https://docs.github.com/en/get-started/quickstart/fork-a-repo)**.
+    Forking a repository basically means creation of its exact copy which belongs to you.
+
+Once you have a GitHub repository with write rights, you can **[clone](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)** it.
+
+* Cloning means creation of a repository copy in other place, e.g. on your laptop. Internally it consists of a few steps (see the citation block below for details) but who would run them manually if it can all be done with a single command?
+* Cloning is like accepting an invitation to share a folder on Dropbox, Google Drive, etc. (which is actually pretty accurate comparison because both is typically done with special URLs).
+
+> What `git clone repositoryURL directoryName` actually does is:
+>
+> * create a directory named `directoryName` and enter it
+> * run `git init` (initialize an empty repository)
+> * run `git remote add origin repositoryURL` (link the just created repository with the remote one we are cloning and assigning the remote repository a name of "origin")
+> * run `git fetch origin` (download all the data from the repository we are cloning)
+> * run `git checkout --track origin/{origin's default branch}` (load the current state of the repository we are cloning and perform some configuration)
+
+After cloning the repository:
+
+* The whole repository content including history of changes, alternative versions of same files (more on that in a moment), etc. is stored in a magic directory called `.git` (depending on your file browser settings you may see it or it may be a hidden directory).
+* The up-to-date version of the repository which you see as files and directories, just like with any other files sharing service like Dropbox, Google Drive, etc.
+
+### Preserving changes and sharing them
  
-What you need to get started with Git:
+As you can see all the files and directories in your file explorer, you can just start adjusting them (or deleting or creating new ones or doing all of it).
+Once you feel you are done and ready to share your outcomes you must:
 
-* a Github account
-* basic knowledge of the command line
+* Tell git changes in which files you want to preserve. This is done with `git add pathToTheFile`.  
+  If you add a directory all files contained in it are added automatically so to add all changes you made you can just run `git add .` in the repository directory.
+* Tell git to preserve the changes (make the migthy **commit**): `git commit -m 'a short description of the changes you made'`.
+* Apply any changes someone else might done in the mean time (of course there might be none) by making a **pull**: `git pull origin`.  
+  * This is the most thrilling action as it might turn out that someone made changes in same files as you and there is a **conflict**.
+    If it is the case, git will provide you a list of files with conflicts and ask you to solve them. It will also adjust conflicting file contents so you see both your version of the file and the version provided by someone else. It looks quite ugly but does the job:
+    ```
+    (...)
+    <<<<<<< HEAD
+    Your version
+    =======
+    Some else's version
+    >>>>>>> commit id or name
+    (...)
+    ```
+    You solve conflicts by manually editing the problematic files, e.g. turning the example above into:
+    ```
+    (...)
+    Your version
+    (...)
+    ```
+    and repeating the add and commit steps.
+* Update the GitHub repository with your changes so others can pull them (make a **push**): `git push origin`.
+  * If you work with a repository fork you might be interested in sharing your changes with the repository you intially forked.
+    To do that you need to make a **[pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork)** on the GitHub.
+    Once it is done you need to wait for the repository owners to review your request and accept or deny it (or ask you to make some additional changes).
 
-If you don't have a Github account, create one here:
-<https://github.com>
+### Less important actions
 
-## Preparation
+The git command provides you many other useful commands. They are not as essential as add/commit/pull/push but can still be useful:
 
-![](images/git_repository_preparation.gif)
+* `git status` lists the current repository state - all files which were modified since the last commit.
+* `git diff` lists detailed changes you made to the files modified since the last commit.
+* `git checkout HEAD path` undoes all changes made to a given path since the last commit. Use with caution, there is no undo for this action.
+* `git log` lists history of commits.
+* `git reset path` revokes `git add`.
 
-## General workflow 
+### Summing up
 
-![](images/git_process_diagram.gif)
+You now know a basic git workflow - how to obtain a repository copy on your local machine, make changes in the repository and share them with others.
+So far, so good.
+Is it really that simple?
 
-## Create a new Github repository
+Well, yes and no. So far we worked with a linear repository history which kept things simple. Which is good.
+The worse which can happen is a conflict but hey, you can get a conflict even in Dropbox/Google Drive/Ms OneDrive/etc.
+Unfortunately sometimes a more complex setup can be needed.
 
-* Go to your browser
-* Go to <https://github.com/>
-* Log in to your account
-* In the upper-right corner of any page, click , and then click New repository.
-* In the Owner drop-down, select the account you wish to create the repository on.
-* Type a name for your repository, and an optional description.
-* You can choose to make the repository either public or private. Public repositories are visible to the public, while private repositories are only accessible to you, and people you share them with. We choose public for this tutorial.
-* There are a number of optional items you can pre-populate your repository with. If you're importing an existing repository to GitHub, don't choose any of these options, as you may introduce a merge conflict. You can choose to add these files using the command line later.
-	* You can create a README, which is a document describing your project.
-	* You can create a CODEOWNERS file, which describes which individuals or teams own certain files in the repository.
-	* You can create a .gitignore file, which is a set of ignore rules.
-	* You can choose to add a software license for your project.
-	* For this exercise choose to at least add a `README` file. You can choose to add a license if you like. 	
-* When you're finished, click Create repository.
+## Commits, branches and merging
 
-Your repository will be located at `https://github.com/username/repositoryname`.
+### Referring to commits
 
-## Set your identity on your local machine
+Before we dig deeper, we must understand better what a commit is and how we can refer to it.
 
-When you start working with Git you need to set your identity. Git tracks who changes what in each file. Therefore you need to identify yourself before you are able to make changes and commit them. This identity will be used to track all the changes that you make to content in a repository. You only have to do this once on each machine that you use.
+A commit is a snapshoot of the repository state. It stores:
 
-Open a terminal window and type the following commands, replacing John Doe with your name and the email-address with your own email address:
+* A link to it direct predecessor-commit(s), so we can track the history of changes.
+* All files changed since the predecessor-commit(s).
+* Some basic metadata like the date of the commit or the name of a person who made the commit.
+* A unique hash-identifier of the commit.
+  This is this ugly and long hexadecimal number displayed by the `git log` (e.g. `f8a3048383bc00394693cafa25206f635e4fe7b3`).
+  It is impossible to remember it but it has its advantages.
+  It is generated automatically so you do not need to remember to assing it and it is guaranteed to be unique. 
 
-* `git config --global user.name "John Doe"`
-* `git config --global user.email johndoe@example.com`
-* `git config --global core.editor "nano -w"` (change the default text editor to something user-friendly)
+As we can see by default the only way to refer to commits is to use their hash-ids. Which is inconvenient. To make it user-friendly to alternative methods are provided:
 
-## Cloning remote repositories
+* Tags. A tag is just a user-friendly label linking to a hash-id of a commit.
+  You assign a tag by running `git tag tagName commitHashId` or just `git tag tagName` (in the latter case the current commit is used).
+  You can list them with `git tag list`.
+  Tags work intuitively. Once you create a tag, it just contantly points to a given commit.
+  They are used to denote important points in the repository history e.g. the software version number (e.g. *1.5* meaning "what we shipped to users under version 1.5") or some kind of milestone (e.g. *thesis_as_sent_to_reviewer*).
+* Branches. Branches are also user-friendly labels linking to a hash-id of a commit.
+  What is specific to them (and a little strange but also useful) is that when you perform a commit, the branch automatically 
 
-![Git clone](images/git_cloning.gif)
+## Homework
 
-To work with the repository we just created we need to transfer the data from the remote repository to the local machine. Copying a remote repository to the local machine is called cloning in Git. For completeness sake I also included in the table below the git command to create a new repository on the local machine. 
+Realize the "Git circle of life" as described above by:
 
-Working with Git repositories is completely command line and file based, so the knowledge that you acquired about the command line and the file system over the past couple of days will come in very handy here.
+* [Forking](https://docs.github.com/en/get-started/quickstart/fork-a-repo) the https://github.com/acdh-oeaw/Teaching_CBS4DH repository.
+* Adjusting the `excersise/regex exercises/regex2_exercise.txt` file by adding regular expressions solving the tasks listed in the file.
+* Commiting and pushing the changes.
+* Making a [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork) against the original repository.
 
-Command | Description
-------- | -----------
-`git clone` |   Copy an existing repository from a remote location, (for example GitHub)
-`git remote` |  View and manage remote repositories
-`git init` |   Create a new repository locally
-
-* Create a directory in your home directory called Workspace were we store all the cloned repositories.
-
-```bash
-$ cd ~
-$ mkdir Workspace
-$ cd Workspace
-```
-
-Now we clone the repository that we just made on GitHub to the local machine.
-
-```bash
-$ git clone https://github.com/username/repositoryname
-$ cd repositoryname
-$ ls -lisa
-```
-
-There should be your files. 
-
-Now we run the git remote command to see whether the remote repository is correctly linked with the local repository.
-
-`$ git remote -v`
-
-Sample outcome:
-
-```bash
-origin	https://github.com/username/repositoryname (fetch)
-origin	https://github.com/username/repositoryname (push)
-```
-
-What *fetch* and *push* stand for we will get into later (under section syncing repositories)
-
-## Working directory
-
-When you have a terminal window open, you are in what is called the *working directory*. The complete repository, with all the changes that people have ever made, is present, but in the background. Information other than current versions of your files is outside your working directory, but you can reach it when you need it.
-
-## Making some changes
-
-* Use your favorite editor to edit files (and you can use different editors for different files in the same project)
-* PyCharm (for Python projects), \<oXygen/\> (for XML projects), vim, notepad++, BBEdit, etc.
-
-## Working with changes locally and tracking them
-
-![Git commit](images/git_making_changes.gif)
-
-Command | Description 
---------|-----------------
-`git status` | Show which files are modified locally or new
-`git diff` |  Show changes
-`git add`  |   Add a file to change tracking and stage  
-`git reset HEAD` |  Untrack a file or unstage 
-`git checkout` | Undo changes to a file (before commit)
-
-## Committing changes
-
-Command | Description 
---------|-----------------
-`git commit` | Make changes permanent
-`git log`  | Show history of commits
-`git reset HEAD~` | Undo the last commit, retain changes in the working directory
-`git reset HEAD~ --hard` | Undo the last commit, remove changes from the working directory
-
-`git commit -a` adds all changed files and commits the changes, that is, it combines `git add` with `git commit`. **But it only adds files that have changed, and not files that are completely new.** The only way to add a new file is with `git add`.
-
-For example:
-
-```bash
-$ git add .
-$ git commit -m "added a new feature some files changed"
-```
-
-If you make a mistake with a commit (forgot to add new files, or messed up your commit message)
-
-`$ git reset HEAD~`
-
-Note that there is a difference between files and commits. A commit can consist (and usually does) of multiple files. Git tracks commits and content, not single files.
-
-If you want to provide a more extensive (e.g. multiline) commit description, run `git commit` without the `-m` parameter.
-This will open a text editor (in our case the `nano`). Just type the commit message and hit `CTRL+X`. Then confirm you want to save your message with `Y` and confirm the default file name (just hit the `Enter`).
-
-# Syncing repositories
-
-![Git syncing repositories](images/git_syncing.gif)
-
-Command | Description
-------- | -----------
- `git pull` | Fetch the commits from a remote repository and merge them with the current working directory (i.e. does a fetch and a merge in one)
- `git push` | Push the commits from the local repository to a remote repository 
- `git fetch` | Fetch the commits from a remote repository into the local repository
- `git merge` | Merge the commits from the local repository with commits fetched from a remote repository (actually this works on branches; this will be explained in the git tutorial part 2)
-
-## Terms learned
-
-* Repository
-* Clone / Origin
-* Working directory
-* Commit
-* Push and pull
-
-## Using a central repository for a project
-
-![Git central repository](images/git_central_repo.gif)
+In case of trouble you can contact me on mateusz.zoltak@oeaw.ac.at
