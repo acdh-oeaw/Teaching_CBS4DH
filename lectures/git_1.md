@@ -107,7 +107,7 @@ Once you feel you are done and ready to share your outcomes you must:
 
 ### Less important actions
 
-The `git` command line app provides you with many other useful actions. They are not as essential as add/commit/pull/push but can still be useful:
+The `git` command line app provides you with many other actions. They are not as essential as add/commit/pull/push but can still be useful:
 
 * `git status` lists the current repository state - all files which were modified since the last commit.
 * `git diff` lists detailed changes you made to the files modified since the last commit.
