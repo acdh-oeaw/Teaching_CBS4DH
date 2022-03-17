@@ -31,7 +31,7 @@ $ git commit -m "added a new feature some files changed"
 * `git fetch origin <branch>` Fetch the commits from a remote repository into the local repository
 * `git merge origin <branch>` Merge the commits from the local repository with commits fetched from a remote repository (actually this works on branches; this will be explained in the git tutorial part 2)
 
-## ToDo
+## ToDo 1
 
 * Create a new Github repository (Github UI)
 * Clone it to your local machine (CLI)
@@ -57,6 +57,12 @@ Command | Description
 `git checkout -b <name>` | Create a new branch and switch to it
 `git stash`    |   Temporarily move changed files out of the way
 `git stash apply` | Reapply changes that were stashed previously
+
+## ToDo 2
+
+* Create a new branch locally (CLI)
+* Switch to this new branch and make changes to README.md (CLI and Atom)
+* Run the git circle to synchronize these changes with the Github remote repository. (CLI)
 
 ## How a merge works
 
