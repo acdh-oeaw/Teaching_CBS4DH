@@ -3,9 +3,11 @@
 ## Opening remarks
 
 * *Git* can mean a lot of things. For the sake of this lecture we assume the *git* is an environment for sharing files (with some goodies like keeping history of changes, etc.).
-* The git environment consists of many pieces which can be provided by many vendors. We do not have time to dig into that. We will just go trough one possible setup based on the GitHub (because we - lectures - use it every day and feel comfortable with it) so you can see how it works. The way it works with other vendors can differ here and there but these differences are not that severe and important (it is like driving a car - if you know how to drive a VM Golf you will most likely manage driving any other compact car out there).
-* The *git* can be used in many ways (e.g. in a centralized or distributed setup, witch extensive use of branches or not, etc.) and people write whole volumes about it. Again, we do not have time to discuss all possibilities. We will just present you a workflow which should do the job for you at the beginning of your git adventure.
-* Below it's assumed you have [git](https://git-scm.com/) installed in your system and you know how to call git commands from the command line.
+* The git environment consists of many pieces which can be provided by many vendors. We do not have time to dig into that. We will just go trough one possible setup based on the `git` command line tool and the GitHub web service (because we - lectures - use it every day and feel comfortable with it) so you can see how it works. The way it works with other vendors differs here and there but these differences are not that severe and at the and of a day not that important (it is like driving a car - if you know how to drive a VM Golf you will most likely manage driving any other compact car out there).
+* The *git* can be used in many ways (e.g. in a centralized or distributed setup, with extensive use of branches or not, etc.) and people write whole volumes about it. Again, we do not have time to discuss all possibilities. We will just present you a workflow which should do the job for you at the beginning of your git adventure.
+* Below it's assumed (as it should be done during the first day of the course):
+  * You have the [git](https://git-scm.com/) command line tool installed in your system and you know how to call `git` commands from the command line.
+  * You already have a [GitHub](https://github.com/) account.
 
 ## Initial intuitions
 
