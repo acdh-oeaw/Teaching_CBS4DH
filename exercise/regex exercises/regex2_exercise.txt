@@ -11,7 +11,7 @@ search: "[A-Za-z]*[a-z][A-Z]*"
 
 4) An1oth2er p3robl4em th5at occur6ed a7re 8unwant9ed n10umbers.
 search: "[0-9]"
-replace: ""
+replace: "$1$2"
 
 5) We have     some spacing  problem.   What shall  we do   about     it    ?
 search: " +( [A-Za-z])| +([?])"
