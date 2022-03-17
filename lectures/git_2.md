@@ -64,6 +64,11 @@ Command | Description
 * Switch to this new branch and make changes to README.md (CLI and Atom)
 * Run the git circle to synchronize these changes with the Github remote repository. (CLI)
 
+### Fixing upstream issues of a new branch:
+`git push -u origin newBranch`
+
+the "-u" flag sets the correct upstream  URL to update Github.
+
 ## How a merge works
 
 ![Git syncing repositories](images/git_syncing.gif)
