@@ -3,15 +3,17 @@
 ## Opening remarks
 
 * *Git* can mean a lot of things. For the sake of this lecture we assume the *git* is an environment for sharing files (with some goodies like keeping history of changes, etc.).
-* The git environment consists of many pieces which can be provided by many vendors. We do not have time to dig into that. We will just go trough one possible setup based on the GitHub (because we - lectures - use it every day and feel comfortable with it) so you can see how it works. The way it works with other vendors can differ here and there but these differences are not that severe and important (it is like driving a car - if you know how to drive a VM Golf you will most likely manage driving any other compact car out there).
-* The *git* can be used in many ways (e.g. in a centralized or distributed setup, witch extensive use of branches or not, etc.) and people write whole volumes about it. Again, we do not have time to discuss all possibilities. We will just present you a workflow which should do the job for you at the beginning of your git adventure.
-* Below it's assumed you have [git](https://git-scm.com/) installed in your system and you know how to call git commands from the command line.
+* The git environment consists of many pieces which can be provided by many vendors. We do not have time to dig into that. We will just go trough one possible setup based on the `git` command line tool and the GitHub web service (because we - lectures - use it every day and feel comfortable with it) so you can see how it works. The way it works with other vendors differs here and there but these differences are not that severe and at the and of a day not that important (it is like driving a car - if you know how to drive a VM Golf you will most likely manage driving any other compact car out there).
+* The *git* can be used in many ways (e.g. in a centralized or distributed setup, with extensive use of branches or not, etc.) and people write whole volumes about it. Again, we do not have time to discuss all possibilities. We will just present you a workflow which should do the job for you at the beginning of your git adventure.
+* Below it's assumed (as it should be done during the first day of the course):
+  * You have the [git](https://git-scm.com/) command line tool installed in your system and you know how to call `git` commands from the command line.
+  * You already have a [GitHub](https://github.com/) account.
 
 ## Initial intuitions
 
 You likely used some kind of file sharing service already, e.g. a Dropbox, Google Drive, Ms OneDrive, YouNameIt.
 Well, git's aim is more or less the same - assure all parties involved in the collaboration have access to the up to date file versions.
-Just in the process of achieving that the accents are put on different aspects of the process:
+Just accents are put on different aspects of the sharing process:
 
 * File sharing services tries to do the work as automatically and transparent as possible. In most cases you do not have to do nothing but assure you are connected to the Internet.
 * Git focuses on giving you control on how the sharing is performed. Which is a lot more work on your side but it also allows you keep things in order in complex collaboration scenarios where ordinary file sharing services would give up.
@@ -68,7 +70,7 @@ Once you have a GitHub repository with write rights, you can **[clone](https://d
 
 After cloning the repository:
 
-* The whole repository content including history of changes, alternative versions of same files (more on that in a moment), etc. is stored in a magic directory called `.git` (depending on your file browser settings you may see it or it may be a hidden directory).
+* The whole repository content including history of changes, alternative versions of same files (more on that in a moment), etc. is stored in a magic directory called `.git` in a way only git knows (and it is none of our business). Depending on your file browser settings you may see this directory or it may be a hidden one.
 * The up-to-date version of the repository which you see as files and directories, just like with any other files sharing service like Dropbox, Google Drive, etc.
 
 ### Preserving changes and sharing them
@@ -105,7 +107,7 @@ Once you feel you are done and ready to share your outcomes you must:
 
 ### Less important actions
 
-The git command provides you many other useful commands. They are not as essential as add/commit/pull/push but can still be useful:
+The `git` command line app provides you with many other actions. They are not as essential as add/commit/pull/push but can still be useful:
 
 * `git status` lists the current repository state - all files which were modified since the last commit.
 * `git diff` lists detailed changes you made to the files modified since the last commit.
