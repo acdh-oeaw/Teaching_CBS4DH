@@ -5,6 +5,8 @@
 3) SOMETHING HAPPENED AnD sOMe OF tHe WORDS lOOk fUNNy. HOW mANy?
 
 4) An1oth2er p3robl4em th5at occur6ed a7re 8unwant9ed n10umbers.
+search: "\d"
+replace: ""
 
 5) We have     some spacing  problem.   What shall  we do   about     it    ?
 
