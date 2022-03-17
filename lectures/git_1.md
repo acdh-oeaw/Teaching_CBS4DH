@@ -70,7 +70,7 @@ Once you have a GitHub repository with write rights, you can **[clone](https://d
 
 After cloning the repository:
 
-* The whole repository content including history of changes, alternative versions of same files (more on that in a moment), etc. is stored in a magic directory called `.git` (depending on your file browser settings you may see it or it may be a hidden directory).
+* The whole repository content including history of changes, alternative versions of same files (more on that in a moment), etc. is stored in a magic directory called `.git` in a way only git knows (and it is none of our business). Depending on your file browser settings you may see this directory or it may be a hidden one.
 * The up-to-date version of the repository which you see as files and directories, just like with any other files sharing service like Dropbox, Google Drive, etc.
 
 ### Preserving changes and sharing them
