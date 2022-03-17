@@ -2,7 +2,111 @@
 
 ## Introduction
 
-This activity provides a hands-on introduction to the principal technologies that make web pages work: HTML, CSS, and JavaScript. These are large technologies that cannot be learned in a day, but the good news is that it doesn’t take much practice to become familiar and comfortable with the features you use most. There are links at the bottom of this page to tutorials and references, which you can visit to learn more.
+This activity provides a basic understanding of webtechnology relevant for Digital Humanities as well as a hands-on introduction to the principal technologies that make web pages work: HTML, CSS, and JavaScript. These are large technologies that cannot be learned in a day, but the good news is that it doesn’t take much practice to become familiar and comfortable with the features you use most. There are links at the bottom of this page to tutorials and references, which you can visit to learn more.
+
+## Internet Technologies - The Idea of the Network
+When thinking about the Internet the first thing that often comes to mind are specific activities: email, file transfer, messaging, data storage in the "cloud" and also the World Wide Web (www). But these are only the surface of what the Internet. A core concept and the technology behind all the services we are operating with today is the network.
+### The Internet - Network of Networks
+The hardware backbone and core technology is the **Internet**, which stands for *interconnected networks*. Thus these are computers that are connected to a loose association of thousands of different networks, run by different organization and using different technologies, which are connected together in a giant network of networks. Here the network is not just a software implementation but indeed a massive physical hardware infrastructure, making the connection between computers and networks possible and therewith enabling the communication we are used to today. 
+### Key Technology Concepts of the Internet
+First of all we need protocols, that define the format and the order of messages exchanged between two or more communicating entities, as well as the actions taken using that message.
+
+- All activity in the Internet that involves multiple remote entities is governed by a protocol.
+- What happens when you make a request to a Web server? 
+  - you type the URL of a Web page into your Web browser.
+  - Your computer sends a connection request message to the Web server and waits for a reply.
+  - The Web server receives your connection request message and returns a connection reply message.
+  - Knowing that it is now OK to request the Web document, your computer sends the name of the Web page it wants to fetch from that Web server in a GET message.
+  - Finally, the Web server returns the Web page (file) to your computer.
+#### TCP/IP
+The most common network protocol, that makes enables the data exchange between two computers, is the combination of TCP/IP. This is by now the standard in network technology on the Internet.
+
+**TCP (Transmission Control Protocol)** establishes the connection among sending and receiving computers on the network. It handles the dissassembly of packets at the point of transmission, and their reassembly at the receiving end.
+
+**IP (Internet Protocol)** provides the Internet's addressing scheme.
+
+Thus the basis of the Internet Communication is the so-called **packet switching**
+
+- In a network application, end systems exchange messages with each other.
+- Messages can contain anything the application designer wants, such as an email message, a JPEG image, or an MP3 audio file.
+- The sender breaks long messages into smaller chunks of data known as packets. This happens with the TCP protocol.
+- Between sender and receiver, each packet travels through communication links and packet switches. The route of each packet through the network can vary.
+- At the recipient the TCP protocol reassembles the packets into the original whole.
+
+#### IP-addresses
+Each device connected in the network must have its own, unique Internet Protocol-address. There are currently two standards.
+
+**IPv4:** This is a 32bit addressing scheme in the following syntax:
+###.###.###.### (where ### = 1-255). e.g. 131.130.70.8
+
+**IPv6:** this is a 128 bit addressing scheme expressed in hexadecimal which can accomodate up to 2^128 devices, thus many more than the previous IP-address standard. This is regarded sufficient for the foreseable future.
+
+e.g. 2001:0DB8:AC10:FE01:0000:0000:0000:0000
+
+IP addresses are assigned by the so-called **DHCP server** and are usually temporary. There are also permanent IP-adresses (useful e.g. for a server).
+#### Domain Name
+A domain name is an IP-address expressed in natural language, e.g. univie.ac.at. 
+This is made possible through the so-called **Domain Name System (DNS)**. This service serves as a registry matching IP-Adresses with domain names.
+
+**Example:** IP-address 131.130.70.8 resolves to domain name "univie.ac.at"
+
+### Web 1.0 - Network of Documents
+Fast forwarding a bit the Web 1.0 came about in the 1990s, buiding up on the network technology of the Internet. This was the Web as a publication method built on technologies of Hypertext and Hypermedia, resulting in a network of documents. Prime example for the technology that became widely adopted and is used until today is the World Wide Web (www) as one specific service on the Internet.
+
+The www is a high profile example of a hypertext, which is a retrieval system of linked computer based documents that allows a user to click on a region (called an anchor or a hyperlink) to obtain another document called webpage. At a later point multimedia elements such as audio, video, graphics could be embedded into the textual documents, transforming hypertext to hypermedia.
+
+Even though historically it was not the first implementation of a hypertext system, the core technological components of the World Wide Web were introduced by Tim Berners Lee in 1989. This included the HyperText Transfer Protocol (HTTP) 0.9, the HyperText Markup Language (HTML), the first Web browser (named WorldWideWeb, which was also a Web editor), the first HTTP server software (later known as CERN httpd), the first web server (http://info.cern.ch), and the first Web pages that described the project itself.
+
+First webpage ever: http://info.cern.ch/hypertext/WWW/TheProject.html
+
+The Web 1.0 was used more as a publication system with static pages or "read only" for the average user, even though the editing capabilities were originally built in.
+
+The www was widely adopted throughout the 1990s and the technologies developed significantly further over time (see [Evolution of the Web](https://web.archive.org/web/20180802093307/http://www.evolutionoftheweb.com/)). 
+
+#### The Hypertext Transfer Protocol (HTTP)
+* Connecting to an HTTP server
+* HTTP request verbs
+  * HEAD
+  * GET
+  * POST
+  * PUT
+  * DELETE
+* HTTP headers
+* HTTP responses
+
+#### URL/URI
+* A URL is the address used by a Web browser to identify the location of content on the Web.
+
+* The components of a URL are: protocol, host, port, and path. These are combined in the following syntax: 
+```protocol://host:port/path?query```
+
+### Web 2.0 - Network of Data
+Web 2.0 is a marketing term coined by the publisher [Tim O’Reilly (2005)](https://www.oreilly.com/pub/a/web2/archive/what-is-web-20.html) to describe the then new concepts rather than a set of technologies.
+
+In the mid-2000s a big step occurred with the rise of software for personal and corporate multimedia publishing on the web (blogging software, cloud based media sharing platforms) as well as social networks. These platforms by now have become ubiquitous and commercialized, and are dominated by a few big players, leading to new business models where data about users become commodities – as well as services on top which can interact with them. Also software for special functionalities formerly only available in desktop applications moved on the web using advances in technology, such as [AJAX](https://www.w3schools.com/xml/ajax_intro.asp), [RSS](https://en.wikipedia.org/wiki/RSS), [XSLT](https://www.w3schools.com/xml/xsl_intro.asp) as well as using technological advances in network technology enabling to transfer large data files (including streaming video and audio) virtually without network lags as well as making it possible for consumer to be always online and enabled people to publish, share and produce content. Thus "Web 2.0 is all about harnessing collective intelligence" ([O'Reilly & Battelle, 2009, p. 1](https://www.kimchristen.com/wp-content/uploads/2015/07/web2009_websquared-whitepaper.pdf)).
+
+According to O'Reilly the web turned into a platform where (personal) data uploaded by the users into content management systems, which are then networked. Thus we moved from a network of documents to a network of data.
+
+![Web 2.0 Meme Map. Source: O'Reilly (2005)](https://cdn.oreillystatic.com/oreilly/images/what-is-web-20-figure1.jpeg)
+
+### Web 3.0 / Web squared - Semantic and Location-based Network
+
+A few years later [Tim O'Reilly and John Battelle (2009)](https://www.kimchristen.com/wp-content/uploads/2015/07/web2009_websquared-whitepaper.pdf) evaluated the development of technology since the coining of the term Web 2.0 and named the phenomenon **Web squared**. "The Web is no longer a collection of static pages of HTML that describe something in the world. Increasingly, the Web is the world—everything and
+everyone in the world casts an 'information shadow,'
+an aura of data which, when captured and processed
+intelligently, offers extraordinary opportunity and mindbending implications"([O'Reilly & Battelle, 2009, p. 2](https://www.kimchristen.com/wp-content/uploads/2015/07/web2009_websquared-whitepaper.pdf))
+
+For Digital Humanities two directions are of increasing importance: the semantic web and location-based information.
+
+Through the invention of the smartphone in 2007 "[c]ollective intelligence applications are no longer
+being driven solely by humans typing on keyboards
+but, increasingly, by sensors. Our phones and cameras are being turned into eyes and ears for applications; motion and location sensors tell where we are, what we’re looking at, and how fast we’re moving. Data is being collected, presented, and acted upon in real time. The scale of participation has increased by orders of magnitude."([O'Reilly & Battelle, 2009, p. 1](https://www.kimchristen.com/wp-content/uploads/2015/07/web2009_websquared-whitepaper.pdf)). 
+
+Through machine-learning the computer is aiming to understand the world and the meaning of objects by bridging the so-called "semantic gap" between low-level patterns and semantic information. Humans teach the computer their knowledge about the world and through semantic web-technologies such as [RDF](https://www.w3.org/RDF/) and [ontologies](https://www.w3.org/standards/semanticweb/ontology), semantic information about real world objects and processes is captured and modeled and this information is networked (keyword: [Linked Data](https://www.w3.org/standards/semanticweb/data.html)).
+
+Digital media become location-aware. Services cannot only react to learned preferences but also to the physical situation of the user (see [Gordon & Souza e Silva, 2011](https://www.worldcat.org/title/net-locality-why-location-matters-in-a-networked-world/oclc/768329544?referer=&ht=edition)). Through ubiquitous Internet connection and therewith ubiquitous information together with location tracking of the devices, their users as well as objects, information can be bound or mapped to certain locations (local contextualization) or tracked through space and time.
+
+Thus the Web becomes the world and the world feeds directly into the Web.
 
 ## The web “stack”
 
