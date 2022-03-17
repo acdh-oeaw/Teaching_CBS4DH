@@ -13,7 +13,7 @@
 
 You likely used some kind of file sharing service already, e.g. a Dropbox, Google Drive, Ms OneDrive, YouNameIt.
 Well, git's aim is more or less the same - assure all parties involved in the collaboration have access to the up to date file versions.
-Just in the process of achieving that the accents are put on different aspects of the process:
+Just accents are put on different aspects of the sharing process:
 
 * File sharing services tries to do the work as automatically and transparent as possible. In most cases you do not have to do nothing but assure you are connected to the Internet.
 * Git focuses on giving you control on how the sharing is performed. Which is a lot more work on your side but it also allows you keep things in order in complex collaboration scenarios where ordinary file sharing services would give up.
