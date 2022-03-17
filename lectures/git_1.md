@@ -70,7 +70,7 @@ Once you have a GitHub repository with write rights, you can **[clone](https://d
 
 After cloning the repository:
 
-* The whole repository content including history of changes, alternative versions of same files (more on that in a moment), etc. is stored in a magic directory called `.git` (depending on your file browser settings you may see it or it may be a hidden directory).
+* The whole repository content including history of changes, alternative versions of same files (more on that in a moment), etc. is stored in a magic directory called `.git` in a way only git knows (and it is none of our business). Depending on your file browser settings you may see this directory or it may be a hidden one.
 * The up-to-date version of the repository which you see as files and directories, just like with any other files sharing service like Dropbox, Google Drive, etc.
 
 ### Preserving changes and sharing them
@@ -107,7 +107,7 @@ Once you feel you are done and ready to share your outcomes you must:
 
 ### Less important actions
 
-The git command provides you many other useful commands. They are not as essential as add/commit/pull/push but can still be useful:
+The `git` command line app provides you with many other actions. They are not as essential as add/commit/pull/push but can still be useful:
 
 * `git status` lists the current repository state - all files which were modified since the last commit.
 * `git diff` lists detailed changes you made to the files modified since the last commit.

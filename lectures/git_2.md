@@ -20,7 +20,8 @@
 * `git commit -m "<message>"` Make changes permanent
 
 ```bash
-$ git add -a
+$ git add --all
+$ git add <filename>
 $ git commit -m "added a new feature some files changed"
 ```
 
@@ -29,6 +30,13 @@ $ git commit -m "added a new feature some files changed"
 * `git push origin <branch>` Push the commits from the local repository to a remote repository 
 * `git fetch origin <branch>` Fetch the commits from a remote repository into the local repository
 * `git merge origin <branch>` Merge the commits from the local repository with commits fetched from a remote repository (actually this works on branches; this will be explained in the git tutorial part 2)
+
+## ToDo 1
+
+* Create a new Github repository (Github UI)
+* Clone it to your local machine (CLI)
+* Create or edit the file README.md (Atom editor)
+* Run the git circle to synchronize these changes with the Github remote repository. (CLI)
 
 ## How to work with branches
 
@@ -50,6 +58,12 @@ Command | Description
 `git stash`    |   Temporarily move changed files out of the way
 `git stash apply` | Reapply changes that were stashed previously
 
+## ToDo 2
+
+* Create a new branch locally (CLI)
+* Switch to this new branch and make changes to README.md (CLI and Atom)
+* Run the git circle to synchronize these changes with the Github remote repository. (CLI)
+
 ## How a merge works
 
 ![Git syncing repositories](images/git_syncing.gif)
@@ -57,7 +71,19 @@ Command | Description
 Command | Description
 --------|------------
 `git merge <branch>` | Merge commits from one branch into the other.
-`git merge --abort` | Abort a merge 
+`git merge --abort` | Abort a merge
+
+### Find Branches on Github
+
+![Git branch: Open Branches](images/github-branches1.png)
+
+### Merge Branches by creating a pull request
+
+![Git branch: Create pull request](images/github-branches2.png)
+
+### Review commits, create title for merge (resolve merge conflicts if necessary)
+
+![Git branch: Review and merge](images/github-branches3.png)
 
 * Make sure you do not have uncommitted changes.
 * If so, stash them or commit them
@@ -67,6 +93,16 @@ Command | Description
 * `$ git push`
 
 ## How to resolve a merge conflict
+
+nano editor main commands:
+
+You type | What happens
+---- | ----
+`Ctrl+S` | Save current file
+`Ctrl+O` | Offer to write file ("Save as")
+`Ctrl+X` | Close buffer, exit from nano
+
+[Nano cheatsheet](https://www.nano-editor.org/dist/latest/cheatsheet.html)
 
 vim is the default editor in Git (on all operating systems). When a merge conflict occurs you are taken into vim to resolve it. The most important vim commands are:
 
