@@ -1,5 +1,5 @@
 1) W!e have. here a.n exam.ple, where s,om.e ex.t,ra, s.i!ngs, g?ot i.n. b,e!tw??een
-search: "[.!?,]"
+search: "[^ [:alpha:]]"
 replace: ""
 
 2) Today we [1,5s] learn how [2s] to filter out some [3,50s] unwanted signs [5s] from a sentence.
