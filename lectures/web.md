@@ -64,15 +64,16 @@ The Web 1.0 was used more as a publication system with static pages or "read onl
 The www was widely adopted throughout the 1990s and the technologies developed significantly further over time (see [Evolution of the Web](https://web.archive.org/web/20180802093307/http://www.evolutionoftheweb.com/)). 
 
 #### The Hypertext Transfer Protocol (HTTP)
-* Connecting to an HTTP server
-* HTTP request verbs
-  * HEAD
-  * GET
-  * POST
-  * PUT
-  * DELETE
-* HTTP headers
-* HTTP responses
+* HTTP is manages the communication in the WWW between the web client and web server and works as a request-response protocol.
+  * The browser (client) sends a request to the server (using a specified request method), and the server sends a response to the client containing status information about the request and if possible also the requested content.
+  * HTTP request methods
+    * HEAD
+    * GET
+    * POST
+    * PUT
+    * DELETE
+
+For more info about HTTP have a look at W3Schools.com: [What is HTTP?](https://www.w3schools.com/whatis/whatis_http.asp), [HTTP Request Methods](https://www.w3schools.com/tags/ref_httpmethods.asp).
 
 #### URL/URI
 * A URL is the address used by a Web browser to identify the location of content on the Web.
