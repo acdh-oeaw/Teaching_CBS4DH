@@ -148,15 +148,6 @@ All content that will appear in the web page goes inside the `<body>` element. A
 
 You’ll use some of these shortly.
 
-### Looking at HTML
-
-1. Start *Atom*.
-2. Create a new directory called `html` and a new file called `index.html`. The latter must be saved in the `html` dir.
-Exercise example: [web\_exercise\_1.html](web/web_exercise_1.html).
-3. Open `index.html` in *Atom*
-4. Start a web browser.
-5. Open the same file in your browser (`Ctrl+o` [Windows] or `Cmd+o` [Mac OS] to open a file from the filesystem).
-
 ### Working with HTML
 
 Currently you will see nothing. However, we will create something similar to the following example in *Atom*:
@@ -182,7 +173,7 @@ Currently you will see nothing. However, we will create something similar to the
         <p>This is one last paragraph.</p>
 
         <h3>Table:</h3>
-         <table>
+        <table>
           <tr>
             <th>Firstname</th>
             <th>Lastname</th>
@@ -204,7 +195,36 @@ Currently you will see nothing. However, we will create something similar to the
 </html>
 ```
 
+### Minimum requirements for a HTML document
 
+```html
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+    <head>
+        <title>HTML exercise 1</title>
+    </head>
+
+    <body>
+
+    </body>
+
+</html>
+```
+
+[w3.org namespaces](https://www.w3.org/2002/12/namespace)
+[XHTML NS](http://www.w3.org/1999/xhtml)
+[XHTML](https://www.w3.org/TR/xhtml1/)
+
+### Looking at HTML
+
+* Fork this [Repository](https://github.com/acdh-oeaw/Teaching_CBS4DH_exercise) and use `git clone` to access the files on your local machine.
+* Start *Atom*.
+* Create a new directory called `html-yourname` and a new file called `index.html`. The latter must be saved in the `html-yourname` dir.
+Exercise example: [web\_exercise\_1.html](web/web_exercise_1.html).
+* Open `index.html` in *Atom*
+* Start a web browser.
+* Open the same file in your browser (`Ctrl+o` [Windows] or `Cmd+o` [Mac OS] to open a file from the filesystem).
 * The only part of the HTML file that is rendered inside the browser window is the part inside the `<body>` tags. Notice that we’ve used several of the element types described earlier.
 * Modify the text of the HTML file in *Atom*. You might add additional paragraphs (`<p>`) elements or headers (`<h1>` through `<h6>`). You can change the bulleted list to a numbered one by changing the wrapper from `<ul>` to `<ol>` (you need to change both the start and end tag, although if you change the start tag first, *Atom* will usually change the end tag automatically to match).
 * Save your document from within *Atom* and then reload it into the browser, observing the changes.
@@ -227,8 +247,8 @@ Currently you will see nothing. However, we will create something similar to the
 
 ### Looking at CSS
 
-Create a directory `static` and sub directory `css`.
-Create a new file called `style.css` and save it in the `html/static/css` directory you previosly created and open it in *Atom*. Example CSS: [web/web\_exercise\_2.html](web/web_exercise_2.html).
+Create a directory `static` and sub directory `css` inside your `html-yourname` dir.
+Create a new file called `style.css` and save it in the `static/css` directory you previosly created and open it in *Atom*. Example CSS: [web/web\_exercise\_2.html](web/web_exercise_2.html).
 
 Before we work with CSS open your `index.html` file and make the following changes:
 
@@ -340,7 +360,14 @@ div{
 
 Open this link to read more about: [What is GitHub Pages?](https://pages.github.com)
 
-### Workflow to deploy Github Pages
+### Manual Workflow to deploy Github Pages
+
+* Open *Settings* of your Github Repository
+* Click on *Pages*
+* Select a *Source* -> change dropdownmenu from *None* to *master* or *main* and *root* to *html-yourname* 
+* Click *save*
+
+### Automated Workflow to deploy Github Pages
 
 * Requires directories: `.github` and a sub directory `workflows` in your Github (git) repository
 * Requires a file called `build.yml` stored in the `workflows`.
