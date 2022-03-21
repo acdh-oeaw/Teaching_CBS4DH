@@ -113,11 +113,13 @@ Thus the Web becomes the world and the world feeds directly into the Web.
 The main front-end web technologies include:
 
 * HTML: HyperText Markup Language. HTML provides a set of tags for web documents, with rules for their use. There are several versions of HTML; new projects should use [HTML5](https://www.w3.org/TR/html5/). We recommend using strict XML syntax.
-* CSS: Cascading Style Sheets. There are several versions of CSS; new projects should use [CSS Snapshot 2017
+* CSS: Cascading Style Sheets. CSS provides means to determine the appearance of Web-content beyond the standard styling of the browser. There are several versions of CSS; new projects should use [CSS Snapshot 2017
 W3C Working Group Note, 31 January 2017](https://www.w3.org/TR/CSS/).
-* JavaScript: JavaScript enables the user to interact with the page in the browser.
+* JavaScript: JavaScript enables the user to interact with the page in the browser. JavaScript is run on the client-side, thus in the browser on the machine of the user.
 
 You can author HTML, CSS, and JavaScript in *Atom*.
+
+This technology stack allows e.g. the separation of content and layout. HTML is used to create the content structure of a web-document, CSS ist used to determine the layout and appearance.
 
 ## HTML
 
