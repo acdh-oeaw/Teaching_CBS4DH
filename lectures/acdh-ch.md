@@ -18,6 +18,12 @@
 # Data, Service, Infrastructure & Education
 
 * [What we offer](https://www.oeaw.ac.at/acdh/what-we-offer), aka the Project lifecycle
-* Tools & Projects
 * [GitHub](https://github.com/acdh-oeaw/)
-* 
+* [Tools](https://www.oeaw.ac.at/acdh/tools/) & [Projects](https://www.oeaw.ac.at/acdh/projects/)
+
+## Examples
+
+* [AMC](https://amc.acdh.oeaw.ac.at/)
+* [Schnitzler Tgebuch](schnitzler-tagebuch.acdh.oeaw.ac.at/)
+* [ÖBL](https://www.oeaw.ac.at/acdh/oebl) => [APIS](apis.acdh.oeaw.ac.at/)
+* https://lioe.dioe.at/
