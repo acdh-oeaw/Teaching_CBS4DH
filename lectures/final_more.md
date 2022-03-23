@@ -19,7 +19,8 @@ This course's aim was to provide basic training and support for further skills c
   * there is an integration for windows explorer: [TortoiseGit](https://tortoisegit.org/)
   * How does a directory know that it is a git repository?
     * there is a hidden `.git`-directory with all the information (see it with `ls -la`)
-* Basic concepts of web(pages:
+* Basic concepts of web(pages):
+  * Internet Technology & the Idea of the network => everything is networked!
   * HTML
   * CSS
   * JavaScript (JS)
@@ -49,7 +50,11 @@ What next?
   * [DHd](https://www.dhd2022.de/) 7.-11. March, "Potsdam"
 * [Computer Applications in Archaeology](https://caa-international.org/)
 * [Events Calendar by ADHO](http://adho.org/events-calendar)
+* (Read Books and Journals)
+  * [Journal: Digital Humanities Quarterly (Open Access)](http://digitalhumanities.org/dhq/)
+  * [Johanna Drucker (2021) - Digital Humanities Coursebook](https://www.routledge.com/The-Digital-Humanities-Coursebook-An-Introduction-to-Digital-Methods-for/Drucker/p/book/9780367565756)
 
 ## Open Science
 * Sharing with others helps you get help from others
 * Wikimedia Deutschland: [Open Science Fellows Program](https://en.wikiversity.org/wiki/Wikimedia_Deutschland/Open_Science_Fellows_Program)
+* Learn about principles of [Opening Science](https://www.openingscience.org/get-the-book/)
