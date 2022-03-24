@@ -45,10 +45,11 @@ What next?
 * [digital humanities im deutschsprachigen raum](https://dig-hum.de/)
 * [DARIAH](https://www.dariah.eu/)
 * [CLARIN](https://www.clarin.eu/)
+* [SSH Open Marketplace](marketplace.sshopencloud.eu/)
 * (Go to Conferences)
   * Digital Humanities conference, e. g. [DH2022](https://dh2022.adho.org/), July 2022, in "Tokyo" (fully online)
   * [DHd](https://www.dhd2022.de/) 7.-11. March, "Potsdam"
-  * Join us at the [ACDH-CH Lecture Series](https://www.oeaw.ac.at/acdh/events/event-series/acdh-ch-lectures) - older lectures are available as video recordings.
+  * Join us at the [ACDH-CH Lecture Series](https://www.oeaw.ac.at/acdh/events/event-series/acdh-ch-lectures) or [ACDH-CH Tool Galleries](https://www.oeaw.ac.at/acdh/events/event-series/acdh-ch-tool-galleries) - older lectures are available as video recordings.
 * [Computer Applications in Archaeology](https://caa-international.org/)
 * [Events Calendar by ADHO](http://adho.org/events-calendar)
 * (Read Books and Journals)
