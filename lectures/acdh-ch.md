@@ -25,6 +25,11 @@
 
 * [AMC](https://amc.acdh.oeaw.ac.at/) - Austrian Media Corpus - largest corpus of contemporary  journalistic texts from Austria
 * [LiO](https://lioe.dioe.at/) - Lexiographic Information System
+* [DYLEN](https://dylen.acdh.oeaw.ac.at/) - Lexiographic Information System
 * [Schnitzler Tgebuch](schnitzler-tagebuch.acdh.oeaw.ac.at/) - digital edition of the diary of Arthur Schnitzler
 * [Auden-Musuliin-Papers](https://amp.acdh.oeaw.ac.at/) - digital edition based on static pages  ([code](https://github.com/Auden-Musulin-Papers/amp-app))
 * [ÖBL](https://www.oeaw.ac.at/acdh/oebl) - Austrian Biography Lexicon, made available with data structured as exploration tool: [APIS](apis.acdh.oeaw.ac.at/), allowing also [network-based visualization](https://apis-hub.acdh-dev.oeaw.ac.at/)
+
+https://www.oeaw.ac.at/acdh/research-topics/linguistics
+https://www.oeaw.ac.at/acdh/research-topics
+https://intavia.eu/
