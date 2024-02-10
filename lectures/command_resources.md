@@ -62,7 +62,7 @@ Command | Mnemonic | What it does
 `cd` | **c**hange **d**irectory | by itself takes you to your home directory,<br/>otherwise specifies a destination
 `clear` | [none] | clears the screen (or `Ctrl+l`)
 `pwd`  | **p**rint **w**orking **d**irectory | displays your current location in the filesystem
-`whoami` | [none] | displays your userid
+`whoami` | [none] | displays your username
 
 ### Explore your files
 

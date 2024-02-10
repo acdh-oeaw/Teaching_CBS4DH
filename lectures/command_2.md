@@ -1,26 +1,11 @@
 # Command line 2
 
-## General
+> [!NOTE]
+> * **References:** Much of the content of these sessions is summarized at our [Command line quick reference](command_resources.md) page.
+> * **Credit:** Our materials are based on the Software Carpentry [Unix Shell](http://swcarpentry.github.io/shell-novice/) course
+> * **Something to play with:** Follow the instructions at <http://swcarpentry.github.io/shell-novice/setup.html> to copy some practice files.
 
-* **References:** Much of the content of these sessions is summarized at our [Command line quick reference](command_resources.md) page.
-* **Credit:** Our materials are based on the Software Carpentry [Unix Shell](http://swcarpentry.github.io/shell-novice/) course
-* **Something to play with:** Follow the instructions at <http://swcarpentry.github.io/shell-novice/setup.html> to copy some practice files.
-
-## General review
-
-### A directory tree sample
-
-![Directory tree sample](images/directory_tree_sample.png)
-
-### Paths
-
-* **Absolute path**: `/Users/mamo/Desktop/shell-lesson-data` (starts with a slash, which means "root directory", i.e. uppermost directory of the filesystem)
-	* This is the one you get when you type `pwd`
-* **Relative path**
-	* `shell-lesson-data` (starting from `/Users/mamo/Desktop/`)
-	* `Desktop/shell-lesson-data` (starting from `Users/mamo/Desktop`)
-	* `..` (starting from `/Users/mamo/Desktop/shell-lesson-data/exercise-data`)
-	* `../shell-lesson-data` (if we imagine to start from another directory contained in `/Users/mamo/Desktop/`)
+## General recap
 
 ### What are we using?
 
@@ -34,82 +19,43 @@
 * `cd` to go to a directory
 * `ls` to show what is inside a directory
 * Need help? `man ls` or `ls --help`
-
-## Working with directories and files
-
-We already considered these topics at the end of yesterday's session. Here is a recap of all the commands and their most important options, and a table to remember the names of the commands.
-
-| Command | Explanation |
-| ------- | ----------- |
-| `cp` | copy |
-| `mv` | move |
-| `rm` | remove |
-| `mkdir` | make directory |
-| `rmdir` | remove directory |
-
-### Working with directories
-
-* `mkdir`: make directory
-	* What's a good name for a directory? And more in general: what's a good filename?
-		* Avoid spaces (otherwise you'll be forced to use quotes `"..."` for arguments or backslashes `\`)
-		* Avoid beginning hyphens, otherwise file and directory names might be mistaken for options/flags
-	* What's a good directory structure for a project?
-* `mkdir -p a/b/c`: create intermediate directories
-* `rmdir`: remove empty directory
-* `rm -rf:` remove directory and its contents recursively (careful!)
-* `rm -ri`: remove directory asking for confirmation (for single files)
-
-### Working with files
-
 * `cp`: copy
-	* `cp oldfile newfile` copy a file
-	* `cp oldfile1 oldfile2 newdirectory`: copy multiple files
-	* `cp -r olddirectory newdirectory` copy directory recursively
-* `mv`: rename / move
-	* Rename a file or directory
-	* Move a file or directory to a different location (optionally rename)
-	* Be careful! It will automatically overwrite files with the same name, unless you add `-i` to make it interactive (will ask for permission)
-* An easy way to create an empty file: `touch test.txt`
-* `rm`: delete (careful: deletion is forever!)
-* `rm -i`: delete after asking permission
+* `mv`: move, also used for renaming files
+* `rm`: remove
+* `mkdir`: make directory
+* `rmdir`: remove directory
+* `touch some_file`: create an empty file, change the last modification date of an existing file
 
-### Editing and saving files
+## More commands!
 
-An easy way to create an empty file: `touch some_file`
+> `cat`
+> `tac`
+> `tail`
+> `head`
+> `sort`
+> `wc`
+> `cut`
+> `grep`
+> `du`
+> `df`
+> `uniq`
+> `seq`
+> `tr`
+> `file`
+> `date`
+> `cal`
+> `nano`
+> `find`
+> `sleep`
+> `curl`
+> `wget`
+> `ssh`
 
-You can use a text editor to edit and save files:
-* Windows default is Notepad, Mac default is TextEdit
-* In this course, we will use [Atom](https://atom.io/)
-* Alternatives are:
-	* [BBEdit](https://www.barebones.com/products/bbedit/) (only Mac)
-	* [Notepad++](https://notepad-plus-plus.org/) (only Windows)
-	* [Visual Studio Code](https://code.visualstudio.com/) (Mac, Windows, Linux)
-* Or use `vim` or `emacs` from the command line (<https://en.wikipedia.org/wiki/Editor_war>)
-* What's a good filename?
-	* Avoid spaces (otherwise you'll be forced to use quotes `"..."` for arguments or backslashes `\`)
-	* Avoid beginning hyphens, otherwise file and directory names might be mistaken for options/flags
-* Check the contents of a file
-	* `cat /Users/djb/Documents/myfile.txt`
-		* Not very useful to navigate through a long text
-	* `less /Users/djb/Documents/myfile.txt`
-		* The text will be organized into pages, and you can use the following commands to navigate through it:
+## Wildcards
 
-| Keystroke | Action |
-| --------- | ------ |
-| space | forward one window |
-| b | backward one window |
-| d | forward one half-window |
-| u | backward one half-window |
-| g | go to first line |
-| G | go to last line |
-| /pattern | search forward for pattern |
-| ?pattern | search backward for pattern |
-| n/N | next/previous search result |
-| q | exit |
+We will work with Software Carpentry lesson [4. Pipes and filters](https://swcarpentry.github.io/shell-novice/04-pipefilter.html).
 
-## Wildcards ("globbing")
-
-For this and the next sections, see <https://swcarpentry.github.io/shell-novice/04-pipefilter/index.html>, on which we will base our exercises.
+You remember the `*` symbol from yesterdays lessen? There are more such tricks:
 
 We will be using some special characters that allow to search for undetermined characters:
 * `*` = zero or more undetermined characters
@@ -124,14 +70,15 @@ We will be using some special characters that allow to search for undetermined c
 
 ### Regex vs globbing
 
-**Globbing** is annoyingly different from **regex**. We will see what regex is in the following session, so don't worry if you don't understand everything here!
+**Globbing** is annoyingly different from **regex**.
+We will see what regex is in the following session, so don't worry if you don't understand everything here!
 
 * Regex: `*` and `?` are repetition indicators for the preceding item
 * Globbing: `*` and `?` are wildcards
 * Glob `*` = regex `.*`
 * Glob `?` = regex `.?`
 
-## Reading from and writing to files
+## Redirection
 
 ![Standard input and output of a command](images/input_output_command.png)
 
@@ -151,33 +98,7 @@ For example, we can save the list of contents of a directory in a text file by s
 * `ls > some_file.txt`
 * `ls some_directory > some_file.txt`
 
-## Filters
-
-### About filters
-
-* Filters are programs that accept input on **stdin** and produce output on **stdout**.
-* Filters transform the input according to some criterion and send the transformed data to the output.
-
-### Some useful filters
-
-* `cat` (one or more files)
-* `wc` (`-l` lines, `-w` words, `-c` characters)
-* `sort` (`-r` reverse, `-u` unique, `-n` numeric)
-	* Numeric (`-n`) vs alphabetic (no option) sorting
-
-### Some more filters
-
-* `head` (`-10`, or any other number, or `-n 10`)
-* `tail` (`-10`, or any other number, or `-n 10`)
-* `uniq` (only on sorted input)
-
-### Redirect input of filters
-
-Contrast `wc file`, `wc < file`:
-* In the first case, the command will just take the string `file` as its input
-* In the second case, you need to have a file with name `file` that acts as input
-
-## Piping
+### Piping
 
 * You can chain commands together thanks to a `pipe`, represented as `|` in the Unix shell.
 	* Mac Austrian keyboard: `Option + 7`
@@ -187,30 +108,19 @@ Contrast `wc file`, `wc < file`:
 	* This means that the output of `wc -l *.pdb` will function as the input of the commmand after `|`, i.e. `sort -n`.
 * Piping is particularly useful with filters, that can be chained together to form computational pipelines. Basically, these are the first steps for programming!
 
-### Practice
 
-We will try to build together the following pipeline, to be used in the directory `shell-lesson-data/exercise-data/proteins`:
-
-`wc -l *.pdb | sort -n | head -n 1`
-
-The best way to understand what a pipeline does is **building it up "gradually"**: try the _first_ command and see the output on the screen; then add the _second_ command and compare the output to the previous one; then add the _third_ command and compare the output again; and so on, like this:
-
-1. `wc -l *.pdb`
-2. `wc -l *.pdb | sort -n`
-3. `wc -l *.pdb | sort -n | head -n 1`
-
-## A very quick look at scripts
+## Scripts
 
 Let's say that you have finally built a nice pipeline of commands that you might want to reuse later. Where do you store it? Can you use it without having to type the whole pipeline again?
 
 You can save it in a **shell script**.
 * A shell script is nothing else than a program that tells the shell what to do.
-* It has the extension `.sh`
+* It usually has the extension `.sh`
 * It is basically a file of text which contains the commands that must be executed by the shell.
 
 For example, in our case, let's call our script `script1.sh`:
-* Create a file `script1.sh` with a text editor (for example, `nano script1.sh` or just a GUI-based editor, like Atom)
-* Write in the first line of the file `#!/bin/bash`. This indicates that the commands must be executed by the shell.
+* Create a file `script1.sh` with a text editor (for example, `nano script1.sh` or just a GUI-based editor)
+* Write in the first line of the file `#!/bin/bash`. This indicates that the commands must be executed by `bash`.
 * Add the command you want to execute, like `wc -l *.pdb | sort -n | head -n 1`
 * Save the final result
 * Make this executable: in the directory where the script is contained, type `chmod 755 script1.sh`
@@ -222,19 +132,3 @@ For example, in our case, let's call our script `script1.sh`:
 * However, the easiest way is to include a **variable**, so that you can specify to the script where it should be applied: instead of writing `*.pdb` in its code, you can write `$@`. This means that the shell will automatically replace `$@` with whatever you input as argument of the script, e.g. `./script1.sh exercise-data/*.pdb`. This will also allow you to use the script to check for other kinds of formats too, e.g. `./script1.sh *.txt`
 
 This is just the tip of the iceberg: scripts would require at least a whole session for itself (or even a whole course), but I hope you already got the gist of what makes the shell such a powerful tool. The shell is not only a way of interacting with the operating system, but it is also a **programming language**.
-
-## History and tab completion
-
-### Review
-
-* `history` (up and down arrows)
-* `tab`: 1) Filename completion, 2) Command completion
-* Editing the command line: `Ctrl + a`, `Ctrl + e`, `Ctrl + u`, `Option + click` (Mac only)
-
-### And something new
-
-* `!580` (execute the 580th command from the history)
-* `!!` (execute the previous command)
-* `!$`: last word of last command
-* `Ctrl+r`: initiate (or continue) history search
-
