@@ -1,20 +1,11 @@
 # Teaching_CBS4DH
 Teaching materials for AR Methodological Workshop - Computational Background Skills for Digital Humanities at University of Vienna.
 
-## Schedule 2022S
-Time | Wednesday (9.3) | Thursday (10.3) | Wednesday (16.3) | Thursday (17.3) | Wednesday (23.3) | Thursday (24.3)
+## Schedule 2024S
+Time | Wednesday (6.3) | Thursday (7.3) | Wednesday (13.3) | Thursday (14.3) | Wednesday (20.3) | Thursday (21.3)
 ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-13:15 – 14:45 |  [Intro and Setup](lectures/intro_and_setup.md) (MĎ) | [Command line 2](lectures/command_2.md) (MC) | [Regular expressions 2](lectures/regex_2.md) (TS, MŻ) | [Git 2](lectures/git_2.md) (DS, MŻ) | [Web technologies 1](lectures/web.md) (FW, DS) | Questions & Answers (MĎ, FW)
-15:00 – 16:25 |  Command line 1: [Mac](lectures/command_1_mac.md) and [Windows](lectures/command_1_windows.md) (MĎ, MC) | [Regular expressions 1](lectures/regex_1.md) (TS, MC) | [Git 1](lectures/git_1.md) (TS, MŻ) | [File formats and encodings](lectures/files.md) (DS, MŻ) | [Web technologies 2](lectures/web.md) (FW) | [More DH](lectures/final_more.md) (MĎ)
-
-Lecturers:
-
-* MĎ - Matej Ďurčo
-* TS - Tahel Singer
-* DS - Daniel Stoxreiter
-* FW - Florian Wiencek
-* MC - Massimiliano Carloni
-* MŻ - Mateusz Żółtak
+13:15 – 14:45 |  [Intro and Setup](lectures/intro_and_setup.md) | [Command line 2](lectures/command_2.md) | [Regular expressions 2](lectures/regex_2.md) | [Git 2](lectures/git_2.md) | [Web technologies 1](lectures/web.md) | Questions & Answers 
+15:00 – 16:25 |  [Command line 1](lectures/command_1.md) | [Regular expressions 1](lectures/regex_1.md) | [Git 1](lectures/git_1.md) | [File formats and encodings](lectures/files.md) | [Web technologies 2](lectures/web.md) | [More DH](lectures/final_more.md)
 
 ## Information about the course (u:find)
 
@@ -39,7 +30,7 @@ Regular attendance, following the practical exercise tasks during the lecture an
 
 - Bring your laptop to the class
 - Create a personal GitHub account: https://github.com/join
-- Download and install Atom code editor: https://atom.io/
+- Download and install Visual Studio code editor: https://code.visualstudio.com/download
 - (Only Windows users) Download and install Gitbash: https://gitforwindows.org/
 
 ## Credits
