@@ -7,49 +7,56 @@
 
 ## General recap
 
-### What are we using?
+### Advantages of the CLI:
 
-* We are using a **shell** based on a **command line interface** (**CLI**) to interact with the operating system.
-* More specifically, we are using **bash**, which is very popular in Unix and Unix-like operating systems (like macOS and Linux), but can also be installed on Windows.
-* When we refer to a CLI-based shell, we usually just say "the shell" or "the command line".
+* fast
+* flexible
+* scriptable
 
 ### The basics of the command line
 
 * General structure of a command: `commmand -option(s) argument(s)`, e.g. `ls -F shell-lesson-data`
+* `whoami`
+* `pwd`
+* `ls` to show details about a file or directory
 * `cd` to go to a directory
-* `ls` to show what is inside a directory
 * Need help? `man ls` or `ls --help`
-* `cp`: copy
-* `mv`: move, also used for renaming files
-* `rm`: remove
 * `mkdir`: make directory
 * `rmdir`: remove directory
 * `touch some_file`: create an empty file, change the last modification date of an existing file
+* `rm`: remove
+* `cp`: copy
+* `mv`: move, also used for renaming files
+
+## Moving on the CLI
+
+![Moving on the CLI](images/moving_cli.png)
+
 
 ## More commands!
 
-> `cat`
-> `tac`
-> `tail`
-> `head`
-> `sort`
-> `wc`
-> `cut`
-> `grep`
-> `du`
-> `df`
-> `uniq`
-> `seq`
-> `tr`
-> `file`
-> `date`
-> `cal`
-> `nano`
-> `find`
-> `sleep`
-> `curl`
-> `wget`
-> `ssh`
+* `cat`
+* `tac`
+* `tail`
+* `head`
+* `sort`
+* `wc`
+* `cut`
+* `grep`
+* `du`
+* `df`
+* `uniq`
+* `seq`
+* `tr`
+* `file`
+* `date`
+* `cal`
+* `nano`
+* `find`
+* `sleep`
+* `curl`
+* `wget`
+* `ssh`
 
 ## Wildcards
 

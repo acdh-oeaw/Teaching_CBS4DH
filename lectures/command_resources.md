@@ -59,20 +59,13 @@ These lists are only brief reminders of the commands we use most often; they’l
 
 Command | Mnemonic | What it does
 ---- | ---- | ----
+`whoami` | [none] | displays your username
+`pwd`  | **p**rint **w**orking **d**irectory | displays your current location in the filesystem
+`ls` | **l**i**s**t | `ls *.txt` | lists the files that match the pattern (or, with no argument, all files)
 `cd` | **c**hange **d**irectory | by itself takes you to your home directory,<br/>otherwise specifies a destination
 `clear` | [none] | clears the screen (or `Ctrl+l`)
-`pwd`  | **p**rint **w**orking **d**irectory | displays your current location in the filesystem
-`whoami` | [none] | displays your username
 
-### Explore your files
-
-Command | Mnemonic | Example | What it does
----- | ---- | ---- | ----
-`grep` | **g**lobal **r**egular **e**xpression **p**rint | `grep stuff *` | finds lines in files that contain “stuff”
-`less` | [none] | `less filename.txt` | pages through “filename.txt”;<br/>use the space bar to page forward, type `q` to quit
-`ls` | **l**i**s**t | `ls *.txt` | lists the files that match the pattern (or, with no argument, all files)
-
-### Manipulate your files
+### Manipulate your files and directories
 
 Command | Mnemonic | Example | What it does
 ---- | ---- | ---- | ----
@@ -80,19 +73,34 @@ Command | Mnemonic | Example | What it does
 `mv` | **m**o**v**e | `mv oldfile.txt newfile.txt` | _renames_ “oldfile.txt” as “newfile.txt”
 `mv` | **m**o**v**e | `mv *.txt archive` | moves all text files into subdirectory called “archive”
 `rm` | **r**e**m**ove | `rm unwanted-file.txt` | deletes “unwanted-file.txt”
-
-There is no undelete, but you can retrieve the last committed version from GitHub.
-
-### Manipulate your directories
-
-Command | Mnemonic | Example | What it does
----- | ---- | ---- | ----
 `mkdir` | **m**a**k**e **dir**ectory | `mkdir new-directory` | creates a directory called “new-directory”
 `rmdir` | **r**e**m**ove **dir**ectory | `rmdir unwanted-directory` | deletes the directory called “new-directory”
+`touch` | | `touch file.txt` | create a file
 
-### Edit your files
+### More tools
 
-Text editors commonly invoked from the command line include **nano**, **vim**, and **emacs**. **nano** is the easiest for new users (it displays prompts for common commands); most experienced users prefer the other two. To edit a file called “filename.txt” with vim, type `vim filename.txt`.
+* `cat`: print file content
+* `tac`: print file content in reverse
+* `tail`: print end of file
+* `head`: print beginning of file
+* `sort`: sort lines
+* `wc`: count words and lines and bytes
+* `cut`: cut lines by a delimiter
+* `grep`: extract lines that contains a word
+* `du`: show disk usage
+* `df`: show free disk space
+* `uniq`: combine lines that occur more than once together
+* `seq`: create a sequence
+* `tr`: replace characters
+* `file`: show filetype of a flie
+* `date`: show date
+* `cal`: show a calendar
+* `nano`: an editor
+* `find`: find files
+* `sleep`: do nothing for a specific amount of time
+* `curl`: make internet requests
+* `wget`: download files
+* `ssh`: connect to other computers
 
 ### Create and unpack zip archive files
 
