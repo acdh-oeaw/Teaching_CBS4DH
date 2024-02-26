@@ -138,8 +138,8 @@ There are various reasons for using text formats:
     Unfortunately or not BOM has never been widely adopted.
     Anyway, if you have a BOM-aware app and a file containing the BOM mark, the automated encoding recognition works, e.g.:
     > * Download and open a [UTF-16-encoded file](https://raw.githubusercontent.com/acdh-oeaw/Teaching_CBS4DH/2022S/lectures/files/utf_16.txt) with BOM
-    > * Download and open [UTF-32-encoded file](https://raw.githubusercontent.com/acdh-oeaw/Teaching_CBS4DH/2022S/lectures/files/utf_32.txt) with BOM
-    > * Download and open [UTF-32-encoded file](https://raw.githubusercontent.com/acdh-oeaw/Teaching_CBS4DH/2022S/lectures/files/utf_32_nobom.txt) without BOM
+    > * Download and open a [UTF-16-encoded file](https://raw.githubusercontent.com/acdh-oeaw/Teaching_CBS4DH/2022S/lectures/files/utf_16_nobom.txt) without BOM
+    
 * **UTF-8 without BOM is the most portable Unicode encoding.**  
   Use it in every new file you create.
   * If you're using Mac or Unix, it's just a default.
