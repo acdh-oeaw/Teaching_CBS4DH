@@ -91,7 +91,7 @@ When it comes to maintain consistency among the scanned pictures, there are thre
   > 3. Make a copy of it and rename the copy to sample.xml
   > 4. Open sample.xml in a browser (just double click on it)
   > 5. Make a copy of it and rename the copy to sample.txt
-  > 6. Open sample.txt in a plain text editor (e.g. Atom)
+  > 6. Open sample.txt in a plain text editor (e.g. Visual Studio Code)
   >
   > As we can see an HTML file is also an XML file as well as a plain text file at the same time
 - File formats form a hierarchy with more specialized ones being build on top of more generic ones, e.g.
@@ -135,11 +135,19 @@ When it comes to maintain consistency among the scanned pictures, there are thre
     but it still has a few implementations ([UTF-8](https://en.wikipedia.org/wiki/UTF-8), [UTF-16](https://en.wikipedia.org/wiki/UTF-16), [UTF-32](https://en.wikipedia.org/wiki/UTF-32) and a few others).
 - Why are code pages troublesome?
   > 1. You have to know file code page to read it properly but this information is not contained in the file
+<<<<<<< HEAD
   >    - Download and open in Atom a sample [Windows-1252-encoded file](https://raw.githubusercontent.com/acdh-oeaw/Teaching_CBS4DH/2022S/lectures/files/windows_1252.txt) (right click on the link and choose "Save target element as..." to download instead of opening it in the browser).  
   >      Choose the encoding using the `Edit->Select Encoding` dialog so it's displayed properly.
   >    - Download and open in Atom a sample [ISO-8859-1-encoded file](https://raw.githubusercontent.com/acdh-oeaw/Teaching_CBS4DH/2022S/lectures/files/iso_8859-1.txt).  
   >      Choose the encoding using the `Edit->Select Encoding` dialog so it's displayed properly.
   >    - Download and open in Atom a sample [file in unknown encoding](https://raw.githubusercontent.com/acdh-oeaw/Teaching_CBS4DH/2022S/lectures/files/mysterious_encoding.txt).  
+=======
+  >    * Download and open in VSC Code a sample [Windows-1252-encoded file](https://raw.githubusercontent.com/acdh-oeaw/Teaching_CBS4DH/2022S/lectures/files/windows_1252.txt) (right click on the link and choose "Save target element as..." to download instead of opening it in the browser).  
+  >      Change the encoding so the file is displayed properly: In the bottom bar of VS Code, you'll see the label `UTF-8`. Click it to open the action bar and select `Reopen with encoding`.
+  >    * Download and open in VSC Code a sample [ISO-8859-1-encoded file](https://raw.githubusercontent.com/acdh-oeaw/Teaching_CBS4DH/2022S/lectures/files/iso_8859-1.txt).  
+  >      Change the encoding so the file is displayed properly.
+  >    * Download and open in VSC Code a sample [file in unknown encoding](https://raw.githubusercontent.com/acdh-oeaw/Teaching_CBS4DH/2022S/lectures/files/mysterious_encoding.txt).  
+>>>>>>> de774e7ee04771278ea15e3b56c9629b1d9a97bd
   >      It contains the same text as in the `iso_8859-1.txt` but can you guess the encoding so that it displays correctly?
   > 2. You can't store characters from different encodings in one file, e.g. you can't have a file containing `Jürgen Żółtak` (a mix of German and Polish characters)
 - Unfortunately, code pages are still wildly used, e.g. in:
@@ -151,11 +159,19 @@ When it comes to maintain consistency among the scanned pictures, there are thre
   - There are many ways of encoding Unicode data: [UTF-8](https://en.wikipedia.org/wiki/UTF-8), [UTF-16](https://en.wikipedia.org/wiki/UTF-16), [UTF-32](https://en.wikipedia.org/wiki/UTF-32).
   - To avoid problems with unknown file encoding the [BOM](https://en.wikipedia.org/wiki/Byte_order_mark) has been invented.  
     Unfortunately or not BOM has never been widely adopted.
+<<<<<<< HEAD
     Anyway, if you have a BOM-aware app (unfortunately Atom is not among them) and a file containing the BOM mark, the automated encoding recognition works, e.g.:
     > - Download and open a [UTF-16-encoded file](https://raw.githubusercontent.com/acdh-oeaw/Teaching_CBS4DH/2022S/lectures/files/utf_16.txt) with BOM
     > - Download and open [UTF-32-encoded file](https://raw.githubusercontent.com/acdh-oeaw/Teaching_CBS4DH/2022S/lectures/files/utf_32.txt) with BOM
     > - Download and open [UTF-32-encoded file](https://raw.githubusercontent.com/acdh-oeaw/Teaching_CBS4DH/2022S/lectures/files/utf_32_nobom.txt) without BOM
 - **UTF-8 without BOM is the most portable Unicode encoding.**  
+=======
+    Anyway, if you have a BOM-aware app and a file containing the BOM mark, the automated encoding recognition works, e.g.:
+    > * Download and open a [UTF-16-encoded file](https://raw.githubusercontent.com/acdh-oeaw/Teaching_CBS4DH/2022S/lectures/files/utf_16.txt) with BOM
+    > * Download and open a [UTF-16le-encoded file](https://raw.githubusercontent.com/acdh-oeaw/Teaching_CBS4DH/2022S/lectures/files/utf_16_nobom.txt) without BOM
+
+* **UTF-8 without BOM is the most portable Unicode encoding.**  
+>>>>>>> de774e7ee04771278ea15e3b56c9629b1d9a97bd
   Use it in every new file you create.
   - If you're using Mac or Unix, it's just a default.
   - If you're using Windows, make sure your app is set up to save files using UTF-8.
@@ -164,6 +180,7 @@ When it comes to maintain consistency among the scanned pictures, there are thre
 
 There are various tools allowing to convert files between characters sets, e.g.
 
+<<<<<<< HEAD
 > - With Atom
 >   1. Install the "convert-file-encoding" Atom package by runing `apm install convert-file-encoding` in the cli
 >   2. Open a file in Atom
@@ -171,11 +188,19 @@ There are various tools allowing to convert files between characters sets, e.g.
 >   4. Save the file
 > - Use the `iconv` app in the cli, e.g.:
 >   `iconv -f CP1252 -t UTF-8 fileInWindows1252Encoding.txt > fileConvertedToUTF8.txt`
+=======
+> * With VS Code
+> Click on the label with the current encoding in the bottom action bar (eg. `UTF-8`) and select `Reop with encoding`. Choose the target encoding from the list.
+> * Alternatively use the `iconv` app in the cli, e.g.:\
+>   `iconv -f CP1252 -t UTF-8 fileInWindows1252Encoding.txt > fileConvertedToUTF8.txt` \
+(`f` = "from code", `t` = "to code")
+>>>>>>> de774e7ee04771278ea15e3b56c9629b1d9a97bd
 
 ### Line endings
 
 - For historical reasons there are two characters used to denote the end of a line in plain text files: a `Carriage Return` (`\r`) and a `Line Feed` (`\n`).
   (If you're wondering why think of how [typewriters](https://en.wikipedia.org/wiki/Typewriter) used to work).
+<<<<<<< HEAD
 - Different operating systems use them in a different way:
   - Windows default is `\r\n`
   - Unix/current Mac default is `\n`
@@ -186,6 +211,19 @@ There are various tools allowing to convert files between characters sets, e.g.
     - When you install git on Windows you can choose if the conversion should be performed automatically when you pull/push data from remote repositories.
   - On Mac: install `dos2unix` via Homebrew (`brew install dos2unix`)
   - On Unix: use `dos2unix` and `unix2dos`
+=======
+* Different operating systems use them in a different way:
+  * Windows default is `\r\n`
+  * Unix/current Mac default is `\n`
+  * Legacy MacOS default is `\r`
+* Most apps just handle all conventions listed above but it does make a difference for file comparison (e.g. in git)
+* There are ways to convert line ending style:
+  * In the bottom bar of VS Code, you'll see a label displaying the line endings of the current file. You can toggle between `LF`/`CRLF`.
+  * On Windows: with [Notepad++](https://notepad-plus-plus.org) or `dos2unix` and `unix2dos`
+    * When you install git on Windows you can choose if the conversion should be performed automatically when you pull/push data from remote repositories.
+  * On Mac: install `dos2unix` via Homebrew (`brew install dos2unix`)
+  * On Unix: use `dos2unix` and `unix2dos`
+>>>>>>> de774e7ee04771278ea15e3b56c9629b1d9a97bd
 
 ## Problems related to file names and paths
 
