@@ -2,7 +2,7 @@
 
 ## Identifying a file format
 
-* How do you identifiy a file format?
+* How do you identify a file format?
 * How does your operating system do it?  
   > By filename extensions
 * Why is this naive?
@@ -18,7 +18,7 @@
   What's the format of the file with the `.bin` extension?
   > [Ask Google](https://fileinfo.com/extension/bin)
 * Is there a better way to recognize the file type?  
-  > Yes, we can try to actually analyse its content, e.g. with the `file` command
+  > Yes, we can try to actually analyze its content, e.g. with the `file` command
   ```
    1. In the cli go to the folder containing the arpanet.html
    2. Execute: `file arpanet.html`
@@ -90,10 +90,53 @@ There are various reasons for using text formats:
              |
              +-> JSON -+            another generic format for storing structured data in text files
                        +-> geoJSON  uses JSON to store spatial data
-                       +-> JSON-LD  uses JSON to store RDF data
+                       +-> JSON-LD  uses JSON to store RDF data 
   ZIP -+        just a compressed set of arbitrary files
        +-> DOCX a compressed set of files representing an Ms Word document
   ```
+
+### Expected file contents: languages and associated files
+
+* Don’t confuse the **type** of a file with its **contents**, even though these are closely linked:
+  > * A simple txt-file could contain Shakespeare's *A Midsommer nights dreame*, a Python script or a even [a mixture of that ;)](https://en.wikipedia.org/wiki/Shakespeare_Programming_Language)
+* But when we handle files – event if they are just special text files – we can't ignore their typical *contents* and the typical associated *languages*
+  > * Eg.white spaces in an xml-file are often considered to be irrelevant for the contents of that file <pre>\<element\>content\<child\>child-element content\<\/child>\<\/element></pre> is broadly expected to be equivalent to:<pre>\<element\>content\<child\>child-element content\<\/child>           
+  \<\/element\></pre>
+  > * In contrary white spaces matters a lot in python script files.<pre>
+  if (2+2)==4:
+  &emsp;&emsp;print("everything still okay")</pre> While the above is valid python (or at least looks like it) this could never run: <pre>
+  if (2+2)==4:
+  print("everything still okay")</pre>
+  (If you want to, try to run the "correct" example in a python shell by simply pasting it there. It will fail. Any idea why?)
+* Knowing what content is typically associated with a file can help you to find out how you **should handle a file** (eg.: don't mess up white-spaces). It also helps you to know what you **could do with a file**. So files could be:
+  > * executed: `.sh`, `.exe`, `.js`, `.py`, `.bin`
+  > * used by you to store data from a project: `.xml`, `.docx`, `.jpg`, `.sql`, `.md`
+  > * used to configure a system or program: `.xml`, `.json`
+  > > Note, how some of these are binary files, while some are text files. But these two categories don’t align with the above mentioned purposes.
+* What you can use a file for already tackles the question of the language used in a file and the data structures associated with that language. You would be surprised if you found out, that the Word document, you just received from your Professor, contained in fact a python script, because you typically expect these documents to contain texts written in a *natural language*, eg. German. There are broad families of technical languages that where created to serve a special purpose.
+
+  > #### Programming languages
+
+  > Generally speaking, we use them to define sets of instructions that can be executed by a computer.
+    > > * Python
+    > > * Java 
+    > > * JavaScript
+    > > * C, C++, C#
+    > > * Fortran
+
+  > #### Markup languages
+  > We use them to encode and structure text-like information.
+    > > * XML
+    > > * HTML
+    > > * TeX
+    > > * Markdown (In fact, this document was written in Markdown.)
+
+  > #### Query languages
+  > we use them if we want to get specific parts/sets of (structured) data. Eg. to search something.
+    > > * SPARQL (for RDF graphs)
+    > > * SQL (for relational databases)
+    > > * XQuery (for XML data sources)
+    > > * XPath (for XML documents)
 
 ### File format conversion
 
@@ -102,7 +145,12 @@ There are various reasons for using text formats:
     * [csv2json](https://www.csvjson.com/csv2json) can convert CSV to JSON and vice versa
     * Ms Office/Libre Office/Google Docs being able to save both in .docx and .odt, .xlsx and .ods, etc.
     * and there are plenty others - google it!
-* But sometimes it's tricky.  
+* Let's imagine, you wanted to create a list of your enemies. Let us further assume, you used a csv file. You would create a table, containing 3 columns: 
+> 1. `name`
+> 2. `age`
+> 3. `actions`
+* When you are done with the table, you suddenly realize: some of them have children. Surely, their children are you enemies too (your are not easily forgiving), but they don't deserve their own row in your table, since they are only secondary enemies. Maybe storing the data in an .csv file was a bad idea from the beginning … ?
+* File-conversions can be tricky.  
   When?
 
 ## Problems specific to plain text files
@@ -178,7 +226,7 @@ There are various tools allowing to convert files between characters sets, e.g.
   * `/` (Unix and Mac but generally works in Windows as well)
 
 * Characters allowed in file and folder names
-  * Differ between operating systems or even filesystems, e.g. `windows:will:not:store:it.txt` is a valid file name under Linux but not under Windows
+  * Differ between operating systems or even file systems, e.g. `windows:will:not:store:it.txt` is a valid file name under Linux but not under Windows
   * Some characters are allowed but may require special handling in the cli, e.g. a space.
     > 1. Rename any file in a way its name contains a space
     > 2. Try to copy it in the cli now.  
@@ -195,12 +243,12 @@ This topic is far to broad to discuss in detail during an introductory course bu
   * etc.
 * The format you choose impacts how easy it will be to reuse the data (see e.g. [5 Star Opened Data](https://en.wikipedia.org/wiki/Linked_data#5-star_linked_open_data)).
   * Use formats which can be processed with free tools.
-    * Something to think about - "free" as in "a free beer" or like in "freedom of speach"?
+    * Something to think about - "free" as in "a free beer" or like in "freedom of speech"?
       See e.g. [here](https://en.wikipedia.org/wiki/Gratis_versus_libre).
   * Think about licensing.
     * Take a look on [CreativeCommons](https://en.wikipedia.org/wiki/Creative_Commons_license). 
     * Honor licenses of data you are using (in academia you are most likely to violate [attribution](https://en.wikipedia.org/wiki/Attribution_(copyright)) and "share [derived work](https://en.wikipedia.org/wiki/Derivative_work) under same license" obligations).
-    * The "free beer" vs "freedom of speach" question applies also here.
+    * The "free beer" vs "freedom of speech" question applies also here.
   * Separate data from presentation and keep your data structured (make it easy to process your data in an automated way).
   * Follow your scientific community standards.
   * Don't forget about the metadata.
