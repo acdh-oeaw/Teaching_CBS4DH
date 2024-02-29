@@ -123,12 +123,12 @@ When it comes to maintain consistency among the scanned pictures, there are thre
   >   if (2+2)==4:
   >   print("everything still okay")</pre>
   >   (If you want to, try to run the "correct" example in a python shell by simply pasting it there. It will fail. Any idea why?)
-- Knowing what content is typically associated with a file can help you to find out how you **should handle a file** -don't mess up with white-spaces. It also helps you to know what you **could do with a file**; files could be:
+- Knowing the typical content associated with a file can help you determine **how to handle a file**. For example, it can prevent you from inadvertently modifying relevant white spaces. It also helps you to know what you **could do with a file**; files could be:
   > - executed: `.sh`, `.exe`, `.js`, `.py`, `.bin`
   > - used to store data from a project: `.xml`, `.docx`, `.jpg`, `.sql`, `.md`
   > - used to configure a system or program: `.xml`, `.json`
   >   > ! Note that some of these are binary files, while some are text files. These two categories, however, don’t align with the above mentioned purposes.
-- The intended use or content of a file can often give insights into the programming language it is written in and the specific data structures employed within it. You would be surprised, for example, if you discover that the Word document, you just received from your Professor, contained python script. This is because you typically expect such a document to contain texts written in _natural language_, e.g., German. Technical languages are not uniform but are organized into families, each tailored to fulfill specific technical tasks or objectives.
+- The purpose of a file often provides clues about the language it's written in and its associated data structures. You would be surprised, for example, if you discover that the Word document, you just received from your Professor, contained python script. This is because you typically expect such a document to contain texts written in _natural language_, e.g., German. Technical languages are not uniform but are organized into families, each tailored to fulfill specific technical tasks or objectives.
 
   > ## Programming languages
 
@@ -174,7 +174,7 @@ Let's imagine, you want to create a list of your enemies. Let us further assume,
 > 2. `age`
 > 3. `actions`
 
-- When you are done with the table, you suddenly realize: some of them have children. Surely, their children are you enemies too (your are not easily forgiving), but they don't deserve their own row in your table, since they are only secondary enemies. Maybe storing the data in an .csv file was a bad idea from the beginning … ?
+- When you are done with the table, you suddenly realize: some of you enemies have children. Surely, their children are you enemies too (your are not easily forgiving), but they don't qualify for their own rows in your table, since they are only secondary enemies. But still, you want to store the same data for parents and children. Maybe storing the data in an .csv file was a bad idea from the beginning … ?
 - File-conversions can be tricky.  
   When?
 
