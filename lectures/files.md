@@ -130,6 +130,7 @@ When it comes to maintain consistency among the scanned pictures, there are thre
 - Knowing the typical content associated with a file can help you determine **how to handle a file**. For example, it can prevent you from inadvertently modifying relevant white spaces. It also helps you to know what you **could do with a file**; files could be:
   > - executed: `.sh`, `.exe`, `.js`, `.py`
   > - used to store data from a project: `.xml`, `.docx`, `.jpg`, `.sql`, `.md`
+  > - used to store graphical data, photos, shapes etc.: `.tif`, `.jpg`, `.svg`
   > - used to configure a system or program: `.xml`, `.json`
   >   > ! Note that some of these are binary files, while some are text files. These two categories, however, don’t align with the above mentioned purposes.
 - The purpose of a file often provides clues about the language it's written in and its associated data structures. You would be surprised, for example, if you discover that the Word document, you just received from your Professor, contained python script. This is because you typically expect such a document to contain texts written in _natural language_, e.g., German. Technical languages are not uniform but are organized into families, each tailored to fulfill specific technical tasks or objectives.
