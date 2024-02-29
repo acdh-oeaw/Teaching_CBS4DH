@@ -1,5 +1,8 @@
 # File formats and encodings
 
+Before we start:
+What is a file? What is a folder/directory?
+
 ## Identifying a file format
 
 - How do you identify a file format?
@@ -47,7 +50,7 @@ There are various reasons for using binary formats:
 - The data stored in a file have no good text representation (e.g. images, movies, sound)
 - Compression.
 - Performance.
-- Protecting intelectual rights - only you know how to read (decode) the data stored in a file.
+- Protecting intellectual rights - only you know how to read (decode) the data stored in a file.
 
 ### Text formats
 
@@ -67,13 +70,14 @@ There are various reasons for using text formats:
 - They are easy to compare and version.  
   (you should have seen it during the git lecture)
 
-### Picture formats
+#### Note on image formats
 
-Pictures can be stored as:
+Images can be stored as:
 
 - JPEG: lossy compression, small size (good for transmission)- it's our gold standard when it comes to archiving
 - PNG: lossy compression, small size (good for transmission)
 - Uncompressed(RAW) or LZW-compressed TIFF: lossless format; Represent the faithful digital version of the holding; they stores correct image dimensions and colour profiles
+- SVG: Scalable Vector Graphics, useful for simple geometric shapes, logos, diagrams etc.
 
 When it comes to maintain consistency among the scanned pictures, there are three detailed levels:
 
@@ -124,7 +128,7 @@ When it comes to maintain consistency among the scanned pictures, there are thre
   >   print("everything still okay")</pre>
   >   (If you want to, try to run the "correct" example in a python shell by simply pasting it there. It will fail. Any idea why?)
 - Knowing the typical content associated with a file can help you determine **how to handle a file**. For example, it can prevent you from inadvertently modifying relevant white spaces. It also helps you to know what you **could do with a file**; files could be:
-  > - executed: `.sh`, `.exe`, `.js`, `.py`, `.bin`
+  > - executed: `.sh`, `.exe`, `.js`, `.py`
   > - used to store data from a project: `.xml`, `.docx`, `.jpg`, `.sql`, `.md`
   > - used to configure a system or program: `.xml`, `.json`
   >   > ! Note that some of these are binary files, while some are text files. These two categories, however, don’t align with the above mentioned purposes.
