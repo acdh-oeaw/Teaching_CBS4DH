@@ -70,16 +70,19 @@ There are various reasons for using text formats:
 - They are easy to compare and version.  
   (you should have seen it during the git lecture)
 
-#### Note on image formats
+#### Images
 
-Images can be stored as:
+Images, despite having distinct content, share similarities with other files.
+In fact, they can be either binary, such as JPEG, PNG, GIF, BMP, or text files, such as Scalable Vector Graphics (SVG), Portable Graymap (PGM),Portable Bitmap (PBM), etc.
+
+Depending on users' needs, images can be, stored as:
 
 - JPEG: lossy compression, small size (good for transmission)- it's our gold standard when it comes to archiving
 - PNG: lossy compression, small size (good for transmission)
-- Uncompressed(RAW) or LZW-compressed TIFF: lossless format; Represent the faithful digital version of the holding; they stores correct image dimensions and colour profiles
-- SVG: Scalable Vector Graphics, useful for simple geometric shapes, logos, diagrams etc.
+- Uncompressed(RAW) or LZW-compressed TIFF: lossless format; Represent the faithful digital version of the holding; they stores correct image dimensions and colour profiles.<br /><b>Note</b>: TIFF files are typically binary, and their content is not easily human-readable. Therefore, providing an example in a text representation is not practical.
+- SVG: Scalable Vector Graphics, useful for simple geometric shapes, logos, diagrams etc. SVG is a vector graphics format that uses XML to describe 2D vector graphics. It is primarily used for scalable two-dimensional graphics that can be rendered with XML and CSS.<br /><b>Note</b>: SVG is a text-based format, but it's not an image format in the traditional sense. It's more of a markup language for describing vector graphics
 
-When it comes to maintain consistency among the scanned pictures, there are three detailed levels:
+When it comes to maintain consistency among the scanned images, there are three detailed levels:
 
 - Thumbnail
   - General Access (jpeg, png)
