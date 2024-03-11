@@ -35,20 +35,6 @@ Some common examples:
 - phone numbers
 - clean out time stamps or (special notationed) notes in transcriptions
 
-## Regex with Python
-
-We will focus on Regex representation in _Python_. The Regex library is imported in Python with the `re` module:
-
-```Python
-import re
-
-# example: substitute every "0" occurence with "1"
-re.sub(r"0", "1", "023") # output = "123"
-```
-
-We will firstly treat basic characters and later see some possibilities to combine them on a higher level to enable more complicated patterns.
-Notice the multiple ways to define the same pattern along this introduction. It is important to compose the regular expression in a way that is readable and understandable for another person.
-
 ## Characters
 
 | Special sequence | Matches                          | Equivalent Sets  |
@@ -115,6 +101,20 @@ What invalid strings that matched before do not match anymore? Can we improve it
 - `[012]` is equal to `(0|1|2)`. `(123)` does not represent the same, as the pattern would look after exactly `"123"` in the string.
 - Note: for German characters (or some other languages with Latin characters) you need to redefine the group of letters `[a-zA-Z]` to include also the extra letters: `[a-zA-ZäöüÄÖÜß]`.
 - Regex for simple punctuation: `[\.\,!\?]`
+
+## Regex with Python
+
+We will focus on Regex representation in _Python_. The Regex library is imported in Python with the `re` module:
+
+```Python
+import re
+
+# example: substitute every "0" occurence with "1"
+re.sub(r"0", "1", "023") # output = "123"
+```
+
+We will firstly treat basic characters and later see some possibilities to combine them on a higher level to enable more complicated patterns.
+Notice the multiple ways to define the same pattern along this introduction. It is important to compose the regular expression in a way that is readable and understandable for another person.
 
 ### **More examples:**
 
