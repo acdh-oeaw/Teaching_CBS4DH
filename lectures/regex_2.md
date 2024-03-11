@@ -114,6 +114,48 @@ Particularly:
 - In each and every [IDE](https://en.wikipedia.org/wiki/Integrated_development_environment) (once you start programming).
 - In CLI tools like `grep` (find matching files/lines) or `sed` (find & replace).
 
+## Regex with Python
+
+We will now focus on Regex representation in _Python_. The Regex library is imported in Python with the `re` module:
+
+```Python
+import re
+
+# example: substitute every "0" occurence with "1"
+re.sub(r"0", "1", "023") # output = "123"
+```
+
+For the examples we will use the `match` function of Python, and will take a deeper look at the different functions in the next lecture.
+
+```Python
+import re
+
+# search the regular expression pattern and return the first occurrence (it checks the match with the beginning of the string)
+# first parameter is the pattern
+# second parameter is the string
+# output is TRUE or FALSE.
+# If there is a match, we can get extra information from the console: <re.Match object; span=(first_index, last_index), match='matched_string'>
+re.matches(r"REGEX", "STRING")
+```
+
+```Python
+import re
+
+re.matches(r"[e]*", "star")
+re.matches(r"st[a]*r", "star")
+
+# What are the outputs of the next functions?
+re.matches(r"st[ea]*r", "star")
+re.matches(r"sta[a]*r", "star")
+re.matches(r"st[ea]*r", "star")
+```
+
+## Regex in Corpora and Text Collections
+
+- Deutsches Textarchiv (DTA): [Corpus](https://www.deutschestextarchiv.de/)|[Documentation](https://www.deutschestextarchiv.de/doku/DDC-suche_hilfe#suche_mit_regul)
+- Digitales Wörterbuch der deutschen Sprache (DWDS): [Corpus](https://www.dwds.de/)|[Documentation](https://www.dwds.de/d/korpussuche#re) 
+- Wienerisches DIGITARIUM: [Corpus](https://digitarium-app.acdh.oeaw.ac.at/)|[Documentation]
+
 <!--
 ## More ambitious task
 

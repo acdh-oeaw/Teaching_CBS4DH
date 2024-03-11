@@ -102,34 +102,10 @@ What invalid strings that matched before do not match anymore? Can we improve it
 - Note: for German characters (or some other languages with Latin characters) you need to redefine the group of letters `[a-zA-Z]` to include also the extra letters: `[a-zA-ZäöüÄÖÜß]`.
 - Regex for simple punctuation: `[\.\,!\?]`
 
-## Regex with Python
-
-We will focus on Regex representation in _Python_. The Regex library is imported in Python with the `re` module:
-
-```Python
-import re
-
-# example: substitute every "0" occurence with "1"
-re.sub(r"0", "1", "023") # output = "123"
-```
-
 We will firstly treat basic characters and later see some possibilities to combine them on a higher level to enable more complicated patterns.
 Notice the multiple ways to define the same pattern along this introduction. It is important to compose the regular expression in a way that is readable and understandable for another person.
 
 ### **More examples:**
-
-For the examples we will use the `match` function of Python, and will take a deeper look at the different functions in the next lecture.
-
-```Python
-import re
-
-# search the regular expression pattern and return the first occurrence (it checks the match with the beginning of the string)
-# first parameter is the pattern
-# second parameter is the string
-# output is TRUE or FALSE.
-# If there is a match, we can get extra information from the console: <re.Match object; span=(first_index, last_index), match='matched_string'>
-re.matches(r"REGEX", "STRING")
-```
 
 The _metacharacter star_ `*`, does not match the _literal character_ `*`, and its meaning is matching _zero or more times_. To match the _literal character_ `*`, we use the backslash for escaping the metacharacter: `\*`.
 
@@ -141,18 +117,6 @@ The _metacharacter star_ `*`, does not match the _literal character_ `*`, and it
 | hello  | `[Hell]*o` | Yes   |
 | star   | `[e]*`     | Yes   |
 | staar  | `st[a]*r`  | Yes   |
-
-```Python
-import re
-
-re.matches(r"[e]*", "star")
-re.matches(r"st[a]*r", "star")
-
-# What are the outputs of the next functions?
-re.matches(r"st[ea]*r", "star")
-re.matches(r"sta[a]*r", "star")
-re.matches(r"st[ea]*r", "star")
-```
 
 The _repeating metacharacter_ plus `+` means matching _one or more times_. This requires _at least one occurrence_ compared to _asterisk_ `*`.
 
