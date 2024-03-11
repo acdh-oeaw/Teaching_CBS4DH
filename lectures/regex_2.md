@@ -1,26 +1,11 @@
 # Regular Expressions 2
 
-[Link to excercises](https://github.com/acdh-oeaw/Teaching_CBS4DH/blob/2022S/exercise/regex%20exercises/regex2_exercise.txt).  
-Reminder: Anchors match a pattern based on its position in the string.  
-Note: Most _regex engines_ have a _multi-line_ mode that makes the _caret_ sign `^` match beginning of each line and the _dollar sign_ `$` match end of each line.
-
-| String      | RE           | Match |
-| ----------- | ------------ | ----- |
-| complicated | `^comp`      | Yes   |
-| appreciated | `ed$`        | Yes   |
-| rain        | `^rain$`     | Yes   |
-| rain        | `^r[ai]+n$`  | Yes   |
-| raaaain     | `^r[ai]+n$`  | Yes   |
-| complicated | `^comp.*ed$` | Yes   |
-
-**Remarks:**
-
-- `^pattern$` has the meaning of a total match
+[Link to excercises](https://github.com/acdh-oeaw/Teaching_CBS4DH/blob/2022S/exercise/regex%20exercises/regex2_exercise.txt).
 
 ## Anchors
 
 Anchors match a pattern based on its position in the string.
-Note: Most _RE engines_ have a _multi-line_ mode that makes _caret_ `^` match after any line break, and _dollar_sign_ `$` before any line break. We will review the examples next lecture, as they are relevant to other functions.
+Note: Most _RE engines_ have a _multi-line_ mode that makes _caret_ `^` match after any line break, and _dollar_sign_ `$` before any line break.
 
 <!-- #### Examples:
 
@@ -48,6 +33,22 @@ A word boundary is a position between a character that can be matched by the set
 | rain | `\brain\b` | Yes |
 | rain | `$r[ai]+n\b` | Yes |
 | complicated | `\bcomp.+\b` | Yes | -->
+
+Reminder: Anchors match a pattern based on its position in the string.  
+Note: Most _regex engines_ have a _multi-line_ mode that makes the _caret_ sign `^` match beginning of each line and the _dollar sign_ `$` match end of each line.
+
+| String      | RE           | Match |
+| ----------- | ------------ | ----- |
+| complicated | `^comp`      | Yes   |
+| appreciated | `ed$`        | Yes   |
+| rain        | `^rain$`     | Yes   |
+| rain        | `^r[ai]+n$`  | Yes   |
+| raaaain     | `^r[ai]+n$`  | Yes   |
+| complicated | `^comp.*ed$` | Yes   |
+
+**Remarks:**
+
+- `^pattern$` has the meaning of a total match
 
 ## Special sequence anchors
 
