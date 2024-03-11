@@ -192,38 +192,6 @@ If either `m` or `n` is omitted it becomes for e.g. `{3,}` _three or more_ and `
 
 With this qualifier you can express all the single repeating qualifiers, e.g. `?` as `{0,1}` `+` as `{1,}`, and `*` as `{0,}` but the single versions are both easier on the eye and shorter to write.
 
-## Anchors
-
-Anchors match a pattern based on its position in the string.
-Note: Most _RE engines_ have a _multi-line_ mode that makes _caret_ `^` match after any line break, and _dollar_sign_ `$` before any line break. We will review the examples next lecture, as they are relevant to other functions.
-
-<!-- #### Examples:
-
-| String | RE | Match |
-| --- | --- | --- |
-| complicated | `^comp` | Yes |
-| appreciated | `ed$` | Yes |
-| rain | `^rain$` | Yes |
-| rain | `^r[ai]+n$` | Yes |
-| complicated | `^comp.*ed$` | Yes |
-
-### Special sequence anchors
-
-| Special sequence |  Matches at |
-| --- | --- |
-| `\b` | a word boundary |
-| `\B` | not a word boundary |
-
-A word boundary is a position between a character that can be matched by the set of characters of `\w` and a character that cannot be matched by `\w`. `\b` also matches at the ends of the string if the first/last characters in the string are word characters. `\B` matches at every position where `\b` cannot match.
-
-| String | RE | Match |
-| --- | --- | --- |
-| complicated | `\bcomp` | Yes |
-| appreciated | `\Bed\b` | Yes |
-| rain | `\brain\b` | Yes |
-| rain | `$r[ai]+n\b` | Yes |
-| complicated | `\bcomp.+\b` | Yes | -->
-
 In the next lecture we will review: anchors, regex-based functions and go over more examples and use cases.
 
 Some links to practice:
