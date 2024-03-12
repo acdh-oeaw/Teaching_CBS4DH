@@ -35,6 +35,9 @@ Some common examples:
 - phone numbers
 - clean out time stamps or (special notationed) notes in transcriptions
 
+We will firstly treat basic characters and later see some possibilities to combine them on a higher level to enable more complicated patterns.
+Notice the multiple ways to define the same pattern along this introduction. It is important to compose the regular expression in a way that is readable and understandable for another person.
+
 ## Characters
 
 | Special sequence | Matches                          | Equivalent Sets  |
@@ -75,37 +78,7 @@ For the characters, either you specify them _individually_ or use _ranges_ by gi
 Having characters in a set, it means that each of the character is connected to the other with an OR logical connector. `[abc]` has the meaning of `a or b or c`. <br>
 A group refers to **whole** the characters in their sequence. `(abc)` has the meaning `abc`. Therefore, this pattern does not match the string `ab`, whereas `[ab][ab]` (or `[ab]+` does).
 
-We now go back to our example from above, we want to form some regex to match a date that looks like: `DAY MONTH YEAR` where the day and the year appear in digits and the month in letters. <br>
-`(\d){2}\s[A-Z][a-z]+\s(\d){4}` <br> We have here a set of groups, we firstly have 2 digits followed by a space, one upper case letter, some arbitrary number of lower case letters, another space and 4 final digits.<br>
-With this regex the following strings would match:
-
-- `30 January 2021`
-- `01 February 1990`
-- `15 April 2000`<br>
-
-_But also:_
-
-- `90 Fix 9999`
-- `00 January 2000`
-- `29 February 2022`
-- `30 Ja 2021`
-
-We cannot cover _all_ edge cases, however, we can definitely make the specification more percise while still maintaining generalization:<br>
-`(0-3)\d\s[A-Z][a-z]{2, 8}\s(0-2)(\d){3}`<br>
-What invalid strings that matched before do not match anymore? Can we improve it even more?
-
-### **Some Remarks:**
-
-- `?` is equal to `{0, 1}`
-- `[0123456789]` is equal to `[0-9]`
-- `[012]` is equal to `(0|1|2)`. `(123)` does not represent the same, as the pattern would look after exactly `"123"` in the string.
-- Note: for German characters (or some other languages with Latin characters) you need to redefine the group of letters `[a-zA-Z]` to include also the extra letters: `[a-zA-ZäöüÄÖÜß]`.
-- Regex for simple punctuation: `[\.\,!\?]`
-
-We will firstly treat basic characters and later see some possibilities to combine them on a higher level to enable more complicated patterns.
-Notice the multiple ways to define the same pattern along this introduction. It is important to compose the regular expression in a way that is readable and understandable for another person.
-
-### **More examples:**
+### **Concrete examples:**
 
 The _metacharacter star_ `*`, does not match the _literal character_ `*`, and its meaning is matching _zero or more times_. To match the _literal character_ `*`, we use the backslash for escaping the metacharacter: `\*`.
 
@@ -153,8 +126,42 @@ The fourth repeated qualifier is `{m,n}`, where `m` and `n` are _decimal integer
 | complicated | `compli(act){3,}ed` | No    |
 
 If either `m` or `n` is omitted it becomes for e.g. `{3,}` _three or more_ and `{,3}` _up to three_ repetitions. `{x}` it means exactly x times.
-
 With this qualifier you can express all the single repeating qualifiers, e.g. `?` as `{0,1}` `+` as `{1,}`, and `*` as `{0,}` but the single versions are both easier on the eye and shorter to write.
+
+We now go back to our example from above, we want to form some regex to match a date that looks like: `DAY MONTH YEAR` where the day and the year appear in digits and the month in letters. <br>
+`(\d){2}\s[A-Z][a-z]+\s(\d){4}` <br> We have here a set of groups, we firstly have 2 digits followed by a space, one upper case letter, some arbitrary number of lower case letters, another space and 4 final digits.<br>
+With this regex the following strings would match:
+
+- `30 January 2021`
+- `01 February 1990`
+- `15 April 2000`<br>
+
+_But also:_
+
+- `90 Fix 9999`
+- `00 January 2000`
+- `29 February 2022`
+- `30 Ja 2021`
+
+We cannot cover _all_ edge cases, however, we can definitely make the specification more percise while still maintaining generalization:<br>
+`(0-3)\d\s[A-Z][a-z]{2, 8}\s(0-2)(\d){3}`<br>
+What invalid strings that matched before do not match anymore? Can we improve it even more?
+
+**Some Remarks:**
+
+- `?` is equal to `{0, 1}`
+- `[0123456789]` is equal to `[0-9]`
+- `[012]` is equal to `(0|1|2)`. `(123)` does not represent the same, as the pattern would look after exactly `"123"` in the string.
+- Note: for German characters (or some other languages with Latin characters) you need to redefine the group of letters `[a-zA-Z]` to include also the extra letters: `[a-zA-ZäöüÄÖÜß]`.
+- Regex for simple punctuation: `[\.\,!\?]`
+
+**Exercises** 
+
+a) https://regexone.com/lesson/repeating_characters
+b) https://regexone.com/lesson/kleene_operators
+c) https://regexone.com/lesson/optional_characters
+
+## **Outlook**
 
 In the next lecture we will review: anchors, regex-based functions and go over more examples and use cases.
 
