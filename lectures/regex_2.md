@@ -155,8 +155,15 @@ re.matches(r"st[ea]*r", "star")
 - Deutsches Textarchiv (DTA): [Corpus](https://www.deutschestextarchiv.de/)|[Documentation](https://www.deutschestextarchiv.de/doku/DDC-suche_hilfe#suche_mit_regul)
 - Digitales Wörterbuch der deutschen Sprache (DWDS): [Corpus](https://www.dwds.de/)|[Documentation](https://www.dwds.de/d/korpussuche#re) 
 - Wienerisches DIGITARIUM: [Corpus](https://digitarium-app.acdh.oeaw.ac.at/)|[Documentation]
+- Brown Corpus: [Corpus](https://app.sketchengine.eu/#dashboard?corpname=preloaded%2Fbrown_1)|[Documentation](https://www.sketchengine.eu/quick-start-guide/concordance-lesson/)
 
+**Tasks**
+
+- Use Regex to find the longest word given within these corpora - which word is it and how many characters does it have? Which differences do you witness between the different corpora during your search?
 <!--
+- Identify as many street names (e.g. Judengasse, Wallnerstraße) as possible within ...
+- Which events that happened on the ... are captured in the ...?
+
 ## More ambitious task
 
 If we still have time, we can try to convert a Wikipedia's "year overview" to a spreadsheet (a CSV file).
