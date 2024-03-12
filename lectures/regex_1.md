@@ -157,9 +157,9 @@ What invalid strings that matched before do not match anymore? Can we improve it
 
 **Exercises** 
 
-a) https://regexone.com/lesson/repeating_characters
-b) https://regexone.com/lesson/kleene_operators
-c) https://regexone.com/lesson/optional_characters
+- a) https://regexone.com/lesson/repeating_characters
+- b) https://regexone.com/lesson/kleene_operators
+- c) https://regexone.com/lesson/optional_characters
 
 ## **Outlook**
 
