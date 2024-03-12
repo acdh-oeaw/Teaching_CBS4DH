@@ -6,11 +6,12 @@
 
 + Let's make sure that the `git` command is available: `$ git --version`
 
-+ One-time Git setup: set author info, text editor, line endings:
++ One-time Git setup (set author info, text editor, line endings):
     + `$ git config --global user.name "<your name>"`
     + `$ git config --global user.email "<username>@users.noreply.github.com"`
     + `$ git config --global core.editor "nano -w"`
     + `$ git config --global core.autocrlf input` for Mac/Linux, `true` for Windows
+    + Check settings: `$ git config --global --list` (or `$ cat ~/.gitconfig`)
 
 + __Notes__:
     + The email you set here will potentially be visible to everyone on the internet, which is why you might want to use the scheme above.
@@ -24,6 +25,6 @@
     + Initialize a new repository: `$ git init`
 
 + Take a quick look at the newly created `.git` directory:
-    + List contents of current directory (`-a`) options shows hidden items): `$ ls -a`
+    + List contents of current directory (`-a` option shows hidden items): `$ ls -a`
     + List contents of `.git`: `$ ls .git`
-    + View `.git/config` file (`q` to exit, you could also use `cat`): `$ less .git/config`
+    + View `.git/config` file: `$ cat .git/config`
