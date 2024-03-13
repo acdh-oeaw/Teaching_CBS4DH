@@ -49,4 +49,20 @@
     + [Dealing with diverged git branches](https://jvns.ca/blog/2024/02/01/dealing-with-diverged-git-branches/)
     + [Popular git config options](https://jvns.ca/blog/2024/02/16/popular-git-config-options/)
 
-+ [SourceTree](https://www.sourcetreeapp.com/): Graphical Git client for Windows and Mac
++ Graphical Git clients
+    + [SourceTree](https://www.sourcetreeapp.com/): for Windows and Mac
+    + [TortoiseGit](https://tortoisegit.org/): for Windows
+    + [GitHub Desktop](https://desktop.github.com/)
+
++ Markdown
+    + [Wikipedia](https://en.wikipedia.org/wiki/Markdown)
+    + [GitHub Markdown Docs](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
+
++ Interesting Repositories from hands-on 2:
+    + __Linux__ kernel: https://github.com/torvalds/linux
+    + __VLC__ media player: https://github.com/videolan/vlc
+    + Image editor __GIMP__: https://gitlab.gnome.org/GNOME/gimp
+    + __LibreOffice__ account: https://github.com/LibreOffice
+    + __Netflix__ account: https://github.com/Netflix
+    + Some __awesome (literally) lists__ of resources: https://github.com/sindresorhus/awesome
+    + ... and __Visual Studio Code__ itself! https://github.com/microsoft/vscode

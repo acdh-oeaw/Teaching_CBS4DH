@@ -4,10 +4,10 @@
 * However, today's lecture will follow a slightly different approach and sequence of steps. The main documents we will use today are the following hands-on tutorials:
     * [Hands-on Part 1](../exercise/git/hands-on_1.md)
     * [Hands-on Part 2](../exercise/git/hands-on_2.md)
-* A great resource you can use to have a quick introduction to Git is the [three-part series](https://howto.acdh.oeaw.ac.at/curriculum/git-a-concise-introduction) of tutorials by Omar Siam on the ACDH-CH HowTo platform. A tutorial about [Git in VS Code](https://howto.acdh.oeaw.ac.at/resource/posts/git-vs-code) is also included, which we will use at the end of the first part of today's lecture.
-* If you have any questions, you can contact us via email:
-    * Massimiliano Carloni (massimiliano.carloni@oeaw.ac.at)
-    * Peter Provaznik (peter.provaznik@oeaw.ac.at)
+    * [Links and resources](git_3.md)
+* If you have any questions, you can contact us via email (vorname.nachname@oeaw.ac.at):
+    * Massimiliano Carloni
+    * Peter Provaznik
 
 # Git 1
 
