@@ -1,7 +1,5 @@
 # Regular Expressions 2
 
-[Link to excercises](https://github.com/acdh-oeaw/Teaching_CBS4DH/blob/2022S/exercise/regex%20exercises/regex2_exercise.txt).
-
 ## Anchors
 
 Anchors match a pattern based on its position in the string.
@@ -185,3 +183,5 @@ If we still have time, we can try to convert a Wikipedia's "year overview" to a 
     * Then find a way to match the whole "record".
     * Finally try to split each record into header and content.
 -->
+**Further practice**
+[Link to excercises](https://github.com/acdh-oeaw/Teaching_CBS4DH/blob/2022S/exercise/regex%20exercises/regex2_exercise.txt).
