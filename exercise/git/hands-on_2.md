@@ -46,26 +46,26 @@ Let's now create a new repository on GitHub.
 
 ## Cloning the repository
 
-You can see some usual suspects here. You have an indication of the last commit. You have a list of files contained (for the moment, just README.md, which only contains the repo name and is rendered just below).
+If you go to the **GitHub page of your repository**, you can see some usual suspects here. You have an indication of the last commit, a list of files contained (for the moment, just README.md, which only contains the repo name and is rendered just below), and your description on the right (if you have provided one).
 
-However, to really work with this repository, it is recommended to create a local copy of it on your computer. In the jargon, this corresponds to **cloning** the repository.
+However, to really work with this repository, it is recommended to create a local copy of it on your computer. In technical terms, this corresponds to **cloning** the repository.
 
-To do this, click on the green button **<> Code**. Several options will appear. We will use the HTTPS option, which allows to clone a repository by providing its URL, which is displayed in the text box just below.
-
-To copy the URL, you can click on the little icon on the right (two overlapping squares). We will now return to our (more or less) beloved command line interface (CLI).
-
-In the CLI, navigate (using the `cd` command) to the folder where you want to store a local copy of your repo, and type `git clone` followed by a whitespace and the URL of your repo. For example:
+1. To do this, click on the green button **<> Code**. Several options will appear. We will use the **HTTPS** option, which allows to clone a repository by providing its URL, which is displayed in the text box just below.
+2. To **copy the URL**, you can click on the little icon on the right (two overlapping squares). We will now return to the command line interface (CLI).
+3. In the CLI, navigate (using the `cd` command) to the folder where you want to store a local copy of your repo, and type `git clone` followed by a whitespace and the URL of your repo. For example:
 
 ```shell
 cd /Users/mcarloni
 git clone https://github.com/carlonim/test-repo.git
 ```
 
-You will now have a new directory which contains your GitHub repository. This local repo will already have a **remote** configured. A remote is a repository hosted elsewhere, from which you can pull data or to which you can push data. When cloning a repository, Git automatically configures a remote with name **origin**. To see the remotes associated to a repo, type the following command:
+4. You will now have a new directory which contains your GitHub repository. This local repo will already have a **remote** configured. A remote is a repository hosted elsewhere, from which you can pull data or to which you can push data. When cloning a repository, Git automatically configures a remote with name **origin**. To see the remotes associated to a repo, type the following command:
 
 ```shell
 git remote
 ```
+
+5. To have more information, you can add the option `-v` (i.e., "verbose") to the command.
 
 ## Push / fetch / pull
 
