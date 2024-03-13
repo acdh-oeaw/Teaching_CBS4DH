@@ -1,14 +1,39 @@
 # Hands-on - Part 2
 
-* To be sure to have Git in English for the current lesson, you can type `LANG=C` in your shell. This will set the language of your current shell to English.
-* We will focus on GitHub, but many of the things we will say here also apply to GitLab or any other web interface for Git.
-* The GitHub interface lets us perform some operations for which we were using commands on the shell.
+## Before starting
+
+To be sure to have your shell **in English** for the current lesson (so that you can more easily recognize logs and error messages described in this document):
+
+1. Type `locale` in your shell and check the value for the variable `LANG`
+2. If this displays any other language (like German), you can type the command `export LANG=en_US.UTF-8`
+3. Check again with `locale` if the changes were applied. This will set the language of your **current shell** to English, but will reset the language to German (or any other default) when you start a new shell session.
+4. If you want to make these changes permanent (which is however *not* needed for this tutorial), you have to open the file `~/.bashrc` (for Bash users, mostly Linux and Windows) or `~/.zshrc` (for Zsh users, mostly macOS) (for example with the editor `nano`) and add the line `export LANG=en_US.UTF-8` to the file. This will execute this command every time you start a new shell session.
+
+## GitHub
+
+* In this hands-on, we will focus on [GitHub](https://github.com), an online service that is based on Git and that allows you to store your repositories on a remote server, so that other people can see them and collaborate by editing them.
+* But many of the things we will say here also apply to other online services based on Git, such as [GitLab](https://gitlab.com).
+* Some interesting repositories or accounts on GitHub/GitLab:
+  * **Linux** kernel: https://github.com/torvalds/linux
+  * **VLC** media player: https://github.com/videolan/vlc
+  * Image editor **GIMP**: https://gitlab.gnome.org/GNOME/gimp
+  * **LibreOffice** account: https://github.com/LibreOffice
+  * **Netflix** account: https://github.com/Netflix
+  * Some **awesome (literally) lists** of resources: https://github.com/sindresorhus/awesome
+  * ... and **Visual Studio Code** itself! https://github.com/microsoft/vscode
+* The GitHub web interface lets us perform some operations for which we were previously using commands on the shell. But we will partly use the command line in this section too.
 
 ## Creating a repository on GitHub
 
-Let's now create a new repository on GitHub. If you are on the GitHub homepage and you have already logged in, you might find a column on the left like this one. The green button depicting a book with a bookmark lets you create a new repository.
+Let's now create a new repository on GitHub.
 
-Otherwise, you can click on your profile picture on the top right corner of the page and click on "Your repositories". You will then find the green button "New".
+1. If you are on the [GitHub homepage](https://github.com) and you have already logged in, you might find a column on the left like this one. The **green button "New"** with the book icon lets you create a new repository.
+
+<img src="github_1.png" alt="github_1" style="zoom:50%;" />
+
+2. Otherwise, you can click on your **profile picture** on the top right corner of the page and click on **"Your repositories"**. You will then find the **green button "New"**.
+
+<img src="github_2.png" alt="github_2" style="zoom:50%;" />
 
 When creating a new repository, you can specify different aspects. You could start with a template (an option we will not discuss here, but if you are curious, see the pages [Create a template repo](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-template-repository) and [Create from a template](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template)).
 
