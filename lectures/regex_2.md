@@ -2,8 +2,8 @@
 
 ## Anchors
 
-Anchors match a pattern based on its position in the string.
-Note: Most _RE engines_ have a _multi-line_ mode that makes _caret_ `^` match after any line break, and _dollar_sign_ `$` before any line break.
+Anchors match a pattern based on its position in the string. They are useful for defining the context in which a pattern should be matched within a text, allowing for more precise and controlled matching.<br>
+
 
 <!-- #### Examples:
 
@@ -32,8 +32,6 @@ A word boundary is a position between a character that can be matched by the set
 | rain | `$r[ai]+n\b` | Yes |
 | complicated | `\bcomp.+\b` | Yes | -->
 
-Reminder: Anchors match a pattern based on its position in the string.  
-Note: Most _regex engines_ have a _multi-line_ mode that makes the _caret_ sign `^` match beginning of each line and the _dollar sign_ `$` match end of each line.
 
 | String      | RE           | Match |
 | ----------- | ------------ | ----- |
@@ -43,6 +41,9 @@ Note: Most _regex engines_ have a _multi-line_ mode that makes the _caret_ sign 
 | rain        | `^r[ai]+n$`  | Yes   |
 | raaaain     | `^r[ai]+n$`  | Yes   |
 | complicated | `^comp.*ed$` | Yes   |
+
+
+Note: Most _RE engines_ have a _multi-line_ mode that makes _caret_ `^` match after any line break, and _dollar_sign_ `$` before any line break.
 
 **Remarks:**
 
