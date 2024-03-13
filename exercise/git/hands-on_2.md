@@ -67,52 +67,83 @@ git remote
 
 5. To have more information, you can add the option `-v` (i.e., "verbose") to the command.
 
-## Push / fetch / pull
+## Push to remote
 
 However, while the repository on your computer is an exact copy of the one on GitHub, this still does not mean that everything is automatically synchronized between the two repositories.
 
-If you make a change to your local repo, you still need to commit your change, as done in the first part of these lectures. But when you do this, you actually commit to your local copy, while the repo on GitHub remains unchanged. To make this change effective on the GitHub repo too, you need to **push** your commit.
+If you make a change to your local repo, you still need to commit your change, as done in the first part of this lecture. But when you do this, you actually commit to your local copy, while the repo on GitHub remains unchanged. To make this change effective on the GitHub repo too, you need to **push** your commit.
 
-Let's first try to commit a change to our local repo. We can open the text editor `nano` and edit the README.md file:
+1. Let's first try to commit a change to our local repo. We can open the text editor `nano` and edit the **README.md** file:
 
 ```shell
 nano README.md
 ```
 
-We can just add a line and then quit using **Ctrl + X**, and then **Y** followed by **Return** to save the changes. We can now commit the change.
+2. We can just add a line and then quit using **Ctrl + X**, and then hit **Y** followed by **Return** to save the changes.
+3. We can now **commit** the change.
 
 ```shell
 git add --all
 git commit -m "Update README.md"
 ```
 
-We can now check if our remote repo is up-to-date too.
+4. Let's check **if our remote repo is up-to-date** too.
 
 ```shell
 git fetch
 git status
 ```
 
-Git will inform us that `Your branch is ahead of 'origin/main' by 1 commit`. To bring the remote repo up-to-date, we will use the command `git push` we mentioned above.
+5. Git will inform us that `Your branch is ahead of 'origin/main' by 1 commit`. To **bring the remote repo up-to-date**, we will use the command `git push` we mentioned above.
 
 ```shell
 git push
 ```
 
-You can now run `git status` or check the remote repo on your GitHub page. If everything worked correctly, your repo should reflect the current status of your local copy.
+At this point, Git will probably ask you for your **GitHub credentials**. However, if you insert your username and then your password, you will receive an error message, since this way of accessing GitHub outside of a web browser is not supported anymore. Therefore, we need a different solution, i.e. creating a **personal access token**, a sequence of characters that will take the place of our password (in this scenario) but will allow us to have more control on what Git (or other applications) can do with our remote repositories.
 
-What happens instead if the remote repo has a new commit that is not present in your local copy? This might happen if you collaborate with other people, and somebody has committed a change while you were working on your repo. In this case, you will need the command `git pull`.
+### Intermezzo: Create a GitHub personal access token
 
-Let's try to simulate such a case. Please go to the GitHub web interface and open the README.md file by clicking on it. On the right, you will find a small icon with a pencil, which allows you to edit the file directly in the browser. Let's add a line with some text, then click on the green button **Commit changes...** Write a commit message and confirm to commit changes.
+1. Go to the [GitHub](http://github.com) page and **log in** if necessary.
+2. Click on your profile picture on the right, then on **Settings**.
+3. Scroll down the bar on the left side until you reach the option **Developer Settings**.
+4. Click on **Personal access tokens** and choose **Tokens (classic)** (in case you see more than one option).
+5. You can now create a new personal access token by clicking on **Generate new token**, then **Generate new token (classic)** (if you see more than one option).
+6. If you have enabled **two-factor authentication**, this might prompt you to take your other device to verify it's you.
+7. Write a descriptive name for your token in the **Note** field.
+8. You can set an expiration date, for example **30 days**, after which this token will not be usable anymore.
+9. Under **Select scopes**, choose **repo** (in bold typeface), which will select all the related checkboxes below.
+10. Scroll down the page and click on the green button **Generate token**.
+11. GitHub will now display a very long sequence of characters. As the page reminds you, this is your personal access token and **you won't be able to see it anymore**. If you accidentally close the page now, you will need to create a new token (no problem, in any case).
+12. **Copy** the token and go back to the command line.
 
-Let's now go back to the command line.
+### git push (for real, now)
+
+1. We can now try to run `git push` again.
+2. When prompted for your GitHub credentials, **enter your username** and then, instead of your password, **paste the token** you just created.
+3. You can now run `git status` or check the remote repo on your GitHub page. If everything worked correctly, your repo should reflect the current status of your local copy.
+
+## Fetch and pull from remote
+
+What happens instead if the remote repo has a new commit that is not present in your local copy? This might happen if you collaborate with other people, and somebody has committed a change while you were working on your repo. In this case, you will need the commands `git fetch` and `git pull`.
+
+Let's try to simulate such a case.
+
+1. Go to the GitHub web interface and open the **README.md** file by clicking on it.
+2. On the right, you will find a **small icon with a pencil**, which allows you to edit the file directly in the browser.
+
+![github_edit](github_edit.png)
+
+3. Let's add a line with some text, then click on the green button **Commit changes...** Write a commit message and confirm to commit changes.
+
+4. Let's now **go back to the command line** and run these commands:
 
 ``` shell
 git fetch
 git status
 ```
 
-Git should inform you that `Your branch is behind 'origin/main' by 1 commit`. Git has fetched the data from the remote repo and has compared it with the local repo. However, it still hasn't applied the new changes to your local repo. To do this, you need a different command:
+5. Git should inform you that `Your branch is behind 'origin/main' by 1 commit`. Git has fetched the data from the remote repo and has compared it with the local repo. However, **it still hasn't applied the new changes to your local repo**. To do this, you need a different command:
 
 ```shell
 git pull
@@ -120,7 +151,9 @@ git pull
 
 Theoretically, you could even run `git pull` without running `git fetch` before, although it's always best to see what's happening before you actually pull the data.
 
-Finally, let's try a more extreme case. Imagine that you commit another change to your remote repo (or somebody else does), and in the meanwhile you modify the same file on your local copy. If you try to push your local change to the remote, you will receive a warning from Git:
+## What if local *and* remote have changed? (stash)
+
+Finally, let's try a more extreme case. Imagine that you commit another change to your remote repo (or somebody else does), and **in the meanwhile you modify something else on your local copy**. If you try to push your local change to the remote, you will receive a warning from Git:
 
 ```shell
 error: failed to push some refs to 'https://github.com/carlonim/test-repo.git'
@@ -133,62 +166,64 @@ git stash
 git pull
 ```
 
-You can view a list of your stashed changes using `git stash list`, and you can apply them again with `git stash apply`. We won't go into the details of resolving conflicts, since this would involve too much time.
+After you have pulled, you can view a list of your stashed changes using `git stash list`, and you can apply them again with `git stash apply`. We won't go into the details of resolving conflicts, since this would involve too much time.
 
 ## Branching
 
-Branches are like alternative or parallel paths your repo can take. You can create a branch with name `feature1` by simply using the following command:
+**Branches** are like alternative or parallel paths your repo can take.
+
+1. You can create a branch with name `feature1` by simply using the following command:
 
 ```shell
 git branch feature1
 ```
 
-To see all branches available, you can type:
+2. To see **all branches available**, you can type:
 
 ```shell
 git branch
 ```
 
-The branch highlighted by an asterisk at the beginning is the branch in which you are currently located. If you run the command `git branch` with the option `-a`, you will list not only local branches, but also remote ones. If you add the option `-v`, you also get additional information, including the last commit message of each branch.
+3. The branch highlighted by an **asterisk** at the beginning is the branch in which you are currently located. If you run the command `git branch` with the option `-a`, you will list not only local branches, but also remote ones. If you add the option `-v`, you also get additional information, including the last commit message of each branch.
 
-To switch to another branch, in our case `feature1`, you can type:
+4. To **switch** to another branch, in our case `feature1`, you can type:
 
 ```shell
 git checkout feature1
 ```
 
-In some cases, you want to create a new branch and switch to it at the same time. You can do so by running:
+5. In some cases, you want to **create a new branch *and* switch to it** at the same time. You can do so by running:
 
 ```shell
 git checkout -b feature2
 ```
 
-You can now make an edit to your repo and then try to push to the remote. Git will alert you:
+6. You can now make an edit to your repo and then try to push to the remote. Git will alert you:
 
 ```shell
 fatal: The current branch feature2 has no upstream branch.
 ```
 
-We need to create a corresponding branch on our remote repo or at least match our local branch to a remote one. To do this, we can type:
+7. We need to **create a corresponding branch** on our remote repo or at least match our local branch to a remote one. To do this, we can type:
 
 ```shell
 git push -u origin feature2
 ```
 
-This will automatically create a branch `feature2` on the remote, if this is not present, and will push the current changes. To check to which remote branch our corrent branch is pushing, you can use the command `git branch -vv`.
+8. This will automatically create a branch `feature2` on the remote, if this is not present, and will push the current changes. To check **to which remote branch** our corrent branch is pushing, you can use the command `git branch -vv`.
 
-Let's now try to **merge** our changes in `feature2` with our branch `main`. This means that all the changes we introduced in `feature2` will be transferred to `main` too. To do this, we need to switch to `main` and then use the `git merge` command, followed by the name of the branch we want to merge:
+9. Let's now try to **merge** our changes in `feature2` with our branch `main`. This means that all the changes we introduced in `feature2` will be transferred to `main` too. To do this, we need to switch to `main` and then use the `git merge` command, followed by the name of the branch we want to merge:
 
 ```shell
 git checkout main
 git merge feature2
 ```
 
-You can now push our updated `main` to remote.
+10. You can now push our updated `main` to remote.
 
 ### Create a branch from a previous commit
 
-Branches do not need to be created from the latest commit. You can also navigate to an earlier commit and create a new branch from that too. Let's try this (where `18b1ae1`is the hash of a previous commit, retrieved through `git log`):
+Branches do not need to be created from the latest commit. You can also navigate to an **earlier commit** and create a new branch from that too. Let's try this (where `18b1ae1` is the hash of a previous commit, retrieved through `git log`):
 
 ```shell
 git checkout 18b1ae1
@@ -198,3 +233,60 @@ git push -u origin my-alternative-branch
 
 If you open your repo on GitHub, you will now find your new branch. GitHub will inform you that your branch is some commits behind your `main` branch.
 
+## Exercise 1 - set-up for collaboration
+
+Let's see how you can invite other people to collaborate to your repo.
+
+1. Create a **new repo** on GitHub, or use the **existing one** you have created previously.
+2. Invite as a collaborator another person. Go to your repo page, and click on **Settings**.
+3. On the left bar, click on **Collaborators**.
+4. Click on the button **Add people**. When asked, insert the username of the other person.
+5. The other person will receive an email, where they can **accept the invitation**.
+6. You can now both edit and push to the repository.
+
+## Exercise 2 - collaborating
+
+Now, given that more than one person can access your repo, let's try to see how collaboration works by making some changes.
+
+1. Both you and the other person **clone** the repo on your machine (if you have not already).
+2. Make some edits (I would suggest **adding a new document** with some text to avoid conflicts).
+3. **Commit** the changes with a message and **push** to remote.
+4. On your repo page, you can see the **history of commits** by just clicking on this link. You will notice commits coming from different users.
+
+<img src="commit_history.png" alt="commit_history" width="400" />
+
+## Exercise 3 - branching
+
+If you have some time left, you can try to use branching in this collaborative setup.
+
+Person/group 1:
+
+1. Create a **new local branch** `bug-fix` based on the latest commit. Choose the name you prefer.
+2. **Push** the branch to remote.
+3. Make some changes, for example create a new document with some text, and **commit** them.
+4. **Push** again.
+
+Person/group 2:
+
+1. Make a change to the `main` branch and **commit**.
+2. Run `git fetch`.
+3. Check what branches are available in the remote repo by running `git branch -a`. You will see **remote branches** at the end of the list (prefixed with `remotes/origin/`), and you might see the branch `remotes/origin/bug-fix` created by the other person/group (if already pushed).
+4. Create a **new local branch** based on the remote branch: `git branch bug-fix origin/bug-fix`
+5. **Switch** to the new branch to check if everything is correct: `git checkout bug-fix`
+6. **Switch** back to main: `git checkout main`
+7. Run **diff** on the two branches: `git diff main bug-fix`
+8. **Merge** `bug-fix` with the `main` branch: `git merge bug-fix`
+
+Person/group 1:
+
+1. **Fetch** and **pull** to see all the changes applied.
+
+## Cheatsheets
+
+* GitHub: https://education.github.com/git-cheat-sheet-education.pdf
+* GitLab: https://about.gitlab.com/images/press/git-cheat-sheet.pdf
+
+## Contacts
+
+* Massimiliano Carloni (massimiliano.carloni@oeaw.ac.at)
+* Peter Provaznik (peter.provaznik@oeaw.ac.at)
