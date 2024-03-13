@@ -33,7 +33,7 @@ Let's now create a new repository on GitHub.
 
 2. Otherwise, you can click on your **profile picture** on the top right corner of the page and click on **"Your repositories"**. You will then find the **green button "New"**.
 
-<img src="github_2.png" alt="github_2" width="400"" />
+<img src="github_2.png" alt="github_2" width="400" />
 
 3. When creating a new repository, you can set up different aspects.
    - You could start with a **template** (an option we will not discuss here, but if you are curious, see the pages [Create a template repo](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-template-repository) and [Create from a template](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template)).
