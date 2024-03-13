@@ -160,7 +160,7 @@ What invalid strings that matched before do not match anymore? Can we improve it
 - `?` is equal to `{0, 1}`
 - `[0123456789]` is equal to `[0-9]`
 - `[012]` is equal to `(0|1|2)`. `(123)` does not represent the same, as the pattern would look after exactly `"123"` in the string.
-- Note: for German characters (or some other languages with Latin characters) you need to redefine the group of letters `[a-zA-Z]` to include also the extra letters: `[a-zA-ZäöüÄÖÜß]`.
+- Note: for German characters (or some other languages with Latin characters) you need to redefine the group of letters `[a-zA-Z]` to include also the extra letters: `[a-zA-ZäöüÄÖÜß]`. Don't forget that some alphabets (e.g. Greek) share similar letters with Latin characters (e.g., Greek "omikron", etc.); these characters are perceived differently in the regex system, therefore, you need to include them when dealing with multilingual documents.
 - Regex for simple punctuation: `[\.\,!\?]`
 
 **Exercises** 
