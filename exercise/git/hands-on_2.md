@@ -33,21 +33,16 @@ Let's now create a new repository on GitHub.
 
 2. Otherwise, you can click on your **profile picture** on the top right corner of the page and click on **"Your repositories"**. You will then find the **green button "New"**.
 
-<img src="github_2.png" alt="github_2" style="zoom:50%;" />
+<img src="github_2.png" alt="github_2" width="400"" />
 
-When creating a new repository, you can specify different aspects. You could start with a template (an option we will not discuss here, but if you are curious, see the pages [Create a template repo](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-template-repository) and [Create from a template](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template)).
-
-The important thing is specifying the name of your repo. As described on the GitHub page, "Great repository names are short and memorable". So have fun trying to find out an original name! You can also provide a description to better explain what your repo is about.
-
-Regarding the visibility of your repo, you have two options, either **Public** and **Private**. We will create a public repo for the purposes of this tutorial, but you could choose to have a private repo, for example, if you have sensitive data or you want to write some code before making your repo public.
-
-An important step is creating a README.md file. Most GitHub repos have a README file. This will be placed in the upmost directory of your repo and will be displayed first when you open your repo. It is important to include such a file, because this is where you can give future users more detailed information about the contents of your repo or how to install/deploy the piece of software you are coding.
-
-We will now ignore `.gitignore`, but so that you know what this is about: `.gitignore`allows you to specify files that should not be tracked in the repo, for example invisible files that only serve to specific operating systems (macOS has a tendency to create such files, such as `.DS_Store`, to store custom attributes of its containing folder).
-
-Finally, you can choose a license to assign to your repo. While we can avoid to specify one for the moment, a license plays a fundamental role in determining how other people can reuse your software.
-
-You can now click on the green button **Create repository**. Congratulations! :tada: You now have a repository on GitHub.
+3. When creating a new repository, you can set up different aspects.
+   - You could start with a **template** (an option we will not discuss here, but if you are curious, see the pages [Create a template repo](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-template-repository) and [Create from a template](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template)).
+   - The important thing is specifying the **name** of your repo. As described on the GitHub page, *Great repository names are short and memorable*. So have fun trying to find out an original name! You can also provide a **description** to better explain what your repo is about.
+   - Regarding the visibility of your repo, you have two options, either **Public** and **Private**. We will create a **public** repo for the purposes of this tutorial, but you could choose to have a private repo, for example, if you want to write some code before making your repo public.
+   - An important step is creating a **README.md** file. Most GitHub repos have a README file. This will be placed in the upmost directory of your repo and will be displayed first when you open your repo. It is important to include such a file, because this is where you can give future users more detailed information about the contents of your repo or how to install/deploy the piece of software you are coding.
+   - We will now ignore `.gitignore`, but so that you know what this is about: `.gitignore` allows you to **specify files that should never be tracked in the repo**, for example invisible files that only serve to specific operating systems (macOS has a tendency to create such files, such as `.DS_Store`, to store custom attributes of its containing folder).
+   - Finally, you can choose a **license** to assign to your repo. While we can avoid to specify one for the moment, a license plays a fundamental role in determining how other people can reuse your software.
+4. You can now click on the green button **Create repository**. Congratulations! :tada: You now have a repository on GitHub.
 
 ## Cloning the repository
 
