@@ -29,7 +29,7 @@ Let's now create a new repository on GitHub.
 
 1. If you are on the [GitHub homepage](https://github.com) and you have already logged in, you might find a column on the left like this one. The **green button "New"** with the book icon lets you create a new repository.
 
-<img src="github_1.png" alt="github_1" style="zoom:50%;" />
+<img src="github_1.png" alt="github_1" width="200" />
 
 2. Otherwise, you can click on your **profile picture** on the top right corner of the page and click on **"Your repositories"**. You will then find the **green button "New"**.
 
