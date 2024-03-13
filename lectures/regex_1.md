@@ -51,7 +51,6 @@ Notice the multiple ways to define the same pattern along this introduction. It 
 
 Besides using the predefined special sequences, also the exact text (as well single characters) can be used. <br>
 For the characters, either you specify them _individually_ or use _ranges_ by giving a _hyphen_ `-` inbetween. We will see some examples later.
-<br><br>
 
 **Exercises**
 - a) https://regexone.com/lesson/introduction_abcs
@@ -59,7 +58,9 @@ For the characters, either you specify them _individually_ or use _ranges_ by gi
 - c) https://regexone.com/lesson/character_ranges 
 - d) https://regexone.com/lesson/whitespaces
 
+
 **Example:** The pattern `\d\d\s[A-Z][a-z][a-z][a-z][a-z]\s\d\d\d\d` matches the string `10 March 2022`. <br> It can also be expressed with the pattern: `[0-9][0-9]\s[A-Z][a-z][a-z][a-z][a-z]\s[0-9][0-9][0-9][0-9]`.<br> We can, of course, just write the string and search it in our sentence, but in this case we lose generalization.<br> Is there a compacter way to write this Regex? Can we make it even more general to include other months as well? Later!
+
 
 ## Metacharacters
 
