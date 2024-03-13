@@ -5,6 +5,9 @@
     * [Hands-on Part 1](../exercise/git/hands-on_1.md)
     * [Hands-on Part 2](../exercise/git/hands-on_2.md)
 * A great resource you can use to have a quick introduction to Git is the [three-part series](https://howto.acdh.oeaw.ac.at/curriculum/git-a-concise-introduction) of tutorials by Omar Siam on the ACDH-CH HowTo platform. A tutorial about [Git in VS Code](https://howto.acdh.oeaw.ac.at/resource/posts/git-vs-code) is also included, which we will use at the end of the first part of today's lecture.
+* If you have any questions, you can contact us via email:
+    * Massimiliano Carloni (massimiliano.carloni@oeaw.ac.at)
+    * Peter Provaznik (peter.provaznik@oeaw.ac.at)
 
 # Git 1
 
@@ -225,5 +228,3 @@ Realize the "Git circle of life" as described above by:
 * Adjusting the `excersise/regex exercises/regex2_exercise.txt` file by adding regular expressions solving the tasks listed in the file.
 * Commiting and pushing the changes.
 * Making a [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork) against the original repository.
-
-In case of trouble you can contact me on mateusz.zoltak@oeaw.ac.at
