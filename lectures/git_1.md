@@ -1,6 +1,6 @@
 # Some preliminary remarks
 
-* This document as well as the following (Git 2) has been preserved here as reference and a different perspective on Git (and GitHub).
+* This document as well as the following ([Git 2](git_2.md)) has been preserved here as reference and a different perspective on Git (and GitHub).
 * However, today's lecture will follow a slightly different approach and sequence of steps. The main documents we will use today are the following hands-on tutorials:
     * [Hands-on Part 1](../exercise/git/hands-on_1.md)
     * [Hands-on Part 2](../exercise/git/hands-on_2.md)
