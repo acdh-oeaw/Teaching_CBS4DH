@@ -105,8 +105,8 @@ As an example let's naively reorder a conditional sentence:
 
 - search for: `(.*), ?(.*)[.]`
 - replace with: `$2, $1.`
-- test string: `If you see a red light, stop.`
-- result: `stop, If you see a red light.`
+- test string: `if you see a red light, stop.`
+- result: `stop, if you see a red light.`
 
 ## Flags
 
