@@ -74,6 +74,25 @@ For the characters, either you specify them _individually_ or use _ranges_ by gi
 | `\`           | _backslash_       | indicate sequences or escape metacharacters                             |
 | `\|`          | _pipe_ or _bar_   | logical OR                                                              |
 
+### Some remarks
+
+* About **sets** of characters `[ ]`
+  * Remember that one set corresponds to **one** character in the expression we want to match, i.e. even if we put five characters between the brackets (like `[abcde]`) this still means *one single* character among the five listed
+  * You can specify individual characters between the brackets `[abcde]` or **ranges** of characters by using the *hyphen* symbol, e.g. `[A-Z]` (all characters between A and Z, i.e. the whole Latin alphabet) or `[0-9]` (all numbers). Be aware that ranges follow the order of characters in the [ASCII standard](https://theasciicode.com.ar).
+  * You can also specify **several sequences inside a set**, for example `[A-Za-z]` to have the whole Latin alphabet both in capital and small letters. (This is better than the range `[A-z]`, because the latter would include characters like `[` and `]`: see the [ASCII table](https://theasciicode.com.ar) and the previous bullet point).
+  * If you want to use the **hyphen** as an actual character inside a set (and not to specify a range), you can add it **at the beginning or end of a set**, for example `[-A-Z]` or `[abcd-]` (or between two ranges, but this might complicate things).
+* About **groups** of characters `( )`
+  * Groups can be used for a **variety of purposes**. We will see some uses of groups later, but in the meantime let's say that groups can be used to apply repeating qualifiers (which we will see in the next section) to multiple characters
+  * Also, they can be **backreferenced**. For example, if we want to find all words of four letters where the first two letters are the inverse of the last two, like `noon` and `peep`, we can use the pattern `\b(\w)(\w)\2\1\b`. The expression `\2` will match the second group identified before, while the expression `\1` the first group.
+  * Groups are also very useful when you have to specify **alternatives** using the character `|`. We will see an example of this in exercise **d** below.
+
+**Exercises**
+
+* a) https://regexone.com/lesson/matching_characters
+* b) https://regexone.com/lesson/excluding_characters
+* c) https://regexone.com/lesson/line_beginning_end
+* d) https://regexone.com/lesson/conditionals
+
 ## Repeating Qualifiers
 
 | Metacharacter | Name                 | Meaning                                    |

@@ -1,5 +1,27 @@
 # Regular Expressions 2
 
+## Greediness and laziness
+
+Let's take this sample sentence (which already hints at our frustration in a couple of seconds):
+
+```
+I would like my regex to take this sentence, but it actually takes more, and I don't know why!
+```
+
+We would like to write a regex that takes the text **until the first comma**. Our best guess would be to write a regex like `.+,` (to also allow for other non-alphanumeric characters before the comma). However, what our regex engine matches is not the text until the first comma, but the text **until the *second* comma**. Why?
+
+Because repeating qualifiers (like the `+` we used) are **greedy** by default behaviour. This means they tend to take **as much text as possible** (actually, in the case of `.+` the whole text of the document) and then take steps back (**backtrack**) until they satisfy the required condition (in our case, that a comma must be at the end of the string).
+
+One possible solution would be to make this repeating qualifier **lazy**. We can do this by adding a question mark `?` just after the repeating qualifier, so our regex will become `.+?,`
+
+> [!NOTE]
+>
+> The question mark `?` used as a **modifier** to make a repeating qualifier lazy should not be confused with the question mark `?` used as a **repeating qualifier** itself (meaning zero or one repetition, as we saw in the previous section).
+
+Another solution would be to use a different regex, for example one where we **exclude the character *comma*** in a set with a repeating qualifier, and then add the comma outside the set: `[^,]+,`
+
+(The latter solution is actually more efficient from a computational point of view.)
+
 ## Anchors
 
 Anchors match a pattern based on its position in the string. They are useful for defining the context in which a pattern should be matched within a text, allowing for more precise and controlled matching.<br>
@@ -70,7 +92,7 @@ A word boundary is a position between a character that can be matched by the set
 
 Regular expression can be also used for the search & replace.
 
-In the simple case you just search using the regular expression and replace it with a fixed text (try it out on the regex101 using the **Substition** function).
+In the simple case you just search using the regular expression and replace it with a fixed text (try it out on the regex101 using the **Substitution** function).
 
 On top of that it is possible to use a selected parts of the match in the replace (so-called _backreferences_):
 
@@ -83,22 +105,28 @@ As an example let's naively reorder a conditional sentence:
 
 - search for: `(.*), ?(.*)[.]`
 - replace with: `$2, $1.`
-- test string: `If you see a red light, stop.`
-- result: `stop, If you see a red light.`
+- test string: `if you see a red light, stop.`
+- result: `stop, if you see a red light.`
 
 ## Flags
 
 To enable some more flexibility or specification during the search for the pattern, some regex flags can be used. We will quickly overview the important ones that can be integrated in more complicated patterns:
 
-- **global** search through the whole string, and do not return just after the first occurence
-- **multi line** total string match, equal to: `^pattern$`
-- **insensitive** case insensitive search (both lower and upper case search)
-- **extended** ignore whitespace
+- **global** **(g)** search through the whole string, and do not return just after the first occurence
+- **multi line** **(m)** total string match, equal to: `^pattern$`
+  - when you have multi line activated, the caret `^` and the dollar sign `$` match beginning and end of each line
+  - with no multi line, the same symbols `^` and `$` match beginning and end of the whole string (i.e., the whole text/document you have)
+
+- **insensitive** **(i)** case insensitive search (both lower and upper case search)
+- **extended** **(x)** ignore whitespace
 
 **Remarks**:
 
-- Flags available and their exact behavior may (and do) vary between regex implementations (check it on the regex101 by choosing different flavors). Check the documentation of the app/language for details.
+- In some applications, you can use flags **inline** by specifying them at the end of a regex pattern, using the letter specified in brackets above, e.g. `/pattern/m` (for multi line)
+- Flags available and their exact behavior may (and do) vary between regex implementations (check it on [regex101](https://regex101.com) by choosing different flavors; you can change flags by clicking on the green letters at the end of the regular expression field: see screenshot). Check the documentation of the app/language for details.
 - Some applications (most notably text editors) do not expose flags or do it indirectly (e.g. with a "ignore case" checkbox in the search dialog).
+
+<img src="images/regex_flags.png" alt="regex_flags" width="200" />
 
 ## Where can you use regular expressions?
 
