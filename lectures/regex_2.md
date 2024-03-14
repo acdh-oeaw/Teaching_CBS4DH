@@ -150,18 +150,19 @@ Download it (or better find it in your cloned repository) and open it with [Goog
 
 ## Regex in Corpora and Text Collections
 
-Many digital corpora and collections offer the possibility to optimize or expand one's full text or metadata search through regular expressions. Here are two exemplary German and one exemplary English resources where regex can be used:
+Many digital corpora and collections offer the possibility to optimize or expand one's full text or metadata search through regular expressions. Here are two exemplary German and one exemplary English resources where this can be applied:
 
 - **Deutsches Textarchiv (DTA)**: [Corpus](https://www.deutschestextarchiv.de/) | [Documentation](https://www.deutschestextarchiv.de/doku/DDC-suche_hilfe#suche_mit_regul)
 - **Wienerisches DIGITARIUM**: [Corpus](https://digitarium-app.acdh.oeaw.ac.at/) | [Documentation](https://digitarium-app.acdh.oeaw.ac.at/search.html?id=jg17xx)
 - **Brown Corpus**: [Corpus](https://app.sketchengine.eu/#dashboard?corpname=preloaded%2Fbrown_1) | [Documentation](https://www.sketchengine.eu/quick-start-guide/concordance-lesson/)
 
-Note: Different corpora and collections often involve specific ways to search with regex - (reading the) documentation is key!
+> [!NOTE]
+> Different corpora and collections often involve specific ways to search with regex - (reading the) documentation is key!
 
 **Tasks**
 
-- Use Regex to find the longest word given within these corpora - which word is it (in total and per corpus) and how many characters does it have? Which differences do you witness between the different corpora during your search?
-- Historically, the German word _Kurier_ has appeared in a variety of writing variants, such as: _Courrier, Currier, Curier, Curir, Courier, Courir, Kourrier, Kurrier, Kurier, Kurir, Kourier, Kourir, Courrir, Currir, Kourrir, Kurrir_ - formulate one regular expression to catch all of the given variants! Using this expression, how many can hits do you get within Deutsches Textarchiv?
+- Use Regex to find the longest word given within each of these corpora - which words are the longest and how many characters do they (approximately) have? Which differences do you witness between the different corpora during your search?
+- Historically, the German word _Kurier_ has appeared in a variety of writing variants, such as: _Courrier, Currier, Curier, Curir, Courier, Courir, Kourrier, Kurrier, Kurier, Kurir, Kourier, Kourir, Courrir, Currir, Kourrir, Kurrir_ - formulate one regular expression to catch all of these variants! How many can hits do you get within Deutsches Textarchiv?
 - Which other research question(s) could you ask with the power of Regex?
 
 <!--
