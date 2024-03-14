@@ -112,15 +112,21 @@ As an example let's naively reorder a conditional sentence:
 
 To enable some more flexibility or specification during the search for the pattern, some regex flags can be used. We will quickly overview the important ones that can be integrated in more complicated patterns:
 
-- **global** search through the whole string, and do not return just after the first occurence
-- **multi line** total string match, equal to: `^pattern$`
-- **insensitive** case insensitive search (both lower and upper case search)
-- **extended** ignore whitespace
+- **global** **(g)** search through the whole string, and do not return just after the first occurence
+- **multi line** **(m)** total string match, equal to: `^pattern$`
+  - when you have multi line activated, the caret `^` and the dollar sign `$` match beginning and end of each line
+  - with no multi line, the same symbols `^` and `$` match beginning and end of the whole string (i.e., the whole text/document you have)
+
+- **insensitive** **(i)** case insensitive search (both lower and upper case search)
+- **extended** **(x)** ignore whitespace
 
 **Remarks**:
 
-- Flags available and their exact behavior may (and do) vary between regex implementations (check it on the regex101 by choosing different flavors). Check the documentation of the app/language for details.
+- In some applications, you can use flags **inline** by specifying them at the end of a regex pattern, using the letter specified in brackets above, e.g. `/pattern/m` (for multi line)
+- Flags available and their exact behavior may (and do) vary between regex implementations (check it on [regex101](https://regex101.com) by choosing different flavors; you can change flags by clicking on the green letters at the end of the regular expression field: see screenshot). Check the documentation of the app/language for details.
 - Some applications (most notably text editors) do not expose flags or do it indirectly (e.g. with a "ignore case" checkbox in the search dialog).
+
+<img src="images/regex_flags.png" alt="regex_flags" width="200" />
 
 ## Where you can use regular expressions?
 
