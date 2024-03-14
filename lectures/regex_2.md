@@ -1,5 +1,27 @@
 # Regular Expressions 2
 
+## Greediness and laziness
+
+Let's take this sample sentence (which already hints at our frustration in a couple of seconds):
+
+```
+I would like my regex to take this sentence, but it actually takes more, and I don't know why!
+```
+
+We would like to write a regex that takes the text **until the first comma**. Our best guess would be to write a regex like `.+,` (to also allow for other non-alphanumeric characters before the comma). However, what our regex engine matches is not the text until the first comma, but the text **until the *second* comma**. Why?
+
+Because repeating qualifiers (like the `+` we used) are **greedy** by default behaviour. This means they tend to take **as much text as possible** (actually, in the case of `.+` the whole text of the document) and then take steps back (**backtrack**) until they satisfy the required condition (in our case, that a comma must be at the end of the string).
+
+One possible solution would be to make this repeating qualifier **lazy**. We can do this by adding a question mark `?` just after the repeating qualifier, so our regex will become `.+?,`
+
+> [!NOTE]
+>
+> The question mark `?` used as a **modifier** to make a repeating qualifier lazy should not be confused with the question mark `?` used as a **repeating qualifier** itself (meaning zero or one repetition, as we saw in the previous section).
+
+Another solution would be to use a different regex, for example one where we **exclude the character *comma*** in a set with a repeating qualifier, and then add the comma outside the set: `[^,]+,`
+
+(The latter solution is actually more efficient from a computational point of view.)
+
 ## Anchors
 
 Anchors match a pattern based on its position in the string. They are useful for defining the context in which a pattern should be matched within a text, allowing for more precise and controlled matching.<br>
@@ -183,6 +205,6 @@ If we still have time, we can try to convert a Wikipedia's "year overview" to a 
     * Start with extracting the part of the whole document you are interested in (note that extracting is the same as "removing the other parts").
     * Then find a way to match the whole "record".
     * Finally try to split each record into header and content.
--->
-**Further practice**
-[Link to excercises](https://github.com/acdh-oeaw/Teaching_CBS4DH/blob/2022S/exercise/regex%20exercises/regex2_exercise.txt).
+    -->
+    **Further practice**
+    [Link to excercises](https://github.com/acdh-oeaw/Teaching_CBS4DH/blob/2022S/exercise/regex%20exercises/regex2_exercise.txt).
