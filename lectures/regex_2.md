@@ -100,7 +100,7 @@ To enable some more flexibility or specification during the search for the patte
 - Flags available and their exact behavior may (and do) vary between regex implementations (check it on the regex101 by choosing different flavors). Check the documentation of the app/language for details.
 - Some applications (most notably text editors) do not expose flags or do it indirectly (e.g. with a "ignore case" checkbox in the search dialog).
 
-## Where you can use regular expressions?
+## Where can you use regular expressions?
 
 All around! (which is why we are learning them)
 
@@ -112,56 +112,31 @@ Particularly:
 - In each and every serious programming language.
 - In each and every [IDE](https://en.wikipedia.org/wiki/Integrated_development_environment) (once you start programming).
 - In CLI tools like `grep` (find matching files/lines) or `sed` (find & replace).
+- In many digital corpora and text collections.
 
 ## Regex with Python
 
-We will now focus on Regex representation in _Python_. The Regex library is imported in Python with the `re` module:
-
-```Python
-import re
-
-# example: substitute every "0" occurence with "1"
-re.sub(r"0", "1", "023") # output = "123"
-```
-
-For the examples we will use the `match` function of Python, and will take a deeper look at the different functions in the next lecture.
-
-```Python
-import re
-
-# search the regular expression pattern and return the first occurrence (it checks the match with the beginning of the string)
-# first parameter is the pattern
-# second parameter is the string
-# output is TRUE or FALSE.
-# If there is a match, we can get extra information from the console: <re.Match object; span=(first_index, last_index), match='matched_string'>
-re.matches(r"REGEX", "STRING")
-```
-
-```Python
-import re
-
-re.matches(r"[e]*", "star")
-re.matches(r"st[a]*r", "star")
-
-# What are the outputs of the next functions?
-re.matches(r"st[ea]*r", "star")
-re.matches(r"sta[a]*r", "star")
-re.matches(r"st[ea]*r", "star")
-```
+We will now focus on using Regex in _Python_, with the help of the library _re_. 
+To start, go to the "exercises" folder - here you will find a [Jupyter Notebook](https://jupyter.org/) called "Regular_Expressions_in_Python_CBS4DH.ipynb".
+Download it (or better find it in your cloned repository) and open it with [Google Colab](https://colab.google/) or - in case you already have Python installed - with Visual Studio Code.
 
 ## Regex in Corpora and Text Collections
 
-- Deutsches Textarchiv (DTA): [Corpus](https://www.deutschestextarchiv.de/)|[Documentation](https://www.deutschestextarchiv.de/doku/DDC-suche_hilfe#suche_mit_regul)
-- Digitales Wörterbuch der deutschen Sprache (DWDS): [Corpus](https://www.dwds.de/)|[Documentation](https://www.dwds.de/d/korpussuche#re) 
-- Wienerisches DIGITARIUM: [Corpus](https://digitarium-app.acdh.oeaw.ac.at/)|[Documentation]
-- Brown Corpus: [Corpus](https://app.sketchengine.eu/#dashboard?corpname=preloaded%2Fbrown_1)|[Documentation](https://www.sketchengine.eu/quick-start-guide/concordance-lesson/)
+Many digital corpora and collections offer the possibility to optimize or expand one's full text or metadata search through regular expressions. Here are two exemplary German and one exemplary English resources where regex can be used:
+
+- **Deutsches Textarchiv (DTA)**: [Corpus](https://www.deutschestextarchiv.de/) | [Documentation](https://www.deutschestextarchiv.de/doku/DDC-suche_hilfe#suche_mit_regul)
+- **Wienerisches DIGITARIUM**: [Corpus](https://digitarium-app.acdh.oeaw.ac.at/) | [Documentation](https://digitarium-app.acdh.oeaw.ac.at/search.html?id=jg17xx)
+- **Brown Corpus**: [Corpus](https://app.sketchengine.eu/#dashboard?corpname=preloaded%2Fbrown_1) | [Documentation](https://www.sketchengine.eu/quick-start-guide/concordance-lesson/)
+
+Note: Different corpora and collections often involve specific ways to search with regex - (reading the) documentation is key!
 
 **Tasks**
 
-- Use Regex to find the longest word given within these corpora - which word is it and how many characters does it have? Which differences do you witness between the different corpora during your search?
+- Use Regex to find the longest word given within these corpora - which word is it (in total and per corpus) and how many characters does it have? Which differences do you witness between the different corpora during your search?
+- Historically, the German word _Kurier_ has appeared in a variety of writing variants, such as: _Courrier, Currier, Curier, Curir, Courier, Courir, Kourrier, Kurrier, Kurier, Kurir, Kourier, Kourir, Courrir, Currir, Kourrir, Kurrir_ - formulate one regular expression to catch all of the given variants! Using this expression, how many can hits do you get within Deutsches Textarchiv?
+- Which other research question(s) could you ask with the power of Regex?
+
 <!--
-- Identify as many street names (e.g. Judengasse, Wallnerstraße) as possible within ...
-- Which events that happened on the ... are captured in the ...?
 
 ## More ambitious task
 
@@ -184,5 +159,3 @@ If we still have time, we can try to convert a Wikipedia's "year overview" to a 
     * Then find a way to match the whole "record".
     * Finally try to split each record into header and content.
 -->
-**Further practice**
-[Link to excercises](https://github.com/acdh-oeaw/Teaching_CBS4DH/blob/2022S/exercise/regex%20exercises/regex2_exercise.txt).
