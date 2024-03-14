@@ -92,7 +92,7 @@ A word boundary is a position between a character that can be matched by the set
 
 Regular expression can be also used for the search & replace.
 
-In the simple case you just search using the regular expression and replace it with a fixed text (try it out on the regex101 using the **Substition** function).
+In the simple case you just search using the regular expression and replace it with a fixed text (try it out on the regex101 using the **Substitution** function).
 
 On top of that it is possible to use a selected parts of the match in the replace (so-called _backreferences_):
 
