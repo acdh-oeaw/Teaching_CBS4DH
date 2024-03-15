@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This activity provides a basic understanding of webtechnology relevant for Digital Humanities as well as a hands-on introduction to the principal technologies that make web pages work: HTML, CSS, and JavaScript. These are large technologies that cannot be learned in a day, but the good news is that it doesn’t take much practice to become familiar and comfortable with the features you use most. There are links at the bottom of this page to tutorials and references, which you can visit to learn more.
+This activity provides a basic understanding of webtechnology relevant for Digital Humanities as well as a hands-on introduction to the principal technologies that make web pages work: HTML, CSS, and JavaScript. These are large technologies that cannot be learned in a day, but the good news is that it doesn’t take much practice to become familiar and comfortable with the features you use most. There are links at the bottom of this page to tutorials and references, which you can visit to learn more...
 
 ## Internet Technologies - The Idea of the Network
 When thinking about the Internet the first thing that often comes to mind are specific activities: email, file transfer, messaging, data storage in the "cloud" and also the World Wide Web (www). But these are only the surface of what the Internet. A core concept and the technology behind all the services we are operating with today is the network.
