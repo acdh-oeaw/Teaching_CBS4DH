@@ -55,16 +55,16 @@ Each device connected in the network must have its own, unique Internet Protocol
 **IPv4:** This is a 32bit addressing scheme in the following syntax:
 ###.###.###.### (where ### = 1-255). e.g. 131.130.70.8
 
-**IPv6:** this is a 128 bit addressing scheme expressed in hexadecimal which can accomodate up to 2^128 devices, thus many more than the previous IP-address standard. This is regarded sufficient for the foreseable future.
+**IPv6:** this is a 128 bit addressing scheme expressed in hexadecimal which can accommodate up to 2^128 devices, thus many more than the previous IP-address standard. This is regarded sufficient for the foreseeable future.
 
 e.g. 2001:0DB8:AC10:FE01:0000:0000:0000:0000
 
-IP addresses are assigned by the so-called **DHCP server** and are usually temporary. There are also permanent IP-adresses (useful e.g. for a server).
+IP addresses are assigned by the so-called **DHCP server** and are usually temporary. There are also permanent IP-addresses (useful e.g. for a server).
 
 #### Domain Name
 
 A domain name is an IP-address expressed in natural language, e.g. univie.ac.at.
-This is made possible through the so-called **Domain Name System (DNS)**. This service serves as a registry matching IP-Adresses with domain names.
+This is made possible through the so-called **Domain Name System (DNS)**. This service serves as a registry matching IP-Addresses with domain names.
 
 **Example:** IP-address 131.130.70.8 resolves to domain name "univie.ac.at"
 
@@ -78,7 +78,7 @@ This is made possible through the so-called **Domain Name System (DNS)**. This s
 
 ### Web 1.0 - Network of Documents
 
-Fast forwarding a bit the Web 1.0 came about in the 1990s, buiding up on the network technology of the Internet. This was the Web as a publication method built on technologies of Hypertext and Hypermedia, resulting in a network of documents. Prime example for the technology that became widely adopted and is used until today is the World Wide Web (www) as one specific service on the Internet.
+Fast forwarding a bit the Web 1.0 came about in the 1990s, building up on the network technology of the Internet. This was the Web as a publication method built on technologies of Hypertext and Hypermedia, resulting in a network of documents. Prime example for the technology that became widely adopted and is used until today is the World Wide Web (www) as one specific service on the Internet.
 
 The www is a high profile example of a hypertext, which is a retrieval system of linked computer based documents that allows a user to click on a region (called an anchor or a hyperlink) to obtain another document called webpage. At a later point multimedia elements such as audio, video, graphics could be embedded into the textual documents, transforming hypertext to hypermedia.
 
@@ -256,7 +256,7 @@ Currently you will see nothing. However, we will create something similar to the
 ### Looking at CSS
 
 Create a directory `static` and sub directory `css` inside your `html-yourname` dir.
-Create a new file called `style.css` and save it in the `static/css` directory you previosly created and open it in _VSCode_. Example CSS: [web/web_exercise_2.html](web/web_exercise_2.html).
+Create a new file called `style.css` and save it in the `static/css` directory you previously created and open it in _VSCode_. Example CSS: [web/web_exercise_2.html](web/web_exercise_2.html).
 
 Before we work with CSS open your `index.html` file and make the following changes:
 
