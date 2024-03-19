@@ -305,8 +305,8 @@ Before we work with CSS open your `index.html` file and make the following chang
 ```
 
 1. Notice the difference that this file has added a `<link>` element in the `<head>`, which uses the `@href` attribute to point to the CSS file.
-2. Some elements like `<h3>` have attributes called `class` and one or serveral values inside.
-3. Open your `style.css` file and add the following CSS code in _VSCode_ and notice that it implements the commands described above, which are responsible for the color, weight and shape of the paragraphs and the table. Your CSS file should look something like. Example CSS: [web/web_exercise_2.css](web/web_exercise_2.css)
+2. Some elements like `<h3>` have attributes called `class` and one or several values inside.
+3. Open your `style.css` file and add the following CSS code in _VSCode_ and notice that it implements the commands described above, which are responsible for the color, weight and shape of the paragraphs and the table. Your CSS file should look something like this example: [web/web_exercise_2.css](web/web_exercise_2.css)
 4. Reload your `index.html` in your Web Browser and notice the changes.
 
 ```css
