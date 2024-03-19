@@ -20,7 +20,7 @@ When thinking about the Internet the first thing that often comes to mind are sp
 
 The hardware backbone and core technology is the **Internet**, which stands for _interconnected networks_. Thus these are computers that are connected to a loose association of thousands of different networks, run by different organization and using different technologies, which are connected together in a giant network of networks. Here the network is not just a software implementation but indeed a massive physical hardware infrastructure, making the connection between computers and networks possible and therewith enabling the communication we are used to today.
 
-### Key Technology Concepts of the Internet
+### Protocols
 
 First of all we need protocols, that define the format and the order of messages exchanged between two or more communicating entities, as well as the actions taken using that message.
 
@@ -67,6 +67,14 @@ A domain name is an IP-address expressed in natural language, e.g. univie.ac.at.
 This is made possible through the so-called **Domain Name System (DNS)**. This service serves as a registry matching IP-Adresses with domain names.
 
 **Example:** IP-address 131.130.70.8 resolves to domain name "univie.ac.at"
+
+#### Ports
+
+- Computers run programs, which _listen_ at _ports_
+- Port: a number that tells the computer which program to send the message to
+- Restricted ports: 0-1023 https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers
+- Registered ports: everything in /etc/services
+- Once you learn enough Python, you too can write a program that listens at a port!
 
 ### Web 1.0 - Network of Documents
 
