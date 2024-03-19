@@ -237,14 +237,6 @@ Currently you will see nothing. However, we will create something similar to the
 - Modify the text of the HTML file in _VSCode_. You might add additional paragraphs (`<p>`) elements or headers (`<h1>` through `<h6>`). You can change the bulleted list to a numbered one by changing the wrapper from `<ul>` to `<ol>` (you need to change both the start and end tag, although if you change the start tag first, _VSCode_ will usually change the end tag automatically to match).
 - Save your document from within _VSCode_ and then reload it into the browser, observing the changes.
 
-### Push changes to your GitHub repository
-
-- `git add --all`
-- `git commit -m "added index.html"`
-- `git pull origin main`
-- resolve merge conflicts if necessary
-- `git push origin main`
-
 ## Styling HTML with CSS
 
 ### About CSS
@@ -356,68 +348,6 @@ div {
 6. Bolding is set with the `font-weight` property, but italics are turned on by setting the `font-style` property to “italic”. Italicize the `<h1>` header by creating a new rule with `h1` as the selector, `font-style` as the property name, and “italic” as the property value.
 7. You can set a `background-color` property for any element, or for the entire page. Try it! (To specify a property for the entire page, create a CSS rule with a selector for “body”, since the `<body>` element contains everything on the page.)
 8. Try changing the size of an element with the `font-size` property. Values can be absolute (e.g., “50px” for 50 pixels) or relative (e.g., “small” or “smaller”).
-
-### Push changes to your GitHub repository
-
-- `git add --all`
-- `git commit -m "added style.css and changed index.html by adding classes"`
-- `git pull origin main`
-- resolve merge conflicts if necessary
-- `git push origin main`
-
-## GitHub Pages
-
-Open this link to read more about: [What is GitHub Pages?](https://pages.github.com)
-
-### Manual Workflow to deploy Github Pages
-
-- Open _Settings_ of your Github Repository
-- Click on _Pages_
-- Select a _Source_ -> change dropdownmenu from _None_ to _master_ or _main_ and _root_ to _html-yourname_
-- Click _save_
-
-### Automated Workflow to deploy Github Pages
-
-- Requires directories: `.github` and a sub directory `workflows` in your Github (git) repository
-- Requires a file called `build.yml` stored in the `workflows`.
-
-#### Inside build.yml
-
-Copy&Paste the following or download this file: [githubActions/build.yml](githubActions/build.yml)
-
-```bash
-name: Build and publish
-
-on:
-  push:
-
-jobs:
-  build_pages:
-    name: Publish as GitHub Pages Website
-    runs-on: ubuntu-latest
-    steps:
-    - name: Perform Checkout
-      uses: actions/checkout@v2
-    - name: Deploy GH Pages
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{secrets.GITHUB_TOKEN}}
-        publish_dir: ./html
-```
-
-### Push changes to your GitHub repository
-
-- `git add --all`
-- `git commit -m "added GitHub Actions workflow"`
-- `git pull origin main`
-- resolve merge conflicts if necessary
-- `git push origin main`
-
-See Actions work!
-
-### Settings / Pages
-
-Select the correct Source by changing the `Branch` to "gh-pages" and click save.
 
 ## JavaScript
 
@@ -581,14 +511,6 @@ The `initialize()` function fires automatically, thanks to the bootstrap line, a
 #### The `toggleColor()` function
 
 The `toggleColor()` function fires whenever the user clicks a button because in the `initialize()` function we told the buttons to listen for and respond to clicks. When `toggleColor()` fires, it finds all of the paragraphs and tables (only one in this case), loops over them, and changes their color. The button that was clicked is represented in the function by the magic word `this`, and the expression `this.value` returns the value of the `@value` attribute on the `<button>` element that was clicked. Since those values are “red” and “green”, we can use them directly to set the color style property of the paragraphs.
-
-### Push changes to your GitHub repository
-
-- `git add --all`
-- `git commit -m "added javascript files"`
-- `git pull origin main`
-- resolve merge conflicts if necessary
-- `git push origin main`
 
 #### Watch the JavaScript work
 
