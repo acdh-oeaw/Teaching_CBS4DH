@@ -237,7 +237,7 @@ Currently you will see nothing. However, we will create something similar to the
 - Fork this [Repository](https://github.com/acdh-oeaw/Teaching_CBS4DH_exercise) and use `git clone` to access the files on your local machine.
 - Start _VSCode_.
 - Create a new directory called `html-yourname` and a new file called `index.html`. The latter must be saved in the `html-yourname` dir.
-  Exercise example: [web_exercise_1.html](web/web_exercise_1.html).
+  Exercise example: [web/web_exercise_1/web_exercise_1.html](web/web_exercise_1/web_exercise_1.html).
 - Open `index.html` in _VSCode_.
 - Start a web browser.
 - Open the same file in your browser (`Ctrl+o` [Windows] or `Cmd+o` [Mac OS] to open a file from the filesystem).
@@ -256,7 +256,7 @@ Currently you will see nothing. However, we will create something similar to the
 ### Looking at CSS
 
 Create a directory `static` and sub directory `css` inside your `html-yourname` dir.
-Create a new file called `style.css` and save it in the `static/css` directory you previously created and open it in _VSCode_. Example CSS: [web/web_exercise_2.html](web/web_exercise_2.html).
+Create a new file called `style.css` and save it in the `static/css` directory you previously created and open it in _VSCode_. Example CSS: [web/web_exercise_2/web_exercise_2.css](web/web_exercise_2/web_exercise_2.css).
 
 Before we work with CSS open your `index.html` file and make the following changes:
 
@@ -306,7 +306,7 @@ Before we work with CSS open your `index.html` file and make the following chang
 
 1. Notice the difference that this file has added a `<link>` element in the `<head>`, which uses the `@href` attribute to point to the CSS file.
 2. Some elements like `<h3>` have attributes called `class` and one or several values inside.
-3. Open your `style.css` file and add the following CSS code in _VSCode_ and notice that it implements the commands described above, which are responsible for the color, weight and shape of the paragraphs and the table. Your CSS file should look something like this example: [web/web_exercise_2.css](web/web_exercise_2.css)
+3. Open your `style.css` file and add the following CSS code in _VSCode_ and notice that it implements the commands described above, which are responsible for the color, weight and shape of the paragraphs and the table. Your CSS file should look something like this example: [web/web_exercise_2/web_exercise_2.css](web/web_exercise_2/web_exercise_2.css)
 4. Reload your `index.html` in your Web Browser and notice the changes.
 
 ```css
@@ -365,7 +365,7 @@ div {
 
 ### The HTML and CSS behind our JavaScript
 
-Open your `index.html` file in _VSCode_. Exercise example: [web/web_exercise_3.html](web/web_exercise_3.html)
+Open your `index.html` file in _VSCode_. Exercise example: [web/web_exercise_3/web_exercise_3.html](web/web_exercise_3/web_exercise_3.html)
 
 It should look something like:
 
@@ -421,7 +421,7 @@ It should look something like:
 2. Notice that except for the filename and title, there are only two differences between this file and the last one. The first difference is that this file has added a `<script>` element in the `<head>`, which uses the `@src` attribute to point to the separate JavaScript file. The second is that we’ve created two `<button>` elements. The `@value` of the button is the text that it displays. As we’ll see below, the `@id` values let the CSS select the buttons separately, so that it can color them differently.
 3. Open the HTML file in a browser. Notice that the page looks the same as the one in the CSS exercise, except for the addition of the buttons.
 
-Open your `style.css` file in _VSCode_. Exercise example: [web/web_exercise_3.css](web/web_exercise_3.css).
+Open your `style.css` file in _VSCode_. Exercise example: [web/web_exercise_3/web_exercise_3.css](web/web_exercise_3/web_exercise_3.css).
 
 It should look something like:
 
@@ -480,7 +480,7 @@ Click the red or green buttons in the web browser and see how the color of the p
 ### How the JavaScript works
 
 Create a new directory as sub directory of `html/static` called `js`.
-Create a new file called `toggleColor.js`, save it in the `html/static/js` directory and open it in _VSCode_. Exercise example: [web/web_exercise_3.js](web/web_exercise_3.js).
+Create a new file called `toggleColor.js`, save it in the `html/static/js` directory and open it in _VSCode_. Exercise example: [web/web_exercise_3/web_exercise_3.js](web/web_exercise_3/web_exercise_3.js).
 
 Copy&Paste the following JavaScript code into your `toggleColor.js` file:
 
