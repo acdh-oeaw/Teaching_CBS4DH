@@ -83,7 +83,7 @@ For the characters, either you specify them _individually_ or use _ranges_ by gi
   * If you want to use the **hyphen** as an actual character inside a set (and not to specify a range), you can add it **at the beginning or end of a set**, for example `[-A-Z]` or `[abcd-]` (or between two ranges, but this might complicate things).
 * About **groups** of characters `( )`
   * Groups can be used for a **variety of purposes**. We will see some uses of groups later, but in the meantime let's say that groups can be used to apply repeating qualifiers (which we will see in the next section) to multiple characters
-  * Also, they can be **backreferenced**. For example, if we want to find all words of four letters where the first two letters are the inverse of the last two, like `noon` and `peep`, we can use the pattern `\b(\w)(\w)\2\1\b`. The expression `\2` will match the second group identified before, while the expression `\1` the first group.
+  * Also, they can be **backreferenced**. For example, if we want to find all words of four letters where the first two letters are the inverse of the last two, like `noon` and `peep`, we can use the pattern `\b(\w)(\w)\2\1\b`. The expression `\2` will match the second group identified before, while the expression `\1` the first group (depending on the regex flavor, you might have to use different characters to backreference groups, e.g.  `\\1` or `$1` instead of `\1`). More information about backreferences will be given in the section [Substitution](regex_2.md#substitution) in the next lesson.
   * Groups are also very useful when you have to specify **alternatives** using the character `|`. We will see an example of this in exercise **d** below.
 
 **Exercises**
