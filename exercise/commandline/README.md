@@ -4,7 +4,7 @@
 
 - [ ] Go to the extracted folder
 
-- [ ] Go into the "exercise/lecture1" folder
+- [ ] Go into the "exercise/commandline" folder
 
 - [ ] Create a directory "comic"
 
@@ -14,10 +14,8 @@
 
 - [ ] Delete the image of Cory Doctorov in the images folder.
 
-- [ ] Remove the "deleteme" folder.
-
 - [ ] Execute these commands or think through them:
-- [ ] mkdir backup; mkdir img-dateien/backup; touch backup/a; touch img-dateien/backup/b; cd img-dateien
+- [ ] `mkdir backup; mkdir images/backup; touch backup/a; touch images/backup/b; cd images`
 - [ ] What does `ls ../backup` show you?
 
 - [ ] In the folder `data` are some empty `.csv` files with years in their filename - create the one thats missing.
@@ -34,14 +32,14 @@
 
 - [ ] Create a `kittens` folder
 
-- [ ] Move all files from `exercises/lecture1/images` that start with a `1` to the kittens folder. Try to do it with only one command.
+- [ ] Move all files from `exercises/commandline/images` that start with a `1` to the kittens folder. Try to do it with only one command.
 
 
 # lesson 2
 
 - [ ] How big are the files in the `kittens` folder we created yesterday?
 
-- [ ] Create a list of all the `.jpg` files in the `lecture1` folder and write it to a file
+- [ ] Create a list of all the `.jpg` files in the `commandline` folder and write it to a file
 
 - [ ] In the folder `chemistry` are a bunch of files - for every file, write the number of lines together with the filename to a file `lines.txt`
 
