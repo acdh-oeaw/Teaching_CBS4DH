@@ -5,7 +5,7 @@ Teaching materials for AR Methodological Workshop - Computational Background Ski
 Time | Wednesday (5.3) | Thursday (6.3) | Wednesday (19.3) | Thursday (20.3) | Wednesday (26.3) | Thursday (27.3)
 ---- | ---- | ---- | ---- | ---- | ---- | ---- |
 13:15 – 14:45 |  [Intro and Setup](lectures/intro_and_setup.md) | [Command line 2](lectures/command_2.md) | [Git 1](lectures/git_1.md) | [Regular expressions 1](lectures/regex_1.md) | [Web technologies 1](lectures/web.md) | [Digital Toolbox](lectures/Toolbox_CBS4DH.pdf)
-15:00 – 16:30 |  [Command line 1](lectures/command_1.md) | [File formats and encodings](lectures/files.md) | [Git 2](lectures/git_2.md), [Git 3](lectures/git_3.md) | [Regular expressions 2](lectures/regex_2.md) | [Web technologies 2](lectures/web.md) |  Questions & Answers 
+15:00 – 16:30 |  [Command line 1](lectures/command_1.md) | [File formats and encodings](lectures/dataformats.md) | [Git 2](lectures/git_2.md), [Git 3](lectures/git_3.md) | [Regular expressions 2](lectures/regex_2.md) | [Web technologies 2](lectures/web.md) |  Questions & Answers 
 
 ## Information about the course (u:find)
 
