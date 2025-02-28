@@ -1288,6 +1288,10 @@ Richard III, Children
 As you like it, Duke senior
 Antony and Cleopatra, Second messenger
 Othello, Iago
+Measure for measure, Messenger
+Measure for measure, Messenger
+Measure for measure, Messenger
+Measure for measure, Messenger
 Henry VIII, Old lady
 Richard III, Queen elizabeth
 Henry VI Part 2, Commons
@@ -1300,6 +1304,10 @@ Julius Caesar, Bastard
 King John, Messenger
 macbeth, Third witch
 Julius Caesar, Volumnius
+As you like it, First lord
+As you like it, First lord
+As you like it, First lord
+As you like it, First lord
 Antony and Cleopatra, Thyreus
 King John, Gurney
 Merchant of Venice, Lorenzo
