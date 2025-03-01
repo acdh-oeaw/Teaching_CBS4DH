@@ -1,0 +1,17 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="cbs4dh">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="lecture" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="part1"/>
+              <xs:element type="xs:string" name="part2"/>
+            </xs:sequence>
+            <xs:attribute type="xs:date" name="date"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
