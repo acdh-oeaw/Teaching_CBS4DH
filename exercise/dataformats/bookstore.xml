@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bookstore>
+  <book category="cooking">
+    <title lang="en">Everyday Italian</title>
+    <author>Giada De Laurentiis</author>
+    <year>2005</year>
+    <price>30.00</price>
+  </book>
+  <book category="web">
+    <title lang="en">Learning XML</title>
+    <author>Erik T. Ray</author>
+    <year>2003</year>
+    <price>39.95</price>
+  </book>
+  <book category="fantasy">
+    <title lang="en">The Colour of Magic</title>
+    <author>Terry Pratchett</author>
+    <year>1983</year>
+    <price>11.95</price>
+  </book>
+  <book category="fantasy">
+    <title lang="en">The Light Fantastic</title>
+    <author>Terry Pratchett</author>
+    <year>1986</year>
+    <price>13.95</price>
+  </book>
+  <book category="fantasy">
+    <title lang="en">Equal Rites</title>
+    <author>Terry Pratchett</author>
+    <year>1987</year>
+    <price>17.95</price>
+  </book>
+  <book category="fantasy">
+    <title lang="en">Mort</title>
+    <author>Terry Pratchett</author>
+    <year>1987</year>
+    <price>14.95</price>
+  </book>
+  <book category="fantasy">
+    <title lang="en">Sourcery</title>
+    <author>Terry Pratchett</author>
+    <year>1988</year>
+    <price>9.95</price>
+  </book>
+  <book category="fantasy">
+    <title lang="en">Wyrd Sisters</title>
+    <author>Terry Pratchett</author>
+    <year>1988</year>
+    <price>22.95</price>
+  </book>
+  <book category="fantasy">
+    <title lang="en">Pyramids</title>
+    <author>Terry Pratchett</author>
+    <year>1989</year>
+    <price>23.95</price>
+  </book>
+  <book category="fantasy">
+    <title lang="en">Guards! Guards!</title>
+    <author>Terry Pratchett</author>
+    <year>1989</year>
+    <price>11.95</price>
+  </book>
+  <book category="fantasy">
+    <title lang="en">Eric</title>
+    <author>Terry Pratchett</author>
+    <year>1990</year>
+    <price>13.95</price>
+  </book>
+  <book category="fantasy">
+    <title lang="en">Moving Pictures</title>
+    <author>Terry Pratchett</author>
+    <year>1990</year>
+    <price>13.95</price>
+  </book>
+  <book category="fantasy">
+    <title lang="en">Reaper Man</title>
+    <author>Terry Pratchett</author>
+    <year>1991</year>
+    <price>12.95</price>
+  </book>
+  <book category="fantasy">
+    <title lang="en">Witches Abroad</title>
+    <author>Terry Pratchett</author>
+    <year>1991</year>
+    <price>15.95</price>
+  </book>
+  <book category="fantasy">
+    <title lang="en">Troll Bridge</title>
+    <author>Terry Pratchett</author>
+    <year>1992</year>
+    <price>14.95</price>
+  </book>
+  <book category="fantasy">
+    <title lang="en">Small Gods</title>
+    <author>Terry Pratchett</author>
+    <year>1992</year>
+    <price>11.95</price>
+  </book>
+  <book category="fantasy">
+    <title lang="en">Lords and Ladies</title>
+    <author>Terry Pratchett</author>
+    <year>1992</year>
+    <price>10.95</price>
+  </book>
+  <book category="fantasy">
+    <title lang="en">Men at Arms</title>
+    <author>Terry Pratchett</author>
+    <year>1993</year>
+    <price>10.95</price>
+  </book>
+  <book category="fantasy">
+    <title lang="en">Soul Music</title>
+    <author>Terry Pratchett</author>
+    <year>1994</year>
+    <price>19.95</price>
+  </book>
+  <book category="fantasy">
+    <title lang="en">Interesting Times</title>
+    <author>Terry Pratchett</author>
+    <year>1994</year>
+    <price>18.95</price>
+  </book>
+  <book category="fantasy">
+    <title lang="en">Maskerade</title>
+    <author>Terry Pratchett</author>
+    <year>1995</year>
+    <price>17.95</price>
+  </book>
+  <book category="fantasy">
+    <title lang="en">Feet of Clay</title>
+    <author>Terry Pratchett</author>
+    <year>1996</year>
+    <price>16.95</price>
+  </book>
+  <book category="fantasy">
+    <title lang="en">Hogfather</title>
+    <author>Terry Pratchett</author>
+    <year>1996</year>
+    <price>16.95</price>
+  </book>
+  <book category="fantasy">
+    <title lang="en">Jingo</title>
+    <author>Terry Pratchett</author>
+    <year>1997</year>
+    <price>18.95</price>
+  </book>
+  <employee id="1">
+    <forename>John</forename>
+    <surname>Barticol</surname>
+  </employee>
+  <employee id="2">
+    <forename>Aria</forename>
+    <surname>Hellbra</surname>
+  </employee>
+</bookstore>
