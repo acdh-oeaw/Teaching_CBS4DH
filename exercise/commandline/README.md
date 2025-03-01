@@ -1,8 +1,8 @@
 # lesson 1
 
-- [ ] Download the repository content using the `.zip` link on github and extract the archive somewhere.
+- [ ] Using your Browser, download the repository content using the `.zip` link on github and extract the archive somewhere.
 
-- [ ] Go to the extracted folder
+- [ ] Using the commandline, go to the extracted folder
 
 - [ ] Go into the "exercise/commandline" folder
 
@@ -37,13 +37,11 @@
 
 # lesson 2
 
-- [ ] How big are the files in the `kittens` folder we created yesterday?
-
 - [ ] Create a list of all the `.jpg` files in the `commandline` folder and write it to a file
 
-- [ ] In the folder `chemistry` are a bunch of files - for every file, write the number of lines together with the filename to a file `lines.txt`
+- [ ] In the folder `chemistry` are a bunch of files - for every file, use `wc` to count the number of lines in the file and write the result (together with the filename) to a file `lines.txt`
 
-- [ ] Now look at the content of the file `lines.txt`, then sort the contents of `lines.txt` - is the sorting correct?
+- [ ] Now look at the content of the file `lines.txt`: sort the contents of `lines.txt` - is the sorting correct?
 
 - [ ] Write the output of the last command to a file `lines_sorted.txt`
 
@@ -53,4 +51,22 @@
 
 - [ ] Use `cut` to show only the filename, without the number of lines
 
-- [ ] There is a file `animals.txt` in the `data` folder. Look at it, then try to reorder the entries in the file, so that the date (first column) and the number (last column) are swapped. Then sort the entries by the number in the first line. Make the animal names UPPERCASE.
+- [ ] There is a file `animals.txt` in the `data` folder. Look at it using the `cat` tool. It contains a date in the first column, then an animal type in the second column and a number of sightings in the third column. Find out on how many days there was a rabbit sighting.
+
+- [ ] Look at the manual of the `tr` tool - can you use it to print the content of `animals.txt` and make the animal names UPPERCASE?
+
+
+## extra
+
+- [ ] Count the words in [E.T.A. Hoffmann / Nachtstücke](https://www.gutenberg.org/cache/epub/6341/pg6341.txt)
+
+- [ ] Count the occurrence of the word "Flugmaschine"  in [A. Hildebrandt / Die Brüder Wright](https://www.gutenberg.org/cache/epub/10914/pg10914.txt)
+
+- [ ] How big are the files in the `kittens` folder we created yesterday?
+
+
+## scripts
+
+- [ ] create a script that prints "My username is:", then in the next line it prints your username
+
+- [ ] extend the script to add to the output: "The last 5 commands I typed where:" and then it should print the last 5 commands that you typed on the commandline
