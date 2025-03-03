@@ -58,7 +58,7 @@
 
 ## extra
 
-- [ ] Count the words in [E.T.A. Hoffmann / Nachtstücke](https://www.gutenberg.org/cache/epub/6341/pg6341.txt)
+- [ ] Sort the words in [E.T.A. Hoffmann / Nachtstücke](https://www.gutenberg.org/cache/epub/6341/pg6341.txt) by the number of occurrence
 
 - [ ] Count the occurrence of the word "Flugmaschine"  in [A. Hildebrandt / Die Brüder Wright](https://www.gutenberg.org/cache/epub/10914/pg10914.txt)
 
