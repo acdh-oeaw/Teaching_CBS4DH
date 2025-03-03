@@ -37,9 +37,9 @@
 
 # lesson 2
 
-- [ ] Create a list of all the `.jpg` files in the `commandline` folder and write it to a file
+- [ ] Create a list of all the `.jpg` files in the `commandline/images` folder and write it to a file
 
-- [ ] In the folder `chemistry` are a bunch of files - for every file, use `wc` to count the number of lines in the file and write the result (together with the filename) to a file `lines.txt`
+- [ ] In the folder `commandline/chemistry` are a bunch of files - for every file, use `wc` to count the number of lines in the file and write the result (together with the filename) to a file `lines.txt`
 
 - [ ] Now look at the content of the file `lines.txt`: sort the contents of `lines.txt` - is the sorting correct?
 
@@ -51,7 +51,7 @@
 
 - [ ] Use `cut` to show only the filename, without the number of lines
 
-- [ ] There is a file `animals.txt` in the `data` folder. Look at it using the `cat` tool. It contains a date in the first column, then an animal type in the second column and a number of sightings in the third column. Find out on how many days there was a rabbit sighting.
+- [ ] There is a file `animals.txt` in the `commandline/data` folder. Look at it using the `cat` tool. It contains a date in the first column, then an animal type in the second column and a number of sightings in the third column. Find out on how many days there was a rabbit sighting.
 
 - [ ] Look at the manual of the `tr` tool - can you use it to print the content of `animals.txt` and make the animal names UPPERCASE?
 
