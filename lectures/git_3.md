@@ -3,7 +3,7 @@
 ## Instructors
 
 + Massimiliano Carloni
-+ Peter Provaznik
++ Dimitra Grigoriou
 
 ## Hands-on instructions
 
