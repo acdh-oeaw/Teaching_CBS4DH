@@ -1,6 +1,6 @@
 # Git 2
 
-## Summarizing yesterdays Git lecture
+## Summarizing previous Git lecture
 
 ### Creating a Github account and repository
 * Online
