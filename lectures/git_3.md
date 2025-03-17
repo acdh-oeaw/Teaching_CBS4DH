@@ -1,4 +1,4 @@
-# Git Fundamentals 2024S
+# Git Fundamentals 2025S
 
 ## Instructors
 
