@@ -35,7 +35,7 @@ $ git commit -m "added a new feature some files changed"
 
 * Create a new Github repository (Github UI)
 * Clone it to your local machine (CLI)
-* Create or edit the file README.md (Atom editor)
+* Create or edit the file README.md (Visual Studio Code)
 * Run the git circle to synchronize these changes with the Github remote repository. (CLI)
 
 ## How to work with branches
