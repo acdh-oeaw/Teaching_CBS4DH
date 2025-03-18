@@ -1,9 +1,15 @@
-# Hands-on instructions
+# Git
+
+First of all, we would like to ask you to share with us your GitHub username: https://forms.office.com/e/KRRaWK6eq0
+
+This will be useful later, during the second part of today's session.
 
 ## 1. Introducing GitHub
 
-* In this hands-on, we will focus on [GitHub](https://github.com), an online service that is based on Git and that allows you to store your repositories on a remote server, so that other people can see them and collaborate by editing them.
-* But many of the things we will say here also apply to other online services based on Git, such as [GitLab](https://gitlab.com).
+* In this hands-on, we will focus on [GitHub](https://github.com), an online service that is based on Git and that allows you to store your repositories/repos on a remote server. Two main features of GitHub are important here:
+  * First, GitHub allows you to share your repos, so that other people can see them (open source)
+  * Secondly, GitHub keeps track of changes made to your repos (called **commits**), including who made the change and why (if a meaningful message was included with the commit). This makes collaborating on the same repository much easier.
+* Many of the things we will say here also apply to other online services based on Git, such as [GitLab](https://gitlab.com).
 * Some interesting repositories or accounts on GitHub/GitLab:
   * **Linux** kernel: https://github.com/torvalds/linux
   * **VLC** media player: https://github.com/videolan/vlc
@@ -12,6 +18,9 @@
   * **Netflix** account: https://github.com/Netflix
   * Some **awesome (literally) lists** of resources: https://github.com/sindresorhus/awesome
   * ... and **Visual Studio Code** itself! https://github.com/microsoft/vscode
+* GitHub is not only for code; it is especially useful for text in general, in particular Markdown:
+  * Some **awesome (literally) lists** of resources: https://github.com/sindresorhus/awesome 
+  * Our own **CBS4DH** repository! https://github.com/acdh-oeaw/Teaching_CBS4DH/tree/2025S  
 
 ## 2. Creating a repository on GitHub
 
