@@ -16,7 +16,6 @@ This will be useful later, during the second part of today's session.
   * Image editor **GIMP**: https://gitlab.gnome.org/GNOME/gimp
   * **LibreOffice** account: https://github.com/LibreOffice
   * **Netflix** account: https://github.com/Netflix
-  * Some **awesome (literally) lists** of resources: https://github.com/sindresorhus/awesome
   * ... and **Visual Studio Code** itself! https://github.com/microsoft/vscode
 * GitHub is not only for code; it is especially useful for text in general, in particular Markdown:
   * Some **awesome (literally) lists** of resources: https://github.com/sindresorhus/awesome 
