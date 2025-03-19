@@ -1,14 +1,4 @@
-# Git Fundamentals 2025S
-
-## Instructors
-
-+ Massimiliano Carloni
-+ Dimitra Grigoriou
-
-## Hands-on instructions
-
-+ [Hands-on 1](../exercise/git/hands-on_1.md)
-+ [Hands-on 2](../exercise/git/hands-on_2.md)
+# Git 3 - Other resources and tips
 
 ## Next steps
 
@@ -16,7 +6,7 @@
 
 + See if you can find the GitHub repository of open-source software that you use regularly (or have used in the past). Take a look at branches, commits (and commit messages), issues, and pull requests. Also try cloning the repo and play around with the various Git commands locally.
 
-+ Start using Git for your work, if you aren't already. By using it regularly, and doing your best to understand and solve any problems you might encounter, you will get comfortable (and competent) very soon, promise!
++ Start using Git for your work, if you haven't already. By using it regularly, and doing your best to understand and solve any problems you might encounter, you will get comfortable (and competent) very soon, promise!
 
 ## Some tips to remember
 
@@ -32,7 +22,7 @@
 
 + [Software Carpentry Git Tutorial](https://swcarpentry.github.io/git-novice/): We recommend that you go through this at your own pace, especially if you are new to Git.
 
-+ ACDH-CH Git HOWTOs by Omar Siam:
++ ACDH-CH Git HowTo by Omar Siam:
     + [Git version control via command line](https://howto.acdh.oeaw.ac.at/resource/posts/git-version-control-via-command-line)
     + [Git collaboration](https://howto.acdh.oeaw.ac.at/resource/posts/git-collaboration)
     + [Git: VS Code](https://howto.acdh.oeaw.ac.at/resource/posts/git-vs-code)
@@ -58,11 +48,9 @@
     + [Wikipedia](https://en.wikipedia.org/wiki/Markdown)
     + [GitHub Markdown Docs](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
 
-+ Interesting Repositories from hands-on 2:
-    + __Linux__ kernel: https://github.com/torvalds/linux
-    + __VLC__ media player: https://github.com/videolan/vlc
-    + Image editor __GIMP__: https://gitlab.gnome.org/GNOME/gimp
-    + __LibreOffice__ account: https://github.com/LibreOffice
-    + __Netflix__ account: https://github.com/Netflix
-    + Some __awesome (literally) lists__ of resources: https://github.com/sindresorhus/awesome
-    + ... and __Visual Studio Code__ itself! https://github.com/microsoft/vscode
+## Instructors
+
+* Massimiliano Carloni (massimiliano.carloni@oeaw.ac.at)
+* Dimitra Grigoriou (dimitra.grigoriou@oeaw.ac.at)
+
+Lessons based on material by Massimiliano Carloni and Peter Provaznik (peter.provaznik@oeaw.ac.at).
