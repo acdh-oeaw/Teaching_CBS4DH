@@ -27,6 +27,12 @@ This will be useful later, during the second part of today's session.
 * By sharing the code, you encourage other people to contribute to it, or inspire them to use it as basis for their own future projects
   * You cannot make changes to any repository, if you don’t have the rights 
   * But you can make your own “copy” of a repository and work on that (it’s called **fork**)
+* Code stored on GitHub is also used as training material for LLMs, especially ChatGPT and Copilot
+* Social dimension of GitHub
+  * **Star** interesting repositories 
+  * **Watch** them --> get updates on them
+  * Your profile can be used as a kind of “portfolio” if you’re applying for a job 
+  * Send feedback in form of **issues** (examples: https://github.com/acdh-oeaw/histogis/issues, https://github.com/Auden-Musulin-Papers/amp-data/issues)
 
 ## 2. Creating a repository on GitHub
 
