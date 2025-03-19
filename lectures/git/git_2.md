@@ -1,5 +1,7 @@
 # Git 2
 
+https://github.com/carlonim/cbs4dh_2025
+
 ## What if local *and* remote have changed? (stash)
 
 Finally, let's try a more extreme case. Imagine that you commit another change to your remote repo (or somebody else does), and **in the meanwhile you modify something else on your local copy**. If you try to push your local change to the remote, you will receive a warning from Git:
