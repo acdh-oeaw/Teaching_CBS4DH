@@ -20,6 +20,13 @@ This will be useful later, during the second part of today's session.
 * GitHub is not only for code; it is especially useful for text in general, in particular Markdown:
   * Some **awesome (literally) lists** of resources: https://github.com/sindresorhus/awesome 
   * Our own **CBS4DH** repository! https://github.com/acdh-oeaw/Teaching_CBS4DH/tree/2025S  
+* You (or your organization) can have your own profile on GitHub: 
+  * Peter: https://github.com/csae8092 
+  * ACDH-CH: https://github.com/acdh-oeaw 
+  * Single projects: https://github.com/Auden-Musulin-Papers
+* By sharing the code, you encourage other people to contribute to it, or inspire them to use it as basis for their own future projects
+  * You cannot make changes to any repository, if you don’t have the rights 
+  * But you can make your own “copy” of a repository and work on that (it’s called **fork**)
 
 ## 2. Creating a repository on GitHub
 
