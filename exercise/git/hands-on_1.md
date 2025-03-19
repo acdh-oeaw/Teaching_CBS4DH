@@ -147,7 +147,7 @@ At this point, Git will probably ask you for your **GitHub credentials**. Howeve
 2. When prompted for your GitHub credentials, **enter your username** and then, instead of your password, **paste the token** you just created.
 3. You can now run `git status` or check the remote repo on your GitHub page. If everything worked correctly, your repo should reflect the current status of your local copy.
 
-Little exercise: you can repeat the whole process by adding a second line to your `hello.txt` file, commit the change, and push it to the remote repository.
+**Little exercise:** you can repeat the whole process by adding a second line to your `hello.txt` file, commit the change, and push it to the remote repository.
 
 ## 9. Fetch and pull from remote
 
