@@ -1,4 +1,4 @@
-# Git
+# Git 1
 
 First of all, we would like to ask you to share with us your GitHub username: https://forms.office.com/e/KRRaWK6eq0
 
@@ -182,7 +182,9 @@ Theoretically, you could even run `git pull` without running `git fetch` before,
 * GitHub: https://education.github.com/git-cheat-sheet-education.pdf
 * GitLab: https://about.gitlab.com/images/press/git-cheat-sheet.pdf
 
-## Contacts
+## Instructors
 
 * Massimiliano Carloni (massimiliano.carloni@oeaw.ac.at)
 * Dimitra Grigoriou (dimitra.grigoriou@oeaw.ac.at)
+
+Lessons based on material by Massimiliano Carloni and Peter Provaznik (peter.provaznik@oeaw.ac.at).

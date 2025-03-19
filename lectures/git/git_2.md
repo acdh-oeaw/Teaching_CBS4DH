@@ -130,7 +130,9 @@ Person/group 1:
 
 1. **Fetch** and **pull** to see all the changes applied.
 
-## Contacts
+## Instructors
 
 * Massimiliano Carloni (massimiliano.carloni@oeaw.ac.at)
 * Dimitra Grigoriou (dimitra.grigoriou@oeaw.ac.at)
+
+Lessons based on material by Massimiliano Carloni and Peter Provaznik (peter.provaznik@oeaw.ac.at).
