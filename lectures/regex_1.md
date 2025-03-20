@@ -170,8 +170,8 @@ _But also:_
 - `29 February 2022`
 - `30 Ja 2021`
 
-We cannot cover _all_ edge cases, however, we can definitely make the specification more percise while still maintaining generalization:<br>
-`(0-3)\d\s[A-Z][a-z]{2, 8}\s(0-2)(\d){3}`<br>
+We cannot cover _all_ edge cases, however, we can definitely make the specification more precise while still maintaining generalization:<br>
+`[0-3]\d\s[A-Z][a-z]{2, 8}\s[0-2](\d){3}`<br>
 What invalid strings that matched before do not match anymore? Can we improve it even more?
 
 **Some Remarks:**
