@@ -150,10 +150,9 @@ Download it (or better find it in your cloned repository) and open it with [Goog
 
 ## Regex in Corpora and Text Collections
 
-Many digital corpora and collections offer the possibility to optimize or expand one's full text or metadata search through regular expressions. Here are two exemplary German resources and one exemplary English resource where this can be applied:
+Many digital corpora and collections offer the possibility to optimize or expand one's full text or metadata search through regular expressions. Here are one exemplary German resource and one exemplary English resource where this can be applied:
 
 - **Deutsches Textarchiv (DTA)**: [Corpus](https://www.deutschestextarchiv.de/) | [Documentation](https://www.deutschestextarchiv.de/doku/DDC-suche_hilfe#suche_mit_regul)
-- **Wienerisches DIGITARIUM**: [Corpus](https://digitarium-app.acdh.oeaw.ac.at/) | [Documentation](https://digitarium-app.acdh.oeaw.ac.at/search.html?id=jg17xx)
 - **Brown Corpus**: [Corpus](https://app.sketchengine.eu/#dashboard?corpname=preloaded%2Fbrown_1) | [Documentation](https://www.sketchengine.eu/quick-start-guide/concordance-lesson/)
 
 > [!NOTE]
