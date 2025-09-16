@@ -1,11 +1,11 @@
 # Teaching_CBS4DH
 Teaching materials for AR Methodological Workshop - Computational Background Skills for Digital Humanities at University of Vienna.
 
-## Schedule 2025S
-Time | Wednesday (5.3) | Thursday (6.3) | Wednesday (19.3) | Thursday (20.3) | Wednesday (26.3) | Thursday (27.3)
+## Schedule 2025W
+Time | Wednesday (8.10) | Thursday (9.10) | Wednesday (15.10) | Thursday (16.10) | Wednesday (26.3) | Thursday (29.10)
 ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-13:15 – 14:45 |  [Intro and Setup](lectures/CBS4DH_DH-general_2025-03-05.pdf) | [Command line 2](lectures/command_2.md) | [Git 1](lectures/git/git_1.md) | [Regular expressions 1](lectures/regex_1.md) | [Web technologies 1](lectures/web.md) | [Digital Toolbox](lectures/Toolbox_CBS4DH.pdf)
-15:00 – 16:30 |  [Command line 1](lectures/command_1.md) | [File formats and encodings](lectures/dataformats.md) | [Git 2](lectures/git/git_2.md), [Git 3](lectures/git/git_3.md) | [Regular expressions 2](lectures/regex_2.md) | [Web technologies 2](lectures/web.md) |  Questions & Answers 
+13:15 – 14:45 |  [Intro and Setup](lectures/CBS4DH_DH-general_2025-03-05.pdf) | [Regular expressions 1](lectures/regex_1.md) | [Web technologies 1](lectures/web.md) | [Command line 1](lectures/command_1.md) | [Git 1](lectures/git/git_1.md) | [Digital Toolbox](lectures/Toolbox_CBS4DH.pdf)
+15:00 – 16:30 | [File formats and encodings](lectures/dataformats.md) | [Regular expressions 2](lectures/regex_2.md) | [Web technologies 2](lectures/web.md) | [Command line 2](lectures/command_2.md) | [Git 2](lectures/git/git_2.md), [Git 3](lectures/git/git_3.md) | Questions & Answers 
 
 ## Information about the course (u:find)
 
@@ -24,11 +24,14 @@ Given its practical nature, students are required to bring a laptop computer (no
 
 ### Assessment and permitted materials
 
-Regular attendance, following the practical exercise tasks during the lecture and active participation will lead to a final grade.
+Students with equipment other than laptop computers are **immediately** disqualified.
+- Weekly task 50% and active participation 50% of the general grade.
+- Regular attendance, active participation and the upload of the exercises on a private repository on GitHub will lead to a final grade.
 
 ### Minimum requirements and assessment criteria 
 
 - Bring your laptop to the class
+- Ask relevant questions and complete tasks
 - Create a personal GitHub account: https://github.com/join
 - Download and install Visual Studio code editor: https://code.visualstudio.com/download
 - (Only Windows users) Download and install Gitbash: https://gitforwindows.org/
