@@ -2,7 +2,7 @@
 Teaching materials for AR Methodological Workshop - Computational Background Skills for Digital Humanities at University of Vienna.
 
 ## Schedule 2025W
-Time | Wednesday (8.10) | Thursday (9.10) | Wednesday (15.10) | Thursday (16.10) | Wednesday (26.3) | Thursday (29.10)
+Time | Wednesday (8.10) | Thursday (9.10) | Wednesday (15.10) | Thursday (16.10) | Wednesday (26.10) | Thursday (29.10)
 ---- | ---- | ---- | ---- | ---- | ---- | ---- |
 13:15 – 14:45 |  [Intro and Setup](lectures/CBS4DH_DH-general_2025-03-05.pdf) | [Regular expressions 1](lectures/regex_1.md) | [Web technologies 1](lectures/web.md) | [Command line 1](lectures/command_1.md) | [Git 1](lectures/git/git_1.md) | [Digital Toolbox](lectures/Toolbox_CBS4DH.pdf)
 15:00 – 16:30 | [File formats and encodings](lectures/dataformats.md) | [Regular expressions 2](lectures/regex_2.md) | [Web technologies 2](lectures/web.md) | [Command line 2](lectures/command_2.md) | [Git 2](lectures/git/git_2.md), [Git 3](lectures/git/git_3.md) | Questions & Answers 
