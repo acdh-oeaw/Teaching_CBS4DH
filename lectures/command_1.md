@@ -91,7 +91,7 @@ We will work with the same [setup as the Software Carpentry lessons](https://swc
 > * For Ubuntu Desktop: you can hit `Ctrl-Alt-T` or you can type `Terminal` into the Search box. You can also right-click on an empty part of a window in the file explorer (_Nautilus_) and select "Open in Terminal".
 > * For Windows go to the start menu and run **Git bash**
 
-## Fist steps
+## First steps
 
 The corresponding software carpentry lesson is [1. Introducing the Shell](https://swcarpentry.github.io/shell-novice/01-intro.html).
 
@@ -103,8 +103,12 @@ The corresponding software carpentry lesson is [1. Introducing the Shell](https:
 * If you write someting it does not know, it tells you so
 * The shell is case sensitive
 * Check what is your current working directory: `pwd`
+    * What you get is the *path* (i.e., position in the file system) of the *directory*
+    * *Directory* is another way of saying *folder*
+    * *Folder* focuses more on the graphical metaphor, while *directory* is the more technical term
+
 * Go to your home directory: `cd ~` or `cd`
-* Go to Desktop: `cd Desktop`
+* Go to Desktop (provided that the Desktop directory is in the current directory): `cd Desktop`
 * How do we check what is in this directory? `ls`
 * Options: `-r`, `--reverse`, `-t`, `-l`, `-h`
 * Distinguish between files, directories, etc.: `ls -F` (option `-F` will add the following characters after pathnames: `/` for directories, `*` for executable files, `@` symbolic links etc.)
@@ -116,7 +120,7 @@ Command + options (with `-`) + arguments
 For example: `ls -F exercise-data`
 
 * Options are also called flags or switches
-* In some cases, options can be express in a longer form, with a double hyphen (`--`)
+* In some cases, options can be expressed in a longer form, with a double hyphen (`--`)
 * You can also combine options together (e.g., `ls -l -h` or `ls -lh`)
 * Some options require an argument immediately after them
 * In general, options are case-sensitive (`ls -s` is different from `ls -S`)
@@ -186,6 +190,7 @@ The corresponding Software Carpentry lessons are [2. Navigating Files and Direct
 ### Navigating files and directories
 
 `cd` = change directory
+
 * `cd ~` (go to home directory)
 * `cd ..` (go to parent directory)
 * `cd ../..` (go up two directories)
@@ -196,6 +201,7 @@ The corresponding Software Carpentry lessons are [2. Navigating Files and Direct
 * `cd /Users/djb/Desktop/shell-lesson-data/exercise-data` (absolute path; it has a leading slash = root directory)
 
 `ls` = listing
+
 * `ls -a`: include hidden files (filenames starting with `.`)
 * `ls -l`: show enhanced file information, including date and time stamps, owner and group, permissions
 * `ls -t`: list in timestamp order
@@ -235,7 +241,7 @@ The corresponding Software Carpentry lessons are [2. Navigating Files and Direct
 
 * The file system is responsible for managing information on the disk.
 * Information is stored in files, which are stored in directories (folders).
-* Directories can also store other directories, which forms a directory tree.
+* Directories can also store other directories, which form a directory tree.
 * `cd path` changes the current working directory.
 * `ls path` prints a listing of a specific file or directory; `ls` on its own lists the current working directory.
 * `pwd` prints the user’s current working directory.
