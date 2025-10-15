@@ -7,23 +7,51 @@
 
 We will work with the same [setup as the Software Carpentry lessons](https://swcarpentry.github.io/shell-novice/index.html).
 
+## Types of interfaces
+
+* Most of the time we work with a device, we use a **graphical user interface** – made of windows, icons, etc. with which we typically interact using a combination of mouse+keyboard or by touching the screen.
+* Many personal assistants, such as home assistants, operate via **voice interfaces**: commands are executed by voice and responses are provided through audio.
+* There is now a lot of discussion about **[brain-computer interfaces](https://en.wikipedia.org/wiki/Brain–computer_interface)**.
+* Maybe many other types of interfaces will be developed in the future...
+* ... but before we get carried away with our hypotheses, we would like to go back to the "basics": the **text-based interface**, typically referred to as the *command line* or the *shell*.
+
 ## What is the *shell*? How do we use it?
 
-* The *shell* is a program that runs other programs. <!-- The shell is still a program, which takes input and gives output. The input is a command, though, so it seems as though we’re doing something different. In reality, using command line is no different than using any other program.-->
+* The *shell* is a program that runs other programs.
+  * The shell is still a program, which takes input and gives output. The input is a command, though, so it seems as though we’re doing something different. In reality, using command line is no different than using any other program.
+
 * There are shells that use a GUI (graphical user interface), for example the [Windows Shell](https://docs.microsoft.com/en-us/windows/win32/shell/shell-entry), and shells that use a CLI (command-line interface), like [cmd](https://en.wikipedia.org/wiki/Cmd.exe) in Windows.
 * The command-line-based window that runs a shell is called a *console* or a *terminal*.
 * The Unix philosophy is that you can _pipe_ (chain) together small commands, each of which does one thing well, to do something complex. You can’t do this in a GUI.
-* bash is the a very popular shell on [Unix-like operating systems](https://en.wikipedia.org/wiki/Unix-like), like Linux and macOS, but we can also install it on Windows.
+* bash is a very popular shell on [Unix-like operating systems](https://en.wikipedia.org/wiki/Unix-like), like Linux and macOS, but we can also install it on Windows.
 * **bash** = ‘Bourne again shell’ (the original Bourne shell is sh; others include csh, ksh, tcsh, zsh).
-* Learn the shell on a need-to-know basis. <!--There are commands you’ll use every day, some you’ll use for special purposes (and you’ll look up how they work when you need them), and some that you’ll never need.-->
+* Learn the shell on a need-to-know basis.
+  * There are commands you’ll use every day, some you’ll use for special purposes (and you’ll look up how they work when you need them), and some that you’ll never need.
+
 
 ### Advantages of using a CLI-based shell
 
-* There are a lot of tools available.
-* Those tools can be combined and thus provide a lot flexibility.
-* It has a very high action-to-keystroke ratio.
-* You can automate most of the boring stuff
-* It is the main way of interacting with remote machines.
+* There are **a lot of tools** available
+  * Some of these tools do not have GUIs, so the only way to use them is by learning the command line.
+  * Some of these tools have GUIs, but these are sometimes more limited in functionality and less reliable.
+  * e.g., **[exiftool](https://exiftool.org/)** (for reading and editing metadata in images), **grep** (regular expressions), **git** (we'll learn about git in the next lesson), **[pandoc](https://pandoc.org/)** (for converting between *a lot of* formats).
+
+* Those tools can be combined and thus provide a lot of **flexibility**.
+* It has a very **high action-to-keystroke ratio**
+  * i.e., you can perform much with just little typing.
+
+* You can **automate most of the boring stuff**
+  * e.g., how to write down a list of all file names in a folder? or how to rename 1000 files?
+
+* It is the main way of interacting with **remote machines**
+  * for example, when you have to connect to the server of your university.
+
+* It can be very useful for **DIY/maker projects** (e.g., if you work with Arduino/Raspberry Pi).
+* And **a lof of other tasks**...
+  * Installing Python packages (e.g. `pip install pandas`)
+  * Installing software (especially when this involves Docker: see e.g. the [instructions for Editing Tools for Digital Epigraphy](https://github.com/eeditiones/edep?tab=readme-ov-file#editing-tools-for-digital-epigraphy))
+
+* Finally, **shell scripts** can be a great introduction to programming languages
 
 ---
 
@@ -41,7 +69,7 @@ We will work with the same [setup as the Software Carpentry lessons](https://swc
 <summary><h3>Note for Windows users</h3></summary>
 
 > * When you downloaded Git, you also downloaded **Git bash** ([screenshot](images/command_1_gitbash.png)), the command line interface.
-> * You may have been using `cmd.exe` ([screenshot](images/getting_to_know_cmd.png)) or Windows PowerShell ([screenshot](images/command_1_powershell.png)), both native to Windows. Though each has its own benefits and drawbacks, for the purposes of this course we will have all Windows users learn and use Git `bash`.
+> * You may have been using `cmd.exe` (the so-called Command Prompt: [screenshot](images/getting_to_know_cmd.png)) or Windows PowerShell ([screenshot](images/command_1_powershell.png)), both native to Windows. Though each has its own benefits and drawbacks, for the purposes of this course we will have all Windows users learn and use Git `bash`.
 > 
 > **Git bash vs. Windows command lines vs. regular bash**
 > 
