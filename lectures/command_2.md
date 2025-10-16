@@ -62,8 +62,6 @@
 
 We will work with Software Carpentry lesson [4. Pipes and filters](https://swcarpentry.github.io/shell-novice/04-pipefilter.html).
 
-You remember the `*` symbol from yesterdays lessen? There are more such tricks:
-
 We will be using some special characters that allow to search for undetermined characters:
 * `*` = zero or more undetermined characters
 * `?` = exactly one undetermined character
@@ -78,7 +76,6 @@ We will be using some special characters that allow to search for undetermined c
 ### Regex vs globbing
 
 **Globbing** is annoyingly different from **regex**.
-We will see what regex is in the following session, so don't worry if you don't understand everything here!
 
 * Regex: `*` and `?` are repetition indicators for the preceding item
 * Globbing: `*` and `?` are wildcards
@@ -97,7 +94,7 @@ We usually **input** data into a command by writing its argument(s) with the _ke
 	* `<`: input from file
 * **stdout**:
 	* `>`: output to file (careful: overwrites existing files with the same name)
-	* `>>`: append to file (creates file if it doesnÕt already exist)
+	* `>>`: append to file (creates file if it doesn't already exist)
 * **stderr**:
 	* `2>`: error messages to file (`2> /dev/null` means that the error messages will basically disappear)
 
@@ -111,8 +108,8 @@ For example, we can save the list of contents of a directory in a text file by s
 	* Mac Austrian keyboard: `Option + 7`
 	* Windows Austrian keyboard: `Alt Gr + 7`
 * `|` pipes output of process on the left into input of process on the right
-	* For example: `wc -l *.pdb | sort -n`
-	* This means that the output of `wc -l *.pdb` will function as the input of the commmand after `|`, i.e. `sort -n`.
+	* For example: `wc -l *.txt | sort -n`
+	* This means that the output of `wc -l *.txt` will function as the input of the commmand after `|`, i.e. `sort -n`.
 * Piping is particularly useful with filters, that can be chained together to form computational pipelines. Basically, these are the first steps for programming!
 
 
@@ -125,17 +122,17 @@ You can save it in a **shell script**.
 * It usually has the extension `.sh`
 * It is basically a file of text which contains the commands that must be executed by the shell.
 
-For example, in our case, let's call our script `script1.sh`:
-* Create a file `script1.sh` with a text editor (for example, `nano script1.sh` or just a GUI-based editor)
+For example, in our case, let's call our script `get_length.sh`:
+* Create a file `get_length.sh` with a text editor (for example, `nano get_length.sh` or just a GUI-based editor)
 * Write in the first line of the file `#!/bin/bash`. This indicates that the commands must be executed by `bash`.
-* Add the command you want to execute, like `wc -l *.pdb | sort -n | head -n 1`
+* Add the command you want to execute, like `wc -l *.txt | sort -n`
 * Save the final result
-* Make this executable: in the directory where the script is contained, type `chmod 755 script1.sh`
-* Execute the script with `./script1.sh` (you have to specify that the script is in your current directory by adding `./`)
+* Make this executable: in the directory where the script is contained, type `chmod 755 get_length.sh`
+* Execute the script with `./get_length.sh` (you have to specify that the script is in your current directory by adding `./`)
 
 **Be careful!**
-* This script will execute the commands in the directory where it is stored. So, it will look for all files `*.pdb` in its directory.
+* This script will execute the commands in the directory where it is stored. So, it will look for all files `*.txt` in its directory.
 * If you want to use it in another directory, you must either move the script or recall it from the directory where you want to use it (this would require a longer and complicated path).
-* However, the easiest way is to include a **variable**, so that you can specify to the script where it should be applied: instead of writing `*.pdb` in its code, you can write `$@`. This means that the shell will automatically replace `$@` with whatever you input as argument of the script, e.g. `./script1.sh exercise-data/*.pdb`. This will also allow you to use the script to check for other kinds of formats too, e.g. `./script1.sh *.txt`
+* However, the easiest way is to include a **variable**, so that you can specify to the script where it should be applied: instead of writing `*.txt` in its code, you can write `$@`. This means that the shell will automatically replace `$@` with whatever you input as argument of the script, e.g. `./get_length.sh exercise-data/*.txt`. This will also allow you to use the script to check for other kinds of formats too, e.g. `./get_length.sh *.xml`
 
 This is just the tip of the iceberg: scripts would require at least a whole session for itself (or even a whole course), but I hope you already got the gist of what makes the shell such a powerful tool. The shell is not only a way of interacting with the operating system, but it is also a **programming language**.
