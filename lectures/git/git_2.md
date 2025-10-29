@@ -1,10 +1,8 @@
 # Git 2
 
-https://github.com/carlonim/cbs4dh_2025
-
 ## What if local *and* remote have changed? (stash)
 
-Finally, let's try a more extreme case. Imagine that you commit another change to your remote repo (or somebody else does), and **in the meanwhile you modify something else on your local copy**. If you try to push your local change to the remote, you will receive a warning from Git:
+Finally, let's try a more extreme case. Imagine that you commit another change to your remote repo (or somebody else does), and **in the meanwhile you modify something else on your local copy **(but did not commit yet). If you try to push your local change to the remote, you will receive a warning from Git:
 
 ```shell
 error: failed to push some refs to 'https://github.com/carlonim/test-repo.git'
@@ -29,7 +27,7 @@ After you have pulled, you can view a list of your stashed changes using `git st
 git branch feature1
 ```
 
-2. To see **all branches available**, you can type:
+2. To see **all available branches**, you can type:
 
 ```shell
 git branch
@@ -101,7 +99,7 @@ Now, given that more than one person can access your repo, let's try to see how 
 
 1. Both you and the other person **clone** the repo on your machine (if you have not already).
 2. Make some edits (I would suggest **adding a new document** with some text to avoid conflicts).
-3. **Commit** the changes with a message and **push** to remote.
+3. **Commit** the changes with a message and **push** to remote. Remember to always **fetch** and **pull** before pushing.
 4. On your repo page, you can see the **history of commits** by just clicking on this link. You will notice commits coming from different users.
 
 <img src="commit_history.png" alt="commit_history" width="400" />
@@ -135,6 +133,6 @@ Person/group 1:
 ## Instructors
 
 * Massimiliano Carloni (massimiliano.carloni@oeaw.ac.at)
-* Dimitra Grigoriou (dimitra.grigoriou@oeaw.ac.at)
+* Lukas Plank (lukas.plank@oeaw.ac.at)
 
 Lessons based on material by Massimiliano Carloni and Peter Provaznik (peter.provaznik@oeaw.ac.at).
