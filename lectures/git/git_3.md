@@ -22,11 +22,8 @@
 
 + [Software Carpentry Git Tutorial](https://swcarpentry.github.io/git-novice/): We recommend that you go through this at your own pace, especially if you are new to Git.
 
-+ ACDH-CH Git HowTo by Omar Siam:
-    + [Git version control via command line](https://howto.acdh.oeaw.ac.at/resource/posts/git-version-control-via-command-line)
-    + [Git collaboration](https://howto.acdh.oeaw.ac.at/resource/posts/git-collaboration)
-    + [Git: VS Code](https://howto.acdh.oeaw.ac.at/resource/posts/git-vs-code)
-
++ [ACDH Git course](https://campus.dariah.eu/curricula/introduction-to-git) by Omar Siam
+    
 + [Git Cheat Sheet](https://about.gitlab.com/images/press/git-cheat-sheet.pdf) from GitLab
 
 + Exercise materials to build and sharpen your skills:
@@ -51,6 +48,6 @@
 ## Instructors
 
 * Massimiliano Carloni (massimiliano.carloni@oeaw.ac.at)
-* Dimitra Grigoriou (dimitra.grigoriou@oeaw.ac.at)
+* Lukas Plank (lukas.plank@oeaw.ac.at)
 
 Lessons based on material by Massimiliano Carloni and Peter Provaznik (peter.provaznik@oeaw.ac.at).
