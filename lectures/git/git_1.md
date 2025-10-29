@@ -1,15 +1,20 @@
 # Git 1
 
-First of all, we would like to ask you to share with us your GitHub username: https://forms.office.com/e/KRRaWK6eq0
+Git was released by Linus Torvalds, the creator of Linux, in 2005. It is a **version control system** that helps you **keep track of changes** to files over time. More precisely, Git is a **distributed** version control system: when several people collaborate on the same project, each can have a complete local copy of the files of that project, make changes independently, and later merge their work with others. Git is great for **collaboration**, as it offers several tools that facilitate collaborative work, such as "branches" (alternative timelines of a project).
 
-This will be useful later, during the second part of today's session.
+You might have heard of [GitHub](https://github.com) (on which we will focus in this hands-on) or [GitLab](https://about.gitlab.com). Both are online services that are **based on** Git – but remember, you can also use Git independently of any online service.
 
 ## 1. Introducing GitHub
 
 * In this hands-on, we will focus on [GitHub](https://github.com), an online service that is based on Git and that allows you to store your repositories/repos on a remote server. Two main features of GitHub are important here:
   * First, GitHub allows you to share your repos, so that other people can see them (open source)
   * Secondly, GitHub keeps track of changes made to your repos (called **commits**), including who made the change and why (if a meaningful message was included with the commit). This makes collaborating on the same repository much easier.
-* Many of the things we will say here also apply to other online services based on Git, such as [GitLab](https://gitlab.com).
+* Many of the things we will say here also apply to other online services based on Git, such as [GitLab](https://gitlab.com), and in general to Git. Actually, you have to install Git on your computer to be able to work locally on the files stored in GitHub (e.g., if you want to edit a file and upload it to your GitHub repository).
+* Let's make sure that the `git` command is available: in the shell, type `git --version` or `git -v`
+  * If the result if a version number, like `git version 2.50.1`, no worries, Git is installed.
+  * For Mac users: a new window might pop up, which invites you to install the Xcode command line tools. In that case, confirm to install. This might take some time, since the tools will be downloaded automatically from the web. Afterwards, you can check if git was installed by closing the Terminal, opening a new one, and typing `git --version` or `git -v`.
+  * If the window didn't pop up and git is not installed, you can try running `xcode-select --install` in the shell. This should prompt you to install the above-mentioned Xcode command line tools.
+
 * Some interesting repositories or accounts on GitHub/GitLab:
   * **Linux** kernel: https://github.com/torvalds/linux
   * **VLC** media player: https://github.com/videolan/vlc
@@ -22,12 +27,12 @@ This will be useful later, during the second part of today's session.
   * Our own **CBS4DH** repository! https://github.com/acdh-oeaw/Teaching_CBS4DH/tree/2025S  
 * You (or your organization) can have your own profile on GitHub: 
   * Peter: https://github.com/csae8092 
-  * ACDH-CH: https://github.com/acdh-oeaw 
+  * ACDH: https://github.com/acdh-oeaw 
   * Single projects: https://github.com/Auden-Musulin-Papers
 * By sharing the code, you encourage other people to contribute to it, or inspire them to use it as basis for their own future projects
   * You cannot make changes to any repository, if you don’t have the rights 
   * But you can make your own “copy” of a repository and work on that (it’s called **fork**)
-* Code stored on GitHub is also used as training material for LLMs, especially ChatGPT and Copilot
+* Code stored on GitHub is also used as training material for LLMs
 * Social dimension of GitHub
   * **Star** interesting repositories 
   * **Watch** them --> get updates on them
@@ -52,7 +57,7 @@ Let's now create a new repository on GitHub.
    - Regarding the visibility of your repo, you have two options, either **Public** and **Private**. We will create a **public** repo for the purposes of this tutorial, but you could choose to have a private repo, for example, if you want to write some code before making your repo public.
    - An important step is creating a **README.md** file. Most GitHub repos have a README file. This will be placed in the upmost directory of your repo and will be displayed first when you open your repo. It is important to include such a file, because this is where you can give future users more detailed information about the contents of your repo or how to install/deploy the piece of software you are coding. However, for the purposes of this tutorial, we will **not** include a README.
    - We will now ignore `.gitignore`, but so that you know what this is about: `.gitignore` allows you to **specify files that should never be tracked in the repo**, for example invisible files that only serve specific operating systems (macOS has a tendency to create such files, such as `.DS_Store`, to store custom attributes of its containing folder).
-   - Finally, you can choose a **license** to assign to your repo. While we can avoid to specify one for the moment, a license plays a fundamental role in determining how other people can reuse your software.
+   - Finally, you can choose a **license** to assign to your repo. While we can avoid to specify one for the moment, a license plays a fundamental role in determining how other people can reuse your work.
 4. You can now click on the green button **Create repository**. Congratulations! :tada: You now have a repository on GitHub.
 
 ## 3. Before starting with the command line
@@ -60,17 +65,17 @@ Let's now create a new repository on GitHub.
 In the next steps, we will work with the command line/shell. To be sure to have your shell **in English** for the current lesson (so that you can more easily recognize logs and error messages described in this document):
 
 1. Type `locale` in your shell and check the value for the variable `LANG`
-2. If this displays any other language (like German), you can type the command `export LANG=en_US.UTF-8`
-3. Check again with `locale` if the changes were applied. This will set the language of your **current shell** to English, but will reset the language to German (or any other default) when you start a new shell session.
-4. If you want to make these changes permanent (which is however *not* needed for this tutorial), you have to open the file `~/.bashrc` (for Bash users, mostly Linux and Windows) or `~/.zshrc` (for Zsh users, mostly macOS) (for example with the editor `nano`) and add the line `export LANG=en_US.UTF-8` to the file. This will execute this command every time you start a new shell session.
+2. If this displays something like `LANG="en_US"` or `LANG="en_US.UTF-8"` (for US English), you are ready to go. There is also the case that `LANG` is not filled out; in that case, just run `git` and see if the messages appear in English. If `LANG` displays any other language (like German), you can type the command `export LANG=en_US.UTF-8`.
+3. Check again with `locale` if the changes were applied. The new settings will only apply to your **current shell** to English, but the langauge will reset to German (or any other default) when you start a new shell session.
+4. If you want to make these changes permanent (which is however *not* needed for this tutorial), you have to open the file `~/.bashrc` (for Bash users, mostly Linux and Windows) or `~/.zshrc` (for Zsh users, mostly macOS) (for example with the editor `nano`) and add the line `export LANG=en_US.UTF-8` to the file (remember, `~` represents your home directory). This will execute this command every time you start a new shell session.
 
 ## 4. Cloning the repository
 
 To really work with the repository you created, it is recommended to create a local copy of it on your computer. In technical terms, this corresponds to **cloning** the repository.
 
-1. To do this, click on the green button **<> Code**. Several options will appear. We will use the **HTTPS** option, which allows to clone a repository by providing its URL, which is displayed in the text box just below.
-2. To **copy the URL**, you can click on the little icon on the right (two overlapping squares). We will now return to the command line interface (CLI).
-3. Let's make sure that the `git` command is available: `$ git --version`
+1. If you created a totally empty repository, you will find a selector HTTPS / SSH and a text box that contains a URL. Make sure that **HTTPS** is selected.
+   Otherwise, if your repository is not empty (e.g., you included a README.md), you can click on the green button **<> Code**. Several options will appear. We will use the **HTTPS** option, which allows to clone a repository by providing its URL, which is displayed in the text box just below.
+2. To **copy the URL**, you can click on the little icon on the right (two overlapping squares) in the text box. We will now return to the command line interface (CLI).
 4. In the CLI, navigate (using the `cd` command) to the folder where you want to store a local copy of your repo, and type `git clone` followed by a whitespace and the URL of your repo. For example:
 
 ```shell
@@ -78,7 +83,7 @@ cd /Users/mcarloni
 git clone https://github.com/carlonim/test-repo.git
 ```
 
-5. You will now have a new directory which contains your GitHub repository. This local repo will already have a **remote** configured. A remote is a repository hosted elsewhere, from which you can pull data or to which you can push data. When cloning a repository, Git automatically configures a remote with name **origin**. To see the remotes associated to a repo, type the following command:
+5. You will now have a new directory which contains your GitHub repository. Move inside this directory (e.g. ``cd test-repo`). This local repo will already have a **remote** configured. A remote is a repository hosted elsewhere, from which you can pull data or to which you can push data. When cloning a repository, Git automatically configures a remote with name **origin**. To see the remotes associated to a repo, type the following command:
 
 ```shell
 git remote
@@ -95,7 +100,7 @@ git remote
 
 Before we actually make changes to the repository, it is important we make sure that everything is set up correctly.
 
-1. One-time Git setup (set author info, text editor, line endings):
+1. One-time Git setup (set author info, text editor, line endings). If you just want to see what values are contained here before editing, type the command without the part between quotes, e.g. `git config --global user.name`.
     + `$ git config --global user.name "<your name>"`
     + `$ git config --global user.email "<username>@users.noreply.github.com"`
     + `$ git config --global core.editor "nano -w"`
@@ -124,7 +129,7 @@ Before we actually make changes to the repository, it is important we make sure 
 ```shell
 git push
 ```
-At this point, Git will probably ask you for your **GitHub credentials**. However, if you insert your username and then your password, you will receive an error message, since this way of accessing GitHub outside of a web browser is not supported anymore. Therefore, we need a different solution, i.e. creating a **personal access token**, a sequence of characters that will take the place of our password (in this scenario) but will allow us to have more control on what Git (or other applications) can do with our remote repositories.
+At this point, Git will probably ask you for your **GitHub credentials**. However, if you insert your username and then your password, you will receive an error message, since this way of accessing GitHub outside of a web browser is not supported anymore. Windows users might get prompted to insert their credentials on the GitHub website. Mac users might need a different solution, i.e. creating a **personal access token**, a sequence of characters that will take the place of our password (in this scenario) but will allow us to have more control on what Git (or other applications) can do with our remote repositories.
 
 ## 7. Intermezzo: Create a GitHub personal access token
 
@@ -185,6 +190,6 @@ Theoretically, you could even run `git pull` without running `git fetch` before,
 ## Instructors
 
 * Massimiliano Carloni (massimiliano.carloni@oeaw.ac.at)
-* Dimitra Grigoriou (dimitra.grigoriou@oeaw.ac.at)
+* Lukas Plank (lukas.plank@oeaw.ac.at)
 
 Lessons based on material by Massimiliano Carloni and Peter Provaznik (peter.provaznik@oeaw.ac.at).
