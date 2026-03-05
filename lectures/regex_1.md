@@ -115,7 +115,7 @@ The _metacharacter star_ `*`, does not match the _literal character_ `*`, and it
 | hello  | `h[ello]*` | Yes   |
 | hello  | `H[ello]*` | No    |
 | hello  | `[Hell]*o` | Yes   |
-| star   | `[e]*`     | Yes   |
+| star   | `[a]*`     | Yes   |
 | staar  | `st[a]*r`  | Yes   |
 
 The _repeating metacharacter_ plus `+` means matching _one or more times_. This requires _at least one occurrence_ compared to _asterisk_ `*`.
