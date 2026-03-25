@@ -24,7 +24,7 @@ You might have heard of [GitHub](https://github.com) (on which we will focus in 
   * ... and **Visual Studio Code** itself! https://github.com/microsoft/vscode
 * GitHub is not only for code; it is especially useful for text in general, in particular Markdown:
   * Some **awesome (literally) lists** of resources: https://github.com/sindresorhus/awesome 
-  * Our own **CBS4DH** repository! https://github.com/acdh-oeaw/Teaching_CBS4DH/tree/2025S  
+  * Our own **CBS4DH** repository! https://github.com/acdh-oeaw/Teaching_CBS4DH/tree/2026S  
 * You (or your organization) can have your own profile on GitHub: 
   * Peter: https://github.com/csae8092 
   * ACDH: https://github.com/acdh-oeaw 
