@@ -8,7 +8,7 @@ Let's take this sample sentence (which already hints at our frustration in a cou
 I would like my regex to take this sentence, but it actually takes more, and I don't know why!
 ```
 
-We would like to write a regex that takes the text **until the first comma**. Our best guess would be to write a regex like `.+,` (to also allow for other non-alphanumeric characters before the comma). However, what our regex engine matches is not the text until the first comma, but the text **until the *second* comma**. Why?
+We would like to write a regex that takes the text **until the first comma**. Our best guess would be to write a regex like `.+,` (to also allow for other non-alphanumeric characters before the comma). However, what our regex engine matches is not the text until the first comma, but the text **until the _second_ comma**. Why?
 
 Because repeating qualifiers (like the `+` we used) are **greedy** by default behaviour. This means they tend to take **as much text as possible** (actually, in the case of `.+` the whole text of the document) and then take steps back (**backtrack**) until they satisfy the required condition (in our case, that a comma must be at the end of the string).
 
@@ -18,14 +18,13 @@ One possible solution would be to make this repeating qualifier **lazy**. We can
 >
 > The question mark `?` used as a **modifier** to make a repeating qualifier lazy should not be confused with the question mark `?` used as a **repeating qualifier** itself (meaning zero or one repetition, as we saw in the previous section).
 
-Another solution would be to use a different regex, for example one where we **exclude the character *comma*** in a set with a repeating qualifier, and then add the comma outside the set: `[^,]+,`
+Another solution would be to use a different regex, for example one where we **exclude the character _comma_** in a set with a repeating qualifier, and then add the comma outside the set: `[^,]+,`
 
 (The latter solution is actually more efficient from a computational point of view.)
 
 ## Anchors
 
 Anchors match a pattern based on its position in the string. They are useful for defining the context in which a pattern should be matched within a text, allowing for more precise and controlled matching.<br>
-
 
 <!-- #### Examples:
 
@@ -54,7 +53,6 @@ A word boundary is a position between a character that can be matched by the set
 | rain | `$r[ai]+n\b` | Yes |
 | complicated | `\bcomp.+\b` | Yes | -->
 
-
 | String      | RE           | Match |
 | ----------- | ------------ | ----- |
 | complicated | `^comp`      | Yes   |
@@ -63,7 +61,6 @@ A word boundary is a position between a character that can be matched by the set
 | rain        | `^r[ai]+n$`  | Yes   |
 | raaaain     | `^r[ai]+n$`  | Yes   |
 | complicated | `^comp.*ed$` | Yes   |
-
 
 Note: Most _RE engines_ have a _multi-line_ mode that makes _caret_ `^` match after any line break, and _dollar_sign_ `$` before any line break.
 
@@ -108,6 +105,14 @@ As an example let's naively reorder a conditional sentence:
 - test string: `if you see a red light, stop.`
 - result: `stop, if you see a red light.`
 
+**Exercises**
+
+- a) https://regexone.com/lesson/line_beginning_end
+- b) https://regexone.com/lesson/capturing_groups
+- c) https://regexone.com/lesson/nested_groups
+- d) https://regexone.com/lesson/more_groups
+- e) https://regexone.com/problem/matching_filenames
+
 ## Flags
 
 To enable some more flexibility or specification during the search for the pattern, some regex flags can be used. We will quickly overview the important ones that can be integrated in more complicated patterns:
@@ -144,7 +149,7 @@ Particularly:
 
 ## Regex with Python
 
-We will now focus on using Regex in _Python_, with the help of the library _re_. 
+We will now focus on using Regex in _Python_, with the help of the library _re_.
 To start, go to the "exercises" folder - here you will find a [Jupyter Notebook](https://jupyter.org/) called "Regular_Expressions_in_Python_CBS4DH.ipynb".
 Download it (or better find it in your cloned repository) and open it with [Google Colab](https://colab.google/) or - in case you already have Python installed - with Visual Studio Code.
 
