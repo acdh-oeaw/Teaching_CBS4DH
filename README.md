@@ -2,21 +2,21 @@
 
 Teaching materials for AR Methodological Workshop - Computational Background Skills for Digital Humanities at University of Vienna.
 
-## Schedule 2026S
+## Schedule 2026W
 
-### March - Group 1
+### October - Group 1
 
-| Time          | Wednesday (04.03.)                                           | Thursday (05.03.)                            | Wednesday (18.03.)                    | Thursday (19.03.)                                                                               | Wednesday (25.03.)                                             | Thursday (26.03.)                                     |
+| Time          | Wednesday (07.10.)                                           | Thursday (08.10.)                            | Wednesday (14.10.)                    | Thursday (15.10.)                                                                               | Wednesday (21.10.)                                             | Thursday (22.10.)                                     |
 | ------------- | ------------------------------------------------------------ | -------------------------------------------- | ------------------------------------- | ----------------------------------------------------------------------------------------------- | -------------------------------------------------------------- | ----------------------------------------------------- |
 | 13:15 – 14:45 | [Intro and Setup](lectures/CBS4DH_DH-general_2026-03-04.pdf) | [Regular expressions 1](lectures/regex_1.md) | [Web technologies 1](lectures/web.md) | [Command line 1](lectures/command_1.md) + [slides](lectures/2026-03-19_CBS4DH_command-line.pdf) | [Git 1](lectures/git/git_1.md)                                 | [Digital Toolbox](lectures/DH_Toolbox_2026-03-27.pdf) |
 | 15:00 – 16:30 | [Data Structures](lectures/data_structures.md)               | [Regular expressions 2](lectures/regex_2.md) | [Web technologies 2](lectures/web.md) | [Command line 2](lectures/command_2.md) + [slides](lectures/2026-03-19_CBS4DH_command-line.pdf) | [Git 2](lectures/git/git_2.md), [Git 3](lectures/git/git_3.md) | Questions & Answers                                   |
 
-### April - Group 2
+### November - Group 2
 
-| Time          | Monday (13.04.)                                              | Wednesday (15.04.)                           | Wednesday (22.04.)                    | Thursday (23.04.)                                                                               | Wednesday (29.04.)                                             | Thursday (30.04.)                                     |
+| Time          | Wednesday (11.11.)                                              | Thursday (12.11.)                           | Wednesday (18.11.)                    | Thursday (19.11.)                                                                               | Wednesday (25.11.)                                             | Thursday (26.11.)                                     |
 | ------------- | ------------------------------------------------------------ | -------------------------------------------- | ------------------------------------- | ----------------------------------------------------------------------------------------------- | -------------------------------------------------------------- | ----------------------------------------------------- |
-| 13:15 – 14:45 | [Intro and Setup](lectures/CBS4DH_DH-general_2026-04-13.pdf) | [Regular expressions 1](lectures/regex_1.md) | [Web technologies 1](lectures/web.md) | [Command line 1](lectures/command_1.md) + [slides](lectures/2026-04-23_CBS4DH_command-line.pdf) | [Git 1](lectures/git/git_1.md)                                 | [Digital Toolbox](lectures/DH_Toolbox_2026-04-30.pdf) |
-| 15:00 – 16:30 | [Data Structures](lectures/data_structures.md)               | [Regular expressions 2](lectures/regex_2.md) | [Web technologies 2](lectures/web.md) | [Command line 2](lectures/command_2.md) + [slides](lectures/2026-04-23_CBS4DH_command-line.pdf) | [Git 2](lectures/git/git_2.md), [Git 3](lectures/git/git_3.md) | Questions & Answers                                   |
+| 13:15 – 14:45 | [Intro and Setup](lectures/CBS4DH_DH-general_2026-04-13.pdf) |  [Command line 1](lectures/command_1.md) + [slides](lectures/2026-03-19_CBS4DH_command-line.pdf) | [Web technologies 1](lectures/web.md) | [Regular expressions 1](lectures/regex_1.md) | [Git 1](lectures/git/git_1.md)                                 | [Digital Toolbox](lectures/DH_Toolbox_2026-04-30.pdf) |
+| 15:00 – 16:30 | [Data Structures](lectures/data_structures.md)               |  [Command line 2](lectures/command_2.md) + [slides](lectures/2026-04-23_CBS4DH_command-line.pdf) | [Web technologies 2](lectures/web.md) | [Regular expressions 2](lectures/regex_2.md) | [Git 2](lectures/git/git_2.md), [Git 3](lectures/git/git_3.md) | Questions & Answers                                   |
 
 ## Information about the course (u:find)
 
