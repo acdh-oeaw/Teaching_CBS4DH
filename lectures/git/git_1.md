@@ -190,6 +190,6 @@ Theoretically, you could even run `git pull` without running `git fetch` before,
 ## Instructors
 
 * Massimiliano Carloni (massimiliano.carloni@oeaw.ac.at)
-* Lukas Plank (lukas.plank@oeaw.ac.at)
+* Kevin Stadler (kevin.stadler@oeaw.ac.at)
 
 Lessons based on material by Massimiliano Carloni and Peter Provaznik (peter.provaznik@oeaw.ac.at).
